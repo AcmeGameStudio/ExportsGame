@@ -108,3 +108,5 @@ Tracked files should be source and project metadata only. Generated or bulky fil
 - `*.apk`, `*.apks`, `*.xapk`
 
 Hexa Sort 专用的关卡导出说明见：[docs/HEXA_LEVEL_EXPORT.md](docs/HEXA_LEVEL_EXPORT.md)
+
+Royal Match 本地存档分析与修改说明见：[docs/ROYAL_MATCH_SAVE.md](docs/ROYAL_MATCH_SAVE.md)
