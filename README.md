@@ -13,6 +13,8 @@ The extractor can export:
 - `Font` as font files
 - APK `res/` and simple `assets/` files such as PNG, SVG, JSON, XML, TXT, WEBP, and bytes files under `direct/`
 
+For complete models, skeletons, materials, scenes, prefabs, and animation clips, use the AssetRipper wrapper described below. That path exports a recovered Unity project or AssetRipper primary/raw output instead of trying to rebuild FBX data directly inside the UnityPy extractor.
+
 ## Setup
 
 Install dependencies into the local `.codex_deps/` directory:
@@ -69,6 +71,24 @@ Export only selected Unity object types:
 rtk python3 scripts/extract_unity_resources.py --no-direct-copy --type TextAsset --type Shader
 ```
 
+Export complete model and animation data through AssetRipper:
+
+```bash
+ASSETRIPPER_BIN=/path/to/AssetRipper rtk python3 scripts/export_complete_models.py --game Royal_Match
+```
+
+By default, `export_complete_models.py` uses AssetRipper's `unity` export mode because it is the most useful mode for preserving project structure, model references, materials, skeletons, prefabs, and animation clips. Use `primary` or `raw` when you specifically want AssetRipper's non-project exports:
+
+```bash
+ASSETRIPPER_BIN=/path/to/AssetRipper rtk python3 scripts/export_complete_models.py --mode primary --game Hexa_Sort
+```
+
+Preview the exact AssetRipper command without running it:
+
+```bash
+ASSETRIPPER_BIN=/path/to/AssetRipper rtk python3 scripts/export_complete_models.py --dry-run --game Hexa_Sort
+```
+
 Useful options:
 
 - `--work-dir`: source directory containing unpacked game folders, default `.xapk_extract_work`
@@ -77,6 +97,18 @@ Useful options:
 - `--game`: limit extraction to one game folder; can be repeated
 - `--type`: limit Unity exports to a type such as `Texture2D`, `Sprite`, `TextAsset`, `AudioClip`, `Font`, or `Shader`; can be repeated
 - `--no-direct-copy`: skip copying plain APK `res/` and simple `assets/` files
+
+Complete model export options:
+
+- `--work-dir`: source directory containing unpacked game folders, default `.xapk_extract_work`
+- `--cache-dir`: intermediate extraction cache shared with the UnityPy extractor, default `.unity_resource_work`
+- `--out-dir`: exported project/model directory, default `extracted_game_models`
+- `--game`: limit export to one game folder; can be repeated
+- `--mode`: AssetRipper export mode, one of `unity`, `primary`, or `raw`; default `unity`
+- `--assetripper-bin`: path to the AssetRipper executable; overrides `ASSETRIPPER_BIN`
+- `--skip-cache-refresh`: reuse existing cache without re-extracting APK files
+- `--dry-run`: print commands without running AssetRipper
+- `--asset-ripper-arg`: pass one additional argument to AssetRipper; repeat for multiple arguments
 
 ## Output Layout
 
@@ -97,6 +129,16 @@ extracted_game_images/
 
 `resource_summary.json` records per-game counts and a capped sample of extraction errors. Some Unity assets may fail to decode because of missing external references, empty pointers, unsupported compression, or partially recoverable bundles; successful exports are still written.
 
+Complete model exports are written to `extracted_game_models/<Game_Name>/`:
+
+```text
+extracted_game_models/
+└── Game_Name/
+    └── AssetRipper output
+```
+
+AssetRipper must be installed separately. If the executable is not on `PATH`, set `ASSETRIPPER_BIN` or pass `--assetripper-bin`. The wrapper prepares cached Unity files from APK/XAPK contents, then delegates full recovery to AssetRipper.
+
 ## Git Hygiene
 
 Tracked files should be source and project metadata only. Generated or bulky files are ignored:
@@ -105,6 +147,7 @@ Tracked files should be source and project metadata only. Generated or bulky fil
 - `.xapk_extract_work/`
 - `.unity_resource_work/`
 - `extracted_game_images/`
+- `extracted_game_models/`
 - `*.apk`, `*.apks`, `*.xapk`
 
 Hexa Sort 专用的关卡导出说明见：[docs/HEXA_LEVEL_EXPORT.md](docs/HEXA_LEVEL_EXPORT.md)

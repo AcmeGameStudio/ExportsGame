@@ -12,5 +12,6 @@ __pycache__/
 .xapk_extract_work/
 .unity_resource_work/
 extracted_game_images/
+extracted_game_models/
 
 .runtime/

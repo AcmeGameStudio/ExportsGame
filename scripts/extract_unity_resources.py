@@ -17,8 +17,6 @@ DEPS = ROOT / ".codex_deps"
 if DEPS.exists():
     sys.path.insert(0, str(DEPS))
 
-import UnityPy  # type: ignore  # noqa: E402
-
 
 APK_EXTENSIONS = {".apk", ".xapk", ".apks", ".zip"}
 DIRECT_COPY_EXTENSIONS = {
@@ -228,6 +226,8 @@ def export_object(obj, out_dir: Path, source_stem: str, used: set[Path], export_
 
 
 def export_unity_assets(files: list[Path], cache_root: Path, out_dir: Path, export_types: set[str]) -> dict[str, object]:
+    import UnityPy  # type: ignore
+
     stats: dict[str, int] = {}
     errors: list[dict[str, str]] = []
     error_count = 0
