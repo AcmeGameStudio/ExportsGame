@@ -508,3 +508,280 @@ scripts/modify_hexasort_save.sh \
 ```
 
 脚本默认目标是 `emulator-5554`；多个模拟器同时连接时使用 `--device SERIAL` 指定目标。每次执行都会先把原始 PlayerPrefs 备份到 `.runtime/hexasort/save_backups/`。
+
+## 核心玩法运行时结构
+
+从 `libil2cpp.so` 对应的 metadata 中，可以确认核心玩法不是由一个函数完成，而是几个系统串联：
+
+```text
+LevelConfig / LevelData
+        ↓
+Tray.InitialSpawn 或 SpawningAlgorithm.GetNext
+        ↓
+TrayItem.TryPlace
+        ↓
+Cell.PlaceHex / AddBlocks
+        ↓
+Cell.IsMergeAble / Merge / MergeAll
+        ↓
+HexaSortMerge.CheckMerge / SortCells
+        ↓
+目标进度、得分、失败检查、下一组手牌
+```
+
+### 合并规则的确定部分
+
+运行时 `Gameplay.Cell` 暴露了以下关键方法和属性：
+
+- `TopType`、`SecondType`、`TopTypeBlocks`：读取棋盘格顶部及下一层 Hex 类型；
+- `IsMergeAble`：判断当前手牌能否与目标格发生合并；
+- `PlaceHex`、`AddBlocks`：把手牌堆放入目标格；
+- `Merge`、`MergeAll`、`MergeBlocks`：执行同色层合并及连锁合并；
+- `NeighbourCellMerged`：相邻格合并后的联动入口；
+- `GenerateBlocks`、`GenerateNewBlocks`：特殊格或生成器产生新 Hex；
+- `ChangeCellDataToNextState`：特殊格完成一次动作后进入 `next_state`。
+
+因此，普通玩法可以概括为：
+
+1. 手牌是一个有顺序的 Hex 堆，顶部颜色决定当前可见和主要匹配类型。
+2. 玩家把手牌放到可放置格；如果目标格存在可匹配的顶部类型，就进入 `IsMergeAble → Merge` 流程。
+3. 合并会重新分配堆叠层，并继续检查同一格、邻居格和特殊格，可能形成连锁。
+4. 某些格子的合并条件不是普通同色匹配，而由 `RequiredType`、`NeighborMergesRequired`、`SelfMergesRequired`、`SelectiveNeighborsRequired` 和特殊 `CellState` 控制。
+5. 每次放置还会触发 `CheckMerge`、`CheckFail`、目标进度和生成下一组手牌。
+
+`types` 数组保存的是层顺序和内部颜色类型；同一个颜色通常用同一个位值表示。不能只看数组长度判断能否合并，必须看顶部层、目标格状态以及特殊格的限制。
+
+### “新手牌”刷新和生成规则
+
+这里的“新手牌”应理解为 Tray 中每次出现的新一组手牌。metadata 对应的运行时类为 `Gameplay.SpawningAlgorithm`，其关键方法包括：
+
+- `GetNext`：取得下一组/下一个生成结果；
+- `GetPieces`、`GetPieceOfType`：生成一组手牌或指定类型的堆；
+- `GetCurrentAvailableTypes`、`GetCurrentAvailableTypesWithCount`：读取棋盘当前可用颜色及数量；
+- `ValidatePiecesWithGrid`：根据当前棋盘验证候选手牌；
+- `GetPowerupPieces`：在满足条件时产生带特殊用途的手牌；
+- `SetupEasyTray`：新手/简单模式的手牌配置；
+- `ThresholdHexCount`：依据进度阈值调整生成参数。
+
+运行时 `Tray` 还包含：
+
+- `InitialSpawn`：首次进入关卡时装载手牌；
+- `LoadPieces`：读取关卡静态 `LevelData.Pieces`；
+- `SpawnItems`：把生成结果创建成 UI 手牌槽；
+- `RefreshTray`：刷新当前 Tray；
+- `ReviveTrayRefresh`：复活流程中的刷新；
+- `VacuumUsed`：使用 Vacuum 后重新处理 Tray；
+- `TrayAvailableSlots`：当前可用槽位数。
+
+所以刷新不是固定的“随机 3 个颜色”，更接近以下流程：
+
+```text
+读取当前棋盘顶部类型和空位
+        ↓
+按关卡难度、动态难度和教程模式确定候选范围
+        ↓
+生成若干层数和颜色组合
+        ↓
+ValidatePiecesWithGrid 检查是否至少存在可放置/可推进候选
+        ↓
+必要时加入 Powerup 或简单模式修正
+        ↓
+生成到 Tray 的空槽位
+```
+
+### 影响手牌生成的配置
+
+| 配置/字段 | 作用 |
+|---|---|
+| `LevelData.Pieces` | 关卡指定的初始手牌；有些关卡三个槽位为空，表示交给运行时生成 |
+| `PreCreatedHex` | 关卡开局预置 Hex 数量，影响初始棋盘和可生成类型 |
+| `Thresholds` | 按 Hex 数量/进度切换生成阶段或难度 |
+| `Difficulty` | 影响候选类型、堆叠长度和生成倾向 |
+| `LevelDifficultyOverrideData` | 按关卡覆盖动态难度倍率和尝试次数倍率 |
+| `DefaultMaxTypesInStack` | 普通生成时单堆允许的最大类型/层数范围 |
+| `MinRandHexPerStack` / `MaxRandHexPerStack` | 随机手牌堆的层数范围 |
+| `MinEasyHexPerStack` / `MaxEasyHexPerStack` | 新手/简单模式的层数范围 |
+| `SmartTrayConfig` | 智能手牌开关、时间窗口和触发概率 |
+| `IsSmartTrayEnabled` | 是否启用智能 Tray |
+| `SmartTrayTimeWindow` | 智能刷新或智能生成的生效时间窗口 |
+| `SmartTrayProbability` | 智能生成介入的概率 |
+| `IsPowerUpEngagementAlgoEnabled` | 是否允许生成用于引导玩家使用特殊能力的手牌 |
+| `AlgoTrayInfo` | Easy/Medium/Hard 三档算法变体 |
+| `IsAlgoTrayEnabled` | 是否启用算法 Tray |
+| `EasyTrayVariant` / `MediumTrayVariant` / `HardTrayVariant` | 不同难度下的生成变体 |
+
+### 新手阶段的实际含义
+
+`SetupEasyTray` 和 `MinEasyHexPerStack/MaxEasyHexPerStack` 表明“新手牌”不是单独的一种数据格式，而是生成算法的 Easy 分支。它通常会：
+
+- 限制堆叠层数，降低一次操作的复杂度；
+- 优先选择当前棋盘已有或容易形成合并的类型；
+- 避免生成完全无法放置的组合；
+- 在特殊玩法教学阶段配合 `TutorialSteps`、`CellsForTutorial` 和 `GetPowerupPieces`；
+- 在动态难度系统介入后，根据失败次数/尝试次数调整生成难度。
+
+### Refresh 与随机性的区别
+
+Refresh/Shuffle 是对当前 Tray 重新请求一组手牌，不等于重置整个关卡。运行时有独立的 `Tray.RefreshTray`、`SpawningAlgorithm.GetNext` 和 `SmartRefreshUsed` 状态，说明刷新至少受以下因素影响：
+
+- 当前棋盘状态；
+- 已经生成的 Hex 数量 `TotalHexCreatedInLevel`；
+- 当前动态难度；
+- 是否已经使用过 Smart Refresh；
+- 当前剩余槽位和可用颜色；
+- 关卡是否处于复活、教程或特殊玩法流程。
+
+因此，想做“固定关卡、每个用户同一关相同内容”，应固定 `LevelConfig`、初始 `Pieces`、随机种子/生成序列和动态难度输入；只固定棋盘 JSON 而不固定 `SpawningAlgorithm` 的输入，后续新手牌仍可能因玩家操作、失败次数或动态难度不同而变化。
+
+## 完整玩法规则总表
+
+下面的规则按当前 6.2.20 的本地化说明、`Gameplay.Cell` 状态类、调试关卡和字段结构整理。这里的“合并”指一次成功的同色/匹配色合并事件；多数特殊玩法监听的是“相邻合并事件”，不一定要求特殊格自身放入棋子。
+
+### 普通格、阻挡格和基础机制
+
+| 玩法/状态 | 触发方式 | 合并后的效果 |
+|---|---|---|
+| `Open` | 普通放置或合并 | 接收普通 Hex，参与同色合并 |
+| `Dead` | 运行时失效/不可用状态 | 不参与正常放置；常用于状态机或旧版兼容 |
+| `RV` | 通过奖励视频/复活解锁 | 将原本受限的格子临时开放，具体范围由 RV 状态控制 |
+| `Cost` | 在格子或锁上进行合并 | 每次满足条件的合并减少成本；成本为 0 后开放/进入下一状态 |
+| `Wood` | 在木头相邻位置合并 | 消耗/破坏木头；目标文本明确为“合并旁边的格子来打破木头” |
+| `Ice` | 在冰块相邻位置合并 | 破坏冰块；通常是逐个或按配置消耗冰层 |
+| `Hole` | 清除周边或向洞口放置 | 作为空洞/不可放置区域参与路径判断；当前缺少独立调试阈值 |
+| `Grass` | 在草地格上完成合并 | 移除草地；本地化明确为“在 Grass cell 上合并” |
+| `Camera` | 在相机旁合并 | 收集照片；目标数量由 Goals 记录 |
+| `LockHighRise` | 达到目标或消耗锁定成本 | 解锁高楼锁定格/堆 |
+| `FridgeCan` | 在相关格上合并 | 处理冰箱罐类障碍；静态枚举和资源存在，但当前样本未确认完整阈值 |
+
+### 引导、生成和邻居触发类玩法
+
+| 玩法 | 触发/合并规则 | 状态或参数 |
+|---|---|---|
+| `BirdHouse` | 在鸟屋相邻位置完成指定次数合并，收集鸟 | 通常由目标计数和运行时动画完成 |
+| `WaitingCell` | 达到棋子目标后解除等待 | `cost` 表示等待/解锁成本，完成后从 Cell Stack 添加新格子 |
+| `WaitingCellStack` | Waiting Cell 被解锁后提供新格子 | 与 `WaitingCell` 配对，不是普通手牌槽 |
+| `FireCracker` | 在爆竹旁完成一次合并 | 发射爆竹；静态编码 `state=13` |
+| `Toaster` | 在烤面包机旁合并 | 生成/烹饪 Toast，再通过目标或后续合并收集；类中有完成回调 |
+| `Gramophone` | 在留声机周围完成合并 | 触发留声机事件；当前静态数据未显示通用计数参数 |
+| `ColorNuts` / `GeneratorNuts` | 合并与坚果颜色相同的 Hex | 收集坚果或生成坚果；颜色匹配由 `required_type`/参数决定 |
+| `CarParking` | 清理汽车行驶路径 | 路径清空后收集车辆，不是直接把手牌放到车上 |
+| `Curtain` | 达成 Curtain 目标 | 窗帘升起，释放/展示后方区域 |
+| `Cloud` | 通常由 Kettle 生成，再在云旁合并 | 通过邻居合并收集云；属于二阶段玩法 |
+| `Playpen` | 在围栏中合并匹配颜色 | 收集对应颜色的球；参数含所需 Hex 类型集合 |
+| `GemBox` / `Gem` | 先在宝石旁合并使 Gem 掉落，再次合并收集 | 两次动作对应掉落和收集两个阶段 |
+| `Carpet` | 在地毯旁合并 | 地毯卷起并收集 Crown；部分版本只通过目标系统出现 |
+| `HoneyTrap` / `Honey` | 在蜂巢相邻位置合并 | 掉落 Honey，直到蜂巢清空；通常按连接的 Honey 数量推进 |
+| `SnakeBody` / `SnakeTail` | 清除或合并蛇身/蛇尾关联区域 | 作为一组连通障碍处理，具体头部状态可能由运行时路径系统控制 |
+| `BirdNest` / `Pearl` | 在鸟巢/牡蛎旁合并匹配颜色 | 收集鸟或牡蛎中的 Pearl；目标文本要求匹配颜色 |
+| `Doll` | 在娃娃关联区域完成合并 | 推进娃娃收集/移动流程；有 `_totalDollsPlaced` 和方向字段 |
+| `Drone` / `DronePad` / `DroneHandler` | 合并触发无人机状态更新 | Drone 在 Pad/Handler 之间移动或处理目标；状态包括 Deactivated、Activated、FlyToTarget |
+
+### 多阶段特殊玩法
+
+| 玩法 | 合并规则 | 配置依据 |
+|---|---|---|
+| Rainbow Launcher | 在发射器旁累计相邻合并，达到配置次数后发射 Rainbow Hex | `MaxRainbowShots`、`CurrentRainbowShots`、`GetRainbowState`；本地化明确为相邻合并 2 次 |
+| Jelly | 在 Jelly 相邻位置合并，按分段逐步清除 | `Segments`、`JelliesStatus`、`Rotation` |
+| Cupboard | Primary/Secondary 关联格逐步响应合并并开门 | `CupboardId`、`DoorOpen`、`state=38/39`；同一 `CupboardId` 的格子必须一起处理 |
+| Bloom | 相邻合并推进 Bloom 开花/花瓣掉落 | 运行时有 `_mergedTiles`、`DelayForBloomOpen` 等字段 |
+| Safe | 达到安全箱目标并按动作推进开锁 | 运行时有 `TOTAL_BLOCKS_REQUIRED`、`TOTAL_ANGLE` 等阈值 |
+| Boxing Glove | 合并触发拳套攻击邻居或目标格 | 类中有 `_neighbourCells`、`HitTargetCell`，属于攻击型邻居机制 |
+| Kettle / Steam / Cloud | Kettle 旁合并生成 Steam/Cloud，再在 Cloud 旁合并收集 | 类中有 `_steamsCreated`；本地化明确为“水壶生成云，云旁合并收集” |
+| Dice | 在 Dice 旁合并掷骰子并收集数字 | `DiceStateData` 有 `PendingHits`、`LastDiceValue`、`PendingDiceValue`；静态编码 `state=44` |
+| Mole | 在 Mole 旁合并击打地鼠 | `MoleID`、`SequenceID`、`MoleStatus`；不同地鼠按 ID/序列关联 |
+| Popcorn Maker / Popcorn | 先达到目标使 Popcorn 爆开，再在其旁合并收集 | `PopcornCellStateData` 有 `IsJumpPending`、`CupRotation` |
+| Candy Machine / Candy | 在糖果机旁合并生成/收集糖果 | `state=53/54`，`Id` 关联实例，部分阶段有 `PendingHits` |
+| Drill | 在钻头旁合并 2 次激活，之后钻穿对象 | `RotationIndex`、`PendingHits`、`TargetCellIndex`；2 次阈值由本地化明确 |
+| Soil Bomb | 在 Soil 相邻位置合并，触发炸弹并清除连通 Soil | `state=52`、`Id`；连通区域由邻居图遍历 |
+| Tesla | 先在 Tesla Tower 旁合并充能，再次合并给 Bulb 供电 | `state=49/50`、`TeslaTower`/`TeslaBulb`；本地化明确为两次阶段 |
+| Rabbit | 在 Rabbit 旁合并唤醒，再提供 Carrot | `ID`、`SequenceID`；目标文本明确为唤醒和喂食 |
+| Penguin / Igloo | 在 Penguin 旁合并融化 Ice，清理到 Igloo 的路径 | `state=60/61`、`Id`、`Rotation`；Igloo 是终点/关联组件 |
+| Hex Generator | 清空生成器前方的槽位获得新 Hex | `Rotation`、`Difficulty`、`targetHexTypes`、`selfHexTypes`；重点是“前方槽位”，不是普通随机手牌 |
+| Firecracker Generator | 在生成器旁合并，一次发射多个爆竹 | `FirecrackerCount`、`Continuous`、`StartingCost`、`PreferSingleTarget` |
+
+### 普通合并、特殊触发和目标统计的关系
+
+一次操作可能同时产生三类结果：
+
+1. **普通合并结果**：改变目标 Cell 的 Hex 堆叠，触发 `MergeBlocks` 或连锁。
+2. **特殊格结果**：相邻特殊格监听 `NeighbourCellMerged`，减少 `cost`、`PendingHits` 或内部计数，并可能改变 `state`。
+3. **目标结果**：`LevelGoalTracker` 根据目标类型累计进度；目标完成不一定意味着特殊 Cell 立刻消失，部分玩法还要执行收集/动画阶段。
+
+因此，判断一个玩法是否“完成”，不能只看 `cost==0`。应同时检查：
+
+```text
+当前 state
+→ 当前 cost / additional_param
+→ next_state / next_cost
+→ Goals 进度
+→ 是否还有运行时生成物或关联 Cell
+```
+
+## 新手牌和刷新规则总表
+
+### 1. 首次进入关卡
+
+`Tray.InitialSpawn` 负责首次生成。若 `LevelData.Pieces` 中存在非空槽位，优先使用关卡配置的静态手牌；如果三个槽位为空或部分为空，则由 `SpawningAlgorithm` 补齐。`TutorialSteps`、`CellsForTutorial` 和 `SetupEasyTray` 可以覆盖普通生成逻辑。
+
+### 2. 普通下一组手牌
+
+`SpawningAlgorithm.GetNext → GetPieces → GetPieceRandom` 生成下一组手牌。生成器至少会读取：
+
+- 当前棋盘每个格子的顶部类型和数量；
+- 当前可放置空格和可合并邻居；
+- `TotalHexCreatedInLevel`；
+- 当前难度和动态难度倍率；
+- `MinRandHexPerStack/MaxRandHexPerStack`；
+- `DefaultMaxTypesInStack`；
+- 当前 Tray 空槽数量。
+
+生成候选后由 `ValidatePiecesWithGrid` 检查棋盘可用性，再通过 `GetCurrentAvailableTypesWithCount` 调整颜色/类型分布。由此可见，手牌刷新是“受棋盘状态约束的随机”，不是完全独立随机。
+
+### 3. 新手 Easy 生成
+
+新手阶段调用 `SetupEasyTray` 或 Easy Tray 变体，核心目标是让玩家能看懂并完成操作：
+
+- 使用较小的 `MinEasyHexPerStack/MaxEasyHexPerStack` 范围；
+- 优先生成当前棋盘已有顶部颜色或可形成合并的类型；
+- 避免连续出现全部无法放置的手牌；
+- 在教程特殊玩法中按 `GetPowerupPieces` 提供引导性手牌；
+- 受到 `TutorialSteps`、动态难度和已完成目标影响。
+
+这意味着新手牌不是固定写死在所有关卡 JSON 中，而是“静态 Pieces + Easy 算法”的组合。
+
+### 4. Refresh/Shuffle
+
+Refresh 的运行时入口是 `Tray.RefreshTray`，随后重新调用生成算法。它通常只替换当前 Tray 内容，不重置棋盘 Cell、Goals 或已完成的特殊玩法。`SmartRefreshUsed` 表明智能刷新存在一次性或次数限制。
+
+Refresh 结果可能受以下因素影响：
+
+| 输入 | 影响 |
+|---|---|
+| 当前顶部颜色 | 决定候选手牌是否有同色合并机会 |
+| 当前空位 | 决定候选手牌能否放置 |
+| 当前特殊格 | 可能优先生成能触发特殊格的颜色 |
+| `TotalHexCreatedInLevel` | 影响生成阶段和难度阈值 |
+| `CurrentDifficulty` | 影响堆叠长度和类型范围 |
+| `SmartTrayProbability` | 决定是否插入智能候选 |
+| `SmartTrayTimeWindow` | 限制智能候选的生效时间 |
+| `IsPowerUpEngagementAlgoEnabled` | 允许生成引导特殊道具的手牌 |
+| 复活状态 | `ReviveTrayRefresh` 可能重新整理手牌 |
+| Vacuum | `VacuumUsed` 后重新计算剩余 Tray |
+
+### 5. 如何实现可复现的关卡
+
+要让每个用户在同一关得到完全相同的过程，需要固定的不只是棋盘：
+
+```text
+LevelConfig
++ 初始 Pieces
+ + PreCreatedHex
+ + 生成随机种子
+ + 生成序列/已生成数量
+ + SmartTray 开关和概率
+ + 动态难度倍率
+ + 失败次数/尝试次数
+ + Refresh、Revive、Vacuum 后的状态
+```
+
+如果只锁定关卡 ID，玩家在不同操作顺序、不同失败次数或不同 Refresh 次数下，仍可能得到不同手牌。若需要“固定主线、池子抽取活动关卡”，建议主线使用固定 `LevelId → seed → piece sequence`，活动池另用独立随机源，避免活动抽取改变主线的手牌序列。
