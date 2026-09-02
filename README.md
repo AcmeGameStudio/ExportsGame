@@ -77,6 +77,19 @@ Export complete model and animation data through AssetRipper:
 ASSETRIPPER_BIN=/path/to/AssetRipper rtk python3 scripts/export_complete_models.py --game Royal_Match
 ```
 
+脚本支持 `.tar.xz` 包并会自动解压；但请注意，`AssetRipper.GUI.Free` 是 GUI 版本，
+不能用于下面的批量 CLI 导出。你下载的包可以手动打开查看资源；批量导出需要另行下载
+带 CLI/ExportRunner 的 AssetRipper 构建，然后把可执行文件或 CLI 包路径传给脚本：
+
+```bash
+rtk python3 scripts/export_complete_models.py \
+  --assetripper-bin /path/to/AssetRipper.CLI \
+  --game Royal_Match
+```
+
+如果你只想启动已下载的 GUI 包，可以在 Finder 中双击解压后的 `AssetRipper.GUI.Free`；
+首次运行如果 macOS 阻止下载的应用，请在“系统设置 → 隐私与安全性”中允许它运行。
+
 By default, `export_complete_models.py` uses AssetRipper's `unity` export mode because it is the most useful mode for preserving project structure, model references, materials, skeletons, prefabs, and animation clips. Use `primary` or `raw` when you specifically want AssetRipper's non-project exports:
 
 ```bash
@@ -105,7 +118,7 @@ Complete model export options:
 - `--out-dir`: exported project/model directory, default `extracted_game_models`
 - `--game`: limit export to one game folder; can be repeated
 - `--mode`: AssetRipper export mode, one of `unity`, `primary`, or `raw`; default `unity`
-- `--assetripper-bin`: path to the AssetRipper executable; overrides `ASSETRIPPER_BIN`
+- `--assetripper-bin`: path to the AssetRipper CLI executable or `.tar.xz` archive; overrides `ASSETRIPPER_BIN`
 - `--skip-cache-refresh`: reuse existing cache without re-extracting APK files
 - `--dry-run`: print commands without running AssetRipper
 - `--asset-ripper-arg`: pass one additional argument to AssetRipper; repeat for multiple arguments

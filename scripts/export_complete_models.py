@@ -4,8 +4,11 @@ from __future__ import annotations
 import argparse
 import os
 import shutil
+import stat
 import subprocess
 import sys
+import tarfile
+import tempfile
 from pathlib import Path
 from typing import Iterable
 
@@ -18,11 +21,25 @@ from scripts.extract_unity_resources import ROOT, extract_relevant_files
 
 DEFAULT_CANDIDATE_NAMES = (
     "AssetRipper",
+    "AssetRipper.GUI.Free",
     "AssetRipper.CLI",
     "AssetRipperConsole",
     "assetripper",
 )
+DEFAULT_ARCHIVE_PATHS = (Path.home() / "Applications" / "AssetRipper_mac_arm64.tar.xz",)
 SUPPORTED_MODES = ("unity", "primary", "raw")
+
+
+def _resolve_candidate(candidate: Path) -> Path | None:
+    if candidate.is_file() or candidate.suffix.lower() == ".xz":
+        return candidate if candidate.exists() else None
+    if not candidate.is_dir():
+        return None
+    for name in DEFAULT_CANDIDATE_NAMES:
+        executable = candidate / name
+        if executable.is_file():
+            return executable
+    return None
 
 
 def iter_game_dirs(work_dir: Path, selected: set[str] | None) -> Iterable[Path]:
@@ -36,20 +53,77 @@ def iter_game_dirs(work_dir: Path, selected: set[str] | None) -> Iterable[Path]:
 
 def resolve_assetripper_bin(explicit: str | None = None) -> Path | None:
     if explicit:
-        candidate = Path(explicit).expanduser()
-        return candidate if candidate.exists() else None
+        return _resolve_candidate(Path(explicit).expanduser())
 
     env_value = os.environ.get("ASSETRIPPER_BIN")
     if env_value:
-        candidate = Path(env_value).expanduser()
-        return candidate if candidate.exists() else None
+        return _resolve_candidate(Path(env_value).expanduser())
 
     for name in DEFAULT_CANDIDATE_NAMES:
         resolved = shutil.which(name)
         if resolved:
             return Path(resolved)
 
+    for archive in DEFAULT_ARCHIVE_PATHS:
+        if archive.exists():
+            return archive
+
     return None
+
+
+def extract_assetripper_archive(archive: Path, destination: Path) -> Path:
+    """Extract an AssetRipper macOS archive and return its executable path."""
+    destination.mkdir(parents=True, exist_ok=True)
+    with tarfile.open(archive, mode="r:*") as tar:
+        for member in tar.getmembers():
+            if not member.isfile():
+                continue
+            member_path = Path(member.name)
+            if member_path.is_absolute() or ".." in member_path.parts:
+                raise ValueError(f"Unsafe AssetRipper archive member: {member.name}")
+            target = destination / member_path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            source = tar.extractfile(member)
+            if source is None:
+                raise ValueError(f"Unable to read AssetRipper archive member: {member.name}")
+            with source, target.open("wb") as output:
+                shutil.copyfileobj(source, output)
+            target.chmod(member.mode & 0o777)
+
+    executable = _resolve_candidate(destination)
+    if executable is None:
+        raise FileNotFoundError(
+            f"AssetRipper executable was not found in archive {archive}; "
+            f"expected one of: {', '.join(DEFAULT_CANDIDATE_NAMES)}"
+        )
+    executable.chmod(executable.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
+    return executable
+
+
+def supports_cli_export(help_text: str) -> bool:
+    normalized = help_text.lower()
+    return "--cli" in normalized and "--input" in normalized and "--output" in normalized
+
+
+def validate_assetripper_cli(assetripper_bin: Path) -> None:
+    try:
+        result = subprocess.run(
+            [str(assetripper_bin), "--help"],
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        raise RuntimeError(f"Unable to inspect AssetRipper CLI at {assetripper_bin}: {exc}") from exc
+
+    help_text = f"{result.stdout}\n{result.stderr}"
+    if not supports_cli_export(help_text):
+        raise RuntimeError(
+            f"{assetripper_bin.name} is GUI-only and does not support --cli/--input/--output. "
+            "Install an AssetRipper CLI/ExportRunner build for scripted exports; "
+            "the downloaded GUI package can still be opened manually."
+        )
 
 
 def build_assetripper_command(
@@ -128,27 +202,38 @@ def main() -> int:
         print(f"No game directories found under {args.work_dir}", file=sys.stderr)
         return 1
 
-    for game_dir in game_dirs:
-        game_cache = args.cache_dir / game_dir.name
-        if not args.skip_cache_refresh:
-            cached_files = extract_relevant_files(game_dir, args.cache_dir)
-            print(f"{game_dir.name}: prepared {len(cached_files)} cached files in {game_cache}")
-        elif not game_cache.exists():
-            print(f"{game_dir.name}: cache directory does not exist: {game_cache}", file=sys.stderr)
-            return 1
-
-        game_out = args.out_dir / game_dir.name
-        game_out.mkdir(parents=True, exist_ok=True)
-        command = build_assetripper_command(
-            assetripper_bin=assetripper_bin,
-            input_dir=game_cache,
-            output_dir=game_out,
-            mode=args.mode,
-            extra_args=args.asset_ripper_arg,
-        )
-        print("+ " + " ".join(command))
+    with tempfile.TemporaryDirectory(prefix="assetripper-") as temp_dir:
+        if assetripper_bin.suffix.lower() == ".xz":
+            assetripper_bin = extract_assetripper_archive(assetripper_bin, Path(temp_dir) / "bin")
+            print(f"Prepared AssetRipper executable: {assetripper_bin}")
         if not args.dry_run:
-            subprocess.run(command, check=True)
+            try:
+                validate_assetripper_cli(assetripper_bin)
+            except RuntimeError as exc:
+                print(f"AssetRipper validation failed: {exc}", file=sys.stderr)
+                return 2
+
+        for game_dir in game_dirs:
+            game_cache = args.cache_dir / game_dir.name
+            if not args.skip_cache_refresh:
+                cached_files = extract_relevant_files(game_dir, args.cache_dir)
+                print(f"{game_dir.name}: prepared {len(cached_files)} cached files in {game_cache}")
+            elif not game_cache.exists():
+                print(f"{game_dir.name}: cache directory does not exist: {game_cache}", file=sys.stderr)
+                return 1
+
+            game_out = args.out_dir / game_dir.name
+            game_out.mkdir(parents=True, exist_ok=True)
+            command = build_assetripper_command(
+                assetripper_bin=assetripper_bin,
+                input_dir=game_cache,
+                output_dir=game_out,
+                mode=args.mode,
+                extra_args=args.asset_ripper_arg,
+            )
+            print("+ " + " ".join(command))
+            if not args.dry_run:
+                subprocess.run(command, check=True)
 
     return 0
 
