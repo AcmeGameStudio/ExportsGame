@@ -22,12 +22,14 @@ class HexaRuntimeAgentTests(unittest.TestCase):
         self.assertEqual(goals["item"]["declaringClass"], "LevelGoalTracker")
         tray = runtime_config["state"]["Gameplay.HexaSortMerge.CheckMerge"]["tray"]["Tray"]["fields"]["TrayItems"]
         self.assertIn("Blocks", tray["item"]["fields"]["_piece"]["fields"])
+        cells = runtime_config["state"]["Gameplay.HexaSortMerge.CheckMerge"]["board"]["GridSystem"]["fields"]["Cells"]
+        self.assertIn("Blocks", cells["value"]["fields"])
         self.assertTrue(config["methods"])
         self.assertTrue(all(("rva" in item or "address" in item or "method" in item) for item in config["methods"]))
 
     def test_agent_is_read_only_and_contains_required_events(self):
         source = AGENT.read_text(encoding="utf-8")
-        for token in ("Interceptor.attach", "method_enter", "method_return", "method_error", "IL2CPP_OBJECT_HEADER_SIZE", "readU32", "readI32", "readBool", "readIl2CppString", "readList", "readDictionary", "recordFieldLayout", "il2cpp_class_get_nested_types", "send(", "il2cpp_class_get_method_from_name", "il2cpp_field_get_offset", "Module.getExportByName", "enumerateExportsSync", "enumerateSymbolsSync"):
+        for token in ("Interceptor.attach", "method_enter", "method_return", "method_error", "session_waiting", "session_ready", "il2cppRuntimeReady", "IL2CPP_OBJECT_HEADER_SIZE", "readU32", "readI32", "readBool", "readIl2CppString", "readList", "readDictionary", "recordFieldLayout", "il2cpp_class_get_nested_types", "send(", "il2cpp_class_get_method_from_name", "il2cpp_field_get_offset", "Module.getExportByName", "enumerateExportsSync", "enumerateSymbolsSync"):
             self.assertIn(token, source)
         for forbidden in ("writeByte", "writeUtf8String", "Memory.patchCode", "Interceptor.replace"):
             self.assertNotIn(forbidden, source)

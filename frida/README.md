@@ -40,6 +40,15 @@
      --pid 13193
    ```
 
+   Hexa Sort 在该模拟器上不适合早期 `spawn` 注入。要用一条命令完成“启动应用、等待 PID、attach 采集”，使用稳定的 `launch-attach`：
+
+   ```bash
+   python3 frida/collect_hexa_runtime.py \
+     --config frida/hexa_runtime_config.json \
+     --output .runtime/hexasort/runtime.jsonl \
+     --mode launch-attach
+   ```
+
    可先确认包名和进程：
 
    ```bash

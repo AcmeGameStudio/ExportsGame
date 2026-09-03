@@ -6,6 +6,8 @@ let configuration = { module: "libil2cpp.so", methods: [], limits: {}, fields: {
 let hooks = [];
 let sequence = 0;
 let inHook = false;
+let installTimer = null;
+let methodsInstalled = false;
 const IL2CPP_OBJECT_HEADER_SIZE = Process.pointerSize * 2;
 const IL2CPP_ARRAY_LENGTH_OFFSET = IL2CPP_OBJECT_HEADER_SIZE + Process.pointerSize;
 const IL2CPP_ARRAY_DATA_OFFSET = IL2CPP_OBJECT_HEADER_SIZE + Process.pointerSize * 2;
@@ -425,16 +427,43 @@ function install(item) {
   }
 }
 
+function installWhenModuleReady() {
+  if (methodsInstalled) return true;
+  if (!il2cppRuntimeReady()) return false;
+  configuration.methods.forEach(install);
+  methodsInstalled = true;
+  if (installTimer !== null) {
+    clearInterval(installTimer);
+    installTimer = null;
+  }
+  emit("session_ready", null, { diagnostics: [], hooks: hooks.length });
+  return true;
+}
+
+function il2cppRuntimeReady() {
+  if (!moduleBase()) return false;
+  try {
+    const domain = exported("il2cpp_domain_get", "pointer", [])();
+    return domain && !domain.isNull();
+  } catch (_) { return false; }
+}
+
 rpc.exports = {
   configure(next) {
     configuration = Object.assign(configuration, next || {});
     emit("session_start", null, { diagnostics: [] });
-    configuration.methods.forEach(install);
-    return { hooked: hooks.length, configured: configuration.methods.length };
+    if (!installWhenModuleReady()) {
+      emit("session_waiting", null, { diagnostics: [{ code: "module_wait", module: configuration.module }] });
+      installTimer = setInterval(installWhenModuleReady, 50);
+    }
+    return { hooked: hooks.length, configured: configuration.methods.length, pending: !methodsInstalled };
   },
   detach() {
+    if (installTimer !== null) clearInterval(installTimer);
+    installTimer = null;
     hooks.forEach(hook => hook.detach());
     hooks = [];
+    methodsInstalled = false;
     return true;
   }
 };

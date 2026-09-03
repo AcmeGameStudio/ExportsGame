@@ -31,6 +31,7 @@
       "root": {"namespace": "Gameplay", "class": "Cell"},
       "board": {
         "CellNumber": "pointer", "RequiredType": "u32", "Cost": "u32", "Index": "i32",
+        "Blocks": {"type": "list", "item": {"type": "object", "namespace": "Gameplay", "class": "Block", "fields": {"_type": "u32", "sequence": "i32"}}},
         "State": {"type": "u32", "fieldName": "<State>k__BackingField"}, "ParamOne": "u32", "AdditionalParam": "string",
         "CellData": {"type": "object", "namespace": "Gameplay", "class": "CellData", "fields": {
           "Row": "i32", "Col": "i32", "Types": {"type": "list", "item": "u32"}, "Cost": "u32", "RequiredType": "u32", "State": "u32",

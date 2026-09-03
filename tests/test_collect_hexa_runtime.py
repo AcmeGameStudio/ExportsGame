@@ -19,6 +19,10 @@ class CollectHexaRuntimeTests(unittest.TestCase):
         self.assertEqual(args.mode, "attach")
         self.assertEqual(args.output, "hexa-runtime.jsonl")
 
+    def test_parser_accepts_launch_attach_mode(self):
+        args = build_parser().parse_args(["--config", "config.json", "--mode", "launch-attach"])
+        self.assertEqual(args.mode, "launch-attach")
+
     def test_parser_accepts_remote_frida_server(self):
         args = build_parser().parse_args(["--config", "config.json", "--remote", "127.0.0.1:27042"])
         self.assertEqual(args.remote, "127.0.0.1:27042")
