@@ -1,0 +1,50 @@
+{
+  "module": "libil2cpp.so",
+  "apiRvas": {
+    "il2cpp_domain_get": "0x1e3b218",
+    "il2cpp_domain_get_assemblies": "0x1e3b224",
+    "il2cpp_assembly_get_image": "0x1e3ad1c",
+    "il2cpp_image_get_name": "0x1e3b8f0",
+    "il2cpp_class_from_name": "0x1e3ad54",
+    "il2cpp_class_get_method_from_name": "0x1e3ad7c",
+    "il2cpp_class_get_field_from_name": "0x1e3ad74",
+    "il2cpp_field_get_offset": "0x1e3b3f0",
+    "il2cpp_thread_attach": "0x1e3b674"
+  },
+  "methods": [
+    {"name": "Gameplay.Cell.PlaceHex", "image": "Assembly-CSharp.dll", "namespace": "Gameplay", "class": "Cell", "method": "PlaceHex", "paramCount": -1},
+    {"name": "Gameplay.HexaSortMerge.CheckMerge", "image": "Assembly-CSharp.dll", "namespace": "Gameplay", "class": "HexaSortMerge", "method": "CheckMerge", "paramCount": -1},
+    {"name": "Gameplay.Tray.RefreshTray", "image": "Assembly-CSharp.dll", "namespace": "Gameplay", "class": "Tray", "method": "RefreshTray", "paramCount": -1},
+    {"name": "Gameplay.Tray.InitialSpawn", "image": "Assembly-CSharp.dll", "namespace": "Gameplay", "class": "Tray", "method": "InitialSpawn", "paramCount": -1},
+    {"name": "Gameplay.HexaSortMerge.CheckFail", "image": "Assembly-CSharp.dll", "namespace": "Gameplay", "class": "HexaSortMerge", "method": "CheckFail", "paramCount": -1}
+  ],
+  "limits": {"maxStringBytes": 512, "maxCollectionItems": 256},
+  "fields": {},
+  "state": {
+    "Gameplay.Cell.PlaceHex": {
+      "root": {"namespace": "Gameplay", "class": "Cell"},
+      "board": {
+        "CellNumber": "u32", "RequiredType": "u32", "Cost": "u32", "Index": "i32",
+        "State": {"type": "u32", "fieldName": "<State>k__BackingField"}, "ParamOne": "u32", "AdditionalParam": "string",
+        "CellData": {"type": "object", "namespace": "Gameplay", "class": "CellData", "fields": {
+          "Row": "i32", "Col": "i32", "Cost": "u32", "RequiredType": "u32",
+          "State": "u32", "NextCost": "u32", "NextRequiredType": "u32",
+          "NextState": "u32", "Probability": "u32", "AdditionalParam": "string",
+          "NextParamOne": "u32", "NextAdditionalParam": "string"
+        }}
+      }
+    },
+    "Gameplay.HexaSortMerge.CheckMerge": {
+      "root": {"namespace": "Gameplay", "class": "HexaSortMerge"},
+      "board": {"IsSorting": "bool", "IsMerging": "bool", "ShouldCheckMerge": "bool", "ShouldCheckFail": "bool", "IsFail": "bool", "IsComplete": "bool"}
+    },
+    "Gameplay.HexaSortMerge.CheckFail": {
+      "root": {"namespace": "Gameplay", "class": "HexaSortMerge"},
+      "board": {"IsSorting": "bool", "IsMerging": "bool", "ShouldCheckMerge": "bool", "ShouldCheckFail": "bool", "IsFail": "bool", "IsComplete": "bool"}
+    },
+    "Gameplay.Tray.RefreshTray": {
+      "root": {"namespace": "Gameplay", "class": "Tray"},
+      "tray": {"IsFailing": "bool", "TrayAvailableSlots": "u32", "_isDragDisabled": "bool", "InitialSpawnDelay": "u32"}
+    }
+  }
+}

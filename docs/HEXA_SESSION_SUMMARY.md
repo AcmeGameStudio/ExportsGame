@@ -16,6 +16,7 @@
 - Payload 解析：`scripts/level_payload.py`
 - IL2CPP metadata 解析：`scripts/il2cpp_metadata.py`
 - 本地存档修改脚本：`scripts/modify_hexasort_save.sh`
+- 只读 Frida 运行时观测器：`frida/hexa_runtime_observer.js`、`frida/collect_hexa_runtime.py`
 
 ## 关卡数据结论
 
