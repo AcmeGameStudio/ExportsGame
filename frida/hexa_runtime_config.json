@@ -6,9 +6,15 @@
     "il2cpp_assembly_get_image": "0x1e3ad1c",
     "il2cpp_image_get_name": "0x1e3b8f0",
     "il2cpp_class_from_name": "0x1e3ad54",
+    "il2cpp_class_get_nested_types": "0x1e3ad64",
     "il2cpp_class_get_method_from_name": "0x1e3ad7c",
     "il2cpp_class_get_field_from_name": "0x1e3ad74",
     "il2cpp_field_get_offset": "0x1e3b3f0",
+    "il2cpp_field_get_type": "0x1e3b3f4",
+    "il2cpp_type_get_name": "0x1e3b6d4",
+    "il2cpp_object_get_class": "0x1e3b5e8",
+    "il2cpp_class_get_name": "0x1e3ad80",
+    "il2cpp_class_get_namespace": "0x1e3ad84",
     "il2cpp_thread_attach": "0x1e3b674"
   },
   "methods": [
@@ -24,17 +30,65 @@
     "Gameplay.Cell.PlaceHex": {
       "root": {"namespace": "Gameplay", "class": "Cell"},
       "board": {
-        "CellNumber": "u32", "RequiredType": "u32", "Cost": "u32", "Index": "i32",
+        "CellNumber": "pointer", "RequiredType": "u32", "Cost": "u32", "Index": "i32",
         "State": {"type": "u32", "fieldName": "<State>k__BackingField"}, "ParamOne": "u32", "AdditionalParam": "string",
         "CellData": {"type": "object", "namespace": "Gameplay", "class": "CellData", "fields": {
-          "Row": "i32", "Col": "i32", "Cost": "u32", "RequiredType": "u32", "State": "u32",
+          "Row": "i32", "Col": "i32", "Types": {"type": "list", "item": "u32"}, "Cost": "u32", "RequiredType": "u32", "State": "u32",
           "NextCost": "u32", "NextRequiredType": "u32", "NextState": "u32", "Probability": "u32",
           "AdditionalParam": "string", "NextParamOne": "u32", "NextAdditionalParam": "string"
         }}
       }
     },
-    "Gameplay.HexaSortMerge.CheckMerge": {"root": {"namespace": "Gameplay", "class": "HexaSortMerge"}, "board": {"IsSorting": "bool", "IsMerging": "bool", "ShouldCheckMerge": "bool", "ShouldCheckFail": "bool", "IsFail": "bool", "IsComplete": "bool"}},
-    "Gameplay.HexaSortMerge.CheckFail": {"root": {"namespace": "Gameplay", "class": "HexaSortMerge"}, "board": {"IsSorting": "bool", "IsMerging": "bool", "ShouldCheckMerge": "bool", "ShouldCheckFail": "bool", "IsFail": "bool", "IsComplete": "bool"}},
-    "Gameplay.Tray.RefreshTray": {"root": {"namespace": "Gameplay", "class": "Tray"}, "tray": {"IsFailing": "bool", "TrayAvailableSlots": "u32", "_isDragDisabled": "bool", "InitialSpawnDelay": "u32"}}
+    "Gameplay.HexaSortMerge.CheckMerge": {
+      "root": {"namespace": "Gameplay", "class": "HexaSortMerge"},
+      "board": {
+        "IsSorting": "bool", "IsMerging": "bool", "ShouldCheckMerge": "bool", "ShouldCheckFail": "bool", "IsFail": "bool", "IsComplete": "bool",
+        "GridSystem": {
+          "type": "object", "namespace": "Gameplay", "class": "GridSystem",
+          "fields": {
+            "Cells": {
+              "type": "dictionary", "key": "i32pair", "entrySize": 24, "valueOffset": 16,
+              "value": {
+                "type": "object", "namespace": "Gameplay", "class": "Cell",
+                "fields": {
+                  "Index": "i32",
+                  "Blocks": {"type": "list", "item": {"type": "object", "namespace": "Gameplay", "class": "Block", "fields": {"_type": "u32", "sequence": "i32"}}},
+                  "CellData": {
+                    "type": "object", "namespace": "Gameplay", "class": "CellData",
+                    "fields": {"Row": "i32", "Col": "i32", "Types": {"type": "list", "item": "u32"}, "State": "u32", "NextState": "u32"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "tray": {
+        "Tray": {
+          "type": "object", "namespace": "Gameplay", "class": "Tray",
+          "fields": {
+            "TrayItems": {
+              "type": "list",
+              "item": {
+                "type": "object", "namespace": "Gameplay", "class": "TrayItem",
+                "fields": {
+                  "_trayIndex": "i32", "_sequence": "i32",
+                  "_piece": {
+                    "type": "object", "namespace": "Gameplay", "class": "Piece",
+                    "fields": {
+                      "_pieceData": {"type": "object", "namespace": "Gameplay", "class": "PieceData", "fields": {"Types": {"type": "list", "item": "u32"}}},
+                      "Blocks": {"type": "list", "item": {"type": "object", "namespace": "Gameplay", "class": "Block", "fields": {"_type": "u32", "sequence": "i32"}}}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Gameplay.HexaSortMerge.CheckFail": {"root": {"namespace": "Gameplay", "class": "HexaSortMerge"}, "board": {"IsSorting": "bool", "IsMerging": "bool", "ShouldCheckMerge": "bool", "ShouldCheckFail": "bool", "IsFail": "bool", "IsComplete": "bool"}, "goals": {"LevelGoalTracker": {"type": "object", "namespace": "Gameplay", "class": "LevelGoalTracker", "fields": {"Goals": {"type": "list", "item": {"type": "object", "namespace": "Gameplay", "declaringClass": "LevelGoalTracker", "class": "GoalTracker", "fields": {"Type": "u32", "Target": "u32", "Achieved": "u32"}}}}}}},
+    "Gameplay.Tray.RefreshTray": {"root": {"namespace": "Gameplay", "class": "Tray"}, "tray": {"IsFailing": "bool", "TrayAvailableSlots": "u32", "_isDragDisabled": "bool", "InitialSpawnDelay": "u32", "TrayItems": {"type": "list", "item": {"type": "object", "namespace": "Gameplay", "class": "TrayItem", "fields": {"_trayIndex": "i32", "_sequence": "i32"}}}}},
+    "Gameplay.Tray.InitialSpawn": {"root": {"namespace": "Gameplay", "class": "Tray"}, "tray": {"TrayItems": {"type": "list", "item": {"type": "object", "namespace": "Gameplay", "class": "TrayItem", "fields": {"_trayIndex": "i32", "_sequence": "i32"}}}}}
   }
 }

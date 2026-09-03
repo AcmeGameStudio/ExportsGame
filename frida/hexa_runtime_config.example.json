@@ -21,30 +21,10 @@
   "limits": {"maxStringBytes": 512, "maxCollectionItems": 256},
   "fields": {},
   "state": {
-    "Gameplay.Cell.PlaceHex": {
-      "root": {"namespace": "Gameplay", "class": "Cell"},
-      "board": {
-        "CellNumber": "u32", "RequiredType": "u32", "Cost": "u32", "Index": "i32",
-        "State": {"type": "u32", "fieldName": "<State>k__BackingField"}, "ParamOne": "u32", "AdditionalParam": "string",
-        "CellData": {"type": "object", "namespace": "Gameplay", "class": "CellData", "fields": {
-          "Row": "i32", "Col": "i32", "Cost": "u32", "RequiredType": "u32",
-          "State": "u32", "NextCost": "u32", "NextRequiredType": "u32",
-          "NextState": "u32", "Probability": "u32", "AdditionalParam": "string",
-          "NextParamOne": "u32", "NextAdditionalParam": "string"
-        }}
-      }
-    },
-    "Gameplay.HexaSortMerge.CheckMerge": {
-      "root": {"namespace": "Gameplay", "class": "HexaSortMerge"},
-      "board": {"IsSorting": "bool", "IsMerging": "bool", "ShouldCheckMerge": "bool", "ShouldCheckFail": "bool", "IsFail": "bool", "IsComplete": "bool"}
-    },
-    "Gameplay.HexaSortMerge.CheckFail": {
-      "root": {"namespace": "Gameplay", "class": "HexaSortMerge"},
-      "board": {"IsSorting": "bool", "IsMerging": "bool", "ShouldCheckMerge": "bool", "ShouldCheckFail": "bool", "IsFail": "bool", "IsComplete": "bool"}
-    },
-    "Gameplay.Tray.RefreshTray": {
-      "root": {"namespace": "Gameplay", "class": "Tray"},
-      "tray": {"IsFailing": "bool", "TrayAvailableSlots": "u32", "_isDragDisabled": "bool", "InitialSpawnDelay": "u32"}
-    }
+    "Gameplay.Cell.PlaceHex": {"root":{"namespace":"Gameplay","class":"Cell"},"board":{"CellData":{"type":"object","namespace":"Gameplay","class":"CellData","fields":{"Row":"i32","Col":"i32","Types":{"type":"list","item":"u32"},"Cost":"u32","State":"u32","NextState":"u32","AdditionalParam":"string"}}}},
+    "Gameplay.HexaSortMerge.CheckMerge":{"root":{"namespace":"Gameplay","class":"HexaSortMerge"},"board":{"IsSorting":"bool","IsMerging":"bool","ShouldCheckMerge":"bool","ShouldCheckFail":"bool","IsFail":"bool","IsComplete":"bool"}},
+    "Gameplay.HexaSortMerge.CheckFail":{"root":{"namespace":"Gameplay","class":"HexaSortMerge"},"board":{"IsSorting":"bool","IsMerging":"bool","ShouldCheckMerge":"bool","ShouldCheckFail":"bool","IsFail":"bool","IsComplete":"bool"}},
+    "Gameplay.Tray.RefreshTray":{"root":{"namespace":"Gameplay","class":"Tray"},"tray":{"IsFailing":"bool","TrayAvailableSlots":"u32","_isDragDisabled":"bool"}},
+    "Gameplay.Tray.InitialSpawn":{"root":{"namespace":"Gameplay","class":"Tray"},"tray":{"IsFailing":"bool","TrayAvailableSlots":"u32","_isDragDisabled":"bool"}}
   }
 }

@@ -24,6 +24,8 @@
 
    ```bash
    adb forward tcp:27042 tcp:27042
+
+   ./frida-server-17.17.0-android-arm64 -l 127.0.0.1:27042
    ```
 
    然后追加 `--remote 127.0.0.1:27042`。若需要在启动时注入，使用 `--mode spawn`；attach 模式要求应用已经运行。多设备时使用 `--device SERIAL`。

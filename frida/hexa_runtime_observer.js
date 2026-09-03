@@ -6,6 +6,9 @@ let configuration = { module: "libil2cpp.so", methods: [], limits: {}, fields: {
 let hooks = [];
 let sequence = 0;
 let inHook = false;
+const IL2CPP_OBJECT_HEADER_SIZE = Process.pointerSize * 2;
+const IL2CPP_ARRAY_LENGTH_OFFSET = IL2CPP_OBJECT_HEADER_SIZE + Process.pointerSize;
+const IL2CPP_ARRAY_DATA_OFFSET = IL2CPP_OBJECT_HEADER_SIZE + Process.pointerSize * 2;
 
 function limit(name, fallback) {
   const value = Number(configuration.limits && configuration.limits[name]);
@@ -21,6 +24,48 @@ function safeRead(read, diagnostics, label) {
     diagnostics.push({ code: "read_error", field: label, message: String(error) });
     return null;
   }
+}
+
+function shouldDebugField(label) {
+  const prefixes = configuration.debugFieldPrefixes || [];
+  return prefixes.some(prefix => label.indexOf(prefix) !== -1);
+}
+
+function shouldDebugCollection(label) {
+  const prefixes = configuration.debugCollectionPrefixes || [];
+  return prefixes.some(prefix => label.indexOf(prefix) !== -1);
+}
+
+function recordFieldLayout(base, offset, diagnostics, label) {
+  if (!shouldDebugField(label)) return;
+  const detail = safeRead(() => ({
+    code: "field_layout",
+    field: label,
+    offset: `0x${Number(offset).toString(16)}`,
+    address: ptrText(base.add(offset)),
+    u32: base.add(offset).readU32(),
+    pointer: ptrText(base.add(offset).readPointer())
+  }), diagnostics, label);
+  if (detail) diagnostics.push(detail);
+}
+
+function recordCollectionLayout(value, field, apiFns, diagnostics, label) {
+  if (!shouldDebugCollection(label)) return;
+  const detail = safeRead(() => {
+    const fieldType = apiFns.typeGetName(apiFns.fieldGetType(field)).readUtf8String();
+    const klass = apiFns.objectGetClass(value);
+    return {
+      code: "collection_layout",
+      field: label,
+      declared_type: fieldType,
+      object_class: `${apiFns.classGetNamespace(klass).readUtf8String()}.${apiFns.classGetName(klass).readUtf8String()}`,
+      object: ptrText(value),
+      word_10: ptrText(value.add(IL2CPP_OBJECT_HEADER_SIZE).readPointer()),
+      word_18: value.add(IL2CPP_OBJECT_HEADER_SIZE + Process.pointerSize).readU32(),
+      word_20: value.add(IL2CPP_ARRAY_DATA_OFFSET).readU32()
+    };
+  }, diagnostics, label);
+  if (detail) diagnostics.push(detail);
 }
 
 function readU32(base, offset, diagnostics, label) {
@@ -45,9 +90,9 @@ function readString(base, offset, diagnostics, label) {
 }
 
 function readIl2CppString(value, maxBytes) {
-  const length = value.add(Process.pointerSize).readU32();
+  const length = value.add(IL2CPP_OBJECT_HEADER_SIZE).readU32();
   const count = Math.min(length, Math.floor(maxBytes / 2));
-  return value.add(Process.pointerSize + 4).readUtf16String(count);
+  return value.add(IL2CPP_OBJECT_HEADER_SIZE + 4).readUtf16String(count);
 }
 
 function readConfigured(base, spec, diagnostics, label) {
@@ -61,7 +106,7 @@ function readConfigured(base, spec, diagnostics, label) {
   return null;
 }
 
-function resolveClass(item, domain, getAssemblies, getImage, imageName, classFromName) {
+function resolveClass(item, domain, getAssemblies, getImage, imageName, classFromName, classGetNestedTypes, classGetName) {
   const count = Memory.alloc(Process.pointerSize);
   count.writeU64(0);
   const assemblies = getAssemblies(domain, count);
@@ -71,6 +116,17 @@ function resolveClass(item, domain, getAssemblies, getImage, imageName, classFro
     const image = getImage(assembly);
     const name = imageName(image).readUtf8String();
     if (name !== wantedImage) continue;
+    if (item.declaringClass) {
+      const parent = classFromName(image, Memory.allocUtf8String(item.namespace || ""), Memory.allocUtf8String(item.declaringClass));
+      if (parent.isNull()) continue;
+      const iterator = Memory.alloc(Process.pointerSize);
+      iterator.writePointer(ptr("0"));
+      let nested;
+      while ((nested = classGetNestedTypes(parent, iterator)) && !nested.isNull()) {
+        if (classGetName(nested).readUtf8String() === item.class) return nested;
+      }
+      continue;
+    }
     const klass = classFromName(image, Memory.allocUtf8String(item.namespace || ""), Memory.allocUtf8String(item.class));
     if (!klass.isNull()) return klass;
   }
@@ -79,7 +135,7 @@ function resolveClass(item, domain, getAssemblies, getImage, imageName, classFro
 
 function readStateFields(base, classSpec, fields, apiFns, diagnostics, label) {
   if (!base || base.isNull() || !fields) return {};
-  const klass = resolveClass(classSpec, apiFns.domainGet(), apiFns.getAssemblies, apiFns.getImage, apiFns.imageName, apiFns.classFromName);
+  const klass = resolveClass(classSpec, apiFns.domainGet(), apiFns.getAssemblies, apiFns.getImage, apiFns.imageName, apiFns.classFromName, apiFns.classGetNestedTypes, apiFns.classGetName);
   const result = {};
   Object.keys(fields).forEach(name => {
     const spec = fields[name];
@@ -88,17 +144,99 @@ function readStateFields(base, classSpec, fields, apiFns, diagnostics, label) {
     const field = apiFns.classGetField(klass, Memory.allocUtf8String(fieldName));
     if (field.isNull()) { diagnostics.push({ code: "field_missing", field: `${label}.${name}` }); return; }
     const offset = apiFns.fieldOffset(field);
+    recordFieldLayout(base, offset, diagnostics, `${label}.${name}`);
     if (type === "u32") result[name] = readU32(base, offset, diagnostics, `${label}.${name}`);
     else if (type === "i32") result[name] = readI32(base, offset, diagnostics, `${label}.${name}`);
     else if (type === "bool") result[name] = readBool(base, offset, diagnostics, `${label}.${name}`);
     else if (type === "string") result[name] = readString(base, offset, diagnostics, `${label}.${name}`);
     else if (type === "pointer") result[name] = safeRead(() => ptrText(base.add(offset).readPointer()), diagnostics, `${label}.${name}`);
+    else if (type === "list" || type === "array" || type === "collection") {
+      const list = safeRead(() => base.add(offset).readPointer(), diagnostics, `${label}.${name}`);
+      const itemSpec = typeof spec === "object" ? spec.item : null;
+      if (list && !list.isNull()) recordCollectionLayout(list, field, apiFns, diagnostics, `${label}.${name}`);
+      result[name] = list && !list.isNull() ? readList(list, itemSpec, apiFns, diagnostics, `${label}.${name}`, type) : [];
+    }
+    else if (type === "dictionary") {
+      const dictionary = safeRead(() => base.add(offset).readPointer(), diagnostics, `${label}.${name}`);
+      if (dictionary && !dictionary.isNull()) recordCollectionLayout(dictionary, field, apiFns, diagnostics, `${label}.${name}`);
+      result[name] = dictionary && !dictionary.isNull() ? readDictionary(dictionary, spec, apiFns, diagnostics, `${label}.${name}`) : [];
+    }
     else if (type === "object") {
       const child = safeRead(() => base.add(offset).readPointer(), diagnostics, `${label}.${name}`);
       result[name] = child && !child.isNull() ? readStateFields(child, spec, spec.fields, apiFns, diagnostics, `${label}.${name}`) : null;
     }
   });
   return result;
+}
+
+function readablePointer(value) {
+  try {
+    if (!value || value.isNull()) return false;
+    if (typeof Process.findRangeByAddress === "function") return Process.findRangeByAddress(value) !== null;
+    value.readU8();
+    return true;
+  } catch (_) { return false; }
+}
+
+function readList(list, itemSpec, apiFns, diagnostics, label, requestedType) {
+  const max = limit("maxCollectionItems", 256);
+  return safeRead(() => {
+    let items;
+    let size;
+    let data;
+    if (requestedType === "array") {
+      size = Math.min(Math.max(list.add(IL2CPP_ARRAY_LENGTH_OFFSET).readS32(), 0), max);
+      data = list.add(IL2CPP_ARRAY_DATA_OFFSET);
+    } else {
+      items = list.add(IL2CPP_OBJECT_HEADER_SIZE).readPointer();
+      const listSize = list.add(IL2CPP_OBJECT_HEADER_SIZE + Process.pointerSize).readS32();
+      if (requestedType === "collection" || requestedType === "list") {
+        if (readablePointer(items)) {
+          size = Math.min(Math.max(listSize, 0), max);
+          data = items.add(IL2CPP_ARRAY_DATA_OFFSET);
+        } else {
+          size = Math.min(Math.max(list.add(IL2CPP_ARRAY_LENGTH_OFFSET).readS32(), 0), max);
+          data = list.add(IL2CPP_ARRAY_DATA_OFFSET);
+        }
+      } else return [];
+    }
+    if (size <= 0) return [];
+    const type = typeof itemSpec === "string" ? itemSpec : itemSpec.type;
+    const values = [];
+    for (let index = 0; index < size; index++) {
+      const slot = data.add(index * (type === "u32" || type === "i32" || type === "bool" ? 4 : Process.pointerSize));
+      if (type === "u32") values.push(slot.readU32());
+      else if (type === "i32") values.push(slot.readS32());
+      else if (type === "bool") values.push(slot.readU8() !== 0);
+      else if (type === "object") {
+        const object = slot.readPointer();
+        values.push(object.isNull() ? null : readStateFields(object, itemSpec, itemSpec.fields, apiFns, diagnostics, `${label}[${index}]`));
+      } else values.push(ptrText(slot.readPointer()));
+    }
+    return values;
+  }, diagnostics, label) || [];
+}
+
+function readDictionary(dictionary, spec, apiFns, diagnostics, label) {
+  const max = limit("maxCollectionItems", 256);
+  return safeRead(() => {
+    const entries = dictionary.add(IL2CPP_OBJECT_HEADER_SIZE + Process.pointerSize).readPointer();
+    const count = Math.min(Math.max(dictionary.add(IL2CPP_ARRAY_DATA_OFFSET).readS32(), 0), max);
+    if (entries.isNull() || count <= 0) return [];
+    const entrySize = Number(spec.entrySize || 24);
+    const data = entries.add(IL2CPP_ARRAY_DATA_OFFSET);
+    const valueOffset = Number(spec.valueOffset || 16);
+    const values = [];
+    for (let index = 0; index < count; index++) {
+      const entry = data.add(index * entrySize);
+      if (entry.readS32() < 0) continue;
+      const value = entry.add(valueOffset).readPointer();
+      const item = { value: value.isNull() ? null : readStateFields(value, spec.value, spec.value.fields, apiFns, diagnostics, `${label}[${index}].value`) };
+      if (spec.key === "i32pair") item.key = { row: entry.add(8).readS32(), col: entry.add(12).readS32() };
+      values.push(item);
+    }
+    return values;
+  }, diagnostics, label) || [];
 }
 
 function snapshot(thisPtr, methodName, diagnostics) {
@@ -114,7 +252,13 @@ function snapshot(thisPtr, methodName, diagnostics) {
       imageName: exported("il2cpp_image_get_name", "pointer", ["pointer"]),
       classFromName: exported("il2cpp_class_from_name", "pointer", ["pointer", "pointer", "pointer"]),
       classGetField: exported("il2cpp_class_get_field_from_name", "pointer", ["pointer", "pointer"]),
-      fieldOffset: exported("il2cpp_field_get_offset", "int", ["pointer"])
+      classGetNestedTypes: exported("il2cpp_class_get_nested_types", "pointer", ["pointer", "pointer"]),
+      fieldOffset: exported("il2cpp_field_get_offset", "int", ["pointer"]),
+      fieldGetType: exported("il2cpp_field_get_type", "pointer", ["pointer"]),
+      typeGetName: exported("il2cpp_type_get_name", "pointer", ["pointer"]),
+      objectGetClass: exported("il2cpp_object_get_class", "pointer", ["pointer"]),
+      classGetName: exported("il2cpp_class_get_name", "pointer", ["pointer"]),
+      classGetNamespace: exported("il2cpp_class_get_namespace", "pointer", ["pointer"])
     };
     for (const name of ["board", "tray", "goals"]) {
       const fields = stateConfig[name];
