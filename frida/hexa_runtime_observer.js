@@ -436,13 +436,22 @@ function installWhenModuleReady() {
     clearInterval(installTimer);
     installTimer = null;
   }
-  emit("session_ready", null, { diagnostics: [], hooks: hooks.length });
+  if (configuration.methods.length > 0 && hooks.length === 0) {
+    emit("session_error", null, { diagnostics: [{ code: "no_hooks_installed" }], hooks: 0 });
+  } else {
+    emit("session_ready", null, { diagnostics: [], hooks: hooks.length });
+  }
   return true;
 }
 
 function il2cppRuntimeReady() {
   if (!moduleBase()) return false;
   try {
+    // domain_get lazily creates a domain even before the GC/runtime is ready.
+    // get_corlib only reads the core image pointer; never attach a thread until
+    // that image has been loaded by IL2CPP initialization.
+    const corlib = exported("il2cpp_get_corlib", "pointer", [])();
+    if (!corlib || corlib.isNull()) return false;
     const domain = exported("il2cpp_domain_get", "pointer", [])();
     return domain && !domain.isNull();
   } catch (_) { return false; }

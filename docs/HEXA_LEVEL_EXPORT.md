@@ -160,9 +160,9 @@ Screenshot
 
 | 字段 | 语义/观察 |
 |---|---|
-| `LevelMode` | 当前全部为 `0`，表示标准关卡模式 |
-| `Time` / `Moves` | 当前全部为 `0`，实际限时配置主要在 Catalog 的 `IsTimeBasedLevel` / `LevelTime` |
-| `PreCreatedHex` | 开局预置 Hex 数量或预生成数量 |
+| `LevelMode` | `0=Classic`、`1=BoardClear`，当前样本均为 Classic |
+| `Time` / `Moves` | 当前全部为 `0`。Catalog 的 `IsTimeBasedLevel` / `LevelTime` 标注限时变体，倒计时调用点尚待确认 |
+| `PreCreatedHex` | 初始化 `TotalHexCreatedInLevel` 的累积计数 |
 | `FlipTime` | 棋盘翻转/动画时间，主要为 `0.55` |
 | `TutorialSteps` | 教学步骤数量 |
 | `RotationalValue` | 棋盘旋转参数，绝大多数为 `0` |
@@ -185,7 +185,7 @@ Screenshot
 | `required_type` | 要求的类型，当前大部分为 `0` |
 | `state` | 当前格子状态/玩法编码 |
 | `next_cost` / `next_state` | 当前状态触发后的下一阶段 |
-| `probability` | 概率参数，当前常见为 `0` 或 `1` |
+| `probability` | 状态参数 `ParamOne`，各机关分别解释 |
 | `additional_param` | 当前特殊玩法的 JSON 参数 |
 | `next_additional_param` | 下一阶段的特殊玩法参数 |
 
@@ -215,7 +215,7 @@ Screenshot
 | `65` | Hex Generator | `Rotation`、`Difficulty`、`targetHexTypes`、`selfHexTypes` |
 | `68` | Firecracker Generator 爆竹生成器 | `FirecrackerCount`、`Continuous`、`StartingCost` |
 
-尚未能仅凭静态 LevelData 完全命名的状态包括 `1、2、3、4、6、7、8、13、14、17、18、20、21、22、23、25、26、27、28、29、31、32、33、36、37、42、43、45、47`。其中一部分是普通阻挡/成本状态，另一部分是特殊玩法的中间阶段，需要结合 `next_state` 或 IL2CPP 运行时代码进一步确认。
+全部编号和二进制证据见 [关卡玩法判定](binary-analysis/LEVEL_GAMEPLAY_CLASSIFICATION.md)。
 
 ## 特殊参数映射
 
@@ -270,16 +270,7 @@ Screenshot
 
 ## 推荐的识别优先级
 
-解析特殊玩法时，应按以下顺序判断：
-
-```text
-additional_param 的专属 key
-    > state 数值
-    > next_state / cost
-    > 关卡名称和 Catalog 名称
-```
-
-例如，只要某格包含 `MoleID`，就应优先识别为 Mole，而不是只根据 `state` 推断。`debug_candy_1`、`debug_soil_1` 等文件名只能作为辅助证据，不能当作正式枚举名称。
+用 `state` 识别开局机关，用 `next_state` 识别后续机关，分别结合当前和后续的参数。像 `MoleID` 这样的专属 key 可确认部件关联。遇到枚举未定义的旧状态时，可用专属 key 和样本名称保留兼容标签，例如 `state=41` 与 `FrogID`。
 
 ## 玩法行为与数据层的区别
 
@@ -396,78 +387,9 @@ libil2cpp.so
 global-metadata.dat
 ```
 
-metadata 中的 `Gameplay.CellState` 枚举包含完整玩法名称。对比静态 LevelData 后发现：旧/主流配置里的导出 `state` 通常是运行时枚举底层值除以 2 的编码形式；例如运行时 `Dice=88`，静态 JSON 为 `state=44`。因此可以得到以下高置信映射：
+metadata v39 使用压缩有符号整数存放枚举默认值。关卡的 `state` 和 `next_state` 直接使用 `Gameplay.CellState` 的整数值。比如 `1=RV`、`2=Cost`、`3=Wood`、`4=Ice`、`5=Hole`、`44=Dice`、`65=HexGenerator`、`68=FireCrackerGenerator`。当前二进制的 `Dead=-1`。
 
-| LevelData state | 运行时 CellState | 玩法 |
-|---:|---:|---|
-| `0` | `Open=0` | 普通开放格 |
-| `1` | `Dead=1` 或 RV 兼容值 | 空/失效状态，需结合上下文 |
-| `2` | `RV=2` | RV/特殊旋转流程 |
-| `3` | `Wood=6` | 木头 |
-| `4` | `Cost=4` | 成本/次数锁 |
-| `5` | `Ice=8` | 冰块 |
-| `6` | `Grass=12` | 草地 |
-| `7` | `Camera=14` | 摄像机格 |
-| `8` | `LockHighRise=16` | 高楼锁 |
-| `9` | `FridgeCan=18` | 冰箱罐/冰箱类障碍 |
-| `10` | `BirdHouse=20` | 鸟屋 |
-| `11` | `WaitingCell=22` | Waiting Cell |
-| `12` | `WaitingCellStack=24` | Waiting Cell Stack |
-| `13` | `FireCracker=26` | 普通爆竹 |
-| `14` | `Toaster=28` | 烤面包机 |
-| `15` | `Gramophone=30` | 留声机 |
-| `16` | `ColorNuts=32` | 彩色坚果 |
-| `17` | `CarParking=34` | 汽车/停车位 |
-| `18` | `Curtain=36` | 窗帘 |
-| `19` | `Cloud=38` | 云 |
-| `20` | `Playpen=40` | 围栏/球池 |
-| `21` | `GemBox=42` | 宝石盒 |
-| `22` | `Gem=44` | 宝石 |
-| `23` | `Honey=46` | 蜂蜜 |
-| `24` | `HoneyTrap=48` | 蜂蜜陷阱 |
-| `25` | `SnakeBody=50` | 蛇身 |
-| `26` | `SnakeTail=52` | 蛇尾 |
-| `27` | `BirdNest=54` | 鸟巢 |
-| `28` | `Pearl=56` | 珍珠 |
-| `29` | `Doll=58` | 娃娃 |
-| `30` | `Drone=60` | 无人机 |
-| `31` | `DronePad=62` | 无人机停机坪 |
-| `32` | `DroneHandler=64` | 无人机控制器 |
-| `33` | `GeneratorNuts=66` | 坚果生成器 |
-| `34` | `RainbowLauncher=68` | 彩虹发射器 |
-| `35` | `Jelly=70` | 果冻 |
-| `36` | `Bloom=72` | Bloom/花朵 |
-| `37` | `SeedBox=74` | 种子盒 |
-| `38` | `CupboardPrimary=76` | 橱柜主部件 |
-| `39` | `CupboardSecondary=78` | 橱柜副部件 |
-| `42` | `Safe=84` | 保险箱 |
-| `43` | `BoxingGlove=86` | 拳套 |
-| `44` | `Dice=88` | 骰子 |
-| `45` | `Kettle=90` | 水壶 |
-| `46` | `Steam=92` | 蒸汽 |
-| `47` | `PopcornMaker=94` | 爆米花机 |
-| `48` | `Popcorn=96` | 爆米花 |
-| `49` | `TeslaTower=98` | Tesla 塔 |
-| `50` | `TeslaBulb=100` | Tesla 灯泡 |
-| `51` | `Mole=102` | 地鼠 |
-| `52` | `SoilBomb=104` | 土壤炸弹 |
-| `53` | `CandyMachine=106` | 糖果机 |
-| `54` | `Candy=108` | 糖果 |
-| `55` | `Drill=110` | 钻头 |
-| `60` | `Penguin=120` | 企鹅 |
-| `61` | `Igloo=122` | 冰屋 |
-| `62` | `Rabbit=124` | 兔子 |
-
-### 两个版本编码例外
-
-runtime enum 还包含 `HexGenerator=128` 和 `FireCrackerGenerator=128`。由于两者在 metadata 中使用同一个底层常量，静态配置通过额外编码区分；当前样本表现为：
-
-- `state=65` + `Rotation` / `Difficulty`：Hex Generator；
-- `state=68` + `FirecrackerCount` / `Continuous`：Firecracker Generator。
-
-所以这两个玩法必须依靠 `additional_param` 识别，不能只用运行时枚举常量。`FrogID` 对应的 Frog 也没有出现在当前 `CellState` 枚举列表中，说明它可能属于旧版兼容层、目标系统或另一个状态枚举。
-
-这次运行时解析将原先大部分“未映射”状态补齐；剩余需要动态观察的重点主要是 `state=1/2` 的兼容语义，以及 `state=65/68` 的新玩法编码规则。
+完整映射、Goals 编号、Catalog 变体和分类例子见 [关卡玩法判定](binary-analysis/LEVEL_GAMEPLAY_CLASSIFICATION.md)。
 
 ## 运行时本地存档：关卡、金币与道具库存
 
@@ -594,7 +516,7 @@ ValidatePiecesWithGrid 检查是否至少存在可放置/可推进候选
 | 配置/字段 | 作用 |
 |---|---|
 | `LevelData.Pieces` | 关卡指定的初始手牌；有些关卡三个槽位为空，表示交给运行时生成 |
-| `PreCreatedHex` | 关卡开局预置 Hex 数量，影响初始棋盘和可生成类型 |
+| `PreCreatedHex` | 开局累计生成数初值，影响后续发牌何时换档 |
 | `Thresholds` | 按 Hex 数量/进度切换生成阶段或难度 |
 | `Difficulty` | 影响候选类型、堆叠长度和生成倾向 |
 | `LevelDifficultyOverrideData` | 按关卡覆盖动态难度倍率和尝试次数倍率 |
@@ -612,13 +534,7 @@ ValidatePiecesWithGrid 检查是否至少存在可放置/可推进候选
 
 ### 新手阶段的实际含义
 
-`SetupEasyTray` 和 `MinEasyHexPerStack/MaxEasyHexPerStack` 表明“新手牌”不是单独的一种数据格式，而是生成算法的 Easy 分支。它通常会：
-
-- 限制堆叠层数，降低一次操作的复杂度；
-- 优先选择当前棋盘已有或容易形成合并的类型；
-- 避免生成完全无法放置的组合；
-- 在特殊玩法教学阶段配合 `TutorialSteps`、`CellsForTutorial` 和 `GetPowerupPieces`；
-- 在动态难度系统介入后，根据失败次数/尝试次数调整生成难度。
+`SetupEasyTray` 写入 Easy 模式、临时标记和计数。临时 Easy 将普通随机堆的候选色限制为 1。持久 Easy 使大于 1 的候选色上限减 1。`MinEasyHexPerStack/MaxEasyHexPerStack` 用在同色配对堆。生成顺序和校验条件见 [手牌二进制分析](binary-analysis/README.md)。
 
 ### Refresh 与随机性的区别
 
@@ -643,7 +559,7 @@ Refresh/Shuffle 是对当前 Tray 重新请求一组手牌，不等于重置整�
 |---|---|---|
 | `Open` | 普通放置或合并 | 接收普通 Hex，参与同色合并 |
 | `Dead` | 运行时失效/不可用状态 | 不参与正常放置；常用于状态机或旧版兼容 |
-| `RV` | 通过奖励视频/复活解锁 | 将原本受限的格子临时开放，具体范围由 RV 状态控制 |
+| `RV` | 通过奖励视频或金币解锁 | 取实际格状态，由 `ExtraSlotConfig.GetCellState` 解析 |
 | `Cost` | 在格子或锁上进行合并 | 每次满足条件的合并减少成本；成本为 0 后开放/进入下一状态 |
 | `Wood` | 在木头相邻位置合并 | 消耗/破坏木头；目标文本明确为“合并旁边的格子来打破木头” |
 | `Ice` | 在冰块相邻位置合并 | 破坏冰块；通常是逐个或按配置消耗冰层 |
@@ -721,37 +637,19 @@ Refresh/Shuffle 是对当前 Tray 重新请求一组手牌，不等于重置整�
 
 ### 1. 首次进入关卡
 
-`Tray.InitialSpawn` 负责首次生成。若 `LevelData.Pieces` 中存在非空槽位，优先使用关卡配置的静态手牌；如果三个槽位为空或部分为空，则由 `SpawningAlgorithm` 补齐。`TutorialSteps`、`CellsForTutorial` 和 `SetupEasyTray` 可以覆盖普通生成逻辑。
+`Tray.InitialSpawn` 会检查 `LevelData.Pieces`。预设堆数达到实际槽数，且每个预设堆均非空时使用关卡手牌。否则整组走 `SpawningAlgorithm.GetNext`。
 
 ### 2. 普通下一组手牌
 
-`SpawningAlgorithm.GetNext → GetPieces → GetPieceRandom` 生成下一组手牌。生成器至少会读取：
+托盘为空后，`GetNext → GetPieces → GetPieceRandom` 生成整组。普通抽样读取空位数、累计生成数、关卡阈值、动态难度和颜色种数配置。
 
-- 当前棋盘每个格子的顶部类型和数量；
-- 当前可放置空格和可合并邻居；
-- `TotalHexCreatedInLevel`；
-- 当前难度和动态难度倍率；
-- `MinRandHexPerStack/MaxRandHexPerStack`；
-- `DefaultMaxTypesInStack`；
-- 当前 Tray 空槽数量。
+### 3. 校验与道具手牌
 
-生成候选后由 `ValidatePiecesWithGrid` 检查棋盘可用性，再通过 `GetCurrentAvailableTypesWithCount` 调整颜色/类型分布。由此可见，手牌刷新是“受棋盘状态约束的随机”，不是完全独立随机。
-
-### 3. 新手 Easy 生成
-
-新手阶段调用 `SetupEasyTray` 或 Easy Tray 变体，核心目标是让玩家能看懂并完成操作：
-
-- 使用较小的 `MinEasyHexPerStack/MaxEasyHexPerStack` 范围；
-- 优先生成当前棋盘已有顶部颜色或可形成合并的类型；
-- 避免连续出现全部无法放置的手牌；
-- 在教程特殊玩法中按 `GetPowerupPieces` 提供引导性手牌；
-- 受到 `TutorialSteps`、动态难度和已完成目标影响。
-
-这意味着新手牌不是固定写死在所有关卡 JSON 中，而是“静态 Pieces + Easy 算法”的组合。
+Easy 临时计数或智能刷新窗口可开启 `ValidatePiecesWithGrid`。校验要求至少一个候选堆顶色命中目标集合，匹配集合为空则通过。恰剩一个空格、未重抽且启用道具引导时，才由 `GetCurrentAvailableTypesWithCount` 为道具分支统计颜色。详细条件见 [手牌二进制分析](binary-analysis/README.md)。
 
 ### 4. Refresh/Shuffle
 
-Refresh 的运行时入口是 `Tray.RefreshTray`，随后重新调用生成算法。它通常只替换当前 Tray 内容，不重置棋盘 Cell、Goals 或已完成的特殊玩法。`SmartRefreshUsed` 表明智能刷新存在一次性或次数限制。
+`Tray.RefreshTray` 写入一次 Easy 覆盖并调用同一生成入口。只有实际重抽才设置本轮的 `SmartRefreshUsed`。
 
 Refresh 结果可能受以下因素影响：
 
@@ -759,10 +657,9 @@ Refresh 结果可能受以下因素影响：
 |---|---|
 | 当前顶部颜色 | 决定候选手牌是否有同色合并机会 |
 | 当前空位 | 决定候选手牌能否放置 |
-| 当前特殊格 | 可能优先生成能触发特殊格的颜色 |
 | `TotalHexCreatedInLevel` | 影响生成阶段和难度阈值 |
 | `CurrentDifficulty` | 影响堆叠长度和类型范围 |
-| `SmartTrayProbability` | 决定是否插入智能候选 |
+| `SmartTrayProbability` | 在时间窗口内决定是否启用棋盘匹配校验 |
 | `SmartTrayTimeWindow` | 限制智能候选的生效时间 |
 | `IsPowerUpEngagementAlgoEnabled` | 允许生成引导特殊道具的手牌 |
 | 复活状态 | `ReviveTrayRefresh` 可能重新整理手牌 |

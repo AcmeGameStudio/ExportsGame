@@ -1,6 +1,7 @@
 {
   "module": "libil2cpp.so",
   "apiRvas": {
+    "il2cpp_get_corlib": "0x1e3ace8",
     "il2cpp_domain_get": "0x1e3b218",
     "il2cpp_domain_get_assemblies": "0x1e3b224",
     "il2cpp_assembly_get_image": "0x1e3ad1c",

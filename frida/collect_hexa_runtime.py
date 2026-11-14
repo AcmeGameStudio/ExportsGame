@@ -64,6 +64,38 @@ def normalize_message(message: dict[str, Any], pid: int) -> dict[str, Any]:
     }
 
 
+def safe_script_detach(script: Any) -> bool:
+    """Detach the agent unless Frida has already destroyed it with the session."""
+    try:
+        script.exports_sync.detach()
+    except Exception as error:
+        if "script has been destroyed" in str(error).lower():
+            return False
+        raise
+    return True
+
+
+def session_detach_event(pid: int, reason: Any, crash: Any) -> dict[str, Any]:
+    # Frida supplies a Crash instance, not a JSON-compatible dict.
+    if crash is not None:
+        if not isinstance(crash, dict):
+            crash = {
+                name: getattr(crash, name, None)
+                for name in ("pid", "process_name", "summary", "report", "parameters")
+            }
+        # Crash parameters may also contain SDK-specific values.
+        crash = json.loads(json.dumps(crash, ensure_ascii=False, default=str))
+    return {
+        "schema_version": 1,
+        "timestamp_ms": int(time.time() * 1000),
+        "pid": pid,
+        "event": "session_detached",
+        "method": None,
+        "sequence": None,
+        "diagnostics": [{"code": "session_detached", "reason": str(reason), "crash": crash}],
+    }
+
+
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
@@ -94,10 +126,17 @@ def main(argv: list[str] | None = None) -> int:
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("a", encoding="utf-8") as stream:
-        def on_message(message: dict[str, Any], _data: Any) -> None:
-            stream.write(json.dumps(normalize_message(message, pid), ensure_ascii=False, separators=(",", ":")) + "\n")
+        def write_event(event: dict[str, Any]) -> None:
+            stream.write(json.dumps(event, ensure_ascii=False, separators=(",", ":")) + "\n")
             stream.flush()
 
+        def on_message(message: dict[str, Any], _data: Any) -> None:
+            write_event(normalize_message(message, pid))
+
+        def on_detached(reason: Any, crash: Any = None) -> None:
+            write_event(session_detach_event(pid, reason, crash))
+
+        session.on("detached", on_detached)
         script = session.create_script(args.config.parent.joinpath("hexa_runtime_observer.js").read_text(encoding="utf-8"))
         script.on("message", on_message)
         script.load()
@@ -105,10 +144,12 @@ def main(argv: list[str] | None = None) -> int:
         if args.mode == "spawn":
             device.resume(pid)
         print(f"Attached to {args.package} (pid={pid}); writing {output}")
-        if not args.no_pause:
-            input("Press Enter to detach... ")
-        script.exports_sync.detach()
-    session.detach()
+        try:
+            if not args.no_pause:
+                input("Press Enter to detach... ")
+        finally:
+            safe_script_detach(script)
+            session.detach()
     return 0
 
 

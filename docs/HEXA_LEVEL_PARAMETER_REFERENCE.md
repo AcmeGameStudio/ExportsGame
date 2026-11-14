@@ -1,5 +1,7 @@
 # Hexa Sort 6.2.20 关卡参数参考
 
+按关卡值判断玩法以及完整的目标、机关编号，见 [关卡玩法判定](binary-analysis/LEVEL_GAMEPLAY_CLASSIFICATION.md)。
+
 本文是对 `Gameplay.LevelConfig`、`LevelData`、Catalog 和运行时特殊玩法参数的整理。结论来自 4171 个导出的关卡、95736 个 Cell、Catalog 表、调试关卡、`global-metadata.dat` 和 `libil2cpp.so` 中的类型/方法名。
 
 ## 1. 关卡数据的分层
@@ -21,20 +23,20 @@ LevelConfig
 
 | 字段 | 当前确认的含义 | 证据/注意 |
 |---|---|---|
-| `LevelMode` | 关卡模式枚举 | 4171 关均为 `0`，具体枚举名尚未从静态数据确认 |
-| `Time` | 旧版关卡级时间限制 | 当前均为 `0`；实际限时关由 Catalog 的 `IsTimeBasedLevel/LevelTime` 控制 |
+| `LevelMode` | 关卡模式枚举 | `0=Classic`、`1=BoardClear`，4171 关均为 `0` |
+| `Time` | 关卡级时间字段 | 当前均为 `0`。限时变体见所选 Catalog 的 `IsTimeBasedLevel/LevelTime`，倒计时调用点尚待确认 |
 | `Moves` | 旧版步数限制 | 当前均为 `0`，未见作为主线限制使用 |
-| `PreCreatedHex` | 开局预置到棋盘或生成系统的 Hex 数量 | 0 最常见，也有 5、10、20、50、100、150、300 等；会影响初始状态和生成阶段 |
+| `PreCreatedHex` | 开局的累计生成数初值 | 新开局写入 `TotalHexCreatedInLevel`，影响生成换档。从 `LevelData.cells[].types` 读取实际开局块堆 |
 | `FlipTime` | 棋盘翻转/翻面动画时长 | 3899/4171 为约 `0.55`，属于表现参数，不是难度参数 |
 | `TutorialSteps` | 教程步骤数/教程流程开关 | 4078 关为 0，92 关为 2，1 关为 1；需和 `CellsForTutorial` 一起解释 |
-| `RotationalValue` | 关卡棋盘旋转参数 | 4167 关为 0，4 关为 5；影响方向/旋转玩法，不等于每个 Cell 的 `Rotation` |
+| `RotationalValue` | 关卡棋盘旋转参数 | 4167 关为 0，4 关为 5。每单位将棋盘增加 Y 轴 60° 的旋转 |
 | `Goals` | 最多 4 个 `(goal_type, target)` | 空目标通常是 `(0,0)`；`goal_type` 是目标系统枚举，不应直接等同 Cell `state` |
 | `CellsForTutorial` | 教程步骤关联的棋盘坐标 | 坐标是 `(row,col)`；当前导出 JSON 已保留坐标 |
-| `Difficulty` | LevelConfig 内的难度枚举 | Catalog 也有同名字段；实际运行时需要确认优先级，通常 Catalog 覆盖/补充主线难度 |
-| `IsRolodex` | 是否走 Rolodex/卡册类关卡流程 | Catalog 中也有同名字段；用于流程分支，不是棋盘障碍 |
-| `Thresholds` | 按累计生成 Hex 数量切换生成参数 | 每条记录 5 个 int；第一列明显是累计 Hex 阈值，后 4 列是生成阶段参数，后三列的精确枚举仍需运行时验证 |
+| `Difficulty` | LevelConfig 内的难度枚举 | 该值与 Catalog 的 `DifficultyTag`、手牌阈值中的 `Difficulty` 分开读取 |
+| `IsRolodex` | 是否走 Rolodex/卡册类关卡流程 | 运行时优先读 `LevelDifficultyOverrideData.IsRolodex`，无覆盖对象时取此值 |
+| `Thresholds` | 按累计生成 Hex 数量切换生成参数 | 字段顺序为 `HexCount, MaxTypesInStack, MaxTypes, HalfHexProbability, Difficulty` |
 | `LevelData` | 静态棋盘和 3 个初始手牌槽 | 见第 3 节 |
-| `LevelDifficultyOverrideData` | 关卡级动态难度覆盖 | 序列化尾部存在，但当前导出器尚未解码其结构；Catalog 的倍率字段可先作为外部覆盖使用 |
+| `LevelDifficultyOverrideData` | 关卡级动态难度覆盖 | 运行时由所选 Catalog 的匹配行写入。静态资产尾部尚未在导出器中结构化 |
 | `EditorVersion` | 创建该关卡的编辑器版本 | 序列化尾部字符串 |
 | `Hash` | 关卡内容/版本 Hash | 序列化尾部字符串，用于校验或缓存关联 |
 | `Author` | 关卡作者 | 序列化尾部字符串 |
@@ -57,10 +59,11 @@ LevelConfig
 
 可以确认：
 
-- 第 1 列是 `TotalHexCreatedInLevel` 的分段上限；`1000000` 是最终兜底段。
-- 第 2 列通常从 2 变为 3，像是生成算法/Tray 档位或最小候选约束。
-- 第 3 列通常是 3 到 8，和堆叠层数/类型阶段有关，但不能仅凭静态样本命名。
-- 第 4、5 列通常是 0、1、2，明显是开关或枚举值；需要调用运行时 `SpawningAlgorithm` 或做行为实验才能定名。
+- `HexCount` 是该档的上限；达到经过动态难度修正后的上限时，进入下一档。`1000000` 在样本中用于兜底。
+- `MaxTypesInStack` 是单堆抽样的候选颜色数上限，`MaxTypes` 是普通随机分支的颜色池大小。
+- `HalfHexProbability` 的在 25,026 条阈值记录中均为 0。两个手牌生成入口及阈值验证器均跳过它。`Difficulty` 作为 `DDSystem.GetLevelDifficulty` 的输入。
+
+字段与指令证据见 [二进制分析](binary-analysis/README.md)。
 
 实现时应保留五元组原值，不要把它压缩成一个“难度等级”。
 
@@ -74,12 +77,12 @@ LevelConfig
 | `types` | 从底到顶的 Hex 类型/颜色位值序列 | 顶部类型决定可见类型和主要合并判断；数值是内部类型，不是颜色名 |
 | `cost` | 当前状态所需的次数、命中数或解锁成本 | 含义依 `state` 改变；不能一概解释为金币/步数 |
 | `required_type` | 当前状态要求的 Hex 类型 | 0 在大量样本中表示“无特定类型要求”，特殊玩法可能使用它做颜色匹配 |
-| `state` | 当前 Cell 状态/玩法枚举 | 静态值通常是运行时 `CellState` 数值的一半；65/68 是编码例外 |
+| `state` | 当前 Cell 状态/玩法枚举 | 与运行时 `CellState` 使用同一个值。通过 metadata 压缩整数的有符号解码取实际枚举值 |
 | `next_cost` | 当前动作完成后下一阶段的成本 | 0 不一定表示玩法完成，需同时看 `next_state` 和目标进度 |
 | `next_required_type` | 下一阶段所需 Hex 类型 | 与 `next_state` 成对使用 |
 | `next_state` | 当前状态完成后的下一状态 | 是状态机关键字段；不能只保存当前 `state` |
-| `probability` | 概率/分支参数 | 当前常见为 0 或 1；精确作用需按特殊玩法动态验证 |
-| `additional_param` | 当前状态的附加 JSON | 识别特殊玩法最可靠的静态线索 |
+| `probability` | 当前状态的 `ParamOne` | 序列化字段名为 `Probability`，游戏原样复制为 `ParamOne`。含义由机关决定 |
+| `additional_param` | 当前状态的附加 JSON | 机关的配置与实例信息，结合当前状态读取 |
 | `next_param_one` | 下一阶段的额外整数参数 | 当前导出保留原值，语义尚未完全确认 |
 | `next_additional_param` | 下一状态的附加 JSON | 与 `next_state/next_cost` 一起构成完整转移 |
 
@@ -87,9 +90,10 @@ LevelConfig
 
 | state | 玩法/状态 | state | 玩法/状态 |
 |---:|---|---:|---|
-| 0 | Open | 1 | Dead/兼容空状态 |
-| 2 | RV | 3 | Wood |
-| 4 | Cost | 5 | Ice |
+| -1 | Dead | 0 | Open |
+| 1 | RV | 2 | Cost |
+| 3 | Wood | 4 | Ice |
+| 5 | Hole |  |  |
 | 6 | Grass | 7 | Camera |
 | 8 | LockHighRise | 9 | FridgeCan |
 | 10 | BirdHouse | 11/12 | WaitingCell / WaitingCellStack |
@@ -109,16 +113,16 @@ LevelConfig
 | 51 | Mole | 52 | SoilBomb |
 | 53/54 | CandyMachine / Candy | 55 | Drill |
 | 60/61 | Penguin / Igloo | 62 | Rabbit |
-| 65 | Hex Generator（附加编码） | 68 | Firecracker Generator（附加编码） |
+| 65 | Hex Generator | 68 | Firecracker Generator |
 
-特殊：`FrogID` 存在于样本参数中，但 Frog 不在当前 `CellState` 枚举表中，应当按参数优先识别为 Frog。
+旧 Frog 样本中，状态 41 和 `FrogID` 同时出现，目标值为 37。当前二进制的枚举和工厂均无该玩法分支。
 
 ### LevelData.Pieces
 
 每关导出固定 3 个槽位。`types` 是一手待放置的堆叠：
 
-- 非空：通常是静态指定的初始手牌。
-- 空数组：交给 `SpawningAlgorithm` 运行时补齐或生成。
+- 静态堆数达到实际托盘槽数，且所有静态堆均非空时，开局使用预设堆。
+- 任一静态堆为空时，整组交给 `SpawningAlgorithm`。
 - 数组顺序表示堆叠层顺序；颜色/类型数值仍需通过资源或运行时类型表映射到显示颜色。
 
 ## 4. `additional_param` 参数字典
@@ -150,7 +154,7 @@ LevelConfig
 | `Continuous`, `ContinuousUse` | Firecracker Generator | 是否连续触发/连续使用 |
 | `PreferSingleTarget`, `SingleTarget` | Firecracker Generator | 是否优先/固定单目标 |
 
-参数判断优先级：`additional_param` key → `state` → `next_state/cost` → 调试关卡名。`Id`、`ID`、`Rotation`、`PendingHits` 这类通用 key 不可单独命名玩法。
+当前与后续机关分别从 `state` 和 `next_state` 解码。结合各自的参数解释实例和变体，枚举缺值时可用专属参数及调试关卡名识别旧样本。`Id`、`ID`、`Rotation`、`PendingHits` 这类通用 key 不可单独命名玩法。
 
 ## 5. Catalog 字段
 
@@ -164,8 +168,8 @@ LevelConfig
 | `IsDDEnabled` | 是否启用 Dynamic Difficulty |
 | `BaseDifficultyMultiplier` | 基础动态难度修正；样本常见 0、-10、-20、-30、-40、-50 |
 | `Attempt 0` ~ `Attempt 3` | 第 0~3 次尝试的动态难度修正 |
-| `IsTimeBasedLevel` | 是否为限时关 |
-| `LevelTime` | 限时秒数；仅在限时 Catalog 行有意义 |
+| `IsTimeBasedLevel` | 该 Catalog 行的限时标记 |
+| `LevelTime` | 限时变体的配置值，倒计时读取链尚待确认 |
 
 同一 `LevelId` 可能出现在多个 Catalog 版本中，导出器已保留全部关联记录。实现时必须先选当前 Catalog 版本，不能把所有版本行同时叠加。
 
@@ -185,11 +189,11 @@ LevelConfig
 
 以下项目是下一轮最值得做的验证：
 
-- `Goals.goal_type` 的完整枚举名与每个目标计数的语义。
-- `Thresholds` 五元组第 2~5 列的准确字段名和算法分支。
-- `LevelDifficultyOverrideData` 的序列化结构及其与 Catalog 动态难度的优先级。
-- `state=1/2` 的 Dead/RV 兼容行为。
-- `probability`、`next_param_one` 的实际使用点。
+- 个别机关如何触发每类目标计数与后续状态。目标枚举及普通计数规则已确认。
+- `Thresholds.HalfHexProbability` 的实际使用位置与取值语义。
+- `LevelDifficultyOverrideData` 在 Unity 资产尾部的序列化结构。Catalog 运行时覆盖的字段与读取顺序已确认。
+- 限时 Catalog 到倒计时的运行时入口。
+- 各机关如何解释 `ParamOne`。当前和下一阶段的字段复制路径已确认。
 - 颜色位值 `1,2,4,8,...` 与美术颜色的精确映射。
 - Firecracker、Rainbow、Drill、Tesla、Penguin 等玩法的逐步状态转移和触发次数。
 - 空 Piece 槽在不同难度、失败次数、Refresh、Revive、Vacuum 下的可复现生成序列。

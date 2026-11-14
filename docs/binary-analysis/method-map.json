@@ -1,0 +1,1376 @@
+[
+  {
+    "class": "Cell",
+    "method": "add_PowerUpApplied",
+    "token": "0x600422d",
+    "rva": "0x21a2314"
+  },
+  {
+    "class": "Cell",
+    "method": "remove_PowerUpApplied",
+    "token": "0x600422e",
+    "rva": "0x21a23f0"
+  },
+  {
+    "class": "Cell",
+    "method": "add_HexAdded",
+    "token": "0x600422f",
+    "rva": "0x21a24cc"
+  },
+  {
+    "class": "Cell",
+    "method": "remove_HexAdded",
+    "token": "0x6004230",
+    "rva": "0x21a25a8"
+  },
+  {
+    "class": "Cell",
+    "method": "add_HexPlaced",
+    "token": "0x6004231",
+    "rva": "0x21a2684"
+  },
+  {
+    "class": "Cell",
+    "method": "remove_HexPlaced",
+    "token": "0x6004232",
+    "rva": "0x21a2760"
+  },
+  {
+    "class": "Cell",
+    "method": "add_BlockRemoved",
+    "token": "0x6004233",
+    "rva": "0x21a283c"
+  },
+  {
+    "class": "Cell",
+    "method": "remove_BlockRemoved",
+    "token": "0x6004234",
+    "rva": "0x21a2918"
+  },
+  {
+    "class": "Cell",
+    "method": "get_SelectiveNeighborsRequired",
+    "token": "0x6004235",
+    "rva": "0x21a29f4"
+  },
+  {
+    "class": "Cell",
+    "method": "get_RequiredTypeForAlgo",
+    "token": "0x6004236",
+    "rva": "0x21a2a0c"
+  },
+  {
+    "class": "Cell",
+    "method": "get_State",
+    "token": "0x6004237",
+    "rva": "0x21a2ac4"
+  },
+  {
+    "class": "Cell",
+    "method": "set_State",
+    "token": "0x6004238",
+    "rva": "0x21a2acc"
+  },
+  {
+    "class": "Cell",
+    "method": "get_ACellStateObject",
+    "token": "0x6004239",
+    "rva": "0x21a2ad4"
+  },
+  {
+    "class": "Cell",
+    "method": "get_PrioritySequence",
+    "token": "0x600423a",
+    "rva": "0x21a2adc"
+  },
+  {
+    "class": "Cell",
+    "method": "get_GenerationArea",
+    "token": "0x600423b",
+    "rva": "0x21a2b68"
+  },
+  {
+    "class": "Cell",
+    "method": "get_MovementPath",
+    "token": "0x600423c",
+    "rva": "0x21a2bf4"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsTemporaryLocked",
+    "token": "0x600423d",
+    "rva": "0x21a2d70"
+  },
+  {
+    "class": "Cell",
+    "method": "get_TopType",
+    "token": "0x600423e",
+    "rva": "0x21a2cb0"
+  },
+  {
+    "class": "Cell",
+    "method": "get_SecondType",
+    "token": "0x600423f",
+    "rva": "0x21a2fc4"
+  },
+  {
+    "class": "Cell",
+    "method": "get_DistributionCount",
+    "token": "0x6004240",
+    "rva": "0x21a3084"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsNewMechanic",
+    "token": "0x6004241",
+    "rva": "0x21a30d8"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsClear",
+    "token": "0x6004242",
+    "rva": "0x21a3114"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsMovingHelperState",
+    "token": "0x6004243",
+    "rva": "0x21a31e4"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsVisualNonPlaceable",
+    "token": "0x6004244",
+    "rva": "0x21a3238"
+  },
+  {
+    "class": "Cell",
+    "method": "get_MechanicState",
+    "token": "0x6004245",
+    "rva": "0x21a3268"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsEmptyTile",
+    "token": "0x6004246",
+    "rva": "0x21a3284"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsAvailable",
+    "token": "0x6004247",
+    "rva": "0x21a32e4"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsVacuumPicked",
+    "token": "0x6004248",
+    "rva": "0x21a33d4"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsPlaceAbleState",
+    "token": "0x6004249",
+    "rva": "0x21a3344"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsCellStateActivate",
+    "token": "0x600424a",
+    "rva": "0x21a3470"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsGeneratorHelperState",
+    "token": "0x600424b",
+    "rva": "0x21a348c"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsGeneratorState",
+    "token": "0x600424c",
+    "rva": "0x21a34f0"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsTemporaryBlocker",
+    "token": "0x600424d",
+    "rva": "0x21a3564"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsTemporaryHelper",
+    "token": "0x600424e",
+    "rva": "0x21a3634"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsLowerLayerState",
+    "token": "0x600424f",
+    "rva": "0x21a3184"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsLowerLayerTrap",
+    "token": "0x6004250",
+    "rva": "0x21a3410"
+  },
+  {
+    "class": "Cell",
+    "method": "get_CanHaveLowerLayerState",
+    "token": "0x6004251",
+    "rva": "0x21a3694"
+  },
+  {
+    "class": "Cell",
+    "method": "get_InTransitionState",
+    "token": "0x6004252",
+    "rva": "0x21a3704"
+  },
+  {
+    "class": "Cell",
+    "method": "get_NeighborMergesRequired",
+    "token": "0x6004253",
+    "rva": "0x21a3740"
+  },
+  {
+    "class": "Cell",
+    "method": "get_IsGlobalLocked",
+    "token": "0x6004254",
+    "rva": "0x21a3810"
+  },
+  {
+    "class": "Cell",
+    "method": "get_SelfMergesRequired",
+    "token": "0x6004255",
+    "rva": "0x21a38e0"
+  },
+  {
+    "class": "Cell",
+    "method": "get_Types",
+    "token": "0x6004256",
+    "rva": "0x21a38fc"
+  },
+  {
+    "class": "Cell",
+    "method": "get_NextCellState",
+    "token": "0x6004257",
+    "rva": "0x21a1cfc"
+  },
+  {
+    "class": "Cell",
+    "method": "get_NextCost",
+    "token": "0x6004258",
+    "rva": "0x21a1d14"
+  },
+  {
+    "class": "Cell",
+    "method": "get_NextRequiredType",
+    "token": "0x6004259",
+    "rva": "0x21a1d2c"
+  },
+  {
+    "class": "Cell",
+    "method": "get_NextParamOne",
+    "token": "0x600425a",
+    "rva": "0x21a1d44"
+  },
+  {
+    "class": "Cell",
+    "method": "get_NextAdditionalParam",
+    "token": "0x600425b",
+    "rva": "0x21a1d5c"
+  },
+  {
+    "class": "Cell",
+    "method": "Init",
+    "token": "0x600425c",
+    "rva": "0x21a3a28"
+  },
+  {
+    "class": "Cell",
+    "method": "AssignReference",
+    "token": "0x600425d",
+    "rva": "0x21a5278"
+  },
+  {
+    "class": "Cell",
+    "method": "PostInit",
+    "token": "0x600425e",
+    "rva": "0x21a52a8"
+  },
+  {
+    "class": "Cell",
+    "method": "FtueInit",
+    "token": "0x600425f",
+    "rva": "0x21a52cc"
+  },
+  {
+    "class": "Cell",
+    "method": "StateReAssign",
+    "token": "0x6004260",
+    "rva": "0x21a52e8"
+  },
+  {
+    "class": "Cell",
+    "method": "ReinitializeACellState",
+    "token": "0x6004261",
+    "rva": "0x21a5420"
+  },
+  {
+    "class": "Cell",
+    "method": "ReInitializeACellState",
+    "token": "0x6004262",
+    "rva": "0x21a553c"
+  },
+  {
+    "class": "Cell",
+    "method": "AddNeighbours",
+    "token": "0x6004263",
+    "rva": "0x21a56c8"
+  },
+  {
+    "class": "Cell",
+    "method": "DecrementCost",
+    "token": "0x6004264",
+    "rva": "0x21a56d0"
+  },
+  {
+    "class": "Cell",
+    "method": "BlocksVisibility",
+    "token": "0x6004265",
+    "rva": "0x21a5730"
+  },
+  {
+    "class": "Cell",
+    "method": "OnRotationUpdate",
+    "token": "0x6004266",
+    "rva": "0x21a11d8"
+  },
+  {
+    "class": "Cell",
+    "method": "EnableHighlight",
+    "token": "0x6004267",
+    "rva": "0x21a58cc"
+  },
+  {
+    "class": "Cell",
+    "method": "NeighbourHighlighted",
+    "token": "0x6004268",
+    "rva": "0x21a5a5c"
+  },
+  {
+    "class": "Cell",
+    "method": "DisableHighlight",
+    "token": "0x6004269",
+    "rva": "0x21a5acc"
+  },
+  {
+    "class": "Cell",
+    "method": "TopTypeBlocks",
+    "token": "0x600426a",
+    "rva": "0x21a5be8"
+  },
+  {
+    "class": "Cell",
+    "method": "RemoveBlocks",
+    "token": "0x600426b",
+    "rva": "0x21a5c64"
+  },
+  {
+    "class": "Cell",
+    "method": "AddBlocksFromCell",
+    "token": "0x600426c",
+    "rva": "0x21a5f14"
+  },
+  {
+    "class": "Cell",
+    "method": "AddBlocksFromCell",
+    "token": "0x600426d",
+    "rva": "0x21a62ec"
+  },
+  {
+    "class": "Cell",
+    "method": "PlaceHex",
+    "token": "0x600426e",
+    "rva": "0x21a6c20"
+  },
+  {
+    "class": "Cell",
+    "method": "AddBlocks",
+    "token": "0x600426f",
+    "rva": "0x21a6488"
+  },
+  {
+    "class": "Cell",
+    "method": "AddBlocksCompleted",
+    "token": "0x6004270",
+    "rva": "0x21a6c9c"
+  },
+  {
+    "class": "Cell",
+    "method": "IsMergeAble",
+    "token": "0x6004271",
+    "rva": "0x21a6d64"
+  },
+  {
+    "class": "Cell",
+    "method": "Merge",
+    "token": "0x6004272",
+    "rva": "0x21a6e34"
+  },
+  {
+    "class": "Cell",
+    "method": "NeighbourCellMerged",
+    "token": "0x6004273",
+    "rva": "0x21a7418"
+  },
+  {
+    "class": "Cell",
+    "method": "MergeAll",
+    "token": "0x6004274",
+    "rva": "0x21a7450"
+  },
+  {
+    "class": "Cell",
+    "method": "MergeAll",
+    "token": "0x6004275",
+    "rva": "0x21a7534"
+  },
+  {
+    "class": "Cell",
+    "method": "PowerupRemove",
+    "token": "0x6004276",
+    "rva": "0x21a7848"
+  },
+  {
+    "class": "Cell",
+    "method": "PowerUpDecrementCost",
+    "token": "0x6004277",
+    "rva": "0x21a7a6c"
+  },
+  {
+    "class": "Cell",
+    "method": "PlayPossibleMergeAnimation",
+    "token": "0x6004278",
+    "rva": "0x21a7b78"
+  },
+  {
+    "class": "Cell",
+    "method": "PlayMergeableAnimation",
+    "token": "0x6004279",
+    "rva": "0x21a7bf4"
+  },
+  {
+    "class": "Cell",
+    "method": "StopMergeableAnimation",
+    "token": "0x600427a",
+    "rva": "0x21a5ab4"
+  },
+  {
+    "class": "Cell",
+    "method": "MergeBlocks",
+    "token": "0x600427b",
+    "rva": "0x21a7200"
+  },
+  {
+    "class": "Cell",
+    "method": "GenerateBlocks",
+    "token": "0x600427c",
+    "rva": "0x21a3e28"
+  },
+  {
+    "class": "Cell",
+    "method": "GenerateNewBlocks",
+    "token": "0x600427d",
+    "rva": "0x21a7c24"
+  },
+  {
+    "class": "Cell",
+    "method": "GenerateNewBlocks",
+    "token": "0x600427e",
+    "rva": "0x21a7d98"
+  },
+  {
+    "class": "Cell",
+    "method": "OpenWithRV",
+    "token": "0x600427f",
+    "rva": "0x21a7f58"
+  },
+  {
+    "class": "Cell",
+    "method": "SetState",
+    "token": "0x6004280",
+    "rva": "0x21a4cf8"
+  },
+  {
+    "class": "Cell",
+    "method": "Distribute",
+    "token": "0x6004281",
+    "rva": "0x21a2df0"
+  },
+  {
+    "class": "Cell",
+    "method": "GetRotationVectorForSorting",
+    "token": "0x6004282",
+    "rva": "0x21a5f50"
+  },
+  {
+    "class": "Cell",
+    "method": "UpdateLockSprite",
+    "token": "0x6004283",
+    "rva": "0x21a8354"
+  },
+  {
+    "class": "Cell",
+    "method": "IsNeighbour",
+    "token": "0x6004284",
+    "rva": "0x21a84c0"
+  },
+  {
+    "class": "Cell",
+    "method": "GetHammerSpawnPosition",
+    "token": "0x6004285",
+    "rva": "0x21a856c"
+  },
+  {
+    "class": "Cell",
+    "method": "CanUsePowerUpOfType",
+    "token": "0x6004286",
+    "rva": "0x21a85b8"
+  },
+  {
+    "class": "Cell",
+    "method": "LockCellForSeconds",
+    "token": "0x6004287",
+    "rva": "0x21a865c"
+  },
+  {
+    "class": "Cell",
+    "method": "ForceUnlockCell",
+    "token": "0x6004288",
+    "rva": "0x21a8708"
+  },
+  {
+    "class": "Cell",
+    "method": "OnDestroy",
+    "token": "0x6004289",
+    "rva": "0x21a8710"
+  },
+  {
+    "class": "Cell",
+    "method": "DamageCell",
+    "token": "0x600428a",
+    "rva": "0x21a872c"
+  },
+  {
+    "class": "Cell",
+    "method": "PowerUpUsed",
+    "token": "0x600428b",
+    "rva": "0x21a8738"
+  },
+  {
+    "class": "Cell",
+    "method": "GetHexTypes",
+    "token": "0x600428c",
+    "rva": "0x21a1d74"
+  },
+  {
+    "class": "Cell",
+    "method": "BringAllBlocksOfTopAbove",
+    "token": "0x600428d",
+    "rva": "0x21a8b14"
+  },
+  {
+    "class": "Cell",
+    "method": "ReDistributeVacuum",
+    "token": "0x600428e",
+    "rva": "0x21a8d18"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.GetRequiredType",
+    "token": "0x600428f",
+    "rva": "0x21a8f60"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.SetRequiredType",
+    "token": "0x6004290",
+    "rva": "0x21a8f68"
+  },
+  {
+    "class": "Cell",
+    "method": "ReInit",
+    "token": "0x6004291",
+    "rva": "0x21a8f70"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.GetCellData",
+    "token": "0x6004292",
+    "rva": "0x21a8fac"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.GetCost",
+    "token": "0x6004293",
+    "rva": "0x21a8fb4"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.SetCost",
+    "token": "0x6004294",
+    "rva": "0x21a8fbc"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.ChangeState",
+    "token": "0x6004295",
+    "rva": "0x21a8fc4"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.IsNeighbour",
+    "token": "0x6004296",
+    "rva": "0x21a8fc8"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.GetNeighbours",
+    "token": "0x6004297",
+    "rva": "0x21a904c"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.GetTransform",
+    "token": "0x6004298",
+    "rva": "0x21a9054"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.RemoveTopBlocks",
+    "token": "0x6004299",
+    "rva": "0x21a905c"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.GetBlocks",
+    "token": "0x600429a",
+    "rva": "0x21a9078"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.GetTopBlockType",
+    "token": "0x600429b",
+    "rva": "0x21a9080"
+  },
+  {
+    "class": "Cell",
+    "method": "SetCellMeshState",
+    "token": "0x600429c",
+    "rva": "0x21a9084"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.SetBlockState",
+    "token": "0x600429d",
+    "rva": "0x21a91b4"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.RemoveBlockType",
+    "token": "0x600429e",
+    "rva": "0x21a9298"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.GetAdditionalParam",
+    "token": "0x600429f",
+    "rva": "0x21a9444"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.SetAdditionalParam",
+    "token": "0x60042a0",
+    "rva": "0x21a944c"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.GetParamOne",
+    "token": "0x60042a1",
+    "rva": "0x21a945c"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.SetParamOne",
+    "token": "0x60042a2",
+    "rva": "0x21a9464"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellNumberListener.CanShowNumber",
+    "token": "0x60042a3",
+    "rva": "0x21a946c"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellNumberListener.GetTopTypeCount",
+    "token": "0x60042a4",
+    "rva": "0x21a94e0"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellNumberListener.GetBlocksCount",
+    "token": "0x60042a5",
+    "rva": "0x21a952c"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellNumberListener.GetTopTypeHex",
+    "token": "0x60042a6",
+    "rva": "0x21a9574"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.LockCellForSeconds",
+    "token": "0x60042a7",
+    "rva": "0x21a9578"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.ForceUnlockCell",
+    "token": "0x60042a8",
+    "rva": "0x21a957c"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.IsTemporaryLocked",
+    "token": "0x60042a9",
+    "rva": "0x21a9584"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.GetCellIndex",
+    "token": "0x60042aa",
+    "rva": "0x21a9588"
+  },
+  {
+    "class": "Cell",
+    "method": "StateReAssign",
+    "token": "0x60042ab",
+    "rva": "0x21a9590"
+  },
+  {
+    "class": "Cell",
+    "method": "StateReAssign",
+    "token": "0x60042ac",
+    "rva": "0x21a95d8"
+  },
+  {
+    "class": "Cell",
+    "method": "ChangeCellDataToNextState",
+    "token": "0x60042ad",
+    "rva": "0x21a9630"
+  },
+  {
+    "class": "Cell",
+    "method": "UpdateCellFromCellData",
+    "token": "0x60042ae",
+    "rva": "0x21a96bc"
+  },
+  {
+    "class": "Cell",
+    "method": "UpdateCellDataCurrentState",
+    "token": "0x60042af",
+    "rva": "0x21a96f8"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.ChangeCellDataToOpenState",
+    "token": "0x60042b0",
+    "rva": "0x21a9780"
+  },
+  {
+    "class": "Cell",
+    "method": "SetCellDataCurrentState",
+    "token": "0x60042b1",
+    "rva": "0x21a97e0"
+  },
+  {
+    "class": "Cell",
+    "method": "SetCellDataNextState",
+    "token": "0x60042b2",
+    "rva": "0x21a9808"
+  },
+  {
+    "class": "Cell",
+    "method": "Gameplay.ICellStateContext.GetState",
+    "token": "0x60042b3",
+    "rva": "0x21a9830"
+  },
+  {
+    "class": "Cell",
+    "method": "AddPriorityData",
+    "token": "0x60042b4",
+    "rva": "0x21a9838"
+  },
+  {
+    "class": "Cell",
+    "method": "AddGenerationData",
+    "token": "0x60042b5",
+    "rva": "0x21a9dbc"
+  },
+  {
+    "class": "Cell",
+    "method": ".ctor",
+    "token": "0x60042b6",
+    "rva": "0x21a9ff0"
+  },
+  {
+    "class": "Cell",
+    "method": ".cctor",
+    "token": "0x60042b7",
+    "rva": "0x21aa0d8"
+  },
+  {
+    "class": "Cell",
+    "method": "<EnableHighlight>b__153_0",
+    "token": "0x60042b8",
+    "rva": "0x21aa128"
+  },
+  {
+    "class": "Cell",
+    "method": "<DisableHighlight>b__155_0",
+    "token": "0x60042b9",
+    "rva": "0x21aa15c"
+  },
+  {
+    "class": "Cell",
+    "method": "<PowerupRemove>b__168_0",
+    "token": "0x60042ba",
+    "rva": "0x21aa17c"
+  },
+  {
+    "class": "Cell",
+    "method": "<MergeBlocks>b__173_0",
+    "token": "0x60042bb",
+    "rva": "0x21aa228"
+  },
+  {
+    "class": "Cell",
+    "method": "<SetState>b__178_1",
+    "token": "0x60042bc",
+    "rva": "0x21aa240"
+  },
+  {
+    "class": "Cell",
+    "method": "<PowerUpUsed>b__189_1",
+    "token": "0x60042bd",
+    "rva": "0x21aa264"
+  },
+  {
+    "class": "Cell",
+    "method": "<PowerUpUsed>b__189_0",
+    "token": "0x60042be",
+    "rva": "0x21aa310"
+  },
+  {
+    "class": "Cell",
+    "method": "<SetCellMeshState>b__206_0",
+    "token": "0x60042bf",
+    "rva": "0x21aa324"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "get_LastActionTime",
+    "token": "0x60043de",
+    "rva": "0x21b6bc0"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "set_LastActionTime",
+    "token": "0x60043df",
+    "rva": "0x21b6bc8"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "OnDestroy",
+    "token": "0x60043e0",
+    "rva": "0x21b6bd0"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "Awake",
+    "token": "0x60043e1",
+    "rva": "0x21b6f3c"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "BoosterExecuted",
+    "token": "0x60043e2",
+    "rva": "0x21b7154"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "AddedHex",
+    "token": "0x60043e3",
+    "rva": "0x21b7170"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "DontCheckAnything",
+    "token": "0x60043e4",
+    "rva": "0x21b7148"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "CheckEverything",
+    "token": "0x60043e5",
+    "rva": "0x21b7184"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "OnValidateSorting",
+    "token": "0x60043e6",
+    "rva": "0x21b7198"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "ChangeSortingStatus",
+    "token": "0x60043e7",
+    "rva": "0x21b72ec"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "Update",
+    "token": "0x60043e8",
+    "rva": "0x21b7320"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "CheckMerge",
+    "token": "0x60043e9",
+    "rva": "0x21b7840"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "OnMergingComplete",
+    "token": "0x60043ea",
+    "rva": "0x21b80fc"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "CompleteAnimation",
+    "token": "0x60043eb",
+    "rva": "0x21b71f8"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "MergeAllCells",
+    "token": "0x60043ec",
+    "rva": "0x21b816c"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "CheckFail",
+    "token": "0x60043ed",
+    "rva": "0x21b7b34"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "OnSortingCompleted",
+    "token": "0x60043ee",
+    "rva": "0x21b7300"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "SortCells",
+    "token": "0x60043ef",
+    "rva": "0x21b859c"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "CheckSort",
+    "token": "0x60043f0",
+    "rva": "0x21b7440"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "GetNeighboursCountWithType",
+    "token": "0x60043f1",
+    "rva": "0x21b8548"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "GetNeighoursWithType",
+    "token": "0x60043f2",
+    "rva": "0x21b8864"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "Gameplay.ISorting.ReValidate",
+    "token": "0x60043f3",
+    "rva": "0x21b8a18"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": ".ctor",
+    "token": "0x60043f4",
+    "rva": "0x21b8a30"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "<CheckMerge>b__37_0",
+    "token": "0x60043f5",
+    "rva": "0x21b8a40"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "<CompleteAnimation>b__39_0",
+    "token": "0x60043f6",
+    "rva": "0x21b8b1c"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "<CompleteAnimation>b__39_2",
+    "token": "0x60043f7",
+    "rva": "0x21b8d70"
+  },
+  {
+    "class": "HexaSortMerge",
+    "method": "<MergeAllCells>b__40_2",
+    "token": "0x60043f8",
+    "rva": "0x21b8d74"
+  },
+  {
+    "class": "Tray",
+    "method": "add_PiecePlaced",
+    "token": "0x6004586",
+    "rva": "0x21c7eb0"
+  },
+  {
+    "class": "Tray",
+    "method": "remove_PiecePlaced",
+    "token": "0x6004587",
+    "rva": "0x21c7f68"
+  },
+  {
+    "class": "Tray",
+    "method": "add_TrayInteractEvent",
+    "token": "0x6004588",
+    "rva": "0x21c8020"
+  },
+  {
+    "class": "Tray",
+    "method": "remove_TrayInteractEvent",
+    "token": "0x6004589",
+    "rva": "0x21c80dc"
+  },
+  {
+    "class": "Tray",
+    "method": "add_TrayRefreshed",
+    "token": "0x600458a",
+    "rva": "0x21c8198"
+  },
+  {
+    "class": "Tray",
+    "method": "remove_TrayRefreshed",
+    "token": "0x600458b",
+    "rva": "0x21c8254"
+  },
+  {
+    "class": "Tray",
+    "method": "OnEnable",
+    "token": "0x600458c",
+    "rva": "0x21c8310"
+  },
+  {
+    "class": "Tray",
+    "method": "OnDisable",
+    "token": "0x600458d",
+    "rva": "0x21c8390"
+  },
+  {
+    "class": "Tray",
+    "method": "Init",
+    "token": "0x600458e",
+    "rva": "0x21c8410"
+  },
+  {
+    "class": "Tray",
+    "method": "InitialSpawn",
+    "token": "0x600458f",
+    "rva": "0x21c8458"
+  },
+  {
+    "class": "Tray",
+    "method": "RefreshTray",
+    "token": "0x6004590",
+    "rva": "0x21c85ec"
+  },
+  {
+    "class": "Tray",
+    "method": "VacuumUsed",
+    "token": "0x6004591",
+    "rva": "0x21c870c"
+  },
+  {
+    "class": "Tray",
+    "method": "ReviveTrayRefresh",
+    "token": "0x6004592",
+    "rva": "0x21c8728"
+  },
+  {
+    "class": "Tray",
+    "method": "LoadPieces",
+    "token": "0x6004593",
+    "rva": "0x21c8750"
+  },
+  {
+    "class": "Tray",
+    "method": "Hide",
+    "token": "0x6004594",
+    "rva": "0x21c8b6c"
+  },
+  {
+    "class": "Tray",
+    "method": "DisableDrag",
+    "token": "0x6004595",
+    "rva": "0x21c8b9c"
+  },
+  {
+    "class": "Tray",
+    "method": "EnableDrag",
+    "token": "0x6004596",
+    "rva": "0x21c8cd8"
+  },
+  {
+    "class": "Tray",
+    "method": "GetTopTrayTypes",
+    "token": "0x6004597",
+    "rva": "0x21b86dc"
+  },
+  {
+    "class": "Tray",
+    "method": "SpawnItems",
+    "token": "0x6004598",
+    "rva": "0x21c8460"
+  },
+  {
+    "class": "Tray",
+    "method": "SpawnItems",
+    "token": "0x6004599",
+    "rva": "0x21c8880"
+  },
+  {
+    "class": "Tray",
+    "method": "TrayItemCanStartDragging",
+    "token": "0x600459a",
+    "rva": "0x21c997c"
+  },
+  {
+    "class": "Tray",
+    "method": "TrayItemStartedDragging",
+    "token": "0x600459b",
+    "rva": "0x21c99f4"
+  },
+  {
+    "class": "Tray",
+    "method": "TrayItemOnDrag",
+    "token": "0x600459c",
+    "rva": "0x21c9a90"
+  },
+  {
+    "class": "Tray",
+    "method": "TrayItemStoppedDragging",
+    "token": "0x600459d",
+    "rva": "0x21c9b34"
+  },
+  {
+    "class": "Tray",
+    "method": "CheckTrayStatus",
+    "token": "0x600459e",
+    "rva": "0x21ca11c"
+  },
+  {
+    "class": "Tray",
+    "method": "GetNeighoursWithType",
+    "token": "0x600459f",
+    "rva": "0x21c9e98"
+  },
+  {
+    "class": "Tray",
+    "method": "GetEmptyNeighoursOfType",
+    "token": "0x60045a0",
+    "rva": "0x21ca1a4"
+  },
+  {
+    "class": "Tray",
+    "method": "CountSlotsPlacements",
+    "token": "0x60045a1",
+    "rva": "0x21c90c8"
+  },
+  {
+    "class": "Tray",
+    "method": "IsTrayEmpty",
+    "token": "0x60045a2",
+    "rva": "0x21c9024"
+  },
+  {
+    "class": "Tray",
+    "method": "GetTrayItemIndex",
+    "token": "0x60045a3",
+    "rva": "0x21ca034"
+  },
+  {
+    "class": "Tray",
+    "method": "RemoveMediumTray",
+    "token": "0x60045a4",
+    "rva": "0x21ca420"
+  },
+  {
+    "class": "Tray",
+    "method": ".ctor",
+    "token": "0x60045a5",
+    "rva": "0x21ca438"
+  },
+  {
+    "class": "Tray",
+    "method": "<SpawnItems>b__37_0",
+    "token": "0x60045a6",
+    "rva": "0x21ca440"
+  },
+  {
+    "class": "Tray",
+    "method": "<GetEmptyNeighoursOfType>b__45_0",
+    "token": "0x60045a7",
+    "rva": "0x21ca52c"
+  },
+  {
+    "class": "Tray",
+    "method": "<GetEmptyNeighoursOfType>b__45_1",
+    "token": "0x60045a8",
+    "rva": "0x21ca5a0"
+  },
+  {
+    "class": "Tray",
+    "method": "<CountSlotsPlacements>g__CanPlace|46_0",
+    "token": "0x60045a9",
+    "rva": "0x21ca388"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "get_SmartRefreshUsed",
+    "token": "0x600455d",
+    "rva": "0x21c45a4"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "set_SmartRefreshUsed",
+    "token": "0x600455e",
+    "rva": "0x21c45ec"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "get_DidGetPowerupPieces",
+    "token": "0x600455f",
+    "rva": "0x21c463c"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "set_DidGetPowerupPieces",
+    "token": "0x6004560",
+    "rva": "0x21c4684"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "get_LastDifficulty",
+    "token": "0x6004561",
+    "rva": "0x21c46d4"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "get_CurrentDifficulty",
+    "token": "0x6004562",
+    "rva": "0x21c46dc"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "Init",
+    "token": "0x6004563",
+    "rva": "0x21c46e4"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "SetupEasyTray",
+    "token": "0x6004564",
+    "rva": "0x21c4cf4"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "GetNext",
+    "token": "0x6004565",
+    "rva": "0x21c4d04"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "ConfigureLevelParameters",
+    "token": "0x6004566",
+    "rva": "0x21c4734"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "GetPieces",
+    "token": "0x6004567",
+    "rva": "0x21c4f88"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "GetPieceOfType",
+    "token": "0x6004568",
+    "rva": "0x21c6dac"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "ThresholdHexCount",
+    "token": "0x6004569",
+    "rva": "0x21c641c"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "GetPieceRandom",
+    "token": "0x600456a",
+    "rva": "0x21c647c"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "ValidatePiecesWithGrid",
+    "token": "0x600456b",
+    "rva": "0x21c5334"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "GetPowerupPieces",
+    "token": "0x600456c",
+    "rva": "0x21c5454"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "GetCurrentAvailableTypesWithCount",
+    "token": "0x600456d",
+    "rva": "0x21c6e44"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": "GetCurrentAvailableTypes",
+    "token": "0x600456e",
+    "rva": "0x21c754c"
+  },
+  {
+    "class": "SpawningAlgorithm",
+    "method": ".ctor",
+    "token": "0x600456f",
+    "rva": "0x21c7608"
+  }
+]
