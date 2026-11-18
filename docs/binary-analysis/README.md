@@ -2,6 +2,8 @@
 
 按关卡字段判断模式、胜利目标、机关和 Catalog 变体，见 [关卡玩法判定](LEVEL_GAMEPLAY_CLASSIFICATION.md)。
 
+广告开格、续玩、刷新道具、吸尘、拖拽落点以及从落子到结算的调用顺序，见 [核心玩法流程规格](CORE_GAMEPLAY_FLOW.md)。
+
 直接读取 ARM64 ELF 与 v39 metadata，未运行游戏。方法地址通过 Assembly-CSharp.dll 的 CodeGenModule、ELF RELA 重定位、metadata 方法 token 得出。不是依据方法出现顺序猜测地址。
 
 ## 手牌更新
@@ -42,7 +44,7 @@ return pieces
 
 ## 合并
 
-Cell.PlaceHex (0x21a6c20–0x21a6c98) 初始化类型后取静态委托，并以当前 Cell 为参数尾调用；本函数没有堆叠搬移循环。
+Cell.PlaceHex (0x21a6c20–0x21a6c98) 确保承载静态事件的类型初始化后，取静态委托并以当前 Cell 为参数调用。棋子的块列表在较早的 `GridSystem.AddBlocks → Cell.AddBlocks` 已提交，本函数没有堆叠搬移循环。
 
 `Cell.IsMergeAble`（0x21a6d64）要求 `IsPlaceAbleState` 为真、`Blocks` 非空，再调用 `Distribute(false)` 更新分组，最后比较首个分组的块数是否达到输入阈值（0x21a6db4–0x21a6e14）。该函数不比较邻居颜色。
 
@@ -73,6 +75,8 @@ return false
 
 ## 新旧排序器如何接管
 
+选源、选目标的完整伪代码、评分表和对拍棋盘见[排序器如何选格](SORT_TARGET_SELECTION.md)。
+
 `CheckSort`（0x21b7440）在 `IsNewSortingAlgoEnabled || LevelGoalTracker.HasSpecialTiles()` 时尝试递归排序（0x21b74b8–0x21b74d4）。该函数看的是运行时目标列表，有多于一项或唯一一项不是 AnyColor 就返回真。常规初始化保留目标占位项，因此不能用有效目标的数量替代这个判断。两个条件均为假时直接走旧版。递归返回任一索引为 -1，或索引转换成的任一 Cell 按 Unity 的对象判等为空时，也调用 `HexaSortAlgoLegacy.Sort`（0x21b7550–0x21b7668）。最终只在两个 Cell 都有效时才调用 `SortCells`（0x21b7690–0x21b76c8）。
 
 `HexaSortAlgoLegacy.Sort`（0x21b3e0c）从 `State == Open`、有块、顶色非 Car 的棋盘格生成候选源。对每个源，先找 `State == Hole (5)` 且 `RequiredType` 与源顶色相等的邻居，取 `Cost` 最小者，优先级记为 99；否则找 `State == Open` 且顶色与源相同的邻居。普通分支没有这样的邻居就不生成候选。其优先级为：
@@ -93,8 +97,8 @@ return false
 
 普通搜索（0x21b5fc0）的状态转移：
 
-1. 按快照中的顺序遍历源格，再遍历该格邻居。源和目标都须有颜色组、`NeighborMergeRequired <= 0`、`IsGlobalLocked == false`；两格顶色必须相同，顶色 `0x100` 的源交给特殊移动分支（0x21b6118–0x21b61b0）。
-2. 暂时从源、目标分别移除顶部组，将两组块数相加后插回目标索引 0。以这个新状态递归；递归返回的源或目标索引无效时，直接在当前模拟状态上算分（0x21b61c8–0x21b62e0）。在模拟时达到 10 块的组留在状态中供评分，不在这一步执行实际消除。
+1. 按快照中的顺序遍历源格，再遍历该格邻居；邻居数组过滤自整张快照，因此目标也按快照顺序。源和目标都须有颜色组、`NeighborMergeRequired <= 0`、`IsGlobalLocked == false`；两格顶色必须相同，顶色 `0x100` 的源交给特殊移动分支（0x21b6118–0x21b61b0）。
+2. 暂时从源、目标分别移除顶部组，将两组块数相加后插回目标索引 0。以这个新状态递归；递归返回的源或目标索引无效时，用当前模拟状态和本层深度算分（0x21b61c8–0x21b62e0）。预算耗尽后，已展开的层仍会给剩余候选试搬并评分。在模拟时达到 10 块的组保持在棋盘上，还能参与后续试搬。
 3. 将结果的源、目标索引改成本层试搬的这对格，再更新本层的解放格、托盘匹配和最近落子相关分数（0x21b630c–0x21b63cc）。第 0 层返回的是第一步搬移。只在候选严格胜出时替换最佳结果，同分保留先遍历到的候选（0x21b643c–0x21b6444）。`TilesFreed` 在试搬后源格仍有顶部组时为 1；它没有按字段名对清空的源格打分。`SecondTypeTrayMatches` 要求托盘匹配开关打开、源格有可用空邻居、露出的顶色在托盘中。`SourceLastPlaced` 在源格不是最近落子坐标时为 1；源格的 `Generation >= 1` 则给候选的 `Generation` 加 1。
 4. 把源、目标的顶部组还原，再试下一个邻居（0x21b64d4–0x21b6534）。
 
@@ -153,7 +157,7 @@ counts = []
 - **按顶部连续颜色组处理。** `Cell.Distribute`（0x21a2df0）从块列表末尾向前扫描，遇到非零颜色变化就新建一组。`TopTypeBlocks`（0x21a5be8）取第 0 组。`AddBlocksFromCell` 在 0x21a63c4–0x21a6434 取源格第 0 组，将整组加入目标，再从源格移除。`Cell.Merge` 同样取第 0 组，将该组实际块数和颜色报给 `LevelGoalTracker.HexMerged`（0x21a6f60–0x21a6fd0）；阈值控制资格，不是固定只删 10 块。
 - **智能匹配色来自空格邻域。** `Tray.SpawnItems` 直接调用 `GetNext(initial, slotCount, EmptyCellCount, TypesWithEmptyNeighbours)`（0x21c8574–0x21c85c4）。因此正常托盘路径的 `matchTypes` 来自 `GridSystem.get_TypesWithEmptyNeighbours`，且道具分支的第三参数 `== 1` 对应恰好剩一个空格。初次生成先尝试 `LevelData.GetPieces(slotCount)`，有非空结果便使用它，绕过 `GetNext`。预设的堆数至少要等于托盘槽数，且任一预设堆的块列表为 null 或为空时，全组改走生成器（0x21bc6b4–0x21bc780、0x21bc89c–0x21bc8cc）。发牌按返回列表下标对应同下标的槽，空数组跳过；一轮发完仍为空托盘时，重新调用 `SpawnItems(false)`（0x21c8944–0x21c89c4、0x21c8a38–0x21c8a54）。
 - **整组生成可保留一个同色配对槽。** `GetPieces(pairSlot, count)` 在 `pairSlot` 或 `SpawnEasyOverride` 为真时抽取一个索引，但仅当 `pairSlot` 为真时才跳过该槽的普通生成（0x21c50c8–0x21c5148、0x21c518c）。每个生成的普通堆或配对堆都把块数交给 `TotalHexCreatedInLevel`，包括随后在校验中被放弃的候选（0x21c517c、0x21c52c8）。因此只开 `SpawnEasyOverride` 时会多消耗一次随机数，仍逐槽生成。开启配对时，从其余槽随机选一槽，读取其末尾颜色，以 `GetPieceOfType(color)` 填入保留槽，并记录这对槽的索引（0x21c51d0–0x21c5300）。`GetPieceOfType` 从实例 +96/+100 读取 Easy 的块数范围，生成同一种颜色的整堆。`GetNext` 的重试固定调用 `GetPieces(true, count)`，所以重试会构造这种配对。
-- **刷新和复活复用同一路径。** `RefreshTray` 在生成前写入生成器 +112 的一次性标志，`ReviveTrayRefresh` 额外写入 +136/+137/+140，然后跳到 `RefreshTray`。`VacuumUsed` 写生成器 +113（`SpawnMediumOverride`），普通随机路径会用它限制颜色种数。证据 0x21c86e0–0x21c8744、0x21c69a4–0x21c69d8。
+- **强制刷新和部分续玩复用同一路径。** `RefreshTray` 销毁所有旧手牌，在生成前写入生成器 +112 的一次性标志。只有续玩门槛成立才走 `ReviveTrayRefresh`，它先写入 +136/+137/+140，再进入 `RefreshTray`。普通吸尘及广告吸尘都会先从托盘抽掉指定颜色的所有块，吸空才自然补牌；完成回调的 `VacuumUsed` 只写 +113（`SpawnMediumOverride`），在检查空托盘之后才写。调用条件、RV 区别和牌面例子见[核心玩法流程规格](CORE_GAMEPLAY_FLOW.md#13-怎样从牌面判断走了哪条分支)。
 
 ## 智能补牌的候选色
 
@@ -194,7 +198,11 @@ counts = []
 | 150 | 3 | 7 | 0 | 0 |
 | 1000000 | 3 | 8 | 0 | 0 |
 
-生成器构造器（0x21c7608）把四个默认值写为 `DefaultMaxTypesInStack=3, DefaultMinTypes=3, MinRandHexPerStack=2, MaxRandHexPerStack=7`，配对的 `MinEasyHexPerStack=3, MaxEasyHexPerStack=5`。这些是 ELF 常量中的构造值；取样时还要经过关卡与辅助配置。
+生成器构造器（0x21c7608）写入 `DefaultMaxTypesInStack=3, DefaultMinTypes=3, MinRandHexPerStack=2, MaxRandHexPerStack=7, MinEasyHexPerStack=3, MaxEasyHexPerStack=5`。原包 `sharedassets0.assets.split152` 中 `SpawningAlgorithm` 对象的六个序列化整数也依次为 `3, 3, 2, 7, 3, 5`。`GetPieceRandom`（0x21c6a0c–0x21c6a20）和 `GetPieceOfType`（0x21c6e00–0x21c6e08）直接将上界传给整数 `Random.Range`，所以上界不含：普通堆通常为 2–6 块，抽到 3 种候选色时为 3–6 块；配对堆为 3–4 块单色。阈值不会把普通堆的总块数范围改小。
+
+**同一关前几轮与后几轮的差别。** 普通堆每次生成前单独判档，生成完立即累加自己的块数，所以同一轮的后续槽也可能进入下一档。例：`level_500` 的 `PreCreatedHex=0`，未调整动态难度时，累计生成数 <30 用 `(单堆最多 2 色, 色池 3 色)`，达到 30 用 `(3,4)`，达到 60 用 `(3,5)`。如果某次补牌从 28 开始，第一堆抽出 5 块，第二堆就从 33 选档。`level_2000` 的 `PreCreatedHex=30`，开局直接从 `(3,4)` 起步，所以不存在所有关都统一持续几轮的大块阶段。开局首发若走生成器，会额外配一个同顶色的单色堆；普通补牌不默认配对。一个 6 块堆可以从 `AAAAAA` 变成 `AAABBC`，颜色段变短，但整堆仍是 6 块。
+
+`EasyTempCounter` 是另一套计数：启用后先按单色生成，再按 `GetNext` 调用次数递减；计数耗尽时关闭临时模式（0x21c4d50–0x21c4d88）。二进制中 `SetupEasyTray` 的直接调用来自 `VacuumBoosterButton.<ExecuteSecondary>d__15.MoveNext`（0x21fbaf4）；复活也可直接设置相同标志与计数。普通关卡初始化会清除 Easy 标志与计数（0x21c46f8–0x21c4704），因此不能把这个计数当成所有关共用的开局补牌阶段。
 
 `LevelThresholdValidator.Validate`（0x21e88e8）要求至少六条、`HexCount` 为正且严格递增，`MaxTypesInStack` 和 `MaxTypes` 均为正（0x21e8934–0x21e8988）。验证器同样没有读 `HalfHexProbability`。
 

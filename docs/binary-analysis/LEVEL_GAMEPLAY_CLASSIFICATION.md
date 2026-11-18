@@ -163,6 +163,8 @@ Unity 资产和导出 JSON 直接保存状态整数。`Cell.Init` 从 `CellData+
 
 ## 对合并和配置的补充
 
+机关怎样限制源格和目标格、怎样影响递归评分，见[机关的递归规则](SORT_TARGET_SELECTION.md#6-机关的递归规则)。
+
 - `RV=1` 由 `Cell.SetState` 转到 `RvHex.Init`（0x21a50b8–0x21a5100）。`RvHex` 可以走金币或奖励视频解锁，具体取 `ExtraSlotConfig.GetCellState`（0x21c1708–0x21c185c）。`Cost=2` 走 `CostCellState` 构造（0x21a42b8–0x21a42e8），它订阅合并事件。`CostCellState.OnCellMerge` 以合并块数减去成本，达到 0 或以下调用 `ChangeState(Open)`（0x211e4c8、0x211e5c8–0x211e6f4）。`Ice=4` 和 `Wood=3` 分别走 `CollectIcePiece` 与 `BreakWood`，各自先检查合并源是否是相邻格，然后在相应消耗分支分别减 1。
 - 旧版排序器特殊邻居分支的比较值是 5，即 `Hole`。它要求邻居 `RequiredType` 等于源顶色，按 Cost 升序挑首个，构造优先级 99 的候选（0x21b4734–0x21b4860、0x21b5234–0x21b5258）。这批关卡没有初始或后续状态 5。
 - 实际消除的通知分两路。消除格可以走自己的状态对象回调。启用邻居通知时，其邻居接收 `NeighbourCellMerged(source, color, count)`，再转给各自状态对象（0x21a704c–0x21a709c、0x21aad2c–0x21aad40、0x21a7418–0x21a7434）。状态 68 的爆竹生成器收到邻居合并就调用 `TriggerCostUpdate`（0x2138ca4）。成本至少为 2 时减 1，并调用 `FireCrackerGenHex.UpdateState`（0x2138c54–0x2138c98）。状态 65 的 HexGenerator 的 `OnHexMerge` 转向 `CheckTargetCell`（0x2142b04）。因此不能把所有机关实现成同一个「周围合并减一次」规则。
