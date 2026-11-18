@@ -2,7 +2,7 @@
 
 按关卡字段判断模式、胜利目标、机关和 Catalog 变体，见 [关卡玩法判定](LEVEL_GAMEPLAY_CLASSIFICATION.md)。
 
-广告开格、续玩、刷新道具、吸尘、拖拽落点以及从落子到结算的调用顺序，见 [核心玩法流程规格](CORE_GAMEPLAY_FLOW.md)。
+广告开格、续玩、刷新道具、吸尘、拖拽落点以及从落子到结算的调用顺序，见 [核心玩法流程规格](CORE_GAMEPLAY_FLOW.md)。各操作留下的状态和何时发下一组牌，见[各操作后的第一组新手牌](CORE_GAMEPLAY_FLOW.md#14-各操作后的第一组新手牌)。
 
 直接读取 ARM64 ELF 与 v39 metadata，未运行游戏。方法地址通过 Assembly-CSharp.dll 的 CodeGenModule、ELF RELA 重定位、metadata 方法 token 得出。不是依据方法出现顺序猜测地址。
 
