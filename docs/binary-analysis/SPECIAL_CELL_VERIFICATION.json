@@ -1,0 +1,36 @@
+{
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81",
+  "enum_items_verified": 60,
+  "method_mapping_rows": 1855,
+  "unique_methods": 1773,
+  "direct_branch_encodings_verified": 16324,
+  "local_link_paths_verified": 94,
+  "method_maps": [
+    {
+      "file": "SpecialCells.methods.json",
+      "mappings": 152
+    },
+    {
+      "file": "SpecialClassicsExtra.methods.json",
+      "mappings": 105
+    },
+    {
+      "file": "SpecialCollectionExtra.methods.json",
+      "mappings": 553
+    },
+    {
+      "file": "SpecialGeneratorsExtra.methods.json",
+      "mappings": 517
+    },
+    {
+      "file": "SpecialLegacyExtra.methods.json",
+      "mappings": 232
+    },
+    {
+      "file": "SpecialMovementExtra.methods.json",
+      "mappings": 296
+    }
+  ],
+  "validation": "static metadata/token/RVA, ELF branch encoding and local path checks; no runtime gameplay comparison"
+}

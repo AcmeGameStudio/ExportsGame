@@ -4,6 +4,10 @@
 
 广告开格、续玩、刷新道具、吸尘、拖拽落点以及从落子到结算的调用顺序，见 [核心玩法流程规格](CORE_GAMEPLAY_FLOW.md)。各操作留下的状态和何时发下一组牌，见[各操作后的第一组新手牌](CORE_GAMEPLAY_FLOW.md#14-各操作后的第一组新手牌)。
 
+云、蜂蜜、草地、宝石与其他机关在消除通知后的反应，见[特殊格反应规格](SPECIAL_CELL_REACTIONS.md)，包括本格/全局/邻格的通知顺序、投放目标、待处理队列、恢复旧堆和后继状态。
+
+其余特殊格的完整规则与当前60个状态枚举的逐项归属，见[全部特殊格覆盖表](SPECIAL_CELL_COVERAGE.md)。该表链接移动、生成、收集、等待开格与经典机关各篇；停用旧编号也单独说明，不再仅列消除入口。
+
 直接读取 ARM64 ELF 与 v39 metadata，未运行游戏。方法地址通过 Assembly-CSharp.dll 的 CodeGenModule、ELF RELA 重定位、metadata 方法 token 得出。不是依据方法出现顺序猜测地址。
 
 ## 手牌更新
@@ -218,7 +222,7 @@ counts = []
 
 ## 仍待核验
 
-25,026 条阈值记录中 `HalfHexProbability` 全为 0。尚未确认该字段的其他消费点、个别特殊格的完整事件处理、运行时下发的动态难度配置与 RNG 状态。以上结果来自静态二进制，未做同一棋盘和输入序列的逐步对拍。现有的本地 `runtime-v21.jsonl` 含 38 条方法返回记录，只覆盖 `InitialSpawn`、`CheckMerge`、`CheckFail`、`PlaceHex`，没有 `GetNext` 或排序器的逐步结果。
+25,026 条阈值记录中 `HalfHexProbability` 全为 0。尚未确认该字段的其他消费点、运行时下发的动态难度配置与 RNG 状态。特殊格已按当前枚举逐项归档；停用旧类型没有活动处理链，见覆盖表中的具体边界。以上结果来自静态二进制，未做同一棋盘和输入序列的逐步对拍。现有的本地 `runtime-v21.jsonl` 含 38 条方法返回记录，只覆盖 `InitialSpawn`、`CheckMerge`、`CheckFail`、`PlaceHex`，没有 `GetNext` 或排序器的逐步结果。
 
 ## 文件
 

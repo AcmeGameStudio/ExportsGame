@@ -1,0 +1,436 @@
+{
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81",
+  "enum": "Gameplay.CellState",
+  "count": 60,
+  "states": [
+    {
+      "value": -1,
+      "name": "Dead",
+      "status": "base",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "不可用基础格；不接受邻消扣层"
+    },
+    {
+      "value": 0,
+      "name": "Open",
+      "status": "base",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "普通承载格；按堆顶参与排序/消除"
+    },
+    {
+      "value": 1,
+      "name": "RV",
+      "status": "base",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "广告/金币解锁；不由邻消打开"
+    },
+    {
+      "value": 2,
+      "name": "Cost",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "全盘按消除块数扣Cost"
+    },
+    {
+      "value": 3,
+      "name": "Wood",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "相邻事件扣1，归零Open并计目标"
+    },
+    {
+      "value": 4,
+      "name": "Ice",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "相邻事件扣1，解冰保留原堆"
+    },
+    {
+      "value": 5,
+      "name": "Hole",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "无活动状态处理器；旧排序器仍有同色Hole优先分支"
+    },
+    {
+      "value": 6,
+      "name": "Grass",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "本格消除扣1；不是邻消扣层"
+    },
+    {
+      "value": 7,
+      "name": "Camera",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "邻消拍照；目标完成停止普通收集，道具入口独立"
+    },
+    {
+      "value": 8,
+      "name": "LockHighRise",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "全局累计消除量达到固定Cost门槛"
+    },
+    {
+      "value": 9,
+      "name": "FridgeCan",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "仅保留罐子表现，未接通棋盘消除处理"
+    },
+    {
+      "value": 10,
+      "name": "BirdHouse",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "本版工厂默认null，无活动处理器"
+    },
+    {
+      "value": 11,
+      "name": "WaitingCell",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "被开的位置；按完整NextState恢复"
+    },
+    {
+      "value": 12,
+      "name": "WaitingCellStack",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "按累计量确定数量，权重抽位置；发完变Dead"
+    },
+    {
+      "value": 13,
+      "name": "FireCracker",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "邻消发射；全盘优先级目标、在途排斥"
+    },
+    {
+      "value": 14,
+      "name": "Toaster",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "两阶段相位；每个产出阶段收2片"
+    },
+    {
+      "value": 15,
+      "name": "Gramophone",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "本版工厂默认null，无活动处理器"
+    },
+    {
+      "value": 16,
+      "name": "ColorNuts",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "旧类型停用；不能套用33"
+    },
+    {
+      "value": 17,
+      "name": "CarParking",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "沿固定车道逐格移动Car，入位提交目标"
+    },
+    {
+      "value": 18,
+      "name": "Curtain",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "全盘匹配色按块数扣；揭幕后提升后继"
+    },
+    {
+      "value": 19,
+      "name": "Cloud",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "旧类型停用；不能套用46"
+    },
+    {
+      "value": 20,
+      "name": "Playpen",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "邻消颜色匹配剩余球色，移除对应球"
+    },
+    {
+      "value": 21,
+      "name": "GemBox",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "相邻命中排队投宝石；无合适空间直接收"
+    },
+    {
+      "value": 22,
+      "name": "Gem",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消一次收集，提升完整后继"
+    },
+    {
+      "value": 23,
+      "name": "Honey",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消一次投1滴；全盘选目标，无目标仍扣存量"
+    },
+    {
+      "value": 24,
+      "name": "HoneyTrap",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消解黏，保留原堆"
+    },
+    {
+      "value": 25,
+      "name": "SnakeBody",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "同组轮廓邻接触发各节；不是只通知最近节"
+    },
+    {
+      "value": 26,
+      "name": "SnakeTail",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "同组链形与尾部收集、计分"
+    },
+    {
+      "value": 27,
+      "name": "BirdNest",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "Cost每次减1，新Cost偶数时收1只"
+    },
+    {
+      "value": 28,
+      "name": "Pearl",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "匹配当前珍珠色；目标结束前可持续产珍珠"
+    },
+    {
+      "value": 29,
+      "name": "Doll",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "待处理批次扣1；空邻格随机迁移或原地打开"
+    },
+    {
+      "value": 30,
+      "name": "Drone",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "两相位递送表现块，不增加普通可排序颜色堆"
+    },
+    {
+      "value": 31,
+      "name": "DronePad",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "同ID停靠点，按Cost选择下一站"
+    },
+    {
+      "value": 32,
+      "name": "DroneHandler",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "控制同组转移，最终退出才收Drone目标"
+    },
+    {
+      "value": 33,
+      "name": "GeneratorNuts",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "匹配当前坚果，完整色段与补充队列"
+    },
+    {
+      "value": 34,
+      "name": "RainbowLauncher",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "激活/发射两阶段；候选评分选择目标和颜色"
+    },
+    {
+      "value": 35,
+      "name": "Jelly",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "按方向和片状态扣除，保存旋转及片数组"
+    },
+    {
+      "value": 37,
+      "name": "SeedBox",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "全盘播草，也可把草写到机关NextState"
+    },
+    {
+      "value": 38,
+      "name": "CupboardPrimary",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "柜门开启后转移杯子；与副半共用邻接去重"
+    },
+    {
+      "value": 39,
+      "name": "CupboardSecondary",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "与主半配对，不能人工重复扣一次"
+    },
+    {
+      "value": 36,
+      "name": "Bloom",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "汇集同轮颜色，同色双击与后续匹配分支不同"
+    },
+    {
+      "value": 42,
+      "name": "Safe",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "按块数转动，收金完成才开；道具计量独立"
+    },
+    {
+      "value": 43,
+      "name": "BoxingGlove",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "两相位拳套；邻格优先目标，待击队列"
+    },
+    {
+      "value": 45,
+      "name": "Kettle",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "按目标额度生成云，预占坐标并保存原堆"
+    },
+    {
+      "value": 46,
+      "name": "Steam",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消收云，动画后恢复原堆顺序"
+    },
+    {
+      "value": 44,
+      "name": "Dice",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "掷1至6点，队列和共享剩余目标防超收"
+    },
+    {
+      "value": 51,
+      "name": "Mole",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "同ID洞口按SequenceID循环或随机；出现延迟可击"
+    },
+    {
+      "value": 47,
+      "name": "PopcornMaker",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "全盘按块数扣；爆开播撒爆米花"
+    },
+    {
+      "value": 48,
+      "name": "Popcorn",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "邻消收集，提升后继"
+    },
+    {
+      "value": 53,
+      "name": "CandyMachine",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "命中相位控制同ID糖果收集，最后清机器"
+    },
+    {
+      "value": 54,
+      "name": "Candy",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "将邻消转发给注册机器；远处候选优先消费"
+    },
+    {
+      "value": 55,
+      "name": "Drill",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "两相位钻头；攻击后可迁入清空目标"
+    },
+    {
+      "value": 52,
+      "name": "SoilBomb",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "同ID组预锁，邻接链传播；置0防重复爆炸"
+    },
+    {
+      "value": 49,
+      "name": "TeslaTower",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "充放电相位；灯泡组和待处理队列"
+    },
+    {
+      "value": 50,
+      "name": "TeslaBulb",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "由塔选择，预置Cost0防重复再动画开格"
+    },
+    {
+      "value": 62,
+      "name": "Rabbit",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "按ID与SequenceID转移，落地才激活下一站"
+    },
+    {
+      "value": 60,
+      "name": "Penguin",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "解冻后固定方向逐格移动，无绕路"
+    },
+    {
+      "value": 61,
+      "name": "Igloo",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "按ID收企鹅，收完停用而非一律Open"
+    },
+    {
+      "value": 65,
+      "name": "HexGenerator",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "朝向固定输出位；输出空且解锁后才消耗生成次数"
+    },
+    {
+      "value": 68,
+      "name": "FireCrackerGenerator",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "Cost5至1充能，批量火箭可重复分配同一目标"
+    }
+  ],
+  "non_enum_legacy": [
+    {
+      "value": 41,
+      "name": "Frog",
+      "status": "not_in_current_enum",
+      "document": "SPECIAL_CELL_LEGACY.md"
+    }
+  ]
+}

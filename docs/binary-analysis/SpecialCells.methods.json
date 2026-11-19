@@ -1,0 +1,919 @@
+{
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81",
+  "module": "Assembly-CSharp.dll",
+  "methods": [
+    {
+      "class": "Gameplay.BirdNestCellState",
+      "method": "OnCellMerge",
+      "token": "0x600374a",
+      "rva": "0x210dbe8"
+    },
+    {
+      "class": "Gameplay.BirdNestCellState",
+      "method": "AnimateBirdNest",
+      "token": "0x600374b",
+      "rva": "0x210d5d0"
+    },
+    {
+      "class": "Gameplay.BloomCellState",
+      "method": "OnCellMerge",
+      "token": "0x600376d",
+      "rva": "0x2110240"
+    },
+    {
+      "class": "Gameplay.BloomCellState",
+      "method": "OpenBloom",
+      "token": "0x600376e",
+      "rva": "0x2110384"
+    },
+    {
+      "class": "Gameplay.BoxingGloveCellState",
+      "method": "OnCellMerge",
+      "token": "0x600379d",
+      "rva": "0x2112778"
+    },
+    {
+      "class": "Gameplay.CameraCellState",
+      "method": "OnCellMerge",
+      "token": "0x60037d1",
+      "rva": "0x2114704"
+    },
+    {
+      "class": "Gameplay.CandyCellState",
+      "method": "NeighbourCellMerged",
+      "token": "0x60037fc",
+      "rva": "0x2115c2c"
+    },
+    {
+      "class": "Gameplay.CandyMachineCellState",
+      "method": "NeighbourCellMerged",
+      "token": "0x600380b",
+      "rva": "0x2117698"
+    },
+    {
+      "class": "Gameplay.CandyMachineCellState",
+      "method": "ProcessHitCall",
+      "token": "0x600380c",
+      "rva": "0x2116fb4"
+    },
+    {
+      "class": "Gameplay.ClamCellState",
+      "method": "CollectPearl",
+      "token": "0x6003875",
+      "rva": "0x211bd40"
+    },
+    {
+      "class": "Gameplay.ClamCellState",
+      "method": "OnCellMerge",
+      "token": "0x6003877",
+      "rva": "0x211c2f0"
+    },
+    {
+      "class": "Gameplay.CostCellState",
+      "method": "OnCellMerge",
+      "token": "0x60038b8",
+      "rva": "0x211e4c8"
+    },
+    {
+      "class": "Gameplay.CupboardSecondaryCellState",
+      "method": "OnCellMerged",
+      "token": "0x6003905",
+      "rva": "0x2121d10"
+    },
+    {
+      "class": "Gameplay.CurtainCellState",
+      "method": "OnHexMerged",
+      "token": "0x600391a",
+      "rva": "0x2122aec"
+    },
+    {
+      "class": "Gameplay.DiceCellState",
+      "method": "NeighbourCellMerged",
+      "token": "0x6003956",
+      "rva": "0x212584c"
+    },
+    {
+      "class": "Gameplay.DiceCellState",
+      "method": "OnDiceHit",
+      "token": "0x6003957",
+      "rva": "0x21256e0"
+    },
+    {
+      "class": "Gameplay.DollCellState",
+      "method": "OnCellMerge",
+      "token": "0x600397f",
+      "rva": "0x21274c0"
+    },
+    {
+      "class": "Gameplay.DrillCellState",
+      "method": "NeighbourCellMerged",
+      "token": "0x60039d4",
+      "rva": "0x212b320"
+    },
+    {
+      "class": "Gameplay.DrillCellState",
+      "method": "OnDrillHit",
+      "token": "0x60039d6",
+      "rva": "0x212b17c"
+    },
+    {
+      "class": "Gameplay.DroneCellState",
+      "method": "OnHexMerged",
+      "token": "0x6003a15",
+      "rva": "0x212e29c"
+    },
+    {
+      "class": "Gameplay.DroneHandlerCellState",
+      "method": "OnHexMerged",
+      "token": "0x6003a28",
+      "rva": "0x212fb88"
+    },
+    {
+      "class": "Gameplay.FireCrackerCellState",
+      "method": "OnHexMerged",
+      "token": "0x6003a70",
+      "rva": "0x2133334"
+    },
+    {
+      "class": "Gameplay.FireCrackerGenCellState",
+      "method": "NeighbourCellMerged",
+      "token": "0x6003ac7",
+      "rva": "0x2138ca4"
+    },
+    {
+      "class": "Gameplay.FireCrackerGenCellState",
+      "method": "TriggerCostUpdate",
+      "token": "0x6003aca",
+      "rva": "0x2138c54"
+    },
+    {
+      "class": "Gameplay.GemBoxCellState.<>c",
+      "method": "<AnimationCoroutine>b__18_0",
+      "token": "0x6003afa",
+      "rva": "0x213ad48"
+    },
+    {
+      "class": "Gameplay.GemBoxCellState.<>c",
+      "method": "<AnimationCoroutine>b__18_1",
+      "token": "0x6003afb",
+      "rva": "0x213ad50"
+    },
+    {
+      "class": "Gameplay.GemBoxCellState.<>c",
+      "method": "<AnimationCoroutine>b__18_2",
+      "token": "0x6003afc",
+      "rva": "0x213add8"
+    },
+    {
+      "class": "Gameplay.GemBoxCellState.<>c",
+      "method": "<AnimationCoroutine>b__18_3",
+      "token": "0x6003afd",
+      "rva": "0x213ae94"
+    },
+    {
+      "class": "Gameplay.GemBoxCellState.<AnimationCoroutine>d__18",
+      "method": "MoveNext",
+      "token": "0x6003b00",
+      "rva": "0x213af20"
+    },
+    {
+      "class": "Gameplay.GemBoxCellState",
+      "method": ".ctor",
+      "token": "0x6003ae9",
+      "rva": "0x213a06c"
+    },
+    {
+      "class": "Gameplay.GemBoxCellState",
+      "method": "RegisterListeners",
+      "token": "0x6003aeb",
+      "rva": "0x213a338"
+    },
+    {
+      "class": "Gameplay.GemBoxCellState",
+      "method": "OnHexMerged",
+      "token": "0x6003af1",
+      "rva": "0x213a9e4"
+    },
+    {
+      "class": "Gameplay.GemBoxCellState",
+      "method": "OnBlockRemoved",
+      "token": "0x6003af2",
+      "rva": "0x213aabc"
+    },
+    {
+      "class": "Gameplay.GemBoxCellState",
+      "method": "CanThrowGem",
+      "token": "0x6003af3",
+      "rva": "0x213a634"
+    },
+    {
+      "class": "Gameplay.GemBoxCellState",
+      "method": "ThrowGem",
+      "token": "0x6003af4",
+      "rva": "0x213a7bc"
+    },
+    {
+      "class": "Gameplay.GemBoxHex",
+      "method": "ThrowGem",
+      "token": "0x6003b0f",
+      "rva": "0x213b74c"
+    },
+    {
+      "class": "Gameplay.GemBoxHex",
+      "method": "CollectAnimation",
+      "token": "0x6003b10",
+      "rva": "0x213ba38"
+    },
+    {
+      "class": "Gameplay.GemCellState",
+      "method": "SpawnPrefab",
+      "token": "0x6003b19",
+      "rva": "0x213c750"
+    },
+    {
+      "class": "Gameplay.GemCellState",
+      "method": "RegisterListeners",
+      "token": "0x6003b1a",
+      "rva": "0x213c96c"
+    },
+    {
+      "class": "Gameplay.GemCellState",
+      "method": "OnHexMerged",
+      "token": "0x6003b21",
+      "rva": "0x213d08c"
+    },
+    {
+      "class": "Gameplay.GemCellState",
+      "method": "Execute",
+      "token": "0x6003b22",
+      "rva": "0x213cc44"
+    },
+    {
+      "class": "Gameplay.GemCellState",
+      "method": "Gameplay.ISeedBoxListener.EnableGrass",
+      "token": "0x6003b23",
+      "rva": "0x213d150"
+    },
+    {
+      "class": "Gameplay.GeneratorNutsCellState",
+      "method": "Merged",
+      "token": "0x6003b36",
+      "rva": "0x213e93c"
+    },
+    {
+      "class": "Gameplay.HexGeneratorCellState",
+      "method": "OnHexMerge",
+      "token": "0x6003b88",
+      "rva": "0x2142b04"
+    },
+    {
+      "class": "Gameplay.HoneyCellState.<>c",
+      "method": "<AnimationCoroutine>b__15_0",
+      "token": "0x6003bc8",
+      "rva": "0x2145b18"
+    },
+    {
+      "class": "Gameplay.HoneyCellState.<>c",
+      "method": "<AnimationCoroutine>b__15_1",
+      "token": "0x6003bc9",
+      "rva": "0x2145bd4"
+    },
+    {
+      "class": "Gameplay.HoneyCellState.<>c",
+      "method": "<AnimationCoroutine>b__15_2",
+      "token": "0x6003bca",
+      "rva": "0x2145c74"
+    },
+    {
+      "class": "Gameplay.HoneyCellState.<>c",
+      "method": "<AnimationCoroutine>b__15_3",
+      "token": "0x6003bcb",
+      "rva": "0x2145d30"
+    },
+    {
+      "class": "Gameplay.HoneyCellState.<AnimationCoroutine>d__15",
+      "method": "MoveNext",
+      "token": "0x6003bce",
+      "rva": "0x2145d98"
+    },
+    {
+      "class": "Gameplay.HoneyCellState",
+      "method": ".ctor",
+      "token": "0x6003bb8",
+      "rva": "0x2144b3c"
+    },
+    {
+      "class": "Gameplay.HoneyCellState",
+      "method": "RegisterListeners",
+      "token": "0x6003bba",
+      "rva": "0x2144e24"
+    },
+    {
+      "class": "Gameplay.HoneyCellState",
+      "method": "OnHexMerged",
+      "token": "0x6003bc0",
+      "rva": "0x214547c"
+    },
+    {
+      "class": "Gameplay.HoneyCellState",
+      "method": "ThrowDrop",
+      "token": "0x6003bc1",
+      "rva": "0x21452a0"
+    },
+    {
+      "class": "Gameplay.HoneyTrapCellState",
+      "method": "RegisterListeners",
+      "token": "0x6003beb",
+      "rva": "0x2147070"
+    },
+    {
+      "class": "Gameplay.HoneyTrapCellState",
+      "method": "OnHexMerged",
+      "token": "0x6003bf2",
+      "rva": "0x2147dec"
+    },
+    {
+      "class": "Gameplay.HoneyTrapCellState",
+      "method": "Execute",
+      "token": "0x6003bf3",
+      "rva": "0x2147600"
+    },
+    {
+      "class": "Gameplay.HoneyTrapCellState",
+      "method": "HexPlaced",
+      "token": "0x6003bf4",
+      "rva": "0x2147eb0"
+    },
+    {
+      "class": "Gameplay.IceCellState",
+      "method": "OnCellMerge",
+      "token": "0x6003c21",
+      "rva": "0x214a6c0"
+    },
+    {
+      "class": "Gameplay.IceCellState",
+      "method": "CollectIcePiece",
+      "token": "0x6003c22",
+      "rva": "0x214a174"
+    },
+    {
+      "class": "Gameplay.IceCellState",
+      "method": "UnlockIce",
+      "token": "0x6003c23",
+      "rva": "0x214a784"
+    },
+    {
+      "class": "Gameplay.JellyCellState",
+      "method": "Merged",
+      "token": "0x6003c5c",
+      "rva": "0x214d4d0"
+    },
+    {
+      "class": "Gameplay.JellyCellState",
+      "method": "HexPlaced",
+      "token": "0x6003c5d",
+      "rva": "0x214db00"
+    },
+    {
+      "class": "Gameplay.JellyCellState",
+      "method": "CheckNeighborMerge",
+      "token": "0x6003c5e",
+      "rva": "0x214d4d4"
+    },
+    {
+      "class": "Gameplay.JellyCellState",
+      "method": "CheckCellUnlock",
+      "token": "0x6003c61",
+      "rva": "0x214cae0"
+    },
+    {
+      "class": "Gameplay.KettleCellState",
+      "method": "get_CanCreateSteam",
+      "token": "0x6003c73",
+      "rva": "0x214e090"
+    },
+    {
+      "class": "Gameplay.KettleCellState",
+      "method": "OnCellMerge",
+      "token": "0x6003c82",
+      "rva": "0x214f2c4"
+    },
+    {
+      "class": "Gameplay.KettleCellState",
+      "method": "CreateSteam",
+      "token": "0x6003c83",
+      "rva": "0x214ee50"
+    },
+    {
+      "class": "Gameplay.KettleCellState",
+      "method": "SelectTargets",
+      "token": "0x6003c85",
+      "rva": "0x214f438"
+    },
+    {
+      "class": "Gameplay.KettleCellState",
+      "method": "CreateSteams",
+      "token": "0x6003c86",
+      "rva": "0x214e784"
+    },
+    {
+      "class": "Gameplay.KettleCellState",
+      "method": "SpawnSteamOnCell",
+      "token": "0x6003c87",
+      "rva": "0x214f944"
+    },
+    {
+      "class": "Gameplay.KettleCellState",
+      "method": "OnSteamSpawnedCallback",
+      "token": "0x6003c88",
+      "rva": "0x214f9e8"
+    },
+    {
+      "class": "Gameplay.KettleCellState",
+      "method": "GetTargetCell",
+      "token": "0x6003c89",
+      "rva": "0x214f598"
+    },
+    {
+      "class": "Gameplay.LockHighRiseCellState",
+      "method": "OnCellMerge",
+      "token": "0x6003cb6",
+      "rva": "0x21511e0"
+    },
+    {
+      "class": "Gameplay.PenguinCellState",
+      "method": "HexPlaced",
+      "token": "0x6003cf8",
+      "rva": "0x2154140"
+    },
+    {
+      "class": "Gameplay.PenguinCellState",
+      "method": "NeighbourCellMerged",
+      "token": "0x6003d01",
+      "rva": "0x2155040"
+    },
+    {
+      "class": "Gameplay.PenguinCellState",
+      "method": "Merge",
+      "token": "0x6003d02",
+      "rva": "0x2153904"
+    },
+    {
+      "class": "Gameplay.PlaypenCellState",
+      "method": "OnCellMerge",
+      "token": "0x6003d4c",
+      "rva": "0x2157cfc"
+    },
+    {
+      "class": "Gameplay.PlaypenCellState",
+      "method": "CanCollectBall",
+      "token": "0x6003d4d",
+      "rva": "0x2157f5c"
+    },
+    {
+      "class": "Gameplay.PopcornCellState",
+      "method": "NeighbourCellMerged",
+      "token": "0x6003d78",
+      "rva": "0x215a078"
+    },
+    {
+      "class": "Gameplay.PopcornCellState",
+      "method": "CollectPopcorn",
+      "token": "0x6003d79",
+      "rva": "0x2159d58"
+    },
+    {
+      "class": "Gameplay.PopcornMakerCellState",
+      "method": "OnCellMerged",
+      "token": "0x6003d94",
+      "rva": "0x215b660"
+    },
+    {
+      "class": "Gameplay.RabbitCellState",
+      "method": "NeighbourCellMerged",
+      "token": "0x6003dc6",
+      "rva": "0x2171b44"
+    },
+    {
+      "class": "Gameplay.RabbitCellState",
+      "method": "MergeDecision",
+      "token": "0x6003dc7",
+      "rva": "0x2171a7c"
+    },
+    {
+      "class": "Gameplay.RainbowLauncherCellState",
+      "method": "OnCellMerge",
+      "token": "0x6003e0e",
+      "rva": "0x2175624"
+    },
+    {
+      "class": "Gameplay.SafeCellState",
+      "method": "OnCellMerged",
+      "token": "0x6003e57",
+      "rva": "0x217a098"
+    },
+    {
+      "class": "Gameplay.SafeCellState",
+      "method": "TurnSafeWheel",
+      "token": "0x6003e58",
+      "rva": "0x21799cc"
+    },
+    {
+      "class": "Gameplay.SeedBoxCellState.<>c",
+      "method": "<GetHighPriorityTargets>b__16_1",
+      "token": "0x6003e90",
+      "rva": "0x217d9d0"
+    },
+    {
+      "class": "Gameplay.SeedBoxCellState.<>c",
+      "method": "<GetHighPriorityTargets>b__16_2",
+      "token": "0x6003e91",
+      "rva": "0x217da1c"
+    },
+    {
+      "class": "Gameplay.SeedBoxCellState.<>c",
+      "method": "<GetHighPriorityTargets>b__16_3",
+      "token": "0x6003e92",
+      "rva": "0x217da70"
+    },
+    {
+      "class": "Gameplay.SeedBoxCellState.<>c",
+      "method": "<GetLowPriorityTargets>b__20_1",
+      "token": "0x6003e94",
+      "rva": "0x217db80"
+    },
+    {
+      "class": "Gameplay.SeedBoxCellState",
+      "method": "OnHexMerged",
+      "token": "0x6003e84",
+      "rva": "0x217c9a4"
+    },
+    {
+      "class": "Gameplay.SeedBoxCellState",
+      "method": "UpdateCostAndAnimate",
+      "token": "0x6003e85",
+      "rva": "0x217bea8"
+    },
+    {
+      "class": "Gameplay.SeedBoxCellState",
+      "method": "GetHighPriorityTargets",
+      "token": "0x6003e86",
+      "rva": "0x217ca70"
+    },
+    {
+      "class": "Gameplay.SeedBoxCellState",
+      "method": "OnAnimationCompleteCallback",
+      "token": "0x6003e87",
+      "rva": "0x217d1b4"
+    },
+    {
+      "class": "Gameplay.SeedBoxCellState",
+      "method": "CheckCellUnlocked",
+      "token": "0x6003e88",
+      "rva": "0x217d320"
+    },
+    {
+      "class": "Gameplay.SeedBoxCellState",
+      "method": "GetLowPriorityTargets",
+      "token": "0x6003e8a",
+      "rva": "0x217cea8"
+    },
+    {
+      "class": "Gameplay.SnakeBodyCellState",
+      "method": "OnHexMerged",
+      "token": "0x6003eba",
+      "rva": "0x217ef1c"
+    },
+    {
+      "class": "Gameplay.SnakeTailCellState",
+      "method": "OnHexMerged",
+      "token": "0x6003ed3",
+      "rva": "0x2180178"
+    },
+    {
+      "class": "Gameplay.SoilBombCellState",
+      "method": "NeighbourCellMerged",
+      "token": "0x6003f10",
+      "rva": "0x218499c"
+    },
+    {
+      "class": "Gameplay.SoilBombCellState",
+      "method": "PlayMergeFeedback",
+      "token": "0x6003f11",
+      "rva": "0x2184460"
+    },
+    {
+      "class": "Gameplay.SteamCellState.<>c__DisplayClass14_0",
+      "method": "<CollectCloud>b__0",
+      "token": "0x6003f55",
+      "rva": "0x2186f54"
+    },
+    {
+      "class": "Gameplay.SteamCellState",
+      "method": "PostInit",
+      "token": "0x6003f46",
+      "rva": "0x2185ff4"
+    },
+    {
+      "class": "Gameplay.SteamCellState",
+      "method": "get_IsTemporaryBlocker",
+      "token": "0x6003f47",
+      "rva": "0x2186774"
+    },
+    {
+      "class": "Gameplay.SteamCellState",
+      "method": "TransferHex",
+      "token": "0x6003f48",
+      "rva": "0x218678c"
+    },
+    {
+      "class": "Gameplay.SteamCellState",
+      "method": "OnCellMerge",
+      "token": "0x6003f4f",
+      "rva": "0x2186e54"
+    },
+    {
+      "class": "Gameplay.SteamCellState",
+      "method": "CollectCloud",
+      "token": "0x6003f50",
+      "rva": "0x21869f8"
+    },
+    {
+      "class": "Gameplay.SteamCellState",
+      "method": "OnSteamAnimCompleteCallback",
+      "token": "0x6003f51",
+      "rva": "0x2186264"
+    },
+    {
+      "class": "Gameplay.SteamCellState",
+      "method": "RegisterListener",
+      "token": "0x6003f52",
+      "rva": "0x2186668"
+    },
+    {
+      "class": "Gameplay.SteamHex.<CloudCollectRoutine>d__21",
+      "method": "MoveNext",
+      "token": "0x6003f67",
+      "rva": "0x2187920"
+    },
+    {
+      "class": "Gameplay.SteamHex",
+      "method": "PlayCloudCollectAnimation",
+      "token": "0x6003f5a",
+      "rva": "0x2186f24"
+    },
+    {
+      "class": "Gameplay.SteamHex",
+      "method": "InvokeGameEvents",
+      "token": "0x6003f5d",
+      "rva": "0x218744c"
+    },
+    {
+      "class": "Gameplay.TeslaTowerCellState",
+      "method": "NeighbourCellMerged",
+      "token": "0x6003f95",
+      "rva": "0x218a19c"
+    },
+    {
+      "class": "Gameplay.TeslaTowerCellState",
+      "method": "OnMerge",
+      "token": "0x6003f96",
+      "rva": "0x2189b2c"
+    },
+    {
+      "class": "Gameplay.ToasterCellState",
+      "method": "OnCellMerge",
+      "token": "0x6003fc4",
+      "rva": "0x218bb64"
+    },
+    {
+      "class": "Gameplay.WaitingTileCellState",
+      "method": "OnHexMerged",
+      "token": "0x600401e",
+      "rva": "0x218ed20"
+    },
+    {
+      "class": "Gameplay.MoleCellState",
+      "method": "OnCellMerge",
+      "token": "0x600404a",
+      "rva": "0x2191bdc"
+    },
+    {
+      "class": "Gameplay.WoodCellState",
+      "method": "OnCellMerge",
+      "token": "0x6004087",
+      "rva": "0x2193f80"
+    },
+    {
+      "class": "Gameplay.WoodCellState",
+      "method": "BreakWood",
+      "token": "0x6004088",
+      "rva": "0x2193bfc"
+    },
+    {
+      "class": "Gameplay.WoodCellState",
+      "method": "UnlockWood",
+      "token": "0x6004089",
+      "rva": "0x2194044"
+    },
+    {
+      "class": "Gameplay.ACellState",
+      "method": "get_IsPlaceableState",
+      "token": "0x60041b3",
+      "rva": "0x219df20"
+    },
+    {
+      "class": "Gameplay.ACellState",
+      "method": "ReValidateSorting",
+      "token": "0x60041d8",
+      "rva": "0x219e380"
+    },
+    {
+      "class": "Gameplay.ACellState",
+      "method": "CellMerged",
+      "token": "0x60041d9",
+      "rva": "0x219e428"
+    },
+    {
+      "class": "Gameplay.ACellState",
+      "method": "NeighbourCellMerged",
+      "token": "0x60041da",
+      "rva": "0x219e42c"
+    },
+    {
+      "class": "Gameplay.Cell.<>c__DisplayClass164_0",
+      "method": "<Merge>b__0",
+      "token": "0x60042de",
+      "rva": "0x21aad2c"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "get_IsLowerLayerState",
+      "token": "0x600424f",
+      "rva": "0x21a3184"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "get_CanHaveLowerLayerState",
+      "token": "0x6004251",
+      "rva": "0x21a3694"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "StateReAssign",
+      "token": "0x6004260",
+      "rva": "0x21a52e8"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "DecrementCost",
+      "token": "0x6004264",
+      "rva": "0x21a56d0"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "RemoveBlocks",
+      "token": "0x600426b",
+      "rva": "0x21a5c64"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "Merge",
+      "token": "0x6004272",
+      "rva": "0x21a6e34"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "NeighbourCellMerged",
+      "token": "0x6004273",
+      "rva": "0x21a7418"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "MergeAll",
+      "token": "0x6004274",
+      "rva": "0x21a7450"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "MergeAll",
+      "token": "0x6004275",
+      "rva": "0x21a7534"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "MergeBlocks",
+      "token": "0x600427b",
+      "rva": "0x21a7200"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "SetState",
+      "token": "0x6004280",
+      "rva": "0x21a4cf8"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "IsNeighbour",
+      "token": "0x6004284",
+      "rva": "0x21a84c0"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "DamageCell",
+      "token": "0x600428a",
+      "rva": "0x21a872c"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "Gameplay.ICellStateContext.IsNeighbour",
+      "token": "0x6004296",
+      "rva": "0x21a8fc8"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "StateReAssign",
+      "token": "0x60042ab",
+      "rva": "0x21a9590"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "ChangeCellDataToNextState",
+      "token": "0x60042ad",
+      "rva": "0x21a9630"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "UpdateCellDataCurrentState",
+      "token": "0x60042af",
+      "rva": "0x21a96f8"
+    },
+    {
+      "class": "Gameplay.Cell",
+      "method": "<SetState>b__178_1",
+      "token": "0x60042bc",
+      "rva": "0x21aa240"
+    },
+    {
+      "class": "Gameplay.CellStateFactory",
+      "method": "GetCellStateObject",
+      "token": "0x6004304",
+      "rva": "0x21a3fc4"
+    },
+    {
+      "class": "Gameplay.GrassHex",
+      "method": "GenerateGrass",
+      "token": "0x600433c",
+      "rva": "0x21a8018"
+    },
+    {
+      "class": "Gameplay.GrassHex",
+      "method": "SetState",
+      "token": "0x600433d",
+      "rva": "0x21a8060"
+    },
+    {
+      "class": "Gameplay.GrassHex",
+      "method": "Animate",
+      "token": "0x6004341",
+      "rva": "0x21a7fdc"
+    },
+    {
+      "class": "Gameplay.GrassHex",
+      "method": "<SetState>b__20_1",
+      "token": "0x600434a",
+      "rva": "0x21ae5fc"
+    },
+    {
+      "class": "Gameplay.HexaSortMerge",
+      "method": "CheckMerge",
+      "token": "0x60043e9",
+      "rva": "0x21b7840"
+    },
+    {
+      "class": "Gameplay.GemHex",
+      "method": "Animate",
+      "token": "0x6003b27",
+      "rva": "0x213d060"
+    },
+    {
+      "class": "Gameplay.GemHex",
+      "method": "<Animation>b__11_0",
+      "token": "0x6003b2b",
+      "rva": "0x213d5a8"
+    },
+    {
+      "class": "Gameplay.HoneyTrapHex",
+      "method": "<Animate>b__17_0",
+      "token": "0x6003c01",
+      "rva": "0x2148814"
+    },
+    {
+      "class": "Gameplay.HoneyTrapHex",
+      "method": "<Animate>b__17_1",
+      "token": "0x6003c02",
+      "rva": "0x214882c"
+    }
+  ]
+}
