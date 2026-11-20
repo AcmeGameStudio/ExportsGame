@@ -1,0 +1,2697 @@
+{
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81",
+  "metadata_registration_rva": "0x42230a8",
+  "color_values": {
+    "None": 0,
+    "Red": 1,
+    "Green": 2,
+    "Blue": 4,
+    "Yellow": 8,
+    "Purple": 16,
+    "Aqua": 32,
+    "White": 64,
+    "Black": 128,
+    "Car": 256
+  },
+  "layouts": [
+    {
+      "name": "Gameplay.GridSystem",
+      "type_definition_index": 2803,
+      "instance_size": "0x60",
+      "fields": [
+        {
+          "name": "HintsEnabled",
+          "type": "UM.Variables.DBBool",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003c81"
+        },
+        {
+          "name": "MergeParticlesEnabled",
+          "type": "UM.Variables.DBBool",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003c82"
+        },
+        {
+          "name": "IsNewClaustrophobiaDefEnabled",
+          "type": "UM.Variables.DBBool",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003c83"
+        },
+        {
+          "name": "CarParkingData",
+          "type": "Gameplay.CarParkingData",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003c84"
+        },
+        {
+          "name": "NULL_INDEX",
+          "type": "System.ValueTuple`2<int,int>",
+          "offset": "0x0",
+          "storage": "static",
+          "token": "0x4003c85"
+        },
+        {
+          "name": "GridParentTransform",
+          "type": "UnityEngine.Transform",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003c86"
+        },
+        {
+          "name": "CellPrefab",
+          "type": "Gameplay.Cell",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4003c87"
+        },
+        {
+          "name": "Cells",
+          "type": "System.Collections.Generic.Dictionary`2<System.ValueTuple`2<int,int>,Gameplay.Cell>",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x4003c88"
+        },
+        {
+          "name": "_lastIndex",
+          "type": "System.ValueTuple`2<int,int>",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x4003c89"
+        },
+        {
+          "name": "LastIndexAdded",
+          "type": "System.ValueTuple`2<int,int>",
+          "offset": "0x58",
+          "storage": "instance",
+          "token": "0x4003c8a"
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_EmptyCellCount",
+          "token": "0x6004360",
+          "rva": "0x21aef60"
+        },
+        {
+          "name": "get_RvCellsCount",
+          "token": "0x6004361",
+          "rva": "0x21af05c"
+        },
+        {
+          "name": "get_IsPrioritizeEmptyCellsOverIterations",
+          "token": "0x6004362",
+          "rva": "0x21af170"
+        },
+        {
+          "name": "get_CanLevelQuit",
+          "token": "0x6004363",
+          "rva": "0x21af1f8"
+        },
+        {
+          "name": "get_IsClaustrophobia",
+          "token": "0x6004364",
+          "rva": "0x21af40c"
+        },
+        {
+          "name": "get_TypesWithEmptyNeighbours",
+          "token": "0x6004365",
+          "rva": "0x21af880"
+        },
+        {
+          "name": "Init",
+          "token": "0x6004366",
+          "rva": "0x21b0064"
+        },
+        {
+          "name": "CheckCellUnlocking",
+          "token": "0x6004367",
+          "rva": "0x21b1108"
+        },
+        {
+          "name": "ResumePaths",
+          "token": "0x6004368",
+          "rva": "0x21b110c"
+        },
+        {
+          "name": "SetupMovementPaths",
+          "token": "0x6004369",
+          "rva": "0x21b0a38"
+        },
+        {
+          "name": "UpdateHighlighting",
+          "token": "0x600436a",
+          "rva": "0x21b169c"
+        },
+        {
+          "name": "GetAlternateBestNeighbour",
+          "token": "0x600436b",
+          "rva": "0x21b1b78"
+        },
+        {
+          "name": "SetupSortingCellsForGrid",
+          "token": "0x600436c",
+          "rva": "0x21b1dac"
+        },
+        {
+          "name": "IsIndexValid",
+          "token": "0x600436d",
+          "rva": "0x21b2714"
+        },
+        {
+          "name": "IsIndexEmpty",
+          "token": "0x600436e",
+          "rva": "0x21b1d18"
+        },
+        {
+          "name": "CellAtIndex",
+          "token": "0x600436f",
+          "rva": "0x21a1008"
+        },
+        {
+          "name": "AddBlocks",
+          "token": "0x6004370",
+          "rva": "0x21b2780"
+        },
+        {
+          "name": "Cleanup",
+          "token": "0x6004371",
+          "rva": "0x21b281c"
+        },
+        {
+          "name": "Reset",
+          "token": "0x6004372",
+          "rva": "0x21b2820"
+        },
+        {
+          "name": "CellPosAtIndex",
+          "token": "0x6004373",
+          "rva": "0x21b2b04"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6004374",
+          "rva": "0x21b2bd8"
+        },
+        {
+          "name": ".cctor",
+          "token": "0x6004375",
+          "rva": "0x21b2be0"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.Cell",
+      "type_definition_index": 2773,
+      "instance_size": "0x168",
+      "fields": [
+        {
+          "name": "Merged",
+          "type": "HexMergeOnCell",
+          "offset": "0x0",
+          "storage": "static",
+          "token": "0x4003bba"
+        },
+        {
+          "name": "PowerUpApplied",
+          "type": "PowerUpAppliedOnCell",
+          "offset": "0x8",
+          "storage": "static",
+          "token": "0x4003bbb"
+        },
+        {
+          "name": "HexAdded",
+          "type": "HexAddedOnCell",
+          "offset": "0x10",
+          "storage": "static",
+          "token": "0x4003bbc"
+        },
+        {
+          "name": "HexPlaced",
+          "type": "HexPlacedOnCell",
+          "offset": "0x18",
+          "storage": "static",
+          "token": "0x4003bbd"
+        },
+        {
+          "name": "BlockRemoved",
+          "type": "BlockRemovedFromCell",
+          "offset": "0x20",
+          "storage": "static",
+          "token": "0x4003bbe"
+        },
+        {
+          "name": "FLIP_TIME",
+          "type": "float",
+          "offset": "0x28",
+          "storage": "static",
+          "token": "0x4003bbf"
+        },
+        {
+          "name": "FLIP_DELAY",
+          "type": "float",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003bc0"
+        },
+        {
+          "name": "MERGE_DELAY",
+          "type": "float",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003bc1"
+        },
+        {
+          "name": "MERGE_TIME",
+          "type": "float",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003bc2"
+        },
+        {
+          "name": "LevelGoalTracker",
+          "type": "Gameplay.LevelGoalTracker",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003bc3"
+        },
+        {
+          "name": "CellUnlockAnimator",
+          "type": "UnityEngine.Animator",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003bc4"
+        },
+        {
+          "name": "_normalUnlockHash",
+          "type": "int",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003bc5"
+        },
+        {
+          "name": "_rvUnlockHash",
+          "type": "int",
+          "offset": "0x34",
+          "storage": "instance",
+          "token": "0x4003bc6"
+        },
+        {
+          "name": "_sortingListener",
+          "type": "Gameplay.ISorting",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003bc7"
+        },
+        {
+          "name": "GoalViewListener",
+          "type": "Gameplay.IGoalView",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4003bc8"
+        },
+        {
+          "name": "GameplaySounds",
+          "type": "Gameplay.GameplaySounds",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x4003bc9"
+        },
+        {
+          "name": "BlockPrefab",
+          "type": "Gameplay.Block",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x4003bca"
+        },
+        {
+          "name": "RVHex",
+          "type": "Gameplay.RvHex",
+          "offset": "0x58",
+          "storage": "instance",
+          "token": "0x4003bcb"
+        },
+        {
+          "name": "GrassHexPrefab",
+          "type": "Gameplay.GrassHex",
+          "offset": "0x60",
+          "storage": "instance",
+          "token": "0x4003bcc"
+        },
+        {
+          "name": "LockHighRiseHex",
+          "type": "Gameplay.LockHighRiseHex",
+          "offset": "0x68",
+          "storage": "instance",
+          "token": "0x4003bcd"
+        },
+        {
+          "name": "FridgeHex",
+          "type": "Gameplay.FridgeHex",
+          "offset": "0x70",
+          "storage": "instance",
+          "token": "0x4003bce"
+        },
+        {
+          "name": "ParticleSystem",
+          "type": "UnityEngine.GameObject",
+          "offset": "0x78",
+          "storage": "instance",
+          "token": "0x4003bcf"
+        },
+        {
+          "name": "HintGlowParticle",
+          "type": "Gameplay.HintGlowParticle",
+          "offset": "0x80",
+          "storage": "instance",
+          "token": "0x4003bd0"
+        },
+        {
+          "name": "CostText",
+          "type": "TMPro.TextMeshPro",
+          "offset": "0x88",
+          "storage": "instance",
+          "token": "0x4003bd1"
+        },
+        {
+          "name": "LockState",
+          "type": "UnityEngine.GameObject",
+          "offset": "0x90",
+          "storage": "instance",
+          "token": "0x4003bd2"
+        },
+        {
+          "name": "RvState",
+          "type": "UnityEngine.GameObject",
+          "offset": "0x98",
+          "storage": "instance",
+          "token": "0x4003bd3"
+        },
+        {
+          "name": "LockedMaterial",
+          "type": "UnityEngine.Material",
+          "offset": "0xa0",
+          "storage": "instance",
+          "token": "0x4003bd4"
+        },
+        {
+          "name": "UnlockedMaterial",
+          "type": "UnityEngine.Material",
+          "offset": "0xa8",
+          "storage": "instance",
+          "token": "0x4003bd5"
+        },
+        {
+          "name": "HighlightMaterial",
+          "type": "UnityEngine.Material",
+          "offset": "0xb0",
+          "storage": "instance",
+          "token": "0x4003bd6"
+        },
+        {
+          "name": "CellMeshRenderer",
+          "type": "UnityEngine.MeshRenderer",
+          "offset": "0xb8",
+          "storage": "instance",
+          "token": "0x4003bd7"
+        },
+        {
+          "name": "ReValidateSorting",
+          "type": "UM.Events.GameEvent",
+          "offset": "0xc0",
+          "storage": "instance",
+          "token": "0x4003bd8"
+        },
+        {
+          "name": "CellNumber",
+          "type": "Gameplay.CellNumber",
+          "offset": "0xc8",
+          "storage": "instance",
+          "token": "0x4003bd9"
+        },
+        {
+          "name": "Blocks",
+          "type": "System.Collections.Generic.List`1<Gameplay.Block>",
+          "offset": "0xd0",
+          "storage": "instance",
+          "token": "0x4003bda"
+        },
+        {
+          "name": "Neighbours",
+          "type": "System.Collections.Generic.List`1<Gameplay.Cell>",
+          "offset": "0xd8",
+          "storage": "instance",
+          "token": "0x4003bdb"
+        },
+        {
+          "name": "CellData",
+          "type": "Gameplay.CellData",
+          "offset": "0xe0",
+          "storage": "instance",
+          "token": "0x4003bdc"
+        },
+        {
+          "name": "RequiredType",
+          "type": "Gameplay.HexType",
+          "offset": "0xe8",
+          "storage": "instance",
+          "token": "0x4003bdd"
+        },
+        {
+          "name": "<State>k__BackingField",
+          "type": "Gameplay.CellState",
+          "offset": "0xec",
+          "storage": "instance",
+          "token": "0x4003bde"
+        },
+        {
+          "name": "Cost",
+          "type": "int",
+          "offset": "0xf0",
+          "storage": "instance",
+          "token": "0x4003bdf"
+        },
+        {
+          "name": "CoinCost",
+          "type": "int",
+          "offset": "0xf4",
+          "storage": "instance",
+          "token": "0x4003be0"
+        },
+        {
+          "name": "Index",
+          "type": "System.ValueTuple`2<int,int>",
+          "offset": "0xf8",
+          "storage": "instance",
+          "token": "0x4003be1"
+        },
+        {
+          "name": "LockColors",
+          "type": "UnityEngine.Color[]",
+          "offset": "0x100",
+          "storage": "instance",
+          "token": "0x4003be2"
+        },
+        {
+          "name": "GridSystem",
+          "type": "Gameplay.GridSystem",
+          "offset": "0x108",
+          "storage": "instance",
+          "token": "0x4003be3"
+        },
+        {
+          "name": "_grassHex",
+          "type": "Gameplay.GrassHex",
+          "offset": "0x110",
+          "storage": "instance",
+          "token": "0x4003be4"
+        },
+        {
+          "name": "_fridgeHex",
+          "type": "Gameplay.FridgeHex",
+          "offset": "0x118",
+          "storage": "instance",
+          "token": "0x4003be5"
+        },
+        {
+          "name": "_lockSprite",
+          "type": "UnityEngine.SpriteRenderer",
+          "offset": "0x120",
+          "storage": "instance",
+          "token": "0x4003be6"
+        },
+        {
+          "name": "_distribution",
+          "type": "System.Collections.Generic.List`1<System.Collections.Generic.List`1<Gameplay.Block>>",
+          "offset": "0x128",
+          "storage": "instance",
+          "token": "0x4003be7"
+        },
+        {
+          "name": "_rotation",
+          "type": "UnityEngine.Vector3",
+          "offset": "0x130",
+          "storage": "instance",
+          "token": "0x4003be8"
+        },
+        {
+          "name": "_cellStateObject",
+          "type": "Gameplay.ACellState",
+          "offset": "0x140",
+          "storage": "instance",
+          "token": "0x4003be9"
+        },
+        {
+          "name": "ParamOne",
+          "type": "int",
+          "offset": "0x148",
+          "storage": "instance",
+          "token": "0x4003bea"
+        },
+        {
+          "name": "AdditionalParam",
+          "type": "string",
+          "offset": "0x150",
+          "storage": "instance",
+          "token": "0x4003beb"
+        },
+        {
+          "name": "_unlockingTime",
+          "type": "long",
+          "offset": "0x158",
+          "storage": "instance",
+          "token": "0x4003bec"
+        },
+        {
+          "name": "BlocksVisible",
+          "type": "bool",
+          "offset": "0x160",
+          "storage": "instance",
+          "token": "0x4003bed"
+        }
+      ],
+      "methods": [
+        {
+          "name": "add_PowerUpApplied",
+          "token": "0x600422d",
+          "rva": "0x21a2314"
+        },
+        {
+          "name": "remove_PowerUpApplied",
+          "token": "0x600422e",
+          "rva": "0x21a23f0"
+        },
+        {
+          "name": "add_HexAdded",
+          "token": "0x600422f",
+          "rva": "0x21a24cc"
+        },
+        {
+          "name": "remove_HexAdded",
+          "token": "0x6004230",
+          "rva": "0x21a25a8"
+        },
+        {
+          "name": "add_HexPlaced",
+          "token": "0x6004231",
+          "rva": "0x21a2684"
+        },
+        {
+          "name": "remove_HexPlaced",
+          "token": "0x6004232",
+          "rva": "0x21a2760"
+        },
+        {
+          "name": "add_BlockRemoved",
+          "token": "0x6004233",
+          "rva": "0x21a283c"
+        },
+        {
+          "name": "remove_BlockRemoved",
+          "token": "0x6004234",
+          "rva": "0x21a2918"
+        },
+        {
+          "name": "get_SelectiveNeighborsRequired",
+          "token": "0x6004235",
+          "rva": "0x21a29f4"
+        },
+        {
+          "name": "get_RequiredTypeForAlgo",
+          "token": "0x6004236",
+          "rva": "0x21a2a0c"
+        },
+        {
+          "name": "get_State",
+          "token": "0x6004237",
+          "rva": "0x21a2ac4"
+        },
+        {
+          "name": "set_State",
+          "token": "0x6004238",
+          "rva": "0x21a2acc"
+        },
+        {
+          "name": "get_ACellStateObject",
+          "token": "0x6004239",
+          "rva": "0x21a2ad4"
+        },
+        {
+          "name": "get_PrioritySequence",
+          "token": "0x600423a",
+          "rva": "0x21a2adc"
+        },
+        {
+          "name": "get_GenerationArea",
+          "token": "0x600423b",
+          "rva": "0x21a2b68"
+        },
+        {
+          "name": "get_MovementPath",
+          "token": "0x600423c",
+          "rva": "0x21a2bf4"
+        },
+        {
+          "name": "get_IsTemporaryLocked",
+          "token": "0x600423d",
+          "rva": "0x21a2d70"
+        },
+        {
+          "name": "get_TopType",
+          "token": "0x600423e",
+          "rva": "0x21a2cb0"
+        },
+        {
+          "name": "get_SecondType",
+          "token": "0x600423f",
+          "rva": "0x21a2fc4"
+        },
+        {
+          "name": "get_DistributionCount",
+          "token": "0x6004240",
+          "rva": "0x21a3084"
+        },
+        {
+          "name": "get_IsNewMechanic",
+          "token": "0x6004241",
+          "rva": "0x21a30d8"
+        },
+        {
+          "name": "get_IsClear",
+          "token": "0x6004242",
+          "rva": "0x21a3114"
+        },
+        {
+          "name": "get_IsMovingHelperState",
+          "token": "0x6004243",
+          "rva": "0x21a31e4"
+        },
+        {
+          "name": "get_IsVisualNonPlaceable",
+          "token": "0x6004244",
+          "rva": "0x21a3238"
+        },
+        {
+          "name": "get_MechanicState",
+          "token": "0x6004245",
+          "rva": "0x21a3268"
+        },
+        {
+          "name": "get_IsEmptyTile",
+          "token": "0x6004246",
+          "rva": "0x21a3284"
+        },
+        {
+          "name": "get_IsAvailable",
+          "token": "0x6004247",
+          "rva": "0x21a32e4"
+        },
+        {
+          "name": "get_IsVacuumPicked",
+          "token": "0x6004248",
+          "rva": "0x21a33d4"
+        },
+        {
+          "name": "get_IsPlaceAbleState",
+          "token": "0x6004249",
+          "rva": "0x21a3344"
+        },
+        {
+          "name": "get_IsCellStateActivate",
+          "token": "0x600424a",
+          "rva": "0x21a3470"
+        },
+        {
+          "name": "get_IsGeneratorHelperState",
+          "token": "0x600424b",
+          "rva": "0x21a348c"
+        },
+        {
+          "name": "get_IsGeneratorState",
+          "token": "0x600424c",
+          "rva": "0x21a34f0"
+        },
+        {
+          "name": "get_IsTemporaryBlocker",
+          "token": "0x600424d",
+          "rva": "0x21a3564"
+        },
+        {
+          "name": "get_IsTemporaryHelper",
+          "token": "0x600424e",
+          "rva": "0x21a3634"
+        },
+        {
+          "name": "get_IsLowerLayerState",
+          "token": "0x600424f",
+          "rva": "0x21a3184"
+        },
+        {
+          "name": "get_IsLowerLayerTrap",
+          "token": "0x6004250",
+          "rva": "0x21a3410"
+        },
+        {
+          "name": "get_CanHaveLowerLayerState",
+          "token": "0x6004251",
+          "rva": "0x21a3694"
+        },
+        {
+          "name": "get_InTransitionState",
+          "token": "0x6004252",
+          "rva": "0x21a3704"
+        },
+        {
+          "name": "get_NeighborMergesRequired",
+          "token": "0x6004253",
+          "rva": "0x21a3740"
+        },
+        {
+          "name": "get_IsGlobalLocked",
+          "token": "0x6004254",
+          "rva": "0x21a3810"
+        },
+        {
+          "name": "get_SelfMergesRequired",
+          "token": "0x6004255",
+          "rva": "0x21a38e0"
+        },
+        {
+          "name": "get_Types",
+          "token": "0x6004256",
+          "rva": "0x21a38fc"
+        },
+        {
+          "name": "get_NextCellState",
+          "token": "0x6004257",
+          "rva": "0x21a1cfc"
+        },
+        {
+          "name": "get_NextCost",
+          "token": "0x6004258",
+          "rva": "0x21a1d14"
+        },
+        {
+          "name": "get_NextRequiredType",
+          "token": "0x6004259",
+          "rva": "0x21a1d2c"
+        },
+        {
+          "name": "get_NextParamOne",
+          "token": "0x600425a",
+          "rva": "0x21a1d44"
+        },
+        {
+          "name": "get_NextAdditionalParam",
+          "token": "0x600425b",
+          "rva": "0x21a1d5c"
+        },
+        {
+          "name": "Init",
+          "token": "0x600425c",
+          "rva": "0x21a3a28"
+        },
+        {
+          "name": "AssignReference",
+          "token": "0x600425d",
+          "rva": "0x21a5278"
+        },
+        {
+          "name": "PostInit",
+          "token": "0x600425e",
+          "rva": "0x21a52a8"
+        },
+        {
+          "name": "FtueInit",
+          "token": "0x600425f",
+          "rva": "0x21a52cc"
+        },
+        {
+          "name": "StateReAssign",
+          "token": "0x6004260",
+          "rva": "0x21a52e8"
+        },
+        {
+          "name": "ReinitializeACellState",
+          "token": "0x6004261",
+          "rva": "0x21a5420"
+        },
+        {
+          "name": "ReInitializeACellState",
+          "token": "0x6004262",
+          "rva": "0x21a553c"
+        },
+        {
+          "name": "AddNeighbours",
+          "token": "0x6004263",
+          "rva": "0x21a56c8"
+        },
+        {
+          "name": "DecrementCost",
+          "token": "0x6004264",
+          "rva": "0x21a56d0"
+        },
+        {
+          "name": "BlocksVisibility",
+          "token": "0x6004265",
+          "rva": "0x21a5730"
+        },
+        {
+          "name": "OnRotationUpdate",
+          "token": "0x6004266",
+          "rva": "0x21a11d8"
+        },
+        {
+          "name": "EnableHighlight",
+          "token": "0x6004267",
+          "rva": "0x21a58cc"
+        },
+        {
+          "name": "NeighbourHighlighted",
+          "token": "0x6004268",
+          "rva": "0x21a5a5c"
+        },
+        {
+          "name": "DisableHighlight",
+          "token": "0x6004269",
+          "rva": "0x21a5acc"
+        },
+        {
+          "name": "TopTypeBlocks",
+          "token": "0x600426a",
+          "rva": "0x21a5be8"
+        },
+        {
+          "name": "RemoveBlocks",
+          "token": "0x600426b",
+          "rva": "0x21a5c64"
+        },
+        {
+          "name": "AddBlocksFromCell",
+          "token": "0x600426c",
+          "rva": "0x21a5f14"
+        },
+        {
+          "name": "AddBlocksFromCell",
+          "token": "0x600426d",
+          "rva": "0x21a62ec"
+        },
+        {
+          "name": "PlaceHex",
+          "token": "0x600426e",
+          "rva": "0x21a6c20"
+        },
+        {
+          "name": "AddBlocks",
+          "token": "0x600426f",
+          "rva": "0x21a6488"
+        },
+        {
+          "name": "AddBlocksCompleted",
+          "token": "0x6004270",
+          "rva": "0x21a6c9c"
+        },
+        {
+          "name": "IsMergeAble",
+          "token": "0x6004271",
+          "rva": "0x21a6d64"
+        },
+        {
+          "name": "Merge",
+          "token": "0x6004272",
+          "rva": "0x21a6e34"
+        },
+        {
+          "name": "NeighbourCellMerged",
+          "token": "0x6004273",
+          "rva": "0x21a7418"
+        },
+        {
+          "name": "MergeAll",
+          "token": "0x6004274",
+          "rva": "0x21a7450"
+        },
+        {
+          "name": "MergeAll",
+          "token": "0x6004275",
+          "rva": "0x21a7534"
+        },
+        {
+          "name": "PowerupRemove",
+          "token": "0x6004276",
+          "rva": "0x21a7848"
+        },
+        {
+          "name": "PowerUpDecrementCost",
+          "token": "0x6004277",
+          "rva": "0x21a7a6c"
+        },
+        {
+          "name": "PlayPossibleMergeAnimation",
+          "token": "0x6004278",
+          "rva": "0x21a7b78"
+        },
+        {
+          "name": "PlayMergeableAnimation",
+          "token": "0x6004279",
+          "rva": "0x21a7bf4"
+        },
+        {
+          "name": "StopMergeableAnimation",
+          "token": "0x600427a",
+          "rva": "0x21a5ab4"
+        },
+        {
+          "name": "MergeBlocks",
+          "token": "0x600427b",
+          "rva": "0x21a7200"
+        },
+        {
+          "name": "GenerateBlocks",
+          "token": "0x600427c",
+          "rva": "0x21a3e28"
+        },
+        {
+          "name": "GenerateNewBlocks",
+          "token": "0x600427d",
+          "rva": "0x21a7c24"
+        },
+        {
+          "name": "GenerateNewBlocks",
+          "token": "0x600427e",
+          "rva": "0x21a7d98"
+        },
+        {
+          "name": "OpenWithRV",
+          "token": "0x600427f",
+          "rva": "0x21a7f58"
+        },
+        {
+          "name": "SetState",
+          "token": "0x6004280",
+          "rva": "0x21a4cf8"
+        },
+        {
+          "name": "Distribute",
+          "token": "0x6004281",
+          "rva": "0x21a2df0"
+        },
+        {
+          "name": "GetRotationVectorForSorting",
+          "token": "0x6004282",
+          "rva": "0x21a5f50"
+        },
+        {
+          "name": "UpdateLockSprite",
+          "token": "0x6004283",
+          "rva": "0x21a8354"
+        },
+        {
+          "name": "IsNeighbour",
+          "token": "0x6004284",
+          "rva": "0x21a84c0"
+        },
+        {
+          "name": "GetHammerSpawnPosition",
+          "token": "0x6004285",
+          "rva": "0x21a856c"
+        },
+        {
+          "name": "CanUsePowerUpOfType",
+          "token": "0x6004286",
+          "rva": "0x21a85b8"
+        },
+        {
+          "name": "LockCellForSeconds",
+          "token": "0x6004287",
+          "rva": "0x21a865c"
+        },
+        {
+          "name": "ForceUnlockCell",
+          "token": "0x6004288",
+          "rva": "0x21a8708"
+        },
+        {
+          "name": "OnDestroy",
+          "token": "0x6004289",
+          "rva": "0x21a8710"
+        },
+        {
+          "name": "DamageCell",
+          "token": "0x600428a",
+          "rva": "0x21a872c"
+        },
+        {
+          "name": "PowerUpUsed",
+          "token": "0x600428b",
+          "rva": "0x21a8738"
+        },
+        {
+          "name": "GetHexTypes",
+          "token": "0x600428c",
+          "rva": "0x21a1d74"
+        },
+        {
+          "name": "BringAllBlocksOfTopAbove",
+          "token": "0x600428d",
+          "rva": "0x21a8b14"
+        },
+        {
+          "name": "ReDistributeVacuum",
+          "token": "0x600428e",
+          "rva": "0x21a8d18"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.GetRequiredType",
+          "token": "0x600428f",
+          "rva": "0x21a8f60"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.SetRequiredType",
+          "token": "0x6004290",
+          "rva": "0x21a8f68"
+        },
+        {
+          "name": "ReInit",
+          "token": "0x6004291",
+          "rva": "0x21a8f70"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.GetCellData",
+          "token": "0x6004292",
+          "rva": "0x21a8fac"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.GetCost",
+          "token": "0x6004293",
+          "rva": "0x21a8fb4"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.SetCost",
+          "token": "0x6004294",
+          "rva": "0x21a8fbc"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.ChangeState",
+          "token": "0x6004295",
+          "rva": "0x21a8fc4"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.IsNeighbour",
+          "token": "0x6004296",
+          "rva": "0x21a8fc8"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.GetNeighbours",
+          "token": "0x6004297",
+          "rva": "0x21a904c"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.GetTransform",
+          "token": "0x6004298",
+          "rva": "0x21a9054"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.RemoveTopBlocks",
+          "token": "0x6004299",
+          "rva": "0x21a905c"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.GetBlocks",
+          "token": "0x600429a",
+          "rva": "0x21a9078"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.GetTopBlockType",
+          "token": "0x600429b",
+          "rva": "0x21a9080"
+        },
+        {
+          "name": "SetCellMeshState",
+          "token": "0x600429c",
+          "rva": "0x21a9084"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.SetBlockState",
+          "token": "0x600429d",
+          "rva": "0x21a91b4"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.RemoveBlockType",
+          "token": "0x600429e",
+          "rva": "0x21a9298"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.GetAdditionalParam",
+          "token": "0x600429f",
+          "rva": "0x21a9444"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.SetAdditionalParam",
+          "token": "0x60042a0",
+          "rva": "0x21a944c"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.GetParamOne",
+          "token": "0x60042a1",
+          "rva": "0x21a945c"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.SetParamOne",
+          "token": "0x60042a2",
+          "rva": "0x21a9464"
+        },
+        {
+          "name": "Gameplay.ICellNumberListener.CanShowNumber",
+          "token": "0x60042a3",
+          "rva": "0x21a946c"
+        },
+        {
+          "name": "Gameplay.ICellNumberListener.GetTopTypeCount",
+          "token": "0x60042a4",
+          "rva": "0x21a94e0"
+        },
+        {
+          "name": "Gameplay.ICellNumberListener.GetBlocksCount",
+          "token": "0x60042a5",
+          "rva": "0x21a952c"
+        },
+        {
+          "name": "Gameplay.ICellNumberListener.GetTopTypeHex",
+          "token": "0x60042a6",
+          "rva": "0x21a9574"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.LockCellForSeconds",
+          "token": "0x60042a7",
+          "rva": "0x21a9578"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.ForceUnlockCell",
+          "token": "0x60042a8",
+          "rva": "0x21a957c"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.IsTemporaryLocked",
+          "token": "0x60042a9",
+          "rva": "0x21a9584"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.GetCellIndex",
+          "token": "0x60042aa",
+          "rva": "0x21a9588"
+        },
+        {
+          "name": "StateReAssign",
+          "token": "0x60042ab",
+          "rva": "0x21a9590"
+        },
+        {
+          "name": "StateReAssign",
+          "token": "0x60042ac",
+          "rva": "0x21a95d8"
+        },
+        {
+          "name": "ChangeCellDataToNextState",
+          "token": "0x60042ad",
+          "rva": "0x21a9630"
+        },
+        {
+          "name": "UpdateCellFromCellData",
+          "token": "0x60042ae",
+          "rva": "0x21a96bc"
+        },
+        {
+          "name": "UpdateCellDataCurrentState",
+          "token": "0x60042af",
+          "rva": "0x21a96f8"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.ChangeCellDataToOpenState",
+          "token": "0x60042b0",
+          "rva": "0x21a9780"
+        },
+        {
+          "name": "SetCellDataCurrentState",
+          "token": "0x60042b1",
+          "rva": "0x21a97e0"
+        },
+        {
+          "name": "SetCellDataNextState",
+          "token": "0x60042b2",
+          "rva": "0x21a9808"
+        },
+        {
+          "name": "Gameplay.ICellStateContext.GetState",
+          "token": "0x60042b3",
+          "rva": "0x21a9830"
+        },
+        {
+          "name": "AddPriorityData",
+          "token": "0x60042b4",
+          "rva": "0x21a9838"
+        },
+        {
+          "name": "AddGenerationData",
+          "token": "0x60042b5",
+          "rva": "0x21a9dbc"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60042b6",
+          "rva": "0x21a9ff0"
+        },
+        {
+          "name": ".cctor",
+          "token": "0x60042b7",
+          "rva": "0x21aa0d8"
+        },
+        {
+          "name": "<EnableHighlight>b__153_0",
+          "token": "0x60042b8",
+          "rva": "0x21aa128"
+        },
+        {
+          "name": "<DisableHighlight>b__155_0",
+          "token": "0x60042b9",
+          "rva": "0x21aa15c"
+        },
+        {
+          "name": "<PowerupRemove>b__168_0",
+          "token": "0x60042ba",
+          "rva": "0x21aa17c"
+        },
+        {
+          "name": "<MergeBlocks>b__173_0",
+          "token": "0x60042bb",
+          "rva": "0x21aa228"
+        },
+        {
+          "name": "<SetState>b__178_1",
+          "token": "0x60042bc",
+          "rva": "0x21aa240"
+        },
+        {
+          "name": "<PowerUpUsed>b__189_1",
+          "token": "0x60042bd",
+          "rva": "0x21aa264"
+        },
+        {
+          "name": "<PowerUpUsed>b__189_0",
+          "token": "0x60042be",
+          "rva": "0x21aa310"
+        },
+        {
+          "name": "<SetCellMeshState>b__206_0",
+          "token": "0x60042bf",
+          "rva": "0x21aa324"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.CellData",
+      "type_definition_index": 2841,
+      "instance_size": "0x58",
+      "fields": [
+        {
+          "name": "Row",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003d78"
+        },
+        {
+          "name": "Col",
+          "type": "int",
+          "offset": "0x14",
+          "storage": "instance",
+          "token": "0x4003d79"
+        },
+        {
+          "name": "Types",
+          "type": "System.Collections.Generic.List`1<Gameplay.HexType>",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003d7a"
+        },
+        {
+          "name": "Cost",
+          "type": "int",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003d7b"
+        },
+        {
+          "name": "RequiredType",
+          "type": "Gameplay.HexType",
+          "offset": "0x24",
+          "storage": "instance",
+          "token": "0x4003d7c"
+        },
+        {
+          "name": "State",
+          "type": "Gameplay.CellState",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003d7d"
+        },
+        {
+          "name": "NextCost",
+          "type": "int",
+          "offset": "0x2c",
+          "storage": "instance",
+          "token": "0x4003d7e"
+        },
+        {
+          "name": "NextRequiredType",
+          "type": "Gameplay.HexType",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003d7f"
+        },
+        {
+          "name": "NextState",
+          "type": "Gameplay.CellState",
+          "offset": "0x34",
+          "storage": "instance",
+          "token": "0x4003d80"
+        },
+        {
+          "name": "Probability",
+          "type": "int",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003d81"
+        },
+        {
+          "name": "AdditionalParam",
+          "type": "string",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4003d82"
+        },
+        {
+          "name": "NextParamOne",
+          "type": "int",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x4003d83"
+        },
+        {
+          "name": "NextAdditionalParam",
+          "type": "string",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x4003d84"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x600447c",
+          "rva": "0x21bc8dc"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x600447d",
+          "rva": "0x21bc8e4"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.Block",
+      "type_definition_index": 2750,
+      "instance_size": "0x90",
+      "fields": [
+        {
+          "name": "YDelta",
+          "type": "float",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003b84"
+        },
+        {
+          "name": "HexMeshRenderer",
+          "type": "UnityEngine.MeshRenderer",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003b85"
+        },
+        {
+          "name": "CostText",
+          "type": "TMPro.TextMeshPro",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003b86"
+        },
+        {
+          "name": "BlockSymbols",
+          "type": "Gameplay.BlockSymbols",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003b87"
+        },
+        {
+          "name": "BlockColorConfig",
+          "type": "Gameplay.BlockColorConfig",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4003b88"
+        },
+        {
+          "name": "GameplaySounds",
+          "type": "Gameplay.GameplaySounds",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x4003b89"
+        },
+        {
+          "name": "MovementPath",
+          "type": "System.Collections.Generic.List`1<Gameplay.Cell>",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x4003b8a"
+        },
+        {
+          "name": "MovementIndex",
+          "type": "int",
+          "offset": "0x58",
+          "storage": "instance",
+          "token": "0x4003b8b"
+        },
+        {
+          "name": "IsDummyBlock",
+          "type": "bool",
+          "offset": "0x5c",
+          "storage": "instance",
+          "token": "0x4003b8c"
+        },
+        {
+          "name": "_type",
+          "type": "Gameplay.HexType",
+          "offset": "0x60",
+          "storage": "instance",
+          "token": "0x4003b8d"
+        },
+        {
+          "name": "_origPos",
+          "type": "UnityEngine.Vector3",
+          "offset": "0x64",
+          "storage": "instance",
+          "token": "0x4003b8e"
+        },
+        {
+          "name": "_origParent",
+          "type": "UnityEngine.Transform",
+          "offset": "0x70",
+          "storage": "instance",
+          "token": "0x4003b8f"
+        },
+        {
+          "name": "_hideTween",
+          "type": "DG.Tweening.Tween",
+          "offset": "0x78",
+          "storage": "instance",
+          "token": "0x4003b90"
+        },
+        {
+          "name": "_blockCar",
+          "type": "Gameplay.BlockCar",
+          "offset": "0x80",
+          "storage": "instance",
+          "token": "0x4003b91"
+        },
+        {
+          "name": "sequence",
+          "type": "DG.Tweening.Sequence",
+          "offset": "0x88",
+          "storage": "instance",
+          "token": "0x4003b92"
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_HexType",
+          "token": "0x60041e7",
+          "rva": "0x219e82c"
+        },
+        {
+          "name": "OnDestroy",
+          "token": "0x60041e8",
+          "rva": "0x219e834"
+        },
+        {
+          "name": "SetCost",
+          "token": "0x60041e9",
+          "rva": "0x219e84c"
+        },
+        {
+          "name": "SetType",
+          "token": "0x60041ea",
+          "rva": "0x219e8bc"
+        },
+        {
+          "name": "DisableBlockSymbols",
+          "token": "0x60041eb",
+          "rva": "0x219eaa0"
+        },
+        {
+          "name": "AssignTempParent",
+          "token": "0x60041ec",
+          "rva": "0x219eab8"
+        },
+        {
+          "name": "ResetToCell",
+          "token": "0x60041ed",
+          "rva": "0x219eb34"
+        },
+        {
+          "name": "Show",
+          "token": "0x60041ee",
+          "rva": "0x219eb7c"
+        },
+        {
+          "name": "Hide",
+          "token": "0x60041ef",
+          "rva": "0x219ec3c"
+        },
+        {
+          "name": "GetGrassSymbolSprite",
+          "token": "0x60041f0",
+          "rva": "0x219ec7c"
+        },
+        {
+          "name": "Animate",
+          "token": "0x60041f1",
+          "rva": "0x219ecb8"
+        },
+        {
+          "name": "OnRotationUpdate",
+          "token": "0x60041f2",
+          "rva": "0x219f1b8"
+        },
+        {
+          "name": "BlockAnimation",
+          "token": "0x60041f3",
+          "rva": "0x219ee58"
+        },
+        {
+          "name": "AnimateVacuum",
+          "token": "0x60041f4",
+          "rva": "0x219f1d0"
+        },
+        {
+          "name": "Start",
+          "token": "0x60041f5",
+          "rva": "0x219f3f8"
+        },
+        {
+          "name": "get_IsCar",
+          "token": "0x60041f6",
+          "rva": "0x219e98c"
+        },
+        {
+          "name": "CarAnimation",
+          "token": "0x60041f7",
+          "rva": "0x219ed90"
+        },
+        {
+          "name": "InitCar",
+          "token": "0x60041f8",
+          "rva": "0x219e99c"
+        },
+        {
+          "name": "UpdateCarDirection",
+          "token": "0x60041f9",
+          "rva": "0x219f46c"
+        },
+        {
+          "name": "FtueMoveBlock",
+          "token": "0x60041fa",
+          "rva": "0x219f59c"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60041fb",
+          "rva": "0x219f5b8"
+        },
+        {
+          "name": "<BlockAnimation>b__28_0",
+          "token": "0x60041fc",
+          "rva": "0x219f5cc"
+        },
+        {
+          "name": "<AnimateVacuum>b__29_0",
+          "token": "0x60041fd",
+          "rva": "0x219f5e4"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.HexType",
+      "type_definition_index": 2822,
+      "instance_size": "0x14",
+      "fields": [
+        {
+          "name": "value__",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003d1c"
+        },
+        {
+          "name": "None",
+          "type": "Gameplay.HexType",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003d1d"
+        },
+        {
+          "name": "Red",
+          "type": "Gameplay.HexType",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003d1e"
+        },
+        {
+          "name": "Green",
+          "type": "Gameplay.HexType",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003d1f"
+        },
+        {
+          "name": "Blue",
+          "type": "Gameplay.HexType",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003d20"
+        },
+        {
+          "name": "Yellow",
+          "type": "Gameplay.HexType",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003d21"
+        },
+        {
+          "name": "Purple",
+          "type": "Gameplay.HexType",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003d22"
+        },
+        {
+          "name": "Aqua",
+          "type": "Gameplay.HexType",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003d23"
+        },
+        {
+          "name": "White",
+          "type": "Gameplay.HexType",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003d24"
+        },
+        {
+          "name": "Black",
+          "type": "Gameplay.HexType",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003d25"
+        },
+        {
+          "name": "Car",
+          "type": "Gameplay.HexType",
+          "offset": "0x0",
+          "storage": "literal",
+          "token": "0x4003d26"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Gameplay.HexTypes",
+      "type_definition_index": 2823,
+      "instance_size": "0x10",
+      "fields": [],
+      "methods": [
+        {
+          "name": "HasType",
+          "token": "0x600440e",
+          "rva": "0x21b6b0c"
+        },
+        {
+          "name": "GetTypeFromBlocks",
+          "token": "0x600440f",
+          "rva": "0x21b9594"
+        },
+        {
+          "name": "GetTypeFromBlocks",
+          "token": "0x6004410",
+          "rva": "0x21b9644"
+        },
+        {
+          "name": "IntFromType",
+          "token": "0x6004411",
+          "rva": "0x21b96ec"
+        },
+        {
+          "name": "TypeFromInt",
+          "token": "0x6004412",
+          "rva": "0x21b971c"
+        }
+      ]
+    },
+    {
+      "name": "SortingCell",
+      "type_definition_index": 2813,
+      "instance_size": "0x70",
+      "fields": [
+        {
+          "name": "Neighbors",
+          "type": "SortingCell[]",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003cdd"
+        },
+        {
+          "name": "NeighborIndices",
+          "type": "System.ValueTuple`2<int,int>[]",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003cde"
+        },
+        {
+          "name": "MovementPath",
+          "type": "SortingCell[]",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003cdf"
+        },
+        {
+          "name": "MovementPathIndices",
+          "type": "System.ValueTuple`2<int,int>[]",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003ce0"
+        },
+        {
+          "name": "SelectiveNeighborsRequired",
+          "type": "System.ValueTuple`2<int,int>[]",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003ce1"
+        },
+        {
+          "name": "Priority",
+          "type": "int",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003ce2"
+        },
+        {
+          "name": "Generation",
+          "type": "int",
+          "offset": "0x3c",
+          "storage": "instance",
+          "token": "0x4003ce3"
+        },
+        {
+          "name": "MovementIndex",
+          "type": "int",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4003ce4"
+        },
+        {
+          "name": "Index",
+          "type": "System.ValueTuple`2<int,int>",
+          "offset": "0x44",
+          "storage": "instance",
+          "token": "0x4003ce5"
+        },
+        {
+          "name": "Types",
+          "type": "System.Collections.Generic.List`1<System.ValueTuple`2<Gameplay.HexType,int>>",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x4003ce6"
+        },
+        {
+          "name": "NeighborMergeRequired",
+          "type": "int",
+          "offset": "0x58",
+          "storage": "instance",
+          "token": "0x4003ce7"
+        },
+        {
+          "name": "SelfMergesRequired",
+          "type": "int",
+          "offset": "0x5c",
+          "storage": "instance",
+          "token": "0x4003ce8"
+        },
+        {
+          "name": "CellState",
+          "type": "Gameplay.CellState",
+          "offset": "0x60",
+          "storage": "instance",
+          "token": "0x4003ce9"
+        },
+        {
+          "name": "ParamOne",
+          "type": "int",
+          "offset": "0x64",
+          "storage": "instance",
+          "token": "0x4003cea"
+        },
+        {
+          "name": "IsCellAvailable",
+          "type": "bool",
+          "offset": "0x68",
+          "storage": "instance",
+          "token": "0x4003ceb"
+        },
+        {
+          "name": "IsGlobalLocked",
+          "type": "bool",
+          "offset": "0x69",
+          "storage": "instance",
+          "token": "0x4003cec"
+        },
+        {
+          "name": "RequiredType",
+          "type": "Gameplay.HexType",
+          "offset": "0x6c",
+          "storage": "instance",
+          "token": "0x4003ced"
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_TopType",
+          "token": "0x60043cd",
+          "rva": "0x21b5870"
+        },
+        {
+          "name": "get_IsTopTypeSpecialMoveObject",
+          "token": "0x60043ce",
+          "rva": "0x21b58f0"
+        },
+        {
+          "name": "get_SecondTypeCount",
+          "token": "0x60043cf",
+          "rva": "0x21b5908"
+        },
+        {
+          "name": "get_SecondType",
+          "token": "0x60043d0",
+          "rva": "0x21b5988"
+        },
+        {
+          "name": "NumberOfTrayTypeInNeighbours",
+          "token": "0x60043d1",
+          "rva": "0x21b5a08"
+        },
+        {
+          "name": "get_HasEmptyNeighbours",
+          "token": "0x60043d2",
+          "rva": "0x21b5b5c"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60043d3",
+          "rva": "0x21b5bc4"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.PieceData",
+      "type_definition_index": 2842,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "Types",
+          "type": "Gameplay.HexType[]",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003d85"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x600447e",
+          "rva": "0x21bc9cc"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.Piece",
+      "type_definition_index": 2859,
+      "instance_size": "0x68",
+      "fields": [
+        {
+          "name": "BlockPrefab",
+          "type": "Gameplay.Block",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003e27"
+        },
+        {
+          "name": "NumberTransform",
+          "type": "UnityEngine.Transform",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003e28"
+        },
+        {
+          "name": "NumberBgSpriteRenderer",
+          "type": "UnityEngine.SpriteRenderer",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003e29"
+        },
+        {
+          "name": "NumberText",
+          "type": "TMPro.TextMeshPro",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003e2a"
+        },
+        {
+          "name": "BlockColorConfig",
+          "type": "Gameplay.BlockColorConfig",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4003e2b"
+        },
+        {
+          "name": "TrayItemDragBoolParam",
+          "type": "UM.Events.GameEventWithBoolParam",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x4003e2c"
+        },
+        {
+          "name": "CellUXRemoteConfig",
+          "type": "Gameplay.CellUXRemoteConfig",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x4003e2d"
+        },
+        {
+          "name": "_pieceData",
+          "type": "Gameplay.HexType[]",
+          "offset": "0x58",
+          "storage": "instance",
+          "token": "0x4003e2e"
+        },
+        {
+          "name": "Blocks",
+          "type": "System.Collections.Generic.List`1<Gameplay.Block>",
+          "offset": "0x60",
+          "storage": "instance",
+          "token": "0x4003e2f"
+        },
+        {
+          "name": "MAX_ALPHA_VALUE",
+          "type": "float",
+          "offset": "0x0",
+          "storage": "static",
+          "token": "0x4003e30"
+        }
+      ],
+      "methods": [
+        {
+          "name": "OnEnable",
+          "token": "0x60044ce",
+          "rva": "0x21beb9c"
+        },
+        {
+          "name": "OnDisable",
+          "token": "0x60044cf",
+          "rva": "0x21bec90"
+        },
+        {
+          "name": "get_TopType",
+          "token": "0x60044d0",
+          "rva": "0x21bed84"
+        },
+        {
+          "name": "get_TopTypeCount",
+          "token": "0x60044d1",
+          "rva": "0x21bedfc"
+        },
+        {
+          "name": "get_PieceData",
+          "token": "0x60044d2",
+          "rva": "0x21beec8"
+        },
+        {
+          "name": "Init",
+          "token": "0x60044d3",
+          "rva": "0x21beed0"
+        },
+        {
+          "name": "GenerateBlocks",
+          "token": "0x60044d4",
+          "rva": "0x21beeec"
+        },
+        {
+          "name": "ShowTopTypeCount",
+          "token": "0x60044d5",
+          "rva": "0x21bf190"
+        },
+        {
+          "name": "HideTopTypeCount",
+          "token": "0x60044d6",
+          "rva": "0x21bf320"
+        },
+        {
+          "name": "OnTrayItemDragUpdated",
+          "token": "0x60044d7",
+          "rva": "0x21bf34c"
+        },
+        {
+          "name": "OnCellNumberToggled",
+          "token": "0x60044d8",
+          "rva": "0x21bf3c8"
+        },
+        {
+          "name": "BringAllBlocksOfTopAbove",
+          "token": "0x60044d9",
+          "rva": "0x21bf43c"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60044da",
+          "rva": "0x21bf854"
+        },
+        {
+          "name": ".cctor",
+          "token": "0x60044db",
+          "rva": "0x21bf85c"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.ACellState",
+      "type_definition_index": 2744,
+      "instance_size": "0x50",
+      "fields": [
+        {
+          "name": "SortingListener",
+          "type": "Gameplay.ISorting",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003b72"
+        },
+        {
+          "name": "GoalViewListener",
+          "type": "Gameplay.IGoalView",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003b73"
+        },
+        {
+          "name": "_cell",
+          "type": "Gameplay.ICellStateContext",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003b74"
+        },
+        {
+          "name": "_cellState",
+          "type": "Gameplay.CellState",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003b75"
+        },
+        {
+          "name": "_goalTracker",
+          "type": "Gameplay.LevelGoalTracker",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003b76"
+        },
+        {
+          "name": "_stateProperties",
+          "type": "Gameplay.CellStateProperties",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003b77"
+        },
+        {
+          "name": "SelectiveNeighborsRequired",
+          "type": "System.ValueTuple`2<int,int>[]",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4003b78"
+        },
+        {
+          "name": "<ActualState>k__BackingField",
+          "type": "Gameplay.CellState",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x4003b79"
+        },
+        {
+          "name": "<IsFtue>k__BackingField",
+          "type": "bool",
+          "offset": "0x4c",
+          "storage": "instance",
+          "token": "0x4003b7a"
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_Index",
+          "token": "0x60041a5",
+          "rva": "0x219ddec"
+        },
+        {
+          "name": "get_Position",
+          "token": "0x60041a6",
+          "rva": "0x2189dcc"
+        },
+        {
+          "name": "Gameplay.IFtueStep.get_PreAnimDelay",
+          "token": "0x60041a7",
+          "rva": "0x219de90"
+        },
+        {
+          "name": "Gameplay.IFtueStep.get_PostAnimDelay",
+          "token": "0x60041a8",
+          "rva": "0x219dea8"
+        },
+        {
+          "name": "Gameplay.IFtueStep.get_IsHudRequired",
+          "token": "0x60041a9",
+          "rva": "0x219dec0"
+        },
+        {
+          "name": "Gameplay.IFtueStep.get_FtueTargetGoal",
+          "token": "0x60041aa",
+          "rva": "0x219dee0"
+        },
+        {
+          "name": "get_ActualState",
+          "token": "0x60041ab",
+          "rva": "0x219def8"
+        },
+        {
+          "name": "set_ActualState",
+          "token": "0x60041ac",
+          "rva": "0x219df00"
+        },
+        {
+          "name": "get_CurrentState",
+          "token": "0x60041ad",
+          "rva": "0x2187c74"
+        },
+        {
+          "name": "get_Cost",
+          "token": "0x60041ae",
+          "rva": "0x2187d14"
+        },
+        {
+          "name": "set_Cost",
+          "token": "0x60041af",
+          "rva": "0x2188740"
+        },
+        {
+          "name": "get_IsFtue",
+          "token": "0x60041b0",
+          "rva": "0x219df08"
+        },
+        {
+          "name": "set_IsFtue",
+          "token": "0x60041b1",
+          "rva": "0x219df10"
+        },
+        {
+          "name": "get_IsCellStateActivate",
+          "token": "0x60041b2",
+          "rva": "0x219df18"
+        },
+        {
+          "name": "get_IsPlaceableState",
+          "token": "0x60041b3",
+          "rva": "0x219df20"
+        },
+        {
+          "name": "get_IsGeneratorState",
+          "token": "0x60041b4",
+          "rva": "0x219df40"
+        },
+        {
+          "name": "get_IsGlobalLocked",
+          "token": "0x60041b5",
+          "rva": "0x219df60"
+        },
+        {
+          "name": "get_IsLowerLayerState",
+          "token": "0x60041b6",
+          "rva": "0x219df80"
+        },
+        {
+          "name": "get_IsTemporaryBlocker",
+          "token": "0x60041b7",
+          "rva": "0x219dfa0"
+        },
+        {
+          "name": "get_IsTemporaryHelper",
+          "token": "0x60041b8",
+          "rva": "0x219dfc0"
+        },
+        {
+          "name": "get_IsSelfMergeRequired",
+          "token": "0x60041b9",
+          "rva": "0x219dfe0"
+        },
+        {
+          "name": "get_IsLowerLayerTrapState",
+          "token": "0x60041ba",
+          "rva": "0x219e000"
+        },
+        {
+          "name": "get_CanHaveLowerLayerState",
+          "token": "0x60041bb",
+          "rva": "0x219e020"
+        },
+        {
+          "name": "get_IsGeneratorHelperState",
+          "token": "0x60041bc",
+          "rva": "0x219e040"
+        },
+        {
+          "name": "get_IsVisualNonPlaceable",
+          "token": "0x60041bd",
+          "rva": "0x219e060"
+        },
+        {
+          "name": "get_IsMovingHelperState",
+          "token": "0x60041be",
+          "rva": "0x219e080"
+        },
+        {
+          "name": "get_MechanicState",
+          "token": "0x60041bf",
+          "rva": "0x219e0a0"
+        },
+        {
+          "name": "get_PrioritySequence",
+          "token": "0x60041c0",
+          "rva": "0x219e0b8"
+        },
+        {
+          "name": "get_GenerationArea",
+          "token": "0x60041c1",
+          "rva": "0x219e120"
+        },
+        {
+          "name": "get_NeighborMergesRequired",
+          "token": "0x60041c2",
+          "rva": "0x219e188"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60041c3",
+          "rva": "0x218ab38"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60041c4",
+          "rva": "0x2187e98"
+        },
+        {
+          "name": "PostInit",
+          "token": "0x60041c5",
+          "rva": "0x2187fec"
+        },
+        {
+          "name": "FtueInit",
+          "token": "0x60041c6",
+          "rva": "0x2193edc"
+        },
+        {
+          "name": "PowerUpUsed",
+          "token": "0x60041c7",
+          "rva": "0x219e190"
+        },
+        {
+          "name": "PowerUpUsedOfType",
+          "token": "0x60041c8",
+          "rva": "0x219e194"
+        },
+        {
+          "name": "CanUsePowerUp",
+          "token": "0x60041c9",
+          "rva": "0x219e198"
+        },
+        {
+          "name": "CanUseFireCracker",
+          "token": "0x60041ca",
+          "rva": "0x219e1a0"
+        },
+        {
+          "name": "CanUsePowerUpOfType",
+          "token": "0x60041cb",
+          "rva": "0x219e1a8"
+        },
+        {
+          "name": "InTransitionState",
+          "token": "0x60041cc",
+          "rva": "0x219e1c0"
+        },
+        {
+          "name": "RotationBasedOnBoard",
+          "token": "0x60041cd",
+          "rva": "0x219e1c8"
+        },
+        {
+          "name": "FtueUse",
+          "token": "0x60041ce",
+          "rva": "0x219e1cc"
+        },
+        {
+          "name": "OnBlocksUpdated",
+          "token": "0x60041cf",
+          "rva": "0x219e1d0"
+        },
+        {
+          "name": "MergeAll",
+          "token": "0x60041d0",
+          "rva": "0x219e1d4"
+        },
+        {
+          "name": "OnDestroy",
+          "token": "0x60041d1",
+          "rva": "0x218e5ec"
+        },
+        {
+          "name": "GetHammerSpawnPosition",
+          "token": "0x60041d2",
+          "rva": "0x219e1d8"
+        },
+        {
+          "name": "NeighborHighlighted",
+          "token": "0x60041d3",
+          "rva": "0x219e1dc"
+        },
+        {
+          "name": "TransferHex",
+          "token": "0x60041d4",
+          "rva": "0x219e1e0"
+        },
+        {
+          "name": "GetCellStateData",
+          "token": "0x60041d5",
+          "rva": "0x219e1e4"
+        },
+        {
+          "name": "GoalUpdated",
+          "token": "0x60041d6",
+          "rva": "0x219e21c"
+        },
+        {
+          "name": "AllGoalsUpdated",
+          "token": "0x60041d7",
+          "rva": "0x219e2cc"
+        },
+        {
+          "name": "ReValidateSorting",
+          "token": "0x60041d8",
+          "rva": "0x219e380"
+        },
+        {
+          "name": "CellMerged",
+          "token": "0x60041d9",
+          "rva": "0x219e428"
+        },
+        {
+          "name": "NeighbourCellMerged",
+          "token": "0x60041da",
+          "rva": "0x219e42c"
+        },
+        {
+          "name": "AddBlocks",
+          "token": "0x60041db",
+          "rva": "0x219e430"
+        },
+        {
+          "name": "AddGridSystem",
+          "token": "0x60041dc",
+          "rva": "0x219e434"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.CellStateProperties",
+      "type_definition_index": 2333,
+      "instance_size": "0x48",
+      "fields": [
+        {
+          "name": "IsPlaceableState",
+          "type": "bool",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x40033c0"
+        },
+        {
+          "name": "IsGeneratorHelperState",
+          "type": "bool",
+          "offset": "0x19",
+          "storage": "instance",
+          "token": "0x40033c1"
+        },
+        {
+          "name": "IsGeneratorState",
+          "type": "bool",
+          "offset": "0x1a",
+          "storage": "instance",
+          "token": "0x40033c2"
+        },
+        {
+          "name": "IsTemporaryBlockedState",
+          "type": "bool",
+          "offset": "0x1b",
+          "storage": "instance",
+          "token": "0x40033c3"
+        },
+        {
+          "name": "IsTemporaryHelperState",
+          "type": "bool",
+          "offset": "0x1c",
+          "storage": "instance",
+          "token": "0x40033c4"
+        },
+        {
+          "name": "IsLowerLayerState",
+          "type": "bool",
+          "offset": "0x1d",
+          "storage": "instance",
+          "token": "0x40033c5"
+        },
+        {
+          "name": "IsLowerLayerTrapState",
+          "type": "bool",
+          "offset": "0x1e",
+          "storage": "instance",
+          "token": "0x40033c6"
+        },
+        {
+          "name": "CanHaveLowerLayerState",
+          "type": "bool",
+          "offset": "0x1f",
+          "storage": "instance",
+          "token": "0x40033c7"
+        },
+        {
+          "name": "IsGlobalLockedState",
+          "type": "bool",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x40033c8"
+        },
+        {
+          "name": "IsSelfMergeRequired",
+          "type": "bool",
+          "offset": "0x21",
+          "storage": "instance",
+          "token": "0x40033c9"
+        },
+        {
+          "name": "IsMovingHelperState",
+          "type": "bool",
+          "offset": "0x22",
+          "storage": "instance",
+          "token": "0x40033ca"
+        },
+        {
+          "name": "FtuePreAnimDelay",
+          "type": "float",
+          "offset": "0x24",
+          "storage": "instance",
+          "token": "0x40033cb"
+        },
+        {
+          "name": "FtuePostAnimDelay",
+          "type": "float",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x40033cc"
+        },
+        {
+          "name": "FtueHudRequired",
+          "type": "bool",
+          "offset": "0x2c",
+          "storage": "instance",
+          "token": "0x40033cd"
+        },
+        {
+          "name": "FtueHudGoalTarget",
+          "type": "int",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x40033ce"
+        },
+        {
+          "name": "IsVisualNonPlaceable",
+          "type": "bool",
+          "offset": "0x34",
+          "storage": "instance",
+          "token": "0x40033cf"
+        },
+        {
+          "name": "MechanicState",
+          "type": "Gameplay.CellState",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x40033d0"
+        },
+        {
+          "name": "HexPrefab",
+          "type": "UnityEngine.MonoBehaviour",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x40033d1"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x600372a",
+          "rva": "0x210bee0"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.BlockColorConfig",
+      "type_definition_index": 2184,
+      "instance_size": "0x20",
+      "fields": [
+        {
+          "name": "BlockInfos",
+          "type": "Gameplay.BlockStyleInfo[]",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x400303f"
+        }
+      ],
+      "methods": [
+        {
+          "name": "GetStyleForIndex",
+          "token": "0x60033bb",
+          "rva": "0x20e94c0"
+        },
+        {
+          "name": "GetSpriteForIndex",
+          "token": "0x60033bc",
+          "rva": "0x20e9504"
+        },
+        {
+          "name": "GetMaterialForIndex",
+          "token": "0x60033bd",
+          "rva": "0x20e8ccc"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60033be",
+          "rva": "0x20e9548"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.BlockStyleInfo",
+      "type_definition_index": 2185,
+      "instance_size": "0x58",
+      "fields": [
+        {
+          "name": "SymbolSprite",
+          "type": "UnityEngine.Sprite",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003040"
+        },
+        {
+          "name": "Material",
+          "type": "UnityEngine.Material",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003041"
+        },
+        {
+          "name": "TransparentMaterial",
+          "type": "UnityEngine.Material",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003042"
+        },
+        {
+          "name": "GrassIconSprite",
+          "type": "UnityEngine.Sprite",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003043"
+        },
+        {
+          "name": "NumberBg",
+          "type": "UnityEngine.Sprite",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003044"
+        },
+        {
+          "name": "NumberColor",
+          "type": "UnityEngine.Color",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003045"
+        },
+        {
+          "name": "ParticleColor",
+          "type": "UnityEngine.Color",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x4003046"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x60033bf",
+          "rva": "0x20e9550"
+        }
+      ]
+    }
+  ]
+}

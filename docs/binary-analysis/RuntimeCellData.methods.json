@@ -1,0 +1,294 @@
+{
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81",
+  "methods": [
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "get_RequiredTypeForAlgo",
+      "token": "0x6004236",
+      "rva": "0x21a2a0c",
+      "end_rva": "0x21a2ac4",
+      "code_sha256": "1abd7ab39d629dc71eec19cc509c576c8dc77bd8c22c5f38dbf82469916f1ee8"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "get_IsTemporaryLocked",
+      "token": "0x600423d",
+      "rva": "0x21a2d70",
+      "end_rva": "0x21a2df0",
+      "code_sha256": "b8aa1d46a539f9a886764e272c1d3a90d99c58eccb1b8d97e56afbe2485726ca"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "get_TopType",
+      "token": "0x600423e",
+      "rva": "0x21a2cb0",
+      "end_rva": "0x21a2d70",
+      "code_sha256": "ad46524b0c3f6edcb534f0bf4736727e4fe0e3d2e2286252cddd6b1cc6c001fd"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "get_SecondType",
+      "token": "0x600423f",
+      "rva": "0x21a2fc4",
+      "end_rva": "0x21a3084",
+      "code_sha256": "7f6726c77f23fbe4d543c27539fd147c9edeab64d0b40b4cab763fcf2cb5d74d"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "get_DistributionCount",
+      "token": "0x6004240",
+      "rva": "0x21a3084",
+      "end_rva": "0x21a30d8",
+      "code_sha256": "b5ffdc08d147a54486b9a24220e67c936cd3acb6ca9190112de8ee52c4c97897"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "get_Types",
+      "token": "0x6004256",
+      "rva": "0x21a38fc",
+      "end_rva": "0x21a3a28",
+      "code_sha256": "67224e055442416d9e69f3c3a3a6c2f414a2990440d82b138736e1340b6e055c"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "Init",
+      "token": "0x600425c",
+      "rva": "0x21a3a28",
+      "end_rva": "0x21a3db0",
+      "code_sha256": "ae9475c8aba4ebe864b554d457c1e5894c4c64cd07220f85b065f782a258e751"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "AddBlocks",
+      "token": "0x600426f",
+      "rva": "0x21a6488",
+      "end_rva": "0x21a6950",
+      "code_sha256": "592ddffdd3f7580ff740b3dc052f89034c1c67e5b2145043b5bd31f663f3aaad"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "GenerateBlocks",
+      "token": "0x600427c",
+      "rva": "0x21a3e28",
+      "end_rva": "0x21a3fc4",
+      "code_sha256": "7bfed30aa52d4d219c1f3b5610eb197b3acc11ba9a56a2dd2e84ee049294c39d"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "Distribute",
+      "token": "0x6004281",
+      "rva": "0x21a2df0",
+      "end_rva": "0x21a2fc4",
+      "code_sha256": "bbc76365ef3a5963c6dacda3d83b1ab9295db3ef4304ffccd219d4013a0e79d4"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "LockCellForSeconds",
+      "token": "0x6004287",
+      "rva": "0x21a865c",
+      "end_rva": "0x21a8708",
+      "code_sha256": "215ef8bcddd44da7764a356612e1222c1b81ef1d1e1dd886902c5dfe23fed08d"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "ForceUnlockCell",
+      "token": "0x6004288",
+      "rva": "0x21a8708",
+      "end_rva": "0x21a8710",
+      "code_sha256": "1022535a245769cbea72f288a368f7ee8bb6bb2fb3f57df64486cc3305996664"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "GetHexTypes",
+      "token": "0x600428c",
+      "rva": "0x21a1d74",
+      "end_rva": "0x21a1ef0",
+      "code_sha256": "48bcf6ce59158e83196b3bd283f797cee85cc232ba510d9fd30bc01109a38f5b"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "Gameplay.ICellStateContext.SetRequiredType",
+      "token": "0x6004290",
+      "rva": "0x21a8f68",
+      "end_rva": "0x21a8f70",
+      "code_sha256": "62c08f8cba4bcc09d672aaef6d7bf631d2279785f9a3249e77e59b61f388e6eb"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "Gameplay.ICellStateContext.SetCost",
+      "token": "0x6004294",
+      "rva": "0x21a8fbc",
+      "end_rva": "0x21a8fc4",
+      "code_sha256": "73b7b2458ea058ce8d99911458c517238ab4aacc79983036824c39aeeb0f5ea3"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "Gameplay.ICellStateContext.SetAdditionalParam",
+      "token": "0x60042a0",
+      "rva": "0x21a944c",
+      "end_rva": "0x21a945c",
+      "code_sha256": "ed1a90416376f14661dffcbd540b988cb8e4363d209fe4063f5ab267d89e6e66"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "Gameplay.ICellStateContext.SetParamOne",
+      "token": "0x60042a2",
+      "rva": "0x21a9464",
+      "end_rva": "0x21a946c",
+      "code_sha256": "ccd9a1b80b77a7a279e3d48dbcee6b4e4f1594f0506ae5ff14908fd4eab094b4"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "ChangeCellDataToNextState",
+      "token": "0x60042ad",
+      "rva": "0x21a9630",
+      "end_rva": "0x21a96bc",
+      "code_sha256": "0e652ae2c02d43601ae5a5bb60fad3103dcf06b236567b8a15cfa0c80e9fbfc6"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "UpdateCellFromCellData",
+      "token": "0x60042ae",
+      "rva": "0x21a96bc",
+      "end_rva": "0x21a96f8",
+      "code_sha256": "fa97349a99c0a8510f7df1addab45579b693a294d98ec27078ec57a26c9059be"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "UpdateCellDataCurrentState",
+      "token": "0x60042af",
+      "rva": "0x21a96f8",
+      "end_rva": "0x21a9780",
+      "code_sha256": "d22f95e91265fe0872b2539e4f6424d2d05b1e5115dcabf72ce14bcf3113cda7"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "Gameplay.ICellStateContext.ChangeCellDataToOpenState",
+      "token": "0x60042b0",
+      "rva": "0x21a9780",
+      "end_rva": "0x21a97e0",
+      "code_sha256": "6ea2646e378738222e8b3ed101901c6a4004e6903b4ed867c31f20a47c127082"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "SetCellDataCurrentState",
+      "token": "0x60042b1",
+      "rva": "0x21a97e0",
+      "end_rva": "0x21a9808",
+      "code_sha256": "4b0635d476bcac63f46b702cc48cd5fe6fd0f625feaeafbd0b1832317a932c1c"
+    },
+    {
+      "class_name": "Gameplay.Cell",
+      "name": "SetCellDataNextState",
+      "token": "0x60042b2",
+      "rva": "0x21a9808",
+      "end_rva": "0x21a9830",
+      "code_sha256": "d6a3b19465848cd8cac23d9b14e1a9ff8530323c1bcede53d4f2c2fb75a30a57"
+    },
+    {
+      "class_name": "Gameplay.CellData",
+      "name": ".ctor",
+      "token": "0x600447c",
+      "rva": "0x21bc8dc",
+      "end_rva": "0x21bc8e4",
+      "code_sha256": "b778acf5724d6ce311a195e6ccae51053ffd421805100e6d52670516c958a179"
+    },
+    {
+      "class_name": "Gameplay.CellData",
+      "name": ".ctor",
+      "token": "0x600447d",
+      "rva": "0x21bc8e4",
+      "end_rva": "0x21bc9cc",
+      "code_sha256": "6be70b8f5f20c400e7e66956391ce3ae8a5490e4b674c19b18c4081c8e5e9cae"
+    },
+    {
+      "class_name": "Gameplay.Block",
+      "name": "get_HexType",
+      "token": "0x60041e7",
+      "rva": "0x219e82c",
+      "end_rva": "0x219e834",
+      "code_sha256": "0d15c1d9a7c781be0a3b517bc9e332ead28dc7efc7a19547c5fb172f81911707"
+    },
+    {
+      "class_name": "Gameplay.Block",
+      "name": "SetType",
+      "token": "0x60041ea",
+      "rva": "0x219e8bc",
+      "end_rva": "0x219e98c",
+      "code_sha256": "679063cc7884b6034741f061cd3bf686f73d0b709b884c76ef8bf519c4216c93"
+    },
+    {
+      "class_name": "Gameplay.HexTypes",
+      "name": "HasType",
+      "token": "0x600440e",
+      "rva": "0x21b6b0c",
+      "end_rva": "0x21b6b18",
+      "code_sha256": "1d96fa5513b971ceab81466f0f51c1dd12aaa24efbc4bd6a1670aa9f11646d21"
+    },
+    {
+      "class_name": "Gameplay.HexTypes",
+      "name": "GetTypeFromBlocks",
+      "token": "0x600440f",
+      "rva": "0x21b9594",
+      "end_rva": "0x21b9644",
+      "code_sha256": "b8b1439f7494701e3351e1b8d136ff70a77cc04482ead9f7d817b8b58ca14567"
+    },
+    {
+      "class_name": "Gameplay.HexTypes",
+      "name": "GetTypeFromBlocks",
+      "token": "0x6004410",
+      "rva": "0x21b9644",
+      "end_rva": "0x21b96ec",
+      "code_sha256": "cda5deb7c2a8aed64082721be72f65cbbda5a6eb180cd2cfcbfcd37e68576309"
+    },
+    {
+      "class_name": "Gameplay.HexTypes",
+      "name": "IntFromType",
+      "token": "0x6004411",
+      "rva": "0x21b96ec",
+      "end_rva": "0x21b971c",
+      "code_sha256": "b352fc778cd500d12bdf586bf44b75a4f8843d3f0a93dd270c251bc89bdddbc4"
+    },
+    {
+      "class_name": "Gameplay.HexTypes",
+      "name": "TypeFromInt",
+      "token": "0x6004412",
+      "rva": "0x21b971c",
+      "end_rva": "0x21b9728",
+      "code_sha256": "6ef46e7656d28b6871df87d3889b3df6dc2a5bc1abef3fa91ca125d02e8b43f9"
+    },
+    {
+      "class_name": "SortingCell",
+      "name": "get_TopType",
+      "token": "0x60043cd",
+      "rva": "0x21b5870",
+      "end_rva": "0x21b58f0",
+      "code_sha256": "7138e02968c9b76857fd9fa7cfb12dbf937c6c299d560a0d751859179ac3a928"
+    },
+    {
+      "class_name": "SortingCell",
+      "name": "get_SecondTypeCount",
+      "token": "0x60043cf",
+      "rva": "0x21b5908",
+      "end_rva": "0x21b5988",
+      "code_sha256": "6cf4e5b510a5cef730af0d4523f02dbd7a4717890d73654697b196f10c0015da"
+    },
+    {
+      "class_name": "SortingCell",
+      "name": "get_SecondType",
+      "token": "0x60043d0",
+      "rva": "0x21b5988",
+      "end_rva": "0x21b5a08",
+      "code_sha256": "431471263e004023a9ac720b766fbcabc0a67b325a8d346f1a5e06f7594fc1c6"
+    },
+    {
+      "class_name": "Gameplay.BlockColorConfig",
+      "name": "GetStyleForIndex",
+      "token": "0x60033bb",
+      "rva": "0x20e94c0",
+      "end_rva": "0x20e9504",
+      "code_sha256": "9952806ac058511a7d8166dd52e6fbfc41d780085b669519595f839bd419c25b"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "static_only": true,
+  "layout_types": 13,
+  "field_records": 164,
+  "method_records": 283,
+  "existing_exact_method_crosschecks": 147,
+  "evidence_method_hash_checks": 36,
+  "evidence_instruction_word_checks": 1674,
+  "document_link_paths_checked": 12,
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81"
+}

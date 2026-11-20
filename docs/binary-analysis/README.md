@@ -1,5 +1,7 @@
 # Hexa 6.2.20：合并与手牌生成的二进制还原
 
+运行时 Cell/CellData/Block 的字段、颜色位编码、格内堆叠顺序与排序快照结构，见[运行时格子数据结构](RUNTIME_CELL_DATA.md)；可复核的完整类型与偏移见[RUNTIME_CELL_LAYOUT.json](RUNTIME_CELL_LAYOUT.json)。
+
 按关卡字段判断模式、胜利目标、机关和 Catalog 变体，见 [关卡玩法判定](LEVEL_GAMEPLAY_CLASSIFICATION.md)。
 
 广告开格、续玩、刷新道具、吸尘、拖拽落点以及从落子到结算的调用顺序，见 [核心玩法流程规格](CORE_GAMEPLAY_FLOW.md)。各操作留下的状态和何时发下一组牌，见[各操作后的第一组新手牌](CORE_GAMEPLAY_FLOW.md#14-各操作后的第一组新手牌)。
