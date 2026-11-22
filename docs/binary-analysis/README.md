@@ -1,5 +1,7 @@
 # Hexa 6.2.20：合并与手牌生成的二进制还原
 
+棋盘底座 prefab、运行时材质字段、锁状态及接入验证，见[棋盘底座与状态证据](CELL_BOARD_VISUALS.md)。
+
 运行时 Cell/CellData/Block 的字段、颜色位编码、格内堆叠顺序与排序快照结构，见[运行时格子数据结构](RUNTIME_CELL_DATA.md)；可复核的完整类型与偏移见[RUNTIME_CELL_LAYOUT.json](RUNTIME_CELL_LAYOUT.json)。
 
 按关卡字段判断模式、胜利目标、机关和 Catalog 变体，见 [关卡玩法判定](LEVEL_GAMEPLAY_CLASSIFICATION.md)。
