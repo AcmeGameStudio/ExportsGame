@@ -4,6 +4,8 @@
 
 按关卡字段判断模式、胜利目标、机关和 Catalog 变体，见 [关卡玩法判定](LEVEL_GAMEPLAY_CLASSIFICATION.md)。
 
+真实 Catalog 数组、玩家关数与关卡 Hash 的映射、当前模拟器快照及加载回退判断，见 [运行时 Catalog 与关卡加载](CATALOG_RUNTIME_LOADING.md)。全量数据见 [Catalog 关卡映射](CATALOG_LEVEL_MAP.json)。
+
 广告开格、续玩、刷新道具、吸尘、拖拽落点以及从落子到结算的调用顺序，见 [核心玩法流程规格](CORE_GAMEPLAY_FLOW.md)。各操作留下的状态和何时发下一组牌，见[各操作后的第一组新手牌](CORE_GAMEPLAY_FLOW.md#14-各操作后的第一组新手牌)。
 
 云、蜂蜜、草地、宝石与其他机关在消除通知后的反应，见[特殊格反应规格](SPECIAL_CELL_REACTIONS.md)，包括本格/全局/邻格的通知顺序、投放目标、待处理队列、恢复旧堆和后继状态。

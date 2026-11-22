@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "collected_at_utc": "2026-11-21T00:49:45.408686+00:00",
+  "device": "emulator-5554",
+  "package": "com.gamebrain.hexasort",
+  "version_name": "6.2.20",
+  "version_code": 1281447,
+  "evidence_boundary": "PlayerPrefs and Unity logs are observed runtime persistence; the selected CatalogSystem._lastLoadedCatalog object was not read from process memory. Historical backups may contain edited progress.",
+  "current": {
+    "source": ".runtime/hexasort/playerprefs-catalog-20261121.xml",
+    "source_sha256": "8561f52b66a34a3881226c361034babccdae899674a2ed6a553c787005367044",
+    "kind": "fresh_adb_read",
+    "fields": {
+      "Level": "2",
+      "LastPlayedLevel": "2",
+      "HighestLevelPlayed1_0": "1",
+      "LevelSequenceInCatalog": "1",
+      "LastLevelLoadedHash": "e319a9aba470b6a14a8bf3a039dea0ba",
+      "LoadedLevelHash": "",
+      "IsInRolodex": "0",
+      "CatalogTestingUserData": {
+        "Tests": [],
+        "CurrentTest": "",
+        "CatalogName": ""
+      },
+      "LevelTestingUserDataJson": {
+        "Tests": [],
+        "CurrentTest": "",
+        "Index": -1,
+        "IsCustomer": false,
+        "IsActivePayer": false,
+        "IsNewPayer": false,
+        "ShopOpenCount": 0,
+        "IAPsCount": 0,
+        "IsRetoolTest": false,
+        "LevelStartedAt": 0
+      },
+      "LevelInfoAnalyticsSaveString": {
+        "layout_id": "e319a9aba470b6a14a8bf3a039dea0ba",
+        "level_name": "level_4",
+        "total_placeable_cells": 12,
+        "total_blocked_cells": 8,
+        "target_goal": 250,
+        "available_rv_cells": 2,
+        "dd_enabled": false,
+        "dd_value": 100,
+        "dd_changed_within_level": false,
+        "avail_cs": 0,
+        "totl_avail_es": 2,
+        "available_mechanics": [],
+        "goals_breakdown": [
+          {
+            "Type": "AnyColor",
+            "Target": 250
+          }
+        ]
+      }
+    },
+    "resolved_hashes": {
+      "LastLevelLoadedHash": {
+        "hash": "e319a9aba470b6a14a8bf3a039dea0ba",
+        "level_id": "level_4"
+      }
+    },
+    "level_save_summary": {},
+    "analytics_hash_matches_asset": true
+  },
+  "historical": [
+    {
+      "source": ".runtime/hexasort/current/playerprefs.xml",
+      "source_sha256": "3f2bd0a9f58b88968c816161a8ea403644cc1fbd4aaeef1a2526e3300f186c90",
+      "kind": "historical_local_file",
+      "fields": {
+        "Level": "100",
+        "LastPlayedLevel": "100",
+        "HighestLevelPlayed1_0": "99",
+        "LevelSequenceInCatalog": "99",
+        "LastLevelLoadedHash": "7468f82f1391b5ab8bb4924364aae60c",
+        "LoadedLevelHash": "",
+        "IsInRolodex": "0",
+        "CatalogTestingUserData": {
+          "Tests": [],
+          "CurrentTest": "",
+          "CatalogName": ""
+        },
+        "LevelTestingUserDataJson": {
+          "Tests": [],
+          "CurrentTest": "",
+          "Index": -1,
+          "IsCustomer": false,
+          "IsActivePayer": false,
+          "IsNewPayer": false,
+          "ShopOpenCount": 0,
+          "IAPsCount": 0,
+          "IsRetoolTest": false,
+          "LevelStartedAt": 0
+        },
+        "LevelInfoAnalyticsSaveString": {
+          "layout_id": "7468f82f1391b5ab8bb4924364aae60c",
+          "level_name": "level_161",
+          "total_placeable_cells": 16,
+          "total_blocked_cells": 10,
+          "target_goal": 259,
+          "available_rv_cells": 2,
+          "dd_enabled": false,
+          "dd_value": 100,
+          "dd_changed_within_level": false,
+          "avail_cs": 0,
+          "totl_avail_es": 2,
+          "available_mechanics": [
+            "LockHighRise",
+            "Ice",
+            "Camera"
+          ],
+          "goals_breakdown": [
+            {
+              "Type": "AnyColor",
+              "Target": 240
+            },
+            {
+              "Type": "Ice",
+              "Target": 4
+            },
+            {
+              "Type": "Camera",
+              "Target": 15
+            }
+          ]
+        }
+      },
+      "resolved_hashes": {
+        "LastLevelLoadedHash": {
+          "hash": "7468f82f1391b5ab8bb4924364aae60c",
+          "level_id": "level_161"
+        }
+      },
+      "level_save_summary": {},
+      "analytics_hash_matches_asset": true
+    },
+    {
+      "source": ".runtime/hexasort/save_backups/20261121_074811/playerprefs.xml",
+      "source_sha256": "dacc413a15e3cba2f3c01918bed6e2d5eb931d0fc743186788bbdd5f4157883e",
+      "kind": "historical_backup",
+      "fields": {
+        "Level": "401",
+        "LastPlayedLevel": "1598",
+        "HighestLevelPlayed1_0": "400",
+        "HighestLevelPlayed": "0",
+        "LevelSequenceInCatalog": "400",
+        "CurrentCatalog": {
+          "MinLevel": 0,
+          "MaxLevel": 0,
+          "IsEnabled": true,
+          "UserTag": "NoTag",
+          "ExperimentName": "NoExperiment",
+          "CurrentCatalog": "Catalog_25.0.0"
+        },
+        "CurrentLevelCatalog": "LevelLoader",
+        "LastLevelLoadedHash": "e7ee00df74dc58ebb7b8eb57df852bbb",
+        "LoadedLevelHash": "b6c2759ed0346d323139605a75838b86",
+        "IsInRolodex": "0",
+        "CatalogTestingUserData": {
+          "Tests": [],
+          "CurrentTest": "",
+          "CatalogName": ""
+        },
+        "CatalogTestingJson": {
+          "Tests": []
+        },
+        "LevelTestingUserDataJson": {
+          "Tests": [],
+          "CurrentTest": "",
+          "Index": -1,
+          "IsCustomer": false,
+          "IsActivePayer": false,
+          "IsNewPayer": false,
+          "ShopOpenCount": 0,
+          "IAPsCount": 0,
+          "IsRetoolTest": false,
+          "LevelStartedAt": 0
+        },
+        "CatalogAILevelsConfigJson": "",
+        "CatalogAIMaxLevelPlayed": "0",
+        "LevelInfoAnalyticsSaveString": {
+          "layout_id": "e7ee00df74dc58ebb7b8eb57df852bbb",
+          "level_name": "level_1477",
+          "total_placeable_cells": 7,
+          "total_blocked_cells": 14,
+          "target_goal": 20,
+          "available_rv_cells": 1,
+          "dd_enabled": true,
+          "dd_value": 100,
+          "dd_changed_within_level": false,
+          "avail_cs": 1,
+          "totl_avail_es": 2,
+          "available_mechanics": [
+            "Mole",
+            "BoxingGlove",
+            "Safe"
+          ],
+          "goals_breakdown": [
+            {
+              "Type": "Mole",
+              "Target": 16
+            },
+            {
+              "Type": "SafeGold",
+              "Target": 4
+            }
+          ]
+        }
+      },
+      "resolved_hashes": {
+        "LastLevelLoadedHash": {
+          "hash": "e7ee00df74dc58ebb7b8eb57df852bbb",
+          "level_id": "level_1477"
+        },
+        "LoadedLevelHash": {
+          "hash": "b6c2759ed0346d323139605a75838b86",
+          "level_id": "level_738"
+        }
+      },
+      "level_save_summary": {
+        "Level": 1598,
+        "Score": 182,
+        "Goals": [
+          {
+            "Type": 48,
+            "Target": 16,
+            "Achieved": 13
+          },
+          {
+            "Type": 39,
+            "Target": 4,
+            "Achieved": 2
+          },
+          {
+            "Type": 0,
+            "Target": 0,
+            "Achieved": 0
+          },
+          {
+            "Type": 0,
+            "Target": 0,
+            "Achieved": 0
+          }
+        ]
+      },
+      "analytics_hash_matches_asset": true
+    }
+  ],
+  "packaged_configuration": {
+    "CatalogSystem_path_id": 45336,
+    "LastPackagedCatalog_path_id": 45400,
+    "LastPackagedCatalog_name": "Catalog_22.0.0",
+    "CatalogConfig_path_id": 45333,
+    "CatalogConfig_embedded_CurrentCatalog": "Catalog_22.0.0",
+    "CatalogConfig_default_literal": "Catalog_22.0.0",
+    "CatalogConfig_time_based_literal": "Catalog_12.5.4",
+    "EnableTestCatalog_serialized_value": false,
+    "EnableTestCatalog_serialized_default": false,
+    "DevCatalog_serialized_value": "Catalog_22.0.0",
+    "v_CatalogJson_path_id": 45341,
+    "v_CatalogJson_serialized_value_catalog": "Catalog_19.0.0",
+    "v_CatalogJson_serialized_default_catalog": "Catalog_22.0.0"
+  },
+  "current_catalog_assessment": {
+    "expected": "Catalog_22.0.0",
+    "confidence": "configuration_inference_not_direct_memory_observation",
+    "reason": "CurrentCatalog and dev override preference keys absent; catalog test membership empty; packaged embedded config, DBString fallback and LastPackagedCatalog point to 22.0.0; observed index 1 maps to level_4."
+  },
+  "log_source": ".runtime/hexasort/catalog-unity-20261121.log",
+  "log_source_sha256": "3cd8b8ad91be7c017645847003463535672dd52f790c876f4ac88ee255055678",
+  "log_level_observations": [
+    {
+      "log_line": 617,
+      "log_prefix": "11-05 18:20:23.708  9464  9534",
+      "hash": "e7ee00df74dc58ebb7b8eb57df852bbb",
+      "level_id": "level_1477"
+    },
+    {
+      "log_line": 6776,
+      "log_prefix": "11-21 08:14:59.746 15994 16072",
+      "hash": "e154950c452bcf28c362657eb73cca89",
+      "level_id": "level_3"
+    },
+    {
+      "log_line": 8489,
+      "log_prefix": "11-21 08:25:34.649 15994 16072",
+      "hash": "b6c2759ed0346d323139605a75838b86",
+      "level_id": "level_738"
+    },
+    {
+      "log_line": 9989,
+      "log_prefix": "11-21 08:27:04.897 18674 18735",
+      "hash": "e154950c452bcf28c362657eb73cca89",
+      "level_id": "level_3"
+    },
+    {
+      "log_line": 22984,
+      "log_prefix": "11-21 08:32:31.687 18674 18735",
+      "hash": "e319a9aba470b6a14a8bf3a039dea0ba",
+      "level_id": "level_4"
+    }
+  ]
+}

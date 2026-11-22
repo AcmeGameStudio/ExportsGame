@@ -158,6 +158,8 @@ LevelConfig
 
 ## 5. Catalog 字段
 
+真实 LevelLoader 数组、Hash、当前设备状态和 CSV 覆盖入口，见 [运行时 Catalog 与关卡加载](binary-analysis/CATALOG_RUNTIME_LOADING.md)。
+
 全量 Catalog 目前出现以下字段：
 
 | 字段 | 含义 |

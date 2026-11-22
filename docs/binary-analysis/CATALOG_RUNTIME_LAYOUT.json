@@ -1,0 +1,999 @@
+{
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81",
+  "layouts": [
+    {
+      "name": "Gameplay.CatalogConfig",
+      "type_definition_index": 2305,
+      "instance_size": "0x80",
+      "fields": [
+        {
+          "name": "CatalogSystem",
+          "type": "Gameplay.CatalogSystem",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x400334d"
+        },
+        {
+          "name": "CatalogTestConfig",
+          "type": "Gameplay.CatalogTestConfig",
+          "offset": "0x58",
+          "storage": "instance",
+          "token": "0x400334e"
+        },
+        {
+          "name": "EnableTestCatalog",
+          "type": "UM.Variables.DBBool",
+          "offset": "0x60",
+          "storage": "instance",
+          "token": "0x400334f"
+        },
+        {
+          "name": "DevCatalog",
+          "type": "UM.Variables.String",
+          "offset": "0x68",
+          "storage": "instance",
+          "token": "0x4003350"
+        },
+        {
+          "name": "_defaultCatalog",
+          "type": "string",
+          "offset": "0x70",
+          "storage": "instance",
+          "token": "0x4003351"
+        },
+        {
+          "name": "_time_based_catalog",
+          "type": "string",
+          "offset": "0x78",
+          "storage": "instance",
+          "token": "0x4003352"
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_IsPartOfTest",
+          "token": "0x60036ce",
+          "rva": "0x2107844"
+        },
+        {
+          "name": "Init",
+          "token": "0x60036cf",
+          "rva": "0x2107918"
+        },
+        {
+          "name": "get_CurrentCatalog",
+          "token": "0x60036d0",
+          "rva": "0x2107b78"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60036d1",
+          "rva": "0x2107c38"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.CatalogSystem",
+      "type_definition_index": 2319,
+      "instance_size": "0x40",
+      "fields": [
+        {
+          "name": "CatalogConfig",
+          "type": "Gameplay.CatalogConfig",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x400336c"
+        },
+        {
+          "name": "CatalogDownloadManifest",
+          "type": "Gameplay.CatalogDownloadManifest",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x400336d"
+        },
+        {
+          "name": "LastPackagedCatalog",
+          "type": "Gameplay.LevelLoader",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x400336e"
+        },
+        {
+          "name": "CatalogAILevels",
+          "type": "Gameplay.CatalogAILevels",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x400336f"
+        },
+        {
+          "name": "_lastLoadedCatalog",
+          "type": "Gameplay.LevelLoader",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003370"
+        }
+      ],
+      "methods": [
+        {
+          "name": "HasCatalogWithName",
+          "token": "0x60036e9",
+          "rva": "0x2108940"
+        },
+        {
+          "name": "HasCatalogAtPersistantPath",
+          "token": "0x60036ea",
+          "rva": "0x21089ec"
+        },
+        {
+          "name": "IsCatalogDownloadable",
+          "token": "0x60036eb",
+          "rva": "0x2108a8c"
+        },
+        {
+          "name": "GetCurrentCatalog",
+          "token": "0x60036ec",
+          "rva": "0x2108ab8"
+        },
+        {
+          "name": "LoadCurrentCatalog",
+          "token": "0x60036ed",
+          "rva": "0x2108b9c"
+        },
+        {
+          "name": "CatalogUpdated",
+          "token": "0x60036ee",
+          "rva": "0x2107b0c"
+        },
+        {
+          "name": "LoadFromDisk",
+          "token": "0x60036ef",
+          "rva": "0x2108e84"
+        },
+        {
+          "name": "DownloadCatalog",
+          "token": "0x60036f0",
+          "rva": "0x2109470"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60036f1",
+          "rva": "0x2109768"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.CatalogData",
+      "type_definition_index": 2307,
+      "instance_size": "0x20",
+      "fields": [
+        {
+          "name": "Name",
+          "type": "string",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003354"
+        },
+        {
+          "name": "Levels",
+          "type": "System.Collections.Generic.List`1<string>",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003355"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x60036d3",
+          "rva": "0x2107cd8"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.LevelLoader",
+      "type_definition_index": 2331,
+      "instance_size": "0x78",
+      "fields": [
+        {
+          "name": "Level",
+          "type": "UM.Variables.DBInt",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003394"
+        },
+        {
+          "name": "LastLevelLoadedHash",
+          "type": "UM.Variables.DBString",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003395"
+        },
+        {
+          "name": "HighestLevelPlayed",
+          "type": "UM.Variables.DBInt",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003396"
+        },
+        {
+          "name": "LevelTestingConfig",
+          "type": "Gameplay.LevelTestingConfig",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003397"
+        },
+        {
+          "name": "LevelSequenceInCatalog",
+          "type": "UM.Variables.DBInt",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003398"
+        },
+        {
+          "name": "NewLevelsStartingIndex",
+          "type": "int",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4003399"
+        },
+        {
+          "name": "Levels",
+          "type": "Gameplay.LevelConfig[]",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x400339a"
+        },
+        {
+          "name": "DifficultyOverrideCSV",
+          "type": "UnityEngine.TextAsset",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x400339b"
+        },
+        {
+          "name": "CatalogDifficultyOverrideData",
+          "type": "Gameplay.CatalogDifficultyOverrideData",
+          "offset": "0x58",
+          "storage": "instance",
+          "token": "0x400339c"
+        },
+        {
+          "name": "LevelHashes",
+          "type": "System.Collections.Generic.List`1<string>",
+          "offset": "0x60",
+          "storage": "instance",
+          "token": "0x400339d"
+        },
+        {
+          "name": "AlternateLevelProvider",
+          "type": "Gameplay.IAlternateLevelProvider",
+          "offset": "0x68",
+          "storage": "instance",
+          "token": "0x400339e"
+        },
+        {
+          "name": "MechanicsUnlocked",
+          "type": "System.Collections.Generic.List`1<MechanicsUnlockData>",
+          "offset": "0x70",
+          "storage": "instance",
+          "token": "0x400339f"
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_RollodexLevels",
+          "token": "0x6003717",
+          "rva": "0x210b154"
+        },
+        {
+          "name": "get_IsInRollodex",
+          "token": "0x6003718",
+          "rva": "0x210b2a8"
+        },
+        {
+          "name": "GetLevel",
+          "token": "0x6003719",
+          "rva": "0x210b2f8"
+        },
+        {
+          "name": "GetLevel",
+          "token": "0x600371a",
+          "rva": "0x210b658"
+        },
+        {
+          "name": "LoadDifficultyOverride",
+          "token": "0x600371b",
+          "rva": "0x2108d14"
+        },
+        {
+          "name": "GetJson",
+          "token": "0x600371c",
+          "rva": "0x210b9fc"
+        },
+        {
+          "name": "GetLevelJsons",
+          "token": "0x600371d",
+          "rva": "0x210bb84"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x600371e",
+          "rva": "0x210bc7c"
+        },
+        {
+          "name": "<GetLevel>b__18_0",
+          "token": "0x600371f",
+          "rva": "0x210bc8c"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.CatalogAILevels",
+      "type_definition_index": 2302,
+      "instance_size": "0x30",
+      "fields": [
+        {
+          "name": "AILevelsCatalogConfig",
+          "type": "Gameplay.CatalogAILevelsConfig",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003347"
+        },
+        {
+          "name": "AIMaxLevelPlayed",
+          "type": "UM.Variables.DBInt",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003348"
+        },
+        {
+          "name": "Levels",
+          "type": "Gameplay.LevelConfig[]",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003349"
+        }
+      ],
+      "methods": [
+        {
+          "name": "Gameplay.IAlternateLevelProvider.GetLevelByHash",
+          "token": "0x60036c6",
+          "rva": "0x21074e0"
+        },
+        {
+          "name": "Gameplay.IAlternateLevelProvider.GetNextLevel",
+          "token": "0x60036c7",
+          "rva": "0x21076d0"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60036c8",
+          "rva": "0x21077cc"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.CatalogDifficultyOverrideData",
+      "type_definition_index": 2310,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "Levels",
+          "type": "System.Collections.Generic.List`1<Gameplay.LevelDifficultyOverrideData>",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x400335a"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x60036d9",
+          "rva": "0x21081b4"
+        },
+        {
+          "name": "LoadCSV",
+          "token": "0x60036da",
+          "rva": "0x210824c"
+        },
+        {
+          "name": "GetDifficultyForLevel",
+          "token": "0x60036db",
+          "rva": "0x21085fc"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.LevelDifficultyOverrideData",
+      "type_definition_index": 2311,
+      "instance_size": "0x38",
+      "fields": [
+        {
+          "name": "LevelId",
+          "type": "string",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x400335c"
+        },
+        {
+          "name": "IsRolodex",
+          "type": "bool",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x400335d"
+        },
+        {
+          "name": "IsDDEnabled",
+          "type": "bool",
+          "offset": "0x19",
+          "storage": "instance",
+          "token": "0x400335e"
+        },
+        {
+          "name": "BaseDifficultyMultiplier",
+          "type": "int",
+          "offset": "0x1c",
+          "storage": "instance",
+          "token": "0x400335f"
+        },
+        {
+          "name": "FirstAttemptMultiplier",
+          "type": "int",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003360"
+        },
+        {
+          "name": "SecondAttemptMultiplier",
+          "type": "int",
+          "offset": "0x24",
+          "storage": "instance",
+          "token": "0x4003361"
+        },
+        {
+          "name": "ThirdAttemptMultiplier",
+          "type": "int",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003362"
+        },
+        {
+          "name": "FourthAttemptMultiplier",
+          "type": "int",
+          "offset": "0x2c",
+          "storage": "instance",
+          "token": "0x4003363"
+        },
+        {
+          "name": "DifficultyTag",
+          "type": "string",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003364"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x60036de",
+          "rva": "0x2108380"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.LevelConfig",
+      "type_definition_index": 2838,
+      "instance_size": "0x98",
+      "fields": [
+        {
+          "name": "LEVEL_DATA_KEY",
+          "type": "string",
+          "offset": "0x0",
+          "storage": "static",
+          "token": "0x4003d57"
+        },
+        {
+          "name": "LEVEL_HASH_KEY",
+          "type": "string",
+          "offset": "0x8",
+          "storage": "static",
+          "token": "0x4003d58"
+        },
+        {
+          "name": "LEVEL_NAME_KEY",
+          "type": "string",
+          "offset": "0x10",
+          "storage": "static",
+          "token": "0x4003d59"
+        },
+        {
+          "name": "LEVEL_CREATED_AT_KEY",
+          "type": "string",
+          "offset": "0x18",
+          "storage": "static",
+          "token": "0x4003d5a"
+        },
+        {
+          "name": "LEVEL_CREATED_BY_KEY",
+          "type": "string",
+          "offset": "0x20",
+          "storage": "static",
+          "token": "0x4003d5b"
+        },
+        {
+          "name": "LevelMode",
+          "type": "Gameplay.LevelMode",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003d5c"
+        },
+        {
+          "name": "Time",
+          "type": "int",
+          "offset": "0x1c",
+          "storage": "instance",
+          "token": "0x4003d5d"
+        },
+        {
+          "name": "Moves",
+          "type": "int",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003d5e"
+        },
+        {
+          "name": "PreCreatedHex",
+          "type": "int",
+          "offset": "0x24",
+          "storage": "instance",
+          "token": "0x4003d5f"
+        },
+        {
+          "name": "FlipTime",
+          "type": "float",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003d60"
+        },
+        {
+          "name": "TutorialSteps",
+          "type": "int",
+          "offset": "0x2c",
+          "storage": "instance",
+          "token": "0x4003d61"
+        },
+        {
+          "name": "RotationalValue",
+          "type": "int",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003d62"
+        },
+        {
+          "name": "Goals",
+          "type": "System.Collections.Generic.List`1<Gameplay.LevelGoal>",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003d63"
+        },
+        {
+          "name": "CellsForTutorial",
+          "type": "UnityEngine.Vector2Int[]",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4003d64"
+        },
+        {
+          "name": "Difficulty",
+          "type": "Gameplay.LevelDifficulty",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x4003d65"
+        },
+        {
+          "name": "IsRolodex",
+          "type": "bool",
+          "offset": "0x4c",
+          "storage": "instance",
+          "token": "0x4003d66"
+        },
+        {
+          "name": "Thresholds",
+          "type": "Gameplay.DifficultyThreshold[]",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x4003d67"
+        },
+        {
+          "name": "LevelData",
+          "type": "Gameplay.LevelData",
+          "offset": "0x58",
+          "storage": "instance",
+          "token": "0x4003d68"
+        },
+        {
+          "name": "LevelDifficultyOverrideData",
+          "type": "Gameplay.LevelDifficultyOverrideData",
+          "offset": "0x60",
+          "storage": "instance",
+          "token": "0x4003d69"
+        },
+        {
+          "name": "EditorVersion",
+          "type": "string",
+          "offset": "0x68",
+          "storage": "instance",
+          "token": "0x4003d6a"
+        },
+        {
+          "name": "Hash",
+          "type": "string",
+          "offset": "0x70",
+          "storage": "instance",
+          "token": "0x4003d6b"
+        },
+        {
+          "name": "Author",
+          "type": "string",
+          "offset": "0x78",
+          "storage": "instance",
+          "token": "0x4003d6c"
+        },
+        {
+          "name": "CreatedDate",
+          "type": "string",
+          "offset": "0x80",
+          "storage": "instance",
+          "token": "0x4003d6d"
+        },
+        {
+          "name": "Version",
+          "type": "int",
+          "offset": "0x88",
+          "storage": "instance",
+          "token": "0x4003d6e"
+        },
+        {
+          "name": "Screenshot",
+          "type": "UnityEngine.Texture",
+          "offset": "0x90",
+          "storage": "instance",
+          "token": "0x4003d6f"
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_IsRolodexEnabled",
+          "token": "0x6004461",
+          "rva": "0x21bad6c"
+        },
+        {
+          "name": "get_IsDDEnabled",
+          "token": "0x6004462",
+          "rva": "0x21bad88"
+        },
+        {
+          "name": "get_DifficultyTag",
+          "token": "0x6004463",
+          "rva": "0x21bada8"
+        },
+        {
+          "name": "ToDictionaryForUpload",
+          "token": "0x6004464",
+          "rva": "0x21badfc"
+        },
+        {
+          "name": "FromFile",
+          "token": "0x6004465",
+          "rva": "0x21bb0a0"
+        },
+        {
+          "name": "FromJson",
+          "token": "0x6004466",
+          "rva": "0x21bb43c"
+        },
+        {
+          "name": "FromJson",
+          "token": "0x6004467",
+          "rva": "0x21bb208"
+        },
+        {
+          "name": "IsLevelCompatible",
+          "token": "0x6004468",
+          "rva": "0x21bb990"
+        },
+        {
+          "name": "CreateNew",
+          "token": "0x6004469",
+          "rva": "0x21bbb84"
+        },
+        {
+          "name": "get_IsValid",
+          "token": "0x600446a",
+          "rva": "0x21bc150"
+        },
+        {
+          "name": "CalculateHash",
+          "token": "0x600446b",
+          "rva": "0x21bb704"
+        },
+        {
+          "name": "CopyJson",
+          "token": "0x600446c",
+          "rva": "0x21bc1ac"
+        },
+        {
+          "name": "ValidateLevel",
+          "token": "0x600446d",
+          "rva": "0x21bc1c0"
+        },
+        {
+          "name": "GetJson",
+          "token": "0x600446e",
+          "rva": "0x21bafd0"
+        },
+        {
+          "name": "SetupBasicThresholds",
+          "token": "0x600446f",
+          "rva": "0x21bbe5c"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6004470",
+          "rva": "0x21bc298"
+        },
+        {
+          "name": ".cctor",
+          "token": "0x6004471",
+          "rva": "0x21bc2f0"
+        }
+      ]
+    },
+    {
+      "name": "Gameplay.LevelConfigForJson",
+      "type_definition_index": 2835,
+      "instance_size": "0x40",
+      "fields": [
+        {
+          "name": "Name",
+          "type": "string",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003d4d"
+        },
+        {
+          "name": "Goals",
+          "type": "System.Collections.Generic.List`1<Gameplay.LevelGoal>",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003d4e"
+        },
+        {
+          "name": "PreCreatedHex",
+          "type": "int",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003d4f"
+        },
+        {
+          "name": "FlipTime",
+          "type": "float",
+          "offset": "0x24",
+          "storage": "instance",
+          "token": "0x4003d50"
+        },
+        {
+          "name": "Thresholds",
+          "type": "Gameplay.DifficultyThreshold[]",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003d51"
+        },
+        {
+          "name": "Difficulty",
+          "type": "Gameplay.LevelDifficulty",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003d52"
+        },
+        {
+          "name": "IsRolodex",
+          "type": "bool",
+          "offset": "0x34",
+          "storage": "instance",
+          "token": "0x4003d53"
+        },
+        {
+          "name": "LevelData",
+          "type": "Gameplay.LevelData",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003d54"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x600445e",
+          "rva": "0x21bad30"
+        }
+      ]
+    },
+    {
+      "name": "UM.Variables.String",
+      "type_definition_index": 4618,
+      "instance_size": "0x30",
+      "fields": [
+        {
+          "name": "Value",
+          "type": "string",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4006e97"
+        },
+        {
+          "name": "DefaultValue",
+          "type": "string",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4006e98"
+        },
+        {
+          "name": "ResetToDefaultOnPlay",
+          "type": "bool",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4006e99"
+        }
+      ],
+      "methods": [
+        {
+          "name": "OnEnable",
+          "token": "0x6006f0c",
+          "rva": "0x238f134"
+        },
+        {
+          "name": "GetValue",
+          "token": "0x6006f0d",
+          "rva": "0x238f14c"
+        },
+        {
+          "name": "SetValue",
+          "token": "0x6006f0e",
+          "rva": "0x238f154"
+        },
+        {
+          "name": "SetValue",
+          "token": "0x6006f0f",
+          "rva": "0x238ee30"
+        },
+        {
+          "name": "ResetToDefault",
+          "token": "0x6006f10",
+          "rva": "0x238f15c"
+        },
+        {
+          "name": "ApplyChange",
+          "token": "0x6006f11",
+          "rva": "0x238ee8c"
+        },
+        {
+          "name": "ApplyChange",
+          "token": "0x6006f12",
+          "rva": "0x238eed4"
+        },
+        {
+          "name": "ToString",
+          "token": "0x6006f13",
+          "rva": "0x238f168"
+        },
+        {
+          "name": "op_Implicit",
+          "token": "0x6006f14",
+          "rva": "0x238f170"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6006f15",
+          "rva": "0x238f084"
+        }
+      ]
+    },
+    {
+      "name": "UM.Variables.DBString",
+      "type_definition_index": 4614,
+      "instance_size": "0x38",
+      "fields": [
+        {
+          "name": "DBCollection",
+          "type": "UM.Variables.DBCollection",
+          "offset": "0x2c",
+          "storage": "instance",
+          "token": "0x4006e8f"
+        },
+        {
+          "name": "Key",
+          "type": "string",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4006e90"
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_GetKey",
+          "token": "0x6006ee7",
+          "rva": "0x238edb4"
+        },
+        {
+          "name": "OnEnable",
+          "token": "0x6006ee8",
+          "rva": "0x238edbc"
+        },
+        {
+          "name": "Refresh",
+          "token": "0x6006ee9",
+          "rva": "0x238edcc"
+        },
+        {
+          "name": "SetValue",
+          "token": "0x6006eea",
+          "rva": "0x238eddc"
+        },
+        {
+          "name": "SetValue",
+          "token": "0x6006eeb",
+          "rva": "0x238ee00"
+        },
+        {
+          "name": "ApplyChange",
+          "token": "0x6006eec",
+          "rva": "0x238ee48"
+        },
+        {
+          "name": "ApplyChange",
+          "token": "0x6006eed",
+          "rva": "0x238eeb4"
+        },
+        {
+          "name": "Save",
+          "token": "0x6006eee",
+          "rva": "0x238ef08"
+        },
+        {
+          "name": "Load",
+          "token": "0x6006eef",
+          "rva": "0x238ef6c"
+        },
+        {
+          "name": "UM.Variables.IDBVariable.Update",
+          "token": "0x6006ef0",
+          "rva": "0x238f038"
+        },
+        {
+          "name": "UM.Variables.IDBVariable.GetValue",
+          "token": "0x6006ef1",
+          "rva": "0x238f064"
+        },
+        {
+          "name": "UM.Variables.IDBVariable.GetCollection",
+          "token": "0x6006ef2",
+          "rva": "0x238f06c"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6006ef3",
+          "rva": "0x238f074"
+        }
+      ]
+    }
+  ],
+  "hash_calls": {
+    "0x2ed75a8": "System.Security.Cryptography.MD5.Create",
+    "0x2ec07e0": "System.Text.Encoding.get_UTF8",
+    "0x2ed23f0": "System.Security.Cryptography.HashAlgorithm.ComputeHash",
+    "0x2f91934": "System.Byte.ToString",
+    "byte_format": "x2"
+  }
+}
