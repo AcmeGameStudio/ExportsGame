@@ -1,0 +1,1791 @@
+{
+  "scope": "Serialized assets, not live overrides; inherited schema checked against metadata",
+  "assets": [
+    {
+      "asset_file": "sharedassets0.assets",
+      "path_id": 45348,
+      "name": "Property_Rainbow",
+      "script": "RainbowLauncherProperties",
+      "inheritance": [
+        "Gameplay.RainbowLauncherProperties",
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "a46a9a4dbc50274a507b22806d674537a85a436c37497c4b9d7d5b9c011e6b7b",
+      "raw_hex": "0000000000000000000000000100000001000000c1040000000000001000000050726f70657274795f5261696e626f77000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000002200000000000000dce70000000000000000000000000000000000000000000000000000dde7000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 1,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 34,
+      "prefab_pptr": [
+        0,
+        59356
+      ],
+      "InteractWithBlocks": 0,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [],
+      "NonInteractableCellStates": [],
+      "subclass_tail_bytes": 12
+    },
+    {
+      "asset_file": "aa78a4474ac05466c887721a29edb2eb",
+      "path_id": 1,
+      "name": "Property_GemBox",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "c28309995199354fca29d937b23140dd48e2db784da8f477ac9e71e59fb7273f",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000f00000050726f70657274795f47656d426f78000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000000100000015000000020000003900000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 21,
+      "prefab_pptr": [
+        2,
+        57
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "4bc16b2475f054e5aa3cdf2c746d8183",
+      "path_id": 1,
+      "name": "Property_BirdNest",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "2e1e99f3bd2db188fdf286cc1ebef8a1d83f73b545082ba720acbb7bcca7f84e",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001100000050726f70657274795f426972644e657374000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000010000001b00000002000000c900000000000000",
+      "payload_offset": 52,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 27,
+      "prefab_pptr": [
+        2,
+        201
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "26fd34e4ef155430496274211c5b229e",
+      "path_id": 1,
+      "name": "Property_Playpen",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "12c88af155d9ce5c746004ba53c34b3d37d3e7485f107da8f80cd574d187da2e",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001000000050726f70657274795f506c617970656e0000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000003f01000000040000000100000014000000020000005100000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 20,
+      "prefab_pptr": [
+        2,
+        81
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "5c17c668e4a054b3581abbbab514c853",
+      "path_id": 1,
+      "name": "Property_Camera",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "ac0dc3810de9c2fb5f358c38925f970a4b7d599030d10d50c2a3e82c85714a47",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000f00000050726f70657274795f43616d657261000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000803f01000000010000000100000007000000020000002d00000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 1,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 7,
+      "prefab_pptr": [
+        2,
+        45
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "86634579cde2848dfbc32eec86a1e92d",
+      "path_id": 1,
+      "name": "Property_CandyMachine",
+      "script": "CandyMachineConfig",
+      "inheritance": [
+        "Gameplay.CandyMachineConfig",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "e95193620b2d9d950d9a054d41c477b458d1387ab98d4b766671e416cc8dc104",
+      "raw_hex": "000000000000000000000000010000000100000008140000000000001500000050726f70657274795f43616e64794d616368696e650000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000020000000100000035000000020000004400000000000000",
+      "payload_offset": 56,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 53,
+      "prefab_pptr": [
+        2,
+        68
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "37a6d9b276ad5463493e48fb4aab511f",
+      "path_id": 1,
+      "name": "Property_Ice",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "f130ed46e4c49b19d3010348d1b4b5437b157a1a6aafca462b4083d46f0a47fc",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000c00000050726f70657274795f4963650000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000003f01000000010000000100000004000000020000008900000000000000",
+      "payload_offset": 44,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 4,
+      "prefab_pptr": [
+        2,
+        137
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "87288f08390004f4dabd919aca2929c3",
+      "path_id": 1,
+      "name": "Property_SnakeBody",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "c7ca2a8396332715df5d1b7005c21af8aa112d1ad141af4ece60cae572c8fbb1",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001200000050726f70657274795f536e616b65426f6479000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000010000000100000001000000ffffffff020000000300000000000000",
+      "payload_offset": 52,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": -1,
+      "prefab_pptr": [
+        2,
+        3
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "6acab6166ae934510bea12755191578b",
+      "path_id": 1,
+      "name": "Property_Jelly",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "622f6cae5c3da059bd13aaf7bf4ae5018734d727c83e6f311ab7b0971d9ad33c",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000e00000050726f70657274795f4a656c6c7900000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000003f01000000020000000100000023000000020000000300000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 35,
+      "prefab_pptr": [
+        2,
+        3
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "1aae7df9ee1894eaeaa45c3b7487227a",
+      "path_id": 1,
+      "name": "Property_WaitingCell",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "dd4ae38b3594ad53c3c5b1a4659177d7063a1b5e8f76e9ef4aed43e420ab9b67",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001400000050726f70657274795f57616974696e6743656c6c00000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000100000000000000ffffffff000000000000000000000000",
+      "payload_offset": 52,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": -1,
+      "prefab_pptr": [
+        0,
+        0
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "e4f3805132742490da6b5d1aff202da9",
+      "path_id": 1,
+      "name": "Property_DroneHandler",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "c9c0f1aa21e9b20e426ab55911a57ee91e254622ba9ab5905e023fed5ce46039",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001500000050726f70657274795f44726f6e6548616e646c65720000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000001000000010000000000000020000000020000002400000000000000",
+      "payload_offset": 56,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 32,
+      "prefab_pptr": [
+        2,
+        36
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "14dc95b0c85ca4b29920a80fc6e6a361",
+      "path_id": 1,
+      "name": "Property_WaitingTile",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "dc41378acf14272fdece3310043ae810b5e2bb75afec13c5832c30ee3b4baebb",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001400000050726f70657274795f57616974696e6754696c65000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000000000000c000000020000000f00000000000000",
+      "payload_offset": 52,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 12,
+      "prefab_pptr": [
+        2,
+        15
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "8c5f3c4db9a5647ca83231e7582fdd96",
+      "path_id": 1,
+      "name": "Property_Drill",
+      "script": "DrillProperties",
+      "inheritance": [
+        "Gameplay.DrillProperties",
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "d987f6715dc63bad0157a4dd2efabe98171a111ee9da16704decd095643321ca",
+      "raw_hex": "0000000000000000000000000100000001000000010d0000000000000e00000050726f70657274795f4472696c6c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000010000003700000002000000300000000000000001000000000000000000000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 1
+      },
+      "mechanic_state": 55,
+      "prefab_pptr": [
+        2,
+        48
+      ],
+      "InteractWithBlocks": 1,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [],
+      "NonInteractableCellStates": [],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "ae6f02430bed245fbaed039290a21950",
+      "path_id": 1,
+      "name": "Property_Mole",
+      "script": "MoleConfig",
+      "inheritance": [
+        "Gameplay.MoleConfig",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "3a830d2a87238bb6e0f08e86b8dd625c3a45921a5cda06a07d829e388a960a49",
+      "raw_hex": "00000000000000000000000001000000010000006e0e0000000000000d00000050726f70657274795f4d6f6c650000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000003f01000000020000000100000033000000020000004000000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 1,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 51,
+      "prefab_pptr": [
+        2,
+        64
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "e0a21237e49fe454f9466bacc516b956",
+      "path_id": 1,
+      "name": "Property_Seedbox",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "108d5461b710ae2f863804baf865c58e51087b3449206aefba92984ab61ad8b8",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001000000050726f70657274795f53656564626f780000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000100000025000000020000005700000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 37,
+      "prefab_pptr": [
+        2,
+        87
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "855d9b1ed3cca43dbaa61959c001e8b7",
+      "path_id": 1,
+      "name": "Property_CupboardSecondary",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "4f27e95127c2565a5687f2f4e2076f39fad5b203aaa9026aa8668dfabb385cf8",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001a00000050726f70657274795f437570626f6172645365636f6e64617279000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000ffffffff000000000000000000000000",
+      "payload_offset": 60,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": -1,
+      "prefab_pptr": [
+        0,
+        0
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "5bb619cbf138c4020bca9b696a7fa2d5",
+      "path_id": 1,
+      "name": "Property_Toaster",
+      "script": "ToasterCellStateProperties",
+      "inheritance": [
+        "Gameplay.ToasterCellStateProperties",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "a31af71a963fc4fcd6831334743be5dc36b07575140a3dae497e038392a8fb26",
+      "raw_hex": "0000000000000000000000000100000001000000c9110000000000001000000050726f70657274795f546f6173746572000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000002000000010000000e000000020000003400000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 1,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 14,
+      "prefab_pptr": [
+        2,
+        52
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "081fbcfce21624c4e9519f3225106094",
+      "path_id": 1,
+      "name": "Property_Dice",
+      "script": "DiceProperties",
+      "inheritance": [
+        "Gameplay.DiceProperties",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "152914194176c211a6d8ca7add8f47eef3500c5c1d4cb931499c35ad17530679",
+      "raw_hex": "0000000000000000000000000100000001000000cc160000000000000d00000050726f70657274795f446963650000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000003f0100000008000000010000002c000000020000001d00000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 1,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 44,
+      "prefab_pptr": [
+        2,
+        29
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "240fa9ac002134838b34dbedceeb8478",
+      "path_id": 1,
+      "name": "Property_TeslaBulb",
+      "script": "TeslaConfig",
+      "inheritance": [
+        "Gameplay.TeslaConfig",
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "cf10861a9be39f5d9abcf0504fa1eb84c90c49b59f7ee00654920c0baa5391b4",
+      "raw_hex": "0000000000000000000000000100000001000000cf110000000000001200000050726f70657274795f5465736c6142756c6200000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000803f0100000001000000010000003100000002000000280000000000000000000000000000000000000000000000",
+      "payload_offset": 52,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 49,
+      "prefab_pptr": [
+        2,
+        40
+      ],
+      "InteractWithBlocks": 0,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [],
+      "NonInteractableCellStates": [],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "bd474a0f469f1403f8485fcb3b127efc",
+      "path_id": 1,
+      "name": "Property_Candy",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "9316e0ed0014c43b53abc0b370e4e81929afcef50b8f70d04ace48e940500841",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000e00000050726f70657274795f43616e647900000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000001000000020000000100000036000000000000000000000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 54,
+      "prefab_pptr": [
+        0,
+        0
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "1ec20505e4c1c41b38b0946239e5f562",
+      "path_id": 1,
+      "name": "Property_Steam",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "3ea3a6c95f609ed45c7f11d9d5103b3890fed6ac39f02ffc5150ba6a17aed0bd",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000e00000050726f70657274795f537465616d000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000010000000100000000000000ffffffff000000000000000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": -1,
+      "prefab_pptr": [
+        0,
+        0
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "bca4c5c9de89847138428acd8f328b63",
+      "path_id": 1,
+      "name": "Property_HoneyTrap",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "721160776cc71956c51e9cd6a5d3c4070066e9577755c09e17fc66fd3405c4a2",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001200000050726f70657274795f486f6e65795472617000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000018000000020000001900000000000000",
+      "payload_offset": 52,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 24,
+      "prefab_pptr": [
+        2,
+        25
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "ff15c7a2d82ca401b8ff3b4496a4f59a",
+      "path_id": 1,
+      "name": "Property_Rabbit",
+      "script": "RabbitProperties",
+      "inheritance": [
+        "Gameplay.RabbitProperties",
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "e3390a8162db768a29b6a9110faa539639c5a9c01b6d805347bfbfec97fc907c",
+      "raw_hex": "0000000000000000000000000100000001000000b10e0000000000000f00000050726f70657274795f526162626974000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000006666a63f0100000001000000010000003e0000000200000033000000000000000000000000000000010000003e00000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 62,
+      "prefab_pptr": [
+        2,
+        51
+      ],
+      "InteractWithBlocks": 0,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [
+        62
+      ],
+      "NonInteractableCellStates": [],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "9d608caf3bde84647a2139c80dcde86a",
+      "path_id": 1,
+      "name": "Property_LockHighRise",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "24e2a307c1f3662abdce360bbc9c40ac740c954c2dfae6a59d57658cf8f4ce05",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001500000050726f70657274795f4c6f636b486967685269736500000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000010000000a00000001000000080000000200000002e3000000000000",
+      "payload_offset": 56,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 8,
+      "prefab_pptr": [
+        2,
+        58114
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "3badfdb3c9d0844a3863bbd4a2e57b92",
+      "path_id": 1,
+      "name": "Property_CupboardPrimary",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "af1bd4e2bf95ee212b7d6748d6cc7d886819e8bad9be725767e5f07374839f13",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001800000050726f70657274795f437570626f6172645072696d617279000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000010000002600000002000000e301000000000000",
+      "payload_offset": 56,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 38,
+      "prefab_pptr": [
+        2,
+        483
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "e1ffcc0c7be1544f4a2130d9675d4f17",
+      "path_id": 1,
+      "name": "Property_Safe",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "e1afbf5cb2c16648d142f6a344cf7424f0484fec8a087aceaf9aeac062b594fe",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000d00000050726f70657274795f536166650000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000c03f0100000001000000010000002a000000020000004c00000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 42,
+      "prefab_pptr": [
+        2,
+        76
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "36d358687a51f416daf755cac443b021",
+      "path_id": 1,
+      "name": "Property_Penguin",
+      "script": "PenguinStateProperties",
+      "inheritance": [
+        "Gameplay.PenguinStateProperties",
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "4cdef13e0aaf7dbac8749284c5ce87e5b0e9feed78ad64fa32e4b7cbe75596e5",
+      "raw_hex": "000000000000000000000000010000000100000027090000000000001000000050726f70657274795f50656e6775696e000000000000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000040400100000001000000010000003c0000000200000023010000000000000000000000000000010000003d000000000000000300000025b1000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 1,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 60,
+      "prefab_pptr": [
+        2,
+        291
+      ],
+      "InteractWithBlocks": 0,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [
+        61
+      ],
+      "NonInteractableCellStates": [],
+      "subclass_tail_bytes": 12
+    },
+    {
+      "asset_file": "e55c4ab28590c412384b0715143c7c16",
+      "path_id": 1,
+      "name": "Property_FireCrackerGenerator",
+      "script": "FireCrackerGenProperties",
+      "inheritance": [
+        "Gameplay.FireCrackerGenProperties",
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "e79172c269d7b02a6b7c9f5acebea720b6e638b6dff7d19356410176b8aa63c2",
+      "raw_hex": "000000000000000000000000010000000100000049040000000000001d00000050726f70657274795f46697265437261636b657247656e657261746f72000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000001000000010000004400000002000000c1000000000000000100000000000000000000000100000044000000030000000100000000000000",
+      "payload_offset": 64,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 1,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 68,
+      "prefab_pptr": [
+        2,
+        193
+      ],
+      "InteractWithBlocks": 1,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [],
+      "NonInteractableCellStates": [
+        68
+      ],
+      "subclass_tail_bytes": 12
+    },
+    {
+      "asset_file": "496feb8644d634a7e8e8e59a0a349b11",
+      "path_id": 1,
+      "name": "Property_TeslaTower",
+      "script": "TeslaConfig",
+      "inheritance": [
+        "Gameplay.TeslaConfig",
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "a66824c53b48e13746cb473a9ea4a359ff92ce7a22e24b64f086e405601d5628",
+      "raw_hex": "0000000000000000000000000100000001000000cf110000000000001300000050726f70657274795f5465736c61546f776572000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000009a99993f010000000100000001000000310000000200000097000000000000000000000000000000010000003200000000000000",
+      "payload_offset": 52,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 1,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 49,
+      "prefab_pptr": [
+        2,
+        151
+      ],
+      "InteractWithBlocks": 0,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [
+        50
+      ],
+      "NonInteractableCellStates": [],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "80e00b7138ab04360b8cdce2582d9b6d",
+      "path_id": 1,
+      "name": "Property_HexGenerator",
+      "script": "HexGeneratorProperties",
+      "inheritance": [
+        "Gameplay.HexGeneratorProperties",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "aefc3566e017d74b5ab7dac3f066aa8b1bc68561669d95c0a8c197ba3bb2735a",
+      "raw_hex": "00000000000000000000000001000000010000009c0b0000000000001500000050726f70657274795f48657847656e657261746f7200000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000010000000100000001000000410000000200000034000000000000000300000051b10000000000000300000025b10000000000000400000001000000010000000100000001000000",
+      "payload_offset": 56,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 65,
+      "prefab_pptr": [
+        2,
+        52
+      ],
+      "subclass_tail_bytes": 44
+    },
+    {
+      "asset_file": "c34943ecc9ae4451795295b787e5ba65",
+      "path_id": 1,
+      "name": "Property_DronePad",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "d944e8879d160417418790a490c47fe20164895626784018722b7d12695c176c",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001100000050726f70657274795f44726f6e6550616400000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000010000000100000000000000ffffffff000000000000000000000000",
+      "payload_offset": 52,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": -1,
+      "prefab_pptr": [
+        0,
+        0
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "0c7ba6c6c796741bcb359c2609d67d37",
+      "path_id": 1,
+      "name": "Property_Honey",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "666886f237826a79880da715bbc5436be8fdf02a8f22d3b1bc6aff9dddd868fd",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000e00000050726f70657274795f486f6e657900000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000000100000017000000020000000e00000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 23,
+      "prefab_pptr": [
+        2,
+        14
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "f9f38a534fcea4d6b9520244f52da7a8",
+      "path_id": 1,
+      "name": "Property_Popcorn",
+      "script": "PopcornProperties",
+      "inheritance": [
+        "Gameplay.PopcornProperties",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "a2d19bd8cbcfc3fe7502a1e0e99b320f4f9374c2d6c8fbaa2a0108673e87025b",
+      "raw_hex": "000000000000000000000000010000000100000091160000000000001000000050726f70657274795f506f70636f726e0000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000100000030000000020000008000000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 48,
+      "prefab_pptr": [
+        2,
+        128
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "1d657ad9edaca4bdbbe80badee6f45bd",
+      "path_id": 1,
+      "name": "Property_Steam",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "000e2c543ab26d08b87dd6450f2d9d31ecdbc966fd08a518b5a813129c347834",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000e00000050726f70657274795f537465616d0000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000010000002e000000020000008600000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 46,
+      "prefab_pptr": [
+        2,
+        134
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "3e9b5f14516e54c84a5c983c9620c13d",
+      "path_id": 1,
+      "name": "Property_Doll",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "7395d9a5775a1631f26de4253658d88789f8bc8505b37b82dce2665aee5facac",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000d00000050726f70657274795f446f6c6c000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000010000001d000000020000006502000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 29,
+      "prefab_pptr": [
+        2,
+        613
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "f71031248e50e4d24b1505360513d010",
+      "path_id": 1,
+      "name": "Property_FireCracker",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "b8ad0606bc77315de63f2001cddc10ff0afba43ce0b7042468d2517686fbd338",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001400000050726f70657274795f46697265437261636b6572000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000000d000000020000003100000000000000",
+      "payload_offset": 52,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 13,
+      "prefab_pptr": [
+        2,
+        49
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "5012b4c9e5f554eee913c8265174d815",
+      "path_id": 1,
+      "name": "Property_PopcornMaker",
+      "script": "PopcornMakerProperties",
+      "inheritance": [
+        "Gameplay.PopcornMakerProperties",
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "4dbd3aa905b3216c0b79aafc9f9159612d3880df7ed8fd44e892ac79b2644cb8",
+      "raw_hex": "00000000000000000000000001000000010000005d020000000000001500000050726f70657274795f506f70636f726e4d616b65720000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000803f01000000010000000100000030000000020000008d00000000000000000000000000000002000000000000000600000000000000",
+      "payload_offset": 56,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 48,
+      "prefab_pptr": [
+        2,
+        141
+      ],
+      "InteractWithBlocks": 0,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [
+        0,
+        6
+      ],
+      "NonInteractableCellStates": [],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "f83135520e0214ccaa1160aaaabedda5",
+      "path_id": 1,
+      "name": "Property_Gem",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "b73fe053b0185e094066476bf2d4d05f015b1bbd3a74aa22b697258d1d948df4",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000c00000050726f70657274795f47656d000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000010000001600000002000000f500000000000000",
+      "payload_offset": 44,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 22,
+      "prefab_pptr": [
+        2,
+        245
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "5a217672dbcf94fb69891e1f1da0ed2b",
+      "path_id": 1,
+      "name": "Property_Igloo",
+      "script": "IglooStateProperties",
+      "inheritance": [
+        "Gameplay.IglooStateProperties",
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "cb56755f376b24e45b1363b67c4e4a8c8db98e845806d3cabc286fbead0f8f01",
+      "raw_hex": "000000000000000000000000010000000100000040150000000000000e00000050726f70657274795f49676c6f6f00000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000c03f0100000001000000010000003c0000000200000034000000000000000000000000000000010000003c00000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 60,
+      "prefab_pptr": [
+        2,
+        52
+      ],
+      "InteractWithBlocks": 0,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [
+        60
+      ],
+      "NonInteractableCellStates": [],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "62a4ec9e1804c4e509e1339b2b2defd1",
+      "path_id": 1,
+      "name": "Property_Boxing",
+      "script": "BoxingGloveProperties",
+      "inheritance": [
+        "Gameplay.BoxingGloveProperties",
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "06dcc7cbe05d20c8e4f6810390817187204383646de89ef55f359b8d0c56a314",
+      "raw_hex": "0000000000000000000000000100000001000000010a0000000000000f00000050726f70657274795f426f78696e6700000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000002b000000020000003c00000000000000010000000000000000000000080000000100000002000000080000000b0000000c000000120000001f00000011000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 1,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 43,
+      "prefab_pptr": [
+        2,
+        60
+      ],
+      "InteractWithBlocks": 1,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [],
+      "NonInteractableCellStates": [
+        1,
+        2,
+        8,
+        11,
+        12,
+        18,
+        31,
+        17
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "97f20a31b14534ee9bdc8115c47a7005",
+      "path_id": 1,
+      "name": "Property_Curtain",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "3ddb484144cf8b597f2ab73fe81157cfa35ca7140c73745d448060d2ce147f13",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001000000050726f70657274795f4375727461696e00000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000010000000a0000000100000012000000020000004800000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 18,
+      "prefab_pptr": [
+        2,
+        72
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "36cf4a2ab73664dd5be1e55eedc8772e",
+      "path_id": 1,
+      "name": "Property_Cost",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "5d3f9031b81ed80c75bdcb95b70a5654e57c6405357ad828974c549af577ae16",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000d00000050726f70657274795f436f737400000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000010000000a0000000100000002000000020000001000000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 1,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 2,
+      "prefab_pptr": [
+        2,
+        16
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "7a8ce94fbd881463987c18c8befbd14a",
+      "path_id": 1,
+      "name": "Property_Drone",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "6a6c9b03c4da81549bc7d95354b872d1830caad1495c6c536f87e7ec61c1c1fd",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000e00000050726f70657274795f44726f6e65000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000ffffffff000000000000000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": -1,
+      "prefab_pptr": [
+        0,
+        0
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "4e7cf5e955e024143a65521af1d2230e",
+      "path_id": 1,
+      "name": "Property_Bloom",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "3a5320861ada2d14f027a463d7a64d2e8a7d0a12126373080b59418da404d4ae",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000e00000050726f70657274795f426c6f6f6d0000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000010000002400000002000000aa00000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 36,
+      "prefab_pptr": [
+        2,
+        170
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "eae957f22893a4a90a6f17c753b67bfa",
+      "path_id": 1,
+      "name": "Property_GeneratorNuts",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "31b1fb82824c8f766a82280e18055d2650439d5960e02aa8397fa52b0023b825",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001600000050726f70657274795f47656e657261746f724e75747300000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000c03f01000000030000000100000021000000020000002a00000000000000",
+      "payload_offset": 56,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 1,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 33,
+      "prefab_pptr": [
+        2,
+        42
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "a5d3c982ae2804ed4923fc3579b51e21",
+      "path_id": 1,
+      "name": "Property_Pearl",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "4ed8ea1213c36d6652c95b0eba49cc8d96707025d8860de8895c3ddfa3d1b8bc",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000e00000050726f70657274795f506561726c0000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000002000000010000001c000000020000002a00000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 1,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 28,
+      "prefab_pptr": [
+        2,
+        42
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "5d38adfd9732e4abcbcb652697d29c9a",
+      "path_id": 1,
+      "name": "Property_SnakeTail",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "159a6ad9a7b14989dfee9dfad4159f15d15adf6fa1de353a525b04d5d843989a",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000001200000050726f70657274795f536e616b655461696c0000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000010000001a000000020000009e00000000000000",
+      "payload_offset": 52,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 26,
+      "prefab_pptr": [
+        2,
+        158
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "1981d068e523e4f26851901b19f65959",
+      "path_id": 1,
+      "name": "Property_Wood",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "693f61cd32633fb6d2f8d76a6184c273c9ee5658e4d4fdb741c25a0650650cde",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000d00000050726f70657274795f576f6f640000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000000100000003000000020000005900000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 3,
+      "prefab_pptr": [
+        2,
+        89
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "aa2cb64a036694370bbfc8d8e52593df",
+      "path_id": 1,
+      "name": "Property_Kettle",
+      "script": "CellStatePropWithInteraction",
+      "inheritance": [
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "46df7b8208fb58dfe09e0b7870d7c175244b294c3f62a63a129e2573bc85e636",
+      "raw_hex": "00000000000000000000000001000000010000002e020000000000000f00000050726f70657274795f4b6574746c6500000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000080bf0100000001000000010000002d0000000200000037000000000000000100000000000000010000000000000000000000",
+      "payload_offset": 48,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 1,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 45,
+      "prefab_pptr": [
+        2,
+        55
+      ],
+      "InteractWithBlocks": 1,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [
+        0
+      ],
+      "NonInteractableCellStates": [],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "2f56b8ba42ecb4d59a9c58bc1d9ed937",
+      "path_id": 1,
+      "name": "Property_Car",
+      "script": "CellStateProperties",
+      "inheritance": [
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "43c29f881e23301b514805ee7691013c1209ce400fdc761e858ceff8968d0b33",
+      "raw_hex": "0000000000000000000000000100000001000000e4150000000000000c00000050726f70657274795f4361720000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000803f01000000010000000000000011000000020000003600000000000000",
+      "payload_offset": 44,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 0,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 17,
+      "prefab_pptr": [
+        2,
+        54
+      ],
+      "subclass_tail_bytes": 0
+    },
+    {
+      "asset_file": "fa513cf8660fe4b61bb1437fbfc6c38f",
+      "path_id": 1,
+      "name": "Property_SoilBomb",
+      "script": "SoilBombProperties",
+      "inheritance": [
+        "Gameplay.SoilBombProperties",
+        "Gameplay.CellStatePropWithInteraction",
+        "Gameplay.CellStateProperties",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "sha256": "475ef4622ef2c3c7c66ee7d7723f0e823da3e270f663d43f1c02b50110ed920a",
+      "raw_hex": "0000000000000000000000000100000001000000f7140000000000001100000050726f70657274795f536f696c426f6d620000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000030000000100000034000000020000003e000000000000000000000000000000010000003400000000000000",
+      "payload_offset": 52,
+      "classification": {
+        "IsPlaceableState": 0,
+        "IsGeneratorHelperState": 0,
+        "IsGeneratorState": 0,
+        "IsTemporaryBlockedState": 1,
+        "IsTemporaryHelperState": 0,
+        "IsLowerLayerState": 0,
+        "IsLowerLayerTrapState": 0,
+        "CanHaveLowerLayerState": 0,
+        "IsGlobalLockedState": 0,
+        "IsSelfMergeRequired": 0,
+        "IsMovingHelperState": 0
+      },
+      "mechanic_state": 52,
+      "prefab_pptr": [
+        2,
+        62
+      ],
+      "InteractWithBlocks": 0,
+      "InteractWithCar": 0,
+      "InteractableCellStates": [
+        52
+      ],
+      "NonInteractableCellStates": [],
+      "subclass_tail_bytes": 0
+    }
+  ]
+}

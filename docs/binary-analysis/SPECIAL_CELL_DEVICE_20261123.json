@@ -1,0 +1,1018 @@
+{
+  "device": "emulator-5554",
+  "package": "com.gamebrain.hexasort",
+  "versionName": "6.2.20",
+  "versionCode": 1281447,
+  "level_user_reported": 1254,
+  "level_runtime_verified": false,
+  "raw_log_sha256": "b5c2de9f2354b2a75adf1a93e7933dcac53b052da12ccfe6866c66470710e00d",
+  "probe_hooks": [
+    {
+      "name": "get_IsGlobalLocked",
+      "rva": "0x21a3810",
+      "cell": true
+    },
+    {
+      "name": "PlaceHex",
+      "rva": "0x21a6c20",
+      "cell": true
+    },
+    {
+      "name": "Merge",
+      "rva": "0x21a6e34",
+      "cell": true
+    },
+    {
+      "name": "NeighbourCellMerged",
+      "rva": "0x21a7418",
+      "cell": true
+    },
+    {
+      "name": "PowerUpUsed",
+      "rva": "0x21a8738",
+      "cell": true
+    },
+    {
+      "name": "Gameplay.BirdNestCellState.OnCellMerge",
+      "rva": "0x210dbe8",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.BloomCellState.OnCellMerge",
+      "rva": "0x2110240",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.BoxingGloveCellState.OnCellMerge",
+      "rva": "0x2112778",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.CameraCellState.OnCellMerge",
+      "rva": "0x2114704",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.CandyCellState.NeighbourCellMerged",
+      "rva": "0x2115c2c",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.CandyMachineCellState.NeighbourCellMerged",
+      "rva": "0x2117698",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.ClamCellState.OnCellMerge",
+      "rva": "0x211c2f0",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.CostCellState.OnCellMerge",
+      "rva": "0x211e4c8",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.CurtainCellState.OnHexMerged",
+      "rva": "0x2122aec",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.DiceCellState.NeighbourCellMerged",
+      "rva": "0x212584c",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.DollCellState.OnCellMerge",
+      "rva": "0x21274c0",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.DrillCellState.NeighbourCellMerged",
+      "rva": "0x212b320",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.DroneCellState.OnHexMerged",
+      "rva": "0x212e29c",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.DroneHandlerCellState.OnHexMerged",
+      "rva": "0x212fb88",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.FireCrackerCellState.OnHexMerged",
+      "rva": "0x2133334",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.FireCrackerGenCellState.NeighbourCellMerged",
+      "rva": "0x2138ca4",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.GemBoxCellState.OnHexMerged",
+      "rva": "0x213a9e4",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.GemCellState.OnHexMerged",
+      "rva": "0x213d08c",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.HoneyCellState.OnHexMerged",
+      "rva": "0x214547c",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.HoneyTrapCellState.OnHexMerged",
+      "rva": "0x2147dec",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.IceCellState.OnCellMerge",
+      "rva": "0x214a6c0",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.KettleCellState.OnCellMerge",
+      "rva": "0x214f2c4",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.LockHighRiseCellState.OnCellMerge",
+      "rva": "0x21511e0",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.PenguinCellState.NeighbourCellMerged",
+      "rva": "0x2155040",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.PlaypenCellState.OnCellMerge",
+      "rva": "0x2157cfc",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.PopcornCellState.NeighbourCellMerged",
+      "rva": "0x215a078",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.RabbitCellState.NeighbourCellMerged",
+      "rva": "0x2171b44",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.RainbowLauncherCellState.OnCellMerge",
+      "rva": "0x2175624",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.SeedBoxCellState.OnHexMerged",
+      "rva": "0x217c9a4",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.SnakeBodyCellState.OnHexMerged",
+      "rva": "0x217ef1c",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.SnakeTailCellState.OnHexMerged",
+      "rva": "0x2180178",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.SoilBombCellState.NeighbourCellMerged",
+      "rva": "0x218499c",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.SteamCellState.OnCellMerge",
+      "rva": "0x2186e54",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.TeslaTowerCellState.NeighbourCellMerged",
+      "rva": "0x218a19c",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.ToasterCellState.OnCellMerge",
+      "rva": "0x218bb64",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.WaitingTileCellState.OnHexMerged",
+      "rva": "0x218ed20",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.MoleCellState.OnCellMerge",
+      "rva": "0x2191bdc",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.WoodCellState.OnCellMerge",
+      "rva": "0x2193f80",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.ACellState.CellMerged",
+      "rva": "0x219e428",
+      "cell": false
+    },
+    {
+      "name": "Gameplay.ACellState.NeighbourCellMerged",
+      "rva": "0x219e42c",
+      "cell": false
+    }
+  ],
+  "events": [
+    {
+      "type": "send",
+      "payload": {
+        "seq": 1,
+        "ms": 1795414473621,
+        "tid": 19127,
+        "event": "ready",
+        "hooks": 45,
+        "frameGetter": "0x7b686cf22c"
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 2,
+        "ms": 1795414474759,
+        "tid": 16972,
+        "event": "properties",
+        "properties": {
+          "ptr": "0x7b7c1b4fa0",
+          "state": 0,
+          "flags": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "mechanic": 3
+        }
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 3,
+        "ms": 1795414474759,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 9753,
+        "method": "PlaceHex",
+        "cell": {
+          "ptr": "0x79b8b72730",
+          "state": 0,
+          "cost": 0,
+          "row": -1,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x79b8b83420"
+        },
+        "properties": null,
+        "args": [
+          "0x0",
+          "0x7b686cc1f4",
+          "0x7ad45ef550"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 4,
+        "ms": 1795414474760,
+        "tid": 16972,
+        "event": "properties",
+        "properties": {
+          "ptr": "0x7a0bc3a3f0",
+          "state": 44,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "mechanic": 44
+        }
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 5,
+        "ms": 1795414475934,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 9812,
+        "method": "PlaceHex",
+        "cell": {
+          "ptr": "0x7b7bdd9000",
+          "state": 0,
+          "cost": 0,
+          "row": -2,
+          "col": -1,
+          "param": 0,
+          "stateObject": "0x0"
+        },
+        "properties": null,
+        "args": [
+          "0x0",
+          "0x7b686cc1f4",
+          "0x7ad45ef550"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 6,
+        "ms": 1795414479270,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 9970,
+        "method": "PlaceHex",
+        "cell": {
+          "ptr": "0x79b8bcd2e0",
+          "state": 0,
+          "cost": 0,
+          "row": 2,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x0"
+        },
+        "properties": null,
+        "args": [
+          "0x0",
+          "0x7b686cc1f4",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 7,
+        "ms": 1795414481506,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10057,
+        "method": "PlaceHex",
+        "cell": {
+          "ptr": "0x79b8b72730",
+          "state": 0,
+          "cost": 0,
+          "row": -1,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x79b8b83420"
+        },
+        "properties": null,
+        "args": [
+          "0x0",
+          "0x7b686cc1f4",
+          "0x7ad45ef550"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 8,
+        "ms": 1795414483291,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10141,
+        "method": "PlaceHex",
+        "cell": {
+          "ptr": "0x79b8b72cf0",
+          "state": 0,
+          "cost": 0,
+          "row": -2,
+          "col": 1,
+          "param": 0,
+          "stateObject": "0x0"
+        },
+        "properties": null,
+        "args": [
+          "0x0",
+          "0x7b686cc1f4",
+          "0x7ad45ef550"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 9,
+        "ms": 1795414484699,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10205,
+        "method": "PlaceHex",
+        "cell": {
+          "ptr": "0x79b8b72730",
+          "state": 0,
+          "cost": 0,
+          "row": -1,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x79b8b83420"
+        },
+        "properties": null,
+        "args": [
+          "0x0",
+          "0x7b686cc1f4",
+          "0x7ad45ef550"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 10,
+        "ms": 1795414485747,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Merge",
+        "cell": {
+          "ptr": "0x79b8b72730",
+          "state": 0,
+          "cost": 0,
+          "row": -1,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x79b8b83420"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8d85ea0",
+          "0x1",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 11,
+        "ms": 1795414485753,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.WoodCellState.OnCellMerge",
+        "cell": {
+          "ptr": "0x79b8b728a0",
+          "state": 3,
+          "cost": 1,
+          "row": -1,
+          "col": -1,
+          "param": 0,
+          "stateObject": "0x79b8b83720"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 12,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.WoodCellState.OnCellMerge",
+        "cell": {
+          "ptr": "0x79b8b722e0",
+          "state": 3,
+          "cost": 1,
+          "row": 0,
+          "col": -2,
+          "param": 0,
+          "stateObject": "0x79b8bb1b40"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 13,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.WoodCellState.OnCellMerge",
+        "cell": {
+          "ptr": "0x79b8b72000",
+          "state": 3,
+          "cost": 2,
+          "row": 0,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x79b8bb1540"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 14,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.WoodCellState.OnCellMerge",
+        "cell": {
+          "ptr": "0x79b8bcdcf0",
+          "state": 3,
+          "cost": 1,
+          "row": 0,
+          "col": 2,
+          "param": 0,
+          "stateObject": "0x79b8bdef00"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 15,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.WoodCellState.OnCellMerge",
+        "cell": {
+          "ptr": "0x79b8bcdb80",
+          "state": 3,
+          "cost": 1,
+          "row": 1,
+          "col": -2,
+          "param": 0,
+          "stateObject": "0x79b8bdec00"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 16,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.WoodCellState.OnCellMerge",
+        "cell": {
+          "ptr": "0x79b8bcda10",
+          "state": 3,
+          "cost": 1,
+          "row": 1,
+          "col": -1,
+          "param": 0,
+          "stateObject": "0x79b8bde900"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 17,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.WoodCellState.OnCellMerge",
+        "cell": {
+          "ptr": "0x79b8bcd8a0",
+          "state": 3,
+          "cost": 3,
+          "row": 1,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x79b8bde600"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 18,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.WoodCellState.OnCellMerge",
+        "cell": {
+          "ptr": "0x79b8bcd730",
+          "state": 3,
+          "cost": 1,
+          "row": 1,
+          "col": 1,
+          "param": 0,
+          "stateObject": "0x79b8bde300"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 19,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.WoodCellState.OnCellMerge",
+        "cell": {
+          "ptr": "0x79b8bcd5c0",
+          "state": 3,
+          "cost": 1,
+          "row": 1,
+          "col": 2,
+          "param": 0,
+          "stateObject": "0x79b8bde000"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 20,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.ACellState.CellMerged",
+        "cell": {
+          "ptr": "0x79b8b72730",
+          "state": 0,
+          "cost": 0,
+          "row": -1,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x79b8b83420"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 21,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "NeighbourCellMerged",
+        "cell": {
+          "ptr": "0x7b7bdd9000",
+          "state": 0,
+          "cost": 0,
+          "row": -2,
+          "col": -1,
+          "param": 0,
+          "stateObject": "0x0"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 22,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "NeighbourCellMerged",
+        "cell": {
+          "ptr": "0x79b8b72e60",
+          "state": 0,
+          "cost": 0,
+          "row": -2,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x79b8b5e240"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 23,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.ACellState.NeighbourCellMerged",
+        "cell": {
+          "ptr": "0x79b8b72e60",
+          "state": 0,
+          "cost": 0,
+          "row": -2,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x79b8b5e240"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 24,
+        "ms": 1795414485758,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "NeighbourCellMerged",
+        "cell": {
+          "ptr": "0x79b8b72cf0",
+          "state": 0,
+          "cost": 0,
+          "row": -2,
+          "col": 1,
+          "param": 0,
+          "stateObject": "0x0"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 25,
+        "ms": 1795414485759,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "NeighbourCellMerged",
+        "cell": {
+          "ptr": "0x79b8b728a0",
+          "state": 0,
+          "cost": 0,
+          "row": -1,
+          "col": -1,
+          "param": 0,
+          "stateObject": "0x79b8b83720"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 26,
+        "ms": 1795414485759,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.ACellState.NeighbourCellMerged",
+        "cell": {
+          "ptr": "0x79b8b728a0",
+          "state": 0,
+          "cost": 0,
+          "row": -1,
+          "col": -1,
+          "param": 0,
+          "stateObject": "0x79b8b83720"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 27,
+        "ms": 1795414485759,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "NeighbourCellMerged",
+        "cell": {
+          "ptr": "0x79b8b725c0",
+          "state": 0,
+          "cost": 0,
+          "row": -1,
+          "col": 1,
+          "param": 0,
+          "stateObject": "0x79b8b83120"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 28,
+        "ms": 1795414485759,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.ACellState.NeighbourCellMerged",
+        "cell": {
+          "ptr": "0x79b8b725c0",
+          "state": 0,
+          "cost": 0,
+          "row": -1,
+          "col": 1,
+          "param": 0,
+          "stateObject": "0x79b8b83120"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 29,
+        "ms": 1795414485759,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "NeighbourCellMerged",
+        "cell": {
+          "ptr": "0x79b8b72000",
+          "state": 3,
+          "cost": 1,
+          "row": 0,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x79b8bb1540"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 30,
+        "ms": 1795414485759,
+        "tid": 16972,
+        "event": "enter",
+        "frame": 10256,
+        "method": "Gameplay.ACellState.NeighbourCellMerged",
+        "cell": {
+          "ptr": "0x79b8b72000",
+          "state": 3,
+          "cost": 1,
+          "row": 0,
+          "col": 0,
+          "param": 0,
+          "stateObject": "0x79b8bb1540"
+        },
+        "properties": null,
+        "args": [
+          "0x79b8b72730",
+          "0x1",
+          "0xa"
+        ]
+      }
+    },
+    {
+      "type": "send",
+      "payload": {
+        "seq": 1,
+        "ms": 1795414543184,
+        "tid": 19967,
+        "event": "ready",
+        "hooks": 45,
+        "frameGetter": "0x7b686cf22c"
+      }
+    }
+  ],
+  "scope": "Read-only probe. Multiple ready events are distinct sessions; seq resets per session. Installed ELF SHA256 matches local static sample.",
+  "installed_binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02"
+}

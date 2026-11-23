@@ -1,0 +1,2411 @@
+{
+  "scope": "Metadata fields and interface slots; coroutine locals are memory state, not proof of persistence",
+  "types": [
+    {
+      "type": "<AfterAllMerges>d__26",
+      "declaring_type": "Gameplay.BloomCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.BloomCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003779"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x600377a"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x600377b"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x600377c"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x600377d"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x600377e"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.BoxingGloveStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "PendingHits",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003792"
+        }
+      ]
+    },
+    {
+      "type": "<AnimateBoxingGlove>d__19",
+      "declaring_type": "Gameplay.BoxingGloveCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.BoxingGloveCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60037b1"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x60037b2"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x60037b3"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x60037b4"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x60037b5"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x60037b6"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.CandyCellStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "Id",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60037fe"
+        }
+      ]
+    },
+    {
+      "type": "<AnimationCoroutine>d__16",
+      "declaring_type": "Gameplay.CandyMachineCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.CandyMachineCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003818"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003819"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x600381a"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x600381b"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x600381c"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x600381d"
+        }
+      ]
+    },
+    {
+      "type": "<FTUEAnimation>d__13",
+      "declaring_type": "Gameplay.CandyMachineCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.CandyMachineCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x600381e"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x600381f"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003820"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003821"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003822"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003823"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.CupboardCellStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "CupboardId",
+          "type": "int"
+        },
+        {
+          "name": "DoorOpen",
+          "type": "bool"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60038c6"
+        },
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60038c7"
+        }
+      ]
+    },
+    {
+      "type": "<Init>d__12",
+      "declaring_type": "Gameplay.CupboardPrimaryCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.CupboardPrimaryCellState"
+        },
+        {
+          "name": "gridSystem",
+          "type": "Gameplay.GridSystem"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60038f4"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x60038f5"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x60038f6"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x60038f7"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x60038f8"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x60038f9"
+        }
+      ]
+    },
+    {
+      "type": "<TossDice>d__23",
+      "declaring_type": "Gameplay.DiceCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.DiceCellState"
+        },
+        {
+          "name": "<diceValue>5__2",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x600395d"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x600395e"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x600395f"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003960"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003961"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003962"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.DiceStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "PendingHits",
+          "type": "int"
+        },
+        {
+          "name": "LastDiceValue",
+          "type": "int"
+        },
+        {
+          "name": "PendingDiceValue",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": "SetDiceData",
+          "slot": 65535,
+          "token": "0x6003977"
+        },
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003978"
+        }
+      ]
+    },
+    {
+      "type": "<AnimationCoroutine>d__14",
+      "declaring_type": "Gameplay.DollCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.DollCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003991"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003992"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003993"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003994"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003995"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003996"
+        }
+      ]
+    },
+    {
+      "type": "<DollOnNeighbourJumpRoutine>d__17",
+      "declaring_type": "Gameplay.DollCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.DollCellState"
+        },
+        {
+          "name": "randomCell",
+          "type": "Gameplay.Cell"
+        },
+        {
+          "name": "newCost",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003997"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003998"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003999"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x600399a"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x600399b"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x600399c"
+        }
+      ]
+    },
+    {
+      "type": "<FtueAnimationCoroutine>d__18",
+      "declaring_type": "Gameplay.DollCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.DollCellState"
+        },
+        {
+          "name": "targetCell",
+          "type": "Gameplay.Cell"
+        },
+        {
+          "name": "<currCost>5__2",
+          "type": "int"
+        },
+        {
+          "name": "<newCost>5__3",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x600399d"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x600399e"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x600399f"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x60039a0"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x60039a1"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x60039a2"
+        }
+      ]
+    },
+    {
+      "type": "<OnDollCollectionRoutine>d__15",
+      "declaring_type": "Gameplay.DollCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.DollCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60039a3"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x60039a4"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x60039a5"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x60039a6"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x60039a7"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x60039a8"
+        }
+      ]
+    },
+    {
+      "type": "<OnDollSelfJumpRoutine>d__16",
+      "declaring_type": "Gameplay.DollCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.DollCellState"
+        },
+        {
+          "name": "newCost",
+          "type": "int"
+        },
+        {
+          "name": "mergesCount",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60039a9"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x60039aa"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x60039ab"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x60039ac"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x60039ad"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x60039ae"
+        }
+      ]
+    },
+    {
+      "type": "<AttackTargetCell>d__23",
+      "declaring_type": "Gameplay.DrillCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "targetCell",
+          "type": "Gameplay.Cell"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.DrillCellState"
+        },
+        {
+          "name": "<>8__1",
+          "type": "<>c__DisplayClass23_0"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60039e4"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x60039e5"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x60039e6"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x60039e7"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x60039e8"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x60039e9"
+        }
+      ]
+    },
+    {
+      "type": "<FTUEAttackTarget>d__25",
+      "declaring_type": "Gameplay.DrillCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.DrillCellState"
+        },
+        {
+          "name": "targetCell",
+          "type": "Gameplay.Cell"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60039ea"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x60039eb"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x60039ec"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x60039ed"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x60039ee"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x60039ef"
+        }
+      ]
+    },
+    {
+      "type": "<MergeDecision>d__20",
+      "declaring_type": "Gameplay.DrillCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.DrillCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60039f0"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x60039f1"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x60039f2"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x60039f3"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x60039f4"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x60039f5"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.DrillCellStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "RotationIndex",
+          "type": "int"
+        },
+        {
+          "name": "PendingHits",
+          "type": "int"
+        },
+        {
+          "name": "TargetCellIndex",
+          "type": "UnityEngine.Vector2Int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60039f6"
+        },
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x60039f7"
+        },
+        {
+          "name": "GetCellIndex",
+          "slot": 65535,
+          "token": "0x60039f8"
+        },
+        {
+          "name": "SetIndex",
+          "slot": 65535,
+          "token": "0x60039f9"
+        }
+      ]
+    },
+    {
+      "type": "<AnimationCoroutine>d__16",
+      "declaring_type": "Gameplay.FireCrackerCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.FireCrackerCellState"
+        },
+        {
+          "name": "<>8__1",
+          "type": "<>c__DisplayClass16_0"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003a8a"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003a8b"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003a8c"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003a8d"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003a8e"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003a8f"
+        }
+      ]
+    },
+    {
+      "type": "<FtueUseCoroutine>d__24",
+      "declaring_type": "Gameplay.FireCrackerCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.FireCrackerCellState"
+        },
+        {
+          "name": "<>8__1",
+          "type": "<>c__DisplayClass24_0"
+        },
+        {
+          "name": "cell",
+          "type": "Gameplay.Cell"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003a90"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003a91"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003a92"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003a93"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003a94"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003a95"
+        }
+      ]
+    },
+    {
+      "type": "<AnimationCoroutine>d__18",
+      "declaring_type": "Gameplay.GemBoxCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "skipInitialDelay",
+          "type": "bool"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.GemBoxCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003afe"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003aff"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003b00"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003b01"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003b02"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003b03"
+        }
+      ]
+    },
+    {
+      "type": "<FtueAnimationCoroutine>d__17",
+      "declaring_type": "Gameplay.GemBoxCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.GemBoxCellState"
+        },
+        {
+          "name": "cellToInteract",
+          "type": "Gameplay.Cell"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003b04"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003b05"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003b06"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003b07"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003b08"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003b09"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.GeneratorNutsStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "HexTypes",
+          "type": "System.Collections.Generic.List`1<Gameplay.HexType>"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003b73"
+        }
+      ]
+    },
+    {
+      "type": "<CheckTargetAndAnimate>d__20",
+      "declaring_type": "Gameplay.HexGeneratorCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.HexGeneratorCellState"
+        },
+        {
+          "name": "<isCompleted>5__2",
+          "type": "bool"
+        },
+        {
+          "name": "<hexTypes>5__3",
+          "type": "System.Collections.Generic.List`1<Gameplay.HexType>"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003b90"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003b91"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003b92"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003b93"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003b94"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003b95"
+        }
+      ]
+    },
+    {
+      "type": "<FtueCoroutine>d__14",
+      "declaring_type": "Gameplay.HexGeneratorCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.HexGeneratorCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003b96"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003b97"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003b98"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003b99"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003b9a"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003b9b"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.HexGeneratorStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "Rotation",
+          "type": "int"
+        },
+        {
+          "name": "Difficulty",
+          "type": "int"
+        },
+        {
+          "name": "targetHexTypes",
+          "type": "System.Collections.Generic.List`1<Gameplay.HexType>"
+        },
+        {
+          "name": "selfHexTypes",
+          "type": "System.Collections.Generic.List`1<Gameplay.HexType>"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003bb1"
+        }
+      ]
+    },
+    {
+      "type": "<AnimationCoroutine>d__15",
+      "declaring_type": "Gameplay.HoneyCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.HoneyCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003bcc"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003bcd"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003bce"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003bcf"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003bd0"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003bd1"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.JellyStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "Segments",
+          "type": "int"
+        },
+        {
+          "name": "Rotation",
+          "type": "int"
+        },
+        {
+          "name": "JelliesStatus",
+          "type": "bool[]"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003c3c"
+        },
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003c3d"
+        },
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003c3e"
+        }
+      ]
+    },
+    {
+      "type": "<CalculateNeighbors>d__15",
+      "declaring_type": "Gameplay.JellyCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.JellyCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003c62"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003c63"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003c64"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003c65"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003c66"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003c67"
+        }
+      ]
+    },
+    {
+      "type": "<CreateSteamCoroutine>d__36",
+      "declaring_type": "Gameplay.KettleCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.KettleCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003c9a"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003c9b"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003c9c"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003c9d"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003c9e"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003c9f"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.KettleStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "SelectedTargetIndices",
+          "type": "System.Collections.Generic.List`1<UnityEngine.Vector2Int>"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003cac"
+        },
+        {
+          "name": "GetCellIndexAt",
+          "slot": 65535,
+          "token": "0x6003cad"
+        },
+        {
+          "name": "AddCellIndex",
+          "slot": 65535,
+          "token": "0x6003cae"
+        },
+        {
+          "name": "RemoveCellIndex",
+          "slot": 65535,
+          "token": "0x6003caf"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.IglooStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "Id",
+          "type": "int"
+        },
+        {
+          "name": "Rotation",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003ce1"
+        },
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003ce2"
+        }
+      ]
+    },
+    {
+      "type": "<CalculateData>d__24",
+      "declaring_type": "Gameplay.PenguinCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.PenguinCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003d11"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003d12"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003d13"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003d14"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003d15"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003d16"
+        }
+      ]
+    },
+    {
+      "type": "<OnBoardUpdated>d__37",
+      "declaring_type": "Gameplay.PenguinCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.PenguinCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003d17"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003d18"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003d19"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003d1a"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003d1b"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003d1c"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.PenguinStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "Id",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003d38"
+        },
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003d39"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.PopcornCellStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "IsJumpPending",
+          "type": "bool"
+        },
+        {
+          "name": "StartPosition",
+          "type": "UnityEngine.Vector3"
+        },
+        {
+          "name": "CupRotation",
+          "type": "UnityEngine.Vector3"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003d7c"
+        },
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003d7d"
+        }
+      ]
+    },
+    {
+      "type": "<AnimationCoroutine>d__13",
+      "declaring_type": "Gameplay.PopcornMakerCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.PopcornMakerCellState"
+        },
+        {
+          "name": "<currentCost>5__2",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003d9d"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003d9e"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003d9f"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003da0"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003da1"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003da2"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.PopcornMakerStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "MaxCounterValue",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003dae"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.RabbitStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "ID",
+          "type": "int"
+        },
+        {
+          "name": "SequenceID",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003db2"
+        }
+      ]
+    },
+    {
+      "type": "<AnimateBlocks>d__45",
+      "declaring_type": "Gameplay.RainbowLauncherCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.RainbowLauncherCellState"
+        },
+        {
+          "name": "targetCell",
+          "type": "Gameplay.Cell"
+        },
+        {
+          "name": "blocks",
+          "type": "System.Collections.Generic.List`1<Gameplay.RainbowLauncherBlock>"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003e27"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003e28"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003e29"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003e2a"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003e2b"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003e2c"
+        }
+      ]
+    },
+    {
+      "type": "<BlockGenerator>d__42",
+      "declaring_type": "Gameplay.RainbowLauncherCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.RainbowLauncherCellState"
+        },
+        {
+          "name": "<targetCell>5__2",
+          "type": "Gameplay.Cell"
+        },
+        {
+          "name": "<blocks>5__3",
+          "type": "System.Collections.Generic.List`1<Gameplay.RainbowLauncherBlock>"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003e2d"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003e2e"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003e2f"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003e30"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003e31"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003e32"
+        }
+      ]
+    },
+    {
+      "type": "<FTUEBlockGenerator>d__41",
+      "declaring_type": "Gameplay.RainbowLauncherCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.RainbowLauncherCellState"
+        },
+        {
+          "name": "targetCell",
+          "type": "Gameplay.Cell"
+        },
+        {
+          "name": "<blocks>5__2",
+          "type": "System.Collections.Generic.List`1<Gameplay.RainbowLauncherBlock>"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003e33"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003e34"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003e35"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003e36"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003e37"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003e38"
+        }
+      ]
+    },
+    {
+      "type": "<TurnWheelCoroutine>d__18",
+      "declaring_type": "Gameplay.SafeCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.SafeCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003e5d"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003e5e"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003e5f"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003e60"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003e61"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003e62"
+        }
+      ]
+    },
+    {
+      "type": "<ExplodeAnimation>d__24",
+      "declaring_type": "Gameplay.SoilBombCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.SoilBombCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003f26"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003f27"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003f28"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003f29"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003f2a"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003f2b"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.SoilBombStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "Id",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003f42"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.SteamStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "Types",
+          "type": "System.Collections.Generic.List`1<Gameplay.HexType>"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003f6b"
+        },
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003f6c"
+        }
+      ]
+    },
+    {
+      "type": "<TurnOnCoroutine>d__10",
+      "declaring_type": "Gameplay.TeslaBulbCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "skipDelay",
+          "type": "bool"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.TeslaBulbCellState"
+        },
+        {
+          "name": "isFTUE",
+          "type": "bool"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003f75"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003f76"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003f77"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003f78"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003f79"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003f7a"
+        }
+      ]
+    },
+    {
+      "type": "<TeslaMergeCoroutine>d__22",
+      "declaring_type": "Gameplay.TeslaTowerCellState",
+      "fields": [
+        {
+          "name": "<>1__state",
+          "type": "int"
+        },
+        {
+          "name": "<>2__current",
+          "type": "object"
+        },
+        {
+          "name": "<>4__this",
+          "type": "Gameplay.TeslaTowerCellState"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6003fa5"
+        },
+        {
+          "name": "System.IDisposable.Dispose",
+          "slot": 5,
+          "token": "0x6003fa6"
+        },
+        {
+          "name": "MoveNext",
+          "slot": 6,
+          "token": "0x6003fa7"
+        },
+        {
+          "name": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+          "slot": 4,
+          "token": "0x6003fa8"
+        },
+        {
+          "name": "System.Collections.IEnumerator.Reset",
+          "slot": 8,
+          "token": "0x6003fa9"
+        },
+        {
+          "name": "System.Collections.IEnumerator.get_Current",
+          "slot": 7,
+          "token": "0x6003faa"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.ToasterStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "PendingCollectCalls",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6004003"
+        },
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6004004"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.MoleCellStateData",
+      "declaring_type": "",
+      "fields": [
+        {
+          "name": "MoleID",
+          "type": "int"
+        },
+        {
+          "name": "SequenceID",
+          "type": "int"
+        },
+        {
+          "name": "MoleStatus",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6004038"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.CellStateData",
+      "declaring_type": "",
+      "fields": [],
+      "methods": [
+        {
+          "name": ".ctor",
+          "slot": 65535,
+          "token": "0x6004302"
+        }
+      ]
+    },
+    {
+      "type": "Gameplay.ICellStateContext",
+      "declaring_type": "",
+      "fields": [],
+      "methods": [
+        {
+          "name": "get_State",
+          "slot": 0,
+          "token": "0x600441c"
+        },
+        {
+          "name": "GetRequiredType",
+          "slot": 1,
+          "token": "0x600441d"
+        },
+        {
+          "name": "SetRequiredType",
+          "slot": 2,
+          "token": "0x600441e"
+        },
+        {
+          "name": "ReInit",
+          "slot": 3,
+          "token": "0x600441f"
+        },
+        {
+          "name": "GetCellData",
+          "slot": 4,
+          "token": "0x6004420"
+        },
+        {
+          "name": "GetBlocks",
+          "slot": 5,
+          "token": "0x6004421"
+        },
+        {
+          "name": "GetCost",
+          "slot": 6,
+          "token": "0x6004422"
+        },
+        {
+          "name": "SetCost",
+          "slot": 7,
+          "token": "0x6004423"
+        },
+        {
+          "name": "ChangeState",
+          "slot": 8,
+          "token": "0x6004424"
+        },
+        {
+          "name": "IsNeighbour",
+          "slot": 9,
+          "token": "0x6004425"
+        },
+        {
+          "name": "GetNeighbours",
+          "slot": 10,
+          "token": "0x6004426"
+        },
+        {
+          "name": "GetTransform",
+          "slot": 11,
+          "token": "0x6004427"
+        },
+        {
+          "name": "RemoveTopBlocks",
+          "slot": 12,
+          "token": "0x6004428"
+        },
+        {
+          "name": "SetCellMeshState",
+          "slot": 13,
+          "token": "0x6004429"
+        },
+        {
+          "name": "SetBlockState",
+          "slot": 14,
+          "token": "0x600442a"
+        },
+        {
+          "name": "RemoveBlockType",
+          "slot": 15,
+          "token": "0x600442b"
+        },
+        {
+          "name": "GetTopBlockType",
+          "slot": 16,
+          "token": "0x600442c"
+        },
+        {
+          "name": "GetParamOne",
+          "slot": 17,
+          "token": "0x600442d"
+        },
+        {
+          "name": "SetParamOne",
+          "slot": 18,
+          "token": "0x600442e"
+        },
+        {
+          "name": "IsTemporaryLocked",
+          "slot": 19,
+          "token": "0x600442f"
+        },
+        {
+          "name": "LockCellForSeconds",
+          "slot": 20,
+          "token": "0x6004430"
+        },
+        {
+          "name": "ForceUnlockCell",
+          "slot": 21,
+          "token": "0x6004431"
+        },
+        {
+          "name": "GetAdditionalParam",
+          "slot": 22,
+          "token": "0x6004432"
+        },
+        {
+          "name": "SetAdditionalParam",
+          "slot": 23,
+          "token": "0x6004433"
+        },
+        {
+          "name": "GetCellIndex",
+          "slot": 24,
+          "token": "0x6004434"
+        },
+        {
+          "name": "StateReAssign",
+          "slot": 25,
+          "token": "0x6004435"
+        },
+        {
+          "name": "StateReAssign",
+          "slot": 26,
+          "token": "0x6004436"
+        },
+        {
+          "name": "ChangeCellDataToNextState",
+          "slot": 27,
+          "token": "0x6004437"
+        },
+        {
+          "name": "ChangeCellDataToOpenState",
+          "slot": 28,
+          "token": "0x6004438"
+        },
+        {
+          "name": "SetCellDataCurrentState",
+          "slot": 29,
+          "token": "0x6004439"
+        },
+        {
+          "name": "UpdateCellDataCurrentState",
+          "slot": 30,
+          "token": "0x600443a"
+        },
+        {
+          "name": "SetCellDataNextState",
+          "slot": 31,
+          "token": "0x600443b"
+        },
+        {
+          "name": "UpdateCellFromCellData",
+          "slot": 32,
+          "token": "0x600443c"
+        },
+        {
+          "name": "DamageCell",
+          "slot": 33,
+          "token": "0x600443d"
+        },
+        {
+          "name": "OnRotationUpdate",
+          "slot": 34,
+          "token": "0x600443e"
+        },
+        {
+          "name": "GetState",
+          "slot": 35,
+          "token": "0x600443f"
+        }
+      ]
+    }
+  ]
+}
