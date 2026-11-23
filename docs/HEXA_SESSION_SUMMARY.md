@@ -240,9 +240,17 @@ PlayerPrefs 文件：
 
 脚本：
 
+```
+
+adb devices
+adb -s emulator-5554 root
+adb -s emulator-5554 shell id
+scripts/modify_hexasort_save.sh --device emulator-5554 --level 1100
+```
+
 ```bash
 scripts/modify_hexasort_save.sh \
-  --level 100 \
+  --level 1 \
   --coin 999999 \
   --hammer 99 \
   --replace 99 \
