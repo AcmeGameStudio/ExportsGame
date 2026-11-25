@@ -1,0 +1,3918 @@
+{
+  "scope": "All local level JSON current/successor fields plus metadata schema; no live behavior validation",
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81",
+  "level_files": 4171,
+  "cells": 95736,
+  "errors": [],
+  "unknown_state_occurrences": {
+    "41": 8
+  },
+  "schemas": {
+    "Gameplay.BoxingGloveStateData": {
+      "name": "Gameplay.BoxingGloveStateData",
+      "type_definition_index": 2351,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "PendingHits",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003448"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003792",
+          "rva": "0x211144c"
+        }
+      ]
+    },
+    "Gameplay.CandyCellStateData": {
+      "name": "Gameplay.CandyCellStateData",
+      "type_definition_index": 2366,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "Id",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x400348b"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x60037fe",
+          "rva": "0x2115df0"
+        }
+      ]
+    },
+    "Gameplay.CupboardCellStateData": {
+      "name": "Gameplay.CupboardCellStateData",
+      "type_definition_index": 2402,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "CupboardId",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003522"
+        },
+        {
+          "name": "DoorOpen",
+          "type": "bool",
+          "offset": "0x14",
+          "storage": "instance",
+          "token": "0x4003523"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x60038c6",
+          "rva": "0x211e87c"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60038c7",
+          "rva": "0x211e884"
+        }
+      ]
+    },
+    "Gameplay.DiceStateData": {
+      "name": "Gameplay.DiceStateData",
+      "type_definition_index": 2427,
+      "instance_size": "0x20",
+      "fields": [
+        {
+          "name": "PendingHits",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x400358b"
+        },
+        {
+          "name": "LastDiceValue",
+          "type": "int",
+          "offset": "0x14",
+          "storage": "instance",
+          "token": "0x400358c"
+        },
+        {
+          "name": "PendingDiceValue",
+          "type": "int",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x400358d"
+        }
+      ],
+      "methods": [
+        {
+          "name": "SetDiceData",
+          "token": "0x6003977",
+          "rva": "0x21250a0"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6003978",
+          "rva": "0x212675c"
+        }
+      ]
+    },
+    "Gameplay.DrillCellStateData": {
+      "name": "Gameplay.DrillCellStateData",
+      "type_definition_index": 2447,
+      "instance_size": "0x20",
+      "fields": [
+        {
+          "name": "RotationIndex",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x40035de"
+        },
+        {
+          "name": "PendingHits",
+          "type": "int",
+          "offset": "0x14",
+          "storage": "instance",
+          "token": "0x40035df"
+        },
+        {
+          "name": "TargetCellIndex",
+          "type": "UnityEngine.Vector2Int",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x40035e0"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x60039f6",
+          "rva": "0x212d3e0"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60039f7",
+          "rva": "0x212d448"
+        },
+        {
+          "name": "GetCellIndex",
+          "token": "0x60039f8",
+          "rva": "0x212af40"
+        },
+        {
+          "name": "SetIndex",
+          "token": "0x60039f9",
+          "rva": "0x212bd98"
+        }
+      ]
+    },
+    "Gameplay.GeneratorNutsStateData": {
+      "name": "Gameplay.GeneratorNutsStateData",
+      "type_definition_index": 2510,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "HexTypes",
+          "type": "System.Collections.Generic.List`1<Gameplay.HexType>",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x40036f4"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003b73",
+          "rva": "0x213e6c0"
+        }
+      ]
+    },
+    "Gameplay.HexGeneratorStateData": {
+      "name": "Gameplay.HexGeneratorStateData",
+      "type_definition_index": 2519,
+      "instance_size": "0x28",
+      "fields": [
+        {
+          "name": "Rotation",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003723"
+        },
+        {
+          "name": "Difficulty",
+          "type": "int",
+          "offset": "0x14",
+          "storage": "instance",
+          "token": "0x4003724"
+        },
+        {
+          "name": "targetHexTypes",
+          "type": "System.Collections.Generic.List`1<Gameplay.HexType>",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003725"
+        },
+        {
+          "name": "selfHexTypes",
+          "type": "System.Collections.Generic.List`1<Gameplay.HexType>",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003726"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003bb1",
+          "rva": "0x2144644"
+        }
+      ]
+    },
+    "Gameplay.IglooStateData": {
+      "name": "Gameplay.IglooStateData",
+      "type_definition_index": 2562,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "Id",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x40037ee"
+        },
+        {
+          "name": "Rotation",
+          "type": "int",
+          "offset": "0x14",
+          "storage": "instance",
+          "token": "0x40037ef"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003ce1",
+          "rva": "0x21528ac"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6003ce2",
+          "rva": "0x21528b4"
+        }
+      ]
+    },
+    "Gameplay.JellyStateData": {
+      "name": "Gameplay.JellyStateData",
+      "type_definition_index": 2541,
+      "instance_size": "0x20",
+      "fields": [
+        {
+          "name": "Segments",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x400378a"
+        },
+        {
+          "name": "Rotation",
+          "type": "int",
+          "offset": "0x14",
+          "storage": "instance",
+          "token": "0x400378b"
+        },
+        {
+          "name": "JelliesStatus",
+          "type": "bool[]",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x400378c"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003c3c",
+          "rva": "0x214b6d4"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6003c3d",
+          "rva": "0x214b6dc"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6003c3e",
+          "rva": "0x214b708"
+        }
+      ]
+    },
+    "Gameplay.KettleStateData": {
+      "name": "Gameplay.KettleStateData",
+      "type_definition_index": 2554,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "SelectedTargetIndices",
+          "type": "System.Collections.Generic.List`1<UnityEngine.Vector2Int>",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x40037d2"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003cac",
+          "rva": "0x21505d8"
+        },
+        {
+          "name": "GetCellIndexAt",
+          "token": "0x6003cad",
+          "rva": "0x214f87c"
+        },
+        {
+          "name": "AddCellIndex",
+          "token": "0x6003cae",
+          "rva": "0x214f814"
+        },
+        {
+          "name": "RemoveCellIndex",
+          "token": "0x6003caf",
+          "rva": "0x214fe30"
+        }
+      ]
+    },
+    "Gameplay.MoleCellStateData": {
+      "name": "Gameplay.MoleCellStateData",
+      "type_definition_index": 2684,
+      "instance_size": "0x20",
+      "fields": [
+        {
+          "name": "MoleID",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003a5c"
+        },
+        {
+          "name": "SequenceID",
+          "type": "int",
+          "offset": "0x14",
+          "storage": "instance",
+          "token": "0x4003a5d"
+        },
+        {
+          "name": "MoleStatus",
+          "type": "int",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x4003a5e"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6004038",
+          "rva": "0x2190694"
+        }
+      ]
+    },
+    "Gameplay.PenguinStateData": {
+      "name": "Gameplay.PenguinStateData",
+      "type_definition_index": 2572,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "Id",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003815"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003d38",
+          "rva": "0x2156794"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6003d39",
+          "rva": "0x215679c"
+        }
+      ]
+    },
+    "Gameplay.PopcornCellStateData": {
+      "name": "Gameplay.PopcornCellStateData",
+      "type_definition_index": 2585,
+      "instance_size": "0x30",
+      "fields": [
+        {
+          "name": "IsJumpPending",
+          "type": "bool",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003852"
+        },
+        {
+          "name": "StartPosition",
+          "type": "UnityEngine.Vector3",
+          "offset": "0x14",
+          "storage": "instance",
+          "token": "0x4003853"
+        },
+        {
+          "name": "CupRotation",
+          "type": "UnityEngine.Vector3",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003854"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003d7c",
+          "rva": "0x215a2e8"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6003d7d",
+          "rva": "0x215a334"
+        }
+      ]
+    },
+    "Gameplay.PopcornMakerStateData": {
+      "name": "Gameplay.PopcornMakerStateData",
+      "type_definition_index": 2592,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "MaxCounterValue",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x400387f"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003dae",
+          "rva": "0x21702f0"
+        }
+      ]
+    },
+    "Gameplay.RabbitStateData": {
+      "name": "Gameplay.RabbitStateData",
+      "type_definition_index": 2595,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "ID",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003882"
+        },
+        {
+          "name": "SequenceID",
+          "type": "int",
+          "offset": "0x14",
+          "storage": "instance",
+          "token": "0x4003883"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003db2",
+          "rva": "0x2170884"
+        }
+      ]
+    },
+    "Gameplay.SoilBombStateData": {
+      "name": "Gameplay.SoilBombStateData",
+      "type_definition_index": 2648,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "Id",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x40039ac"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003f42",
+          "rva": "0x2185f0c"
+        }
+      ]
+    },
+    "Gameplay.SteamStateData": {
+      "name": "Gameplay.SteamStateData",
+      "type_definition_index": 2655,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "Types",
+          "type": "System.Collections.Generic.List`1<Gameplay.HexType>",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x40039d7"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6003f6b",
+          "rva": "0x2187c08"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6003f6c",
+          "rva": "0x2187c10"
+        }
+      ]
+    },
+    "Gameplay.ToasterStateData": {
+      "name": "Gameplay.ToasterStateData",
+      "type_definition_index": 2677,
+      "instance_size": "0x18",
+      "fields": [
+        {
+          "name": "PendingCollectCalls",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4003a39"
+        }
+      ],
+      "methods": [
+        {
+          "name": ".ctor",
+          "token": "0x6004003",
+          "rva": "0x218d1f8"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6004004",
+          "rva": "0x218d200"
+        }
+      ]
+    },
+    "RainbowLauncherStateData": {
+      "name": "RainbowLauncherStateData",
+      "type_definition_index": 63,
+      "instance_size": "0x20",
+      "fields": [
+        {
+          "name": "MaxRainbowShots",
+          "type": "int",
+          "offset": "0x10",
+          "storage": "instance",
+          "token": "0x4000149"
+        },
+        {
+          "name": "IsNewRainbow",
+          "type": "int",
+          "offset": "0x14",
+          "storage": "instance",
+          "token": "0x400014a"
+        },
+        {
+          "name": "CurrentRainbowShots",
+          "type": "int",
+          "offset": "0x18",
+          "storage": "instance",
+          "token": "0x400014b"
+        },
+        {
+          "name": "SingleShotStartCompleted",
+          "type": "bool",
+          "offset": "0x1c",
+          "storage": "instance",
+          "token": "0x400014c"
+        },
+        {
+          "name": "AnimationCompleted",
+          "type": "bool",
+          "offset": "0x1d",
+          "storage": "instance",
+          "token": "0x400014d"
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_GetRainbowState",
+          "token": "0x6000101",
+          "rva": "0x1f6cc40"
+        },
+        {
+          "name": "get_GetRemainingHits",
+          "token": "0x6000102",
+          "rva": "0x1f6cc64"
+        },
+        {
+          "name": "get_HasNewRainbow",
+          "token": "0x6000103",
+          "rva": "0x1f6cc74"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6000104",
+          "rva": "0x1f6cc84"
+        }
+      ]
+    }
+  },
+  "states": [
+    {
+      "value": -1,
+      "name": "Dead",
+      "status": "base",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "不可用基础格；不接受邻消扣层",
+      "schema": null,
+      "observations": {},
+      "cost": {},
+      "required_type": {},
+      "param_one": {},
+      "payload_kind": {},
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {},
+      "extra_keys": {}
+    },
+    {
+      "value": 0,
+      "name": "Open",
+      "status": "base",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "普通承载格；按堆顶参与排序/消除",
+      "schema": null,
+      "observations": {
+        "current": 41947,
+        "successor": 93602
+      },
+      "cost": {
+        "0": 135488,
+        "1": 27,
+        "3": 13,
+        "2": 5,
+        "60": 14,
+        "4": 2
+      },
+      "required_type": {
+        "0": 135549
+      },
+      "param_one": {
+        "0": 134503,
+        "1": 376,
+        "2": 357,
+        "8": 154,
+        "5": 21,
+        "-1": 11,
+        "50": 1,
+        "70": 1,
+        "6": 1,
+        "3": 26,
+        "200": 18,
+        "1000": 6,
+        "100": 7,
+        "4": 57,
+        "500": 10
+      },
+      "payload_kind": {
+        "empty": 121666,
+        "object": 13883
+      },
+      "json_keys": {
+        "MaxRainbowShots": 33,
+        "IsNewRainbow": 33,
+        "CurrentRainbowShots": 33,
+        "SingleShotStartCompleted": 32,
+        "AnimationCompleted": 32,
+        "GetRainbowState": 33,
+        "GetRemainingHits": 33,
+        "HasNewRainbow": 32,
+        "Id": 230,
+        "MoleID": 92,
+        "SequenceID": 124,
+        "MoleStatus": 92,
+        "Segments": 77,
+        "Rotation": 90,
+        "JelliesStatus": 77,
+        "CupboardId": 46,
+        "DoorOpen": 46,
+        "Difficulty": 11,
+        "targetHexTypes": 4,
+        "selfHexTypes": 4,
+        "RotationIndex": 51,
+        "PendingHits": 51,
+        "TargetCellIndex": 51,
+        "ID": 32
+      },
+      "null_json_fields": {
+        "JelliesStatus": 77,
+        "targetHexTypes": 4,
+        "selfHexTypes": 4
+      },
+      "json_value_types": {
+        "MaxRainbowShots": {
+          "int": 33
+        },
+        "IsNewRainbow": {
+          "int": 33
+        },
+        "CurrentRainbowShots": {
+          "int": 33
+        },
+        "SingleShotStartCompleted": {
+          "bool": 32
+        },
+        "AnimationCompleted": {
+          "bool": 32
+        },
+        "GetRainbowState": {
+          "int": 33
+        },
+        "GetRemainingHits": {
+          "int": 33
+        },
+        "HasNewRainbow": {
+          "bool": 32
+        },
+        "Id": {
+          "int": 230
+        },
+        "MoleID": {
+          "int": 92
+        },
+        "SequenceID": {
+          "int": 124
+        },
+        "MoleStatus": {
+          "int": 92
+        },
+        "Segments": {
+          "int": 77
+        },
+        "Rotation": {
+          "int": 90
+        },
+        "JelliesStatus": {
+          "NoneType": 77
+        },
+        "CupboardId": {
+          "int": 46
+        },
+        "DoorOpen": {
+          "bool": 46
+        },
+        "Difficulty": {
+          "int": 11
+        },
+        "targetHexTypes": {
+          "NoneType": 4
+        },
+        "selfHexTypes": {
+          "NoneType": 4
+        },
+        "RotationIndex": {
+          "int": 51
+        },
+        "PendingHits": {
+          "int": 51
+        },
+        "TargetCellIndex": {
+          "dict": 51
+        },
+        "ID": {
+          "int": 32
+        }
+      },
+      "examples": {
+        "empty": {
+          "file": "a_camera_1.json",
+          "index": 0,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "aq_frog.json",
+          "index": 0,
+          "successor": true,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {
+        "MaxRainbowShots": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_10.json"
+        },
+        "IsNewRainbow": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_10.json"
+        },
+        "CurrentRainbowShots": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_10.json"
+        },
+        "SingleShotStartCompleted": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_10.json"
+        },
+        "AnimationCompleted": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_10.json"
+        },
+        "GetRainbowState": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_10.json"
+        },
+        "GetRemainingHits": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_10.json"
+        },
+        "HasNewRainbow": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_10.json"
+        },
+        "Id": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_14.json"
+        },
+        "MoleID": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_2.json"
+        },
+        "SequenceID": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_2.json"
+        },
+        "MoleStatus": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_2.json"
+        },
+        "Segments": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_dice_7.json"
+        },
+        "Rotation": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_dice_7.json"
+        },
+        "JelliesStatus": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_dice_7.json"
+        },
+        "CupboardId": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_drill_7.json"
+        },
+        "DoorOpen": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_drill_7.json"
+        },
+        "Difficulty": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_firecrackergenerator_21.json"
+        },
+        "targetHexTypes": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_firecrackergenerator_21.json"
+        },
+        "selfHexTypes": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_firecrackergenerator_21.json"
+        },
+        "RotationIndex": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_hexg_1.json"
+        },
+        "PendingHits": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_hexg_1.json"
+        },
+        "TargetCellIndex": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_hexg_1.json"
+        },
+        "ID": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_hexg_4.json"
+        }
+      }
+    },
+    {
+      "value": 1,
+      "name": "RV",
+      "status": "base",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "广告/金币解锁；不由邻消打开",
+      "schema": null,
+      "observations": {
+        "current": 7417
+      },
+      "cost": {
+        "0": 7417
+      },
+      "required_type": {
+        "0": 7417
+      },
+      "param_one": {
+        "0": 7194,
+        "2": 91,
+        "1": 67,
+        "-1": 4,
+        "8": 29,
+        "5": 7,
+        "200": 4,
+        "1000": 2,
+        "100": 2,
+        "4": 10,
+        "500": 2,
+        "3": 2,
+        "15": 2,
+        "1000000000": 1
+      },
+      "payload_kind": {
+        "empty": 6781,
+        "object": 636
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "claustrophobia_text.json",
+          "index": 2,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_1000.json",
+          "index": 0,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 2,
+      "name": "Cost",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "全盘按消除块数扣Cost",
+      "schema": null,
+      "observations": {
+        "current": 3532
+      },
+      "cost": {
+        "100": 429,
+        "30": 81,
+        "20": 100,
+        "75": 172,
+        "50": 301,
+        "40": 121,
+        "70": 13,
+        "80": 130,
+        "60": 134,
+        "10": 54,
+        "200": 272,
+        "150": 352,
+        "250": 156,
+        "300": 72,
+        "125": 162,
+        "25": 82,
+        "130": 11,
+        "160": 81,
+        "90": 57,
+        "120": 160,
+        "175": 112,
+        "225": 51,
+        "230": 3,
+        "140": 57,
+        "180": 66,
+        "275": 18,
+        "45": 7,
+        "15": 7,
+        "110": 13,
+        "35": 14,
+        "65": 13,
+        "210": 24,
+        "270": 12,
+        "240": 55,
+        "170": 10,
+        "220": 9,
+        "320": 18,
+        "340": 6,
+        "360": 2,
+        "330": 2,
+        "310": 2,
+        "260": 17,
+        "350": 15,
+        "325": 7,
+        "280": 31,
+        "190": 8,
+        "85": 3,
+        "235": 3,
+        "375": 3,
+        "290": 3,
+        "55": 1
+      },
+      "required_type": {
+        "0": 3532
+      },
+      "param_one": {
+        "0": 3526,
+        "1": 3,
+        "2": 3
+      },
+      "payload_kind": {
+        "empty": 3166,
+        "object": 366
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 27,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "cupboardtest_16.json",
+          "index": 3,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 3,
+      "name": "Wood",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "相邻事件扣1，归零Open并计目标",
+      "schema": null,
+      "observations": {
+        "current": 5849,
+        "successor": 775
+      },
+      "cost": {
+        "1": 1473,
+        "3": 3610,
+        "0": 22,
+        "2": 1519
+      },
+      "required_type": {
+        "0": 6624
+      },
+      "param_one": {
+        "0": 6564,
+        "1": 10,
+        "2": 17,
+        "3": 5,
+        "8": 10,
+        "-1": 2,
+        "4": 16
+      },
+      "payload_kind": {
+        "empty": 6243,
+        "object": 381
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "a_cracker.json",
+          "index": 16,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "boxing_glove_test.json",
+          "index": 0,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 4,
+      "name": "Ice",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "相邻事件扣1，解冰保留原堆",
+      "schema": null,
+      "observations": {
+        "current": 3027,
+        "successor": 89
+      },
+      "cost": {
+        "3": 3116
+      },
+      "required_type": {
+        "0": 3116
+      },
+      "param_one": {
+        "0": 3055,
+        "1": 12,
+        "2": 37,
+        "8": 6,
+        "4": 6
+      },
+      "payload_kind": {
+        "empty": 3009,
+        "object": 107
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "algo_test_4.json",
+          "index": 16,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "cupboardtest_10.json",
+          "index": 4,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 5,
+      "name": "Hole",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "无活动状态处理器；旧排序器仍有同色Hole优先分支",
+      "schema": null,
+      "observations": {},
+      "cost": {},
+      "required_type": {},
+      "param_one": {},
+      "payload_kind": {},
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {},
+      "extra_keys": {}
+    },
+    {
+      "value": 6,
+      "name": "Grass",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "本格消除扣1；不是邻消扣层",
+      "schema": null,
+      "observations": {
+        "current": 3412,
+        "successor": 129
+      },
+      "cost": {
+        "1": 3541
+      },
+      "required_type": {
+        "0": 3541
+      },
+      "param_one": {
+        "0": 3458,
+        "1": 35,
+        "5": 14,
+        "8": 20,
+        "2": 14
+      },
+      "payload_kind": {
+        "empty": 3433,
+        "object": 108
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 20,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "cupboardtest_11.json",
+          "index": 0,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 7,
+      "name": "Camera",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "邻消拍照；目标完成停止普通收集，道具入口独立",
+      "schema": null,
+      "observations": {
+        "current": 1132,
+        "successor": 57
+      },
+      "cost": {
+        "1": 1045,
+        "2": 31,
+        "6": 8,
+        "3": 46,
+        "4": 9,
+        "100": 10,
+        "5": 2,
+        "20": 1,
+        "0": 37
+      },
+      "required_type": {
+        "0": 1189
+      },
+      "param_one": {
+        "0": 1160,
+        "1": 19,
+        "5": 2,
+        "2": 7,
+        "4": 1
+      },
+      "payload_kind": {
+        "empty": 1137,
+        "object": 52
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "a_camera_1.json",
+          "index": 7,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "cupboardtest_15.json",
+          "index": 7,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 8,
+      "name": "LockHighRise",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "全局累计消除量达到固定Cost门槛",
+      "schema": null,
+      "observations": {
+        "current": 1922
+      },
+      "cost": {
+        "20": 89,
+        "100": 258,
+        "50": 153,
+        "30": 52,
+        "150": 154,
+        "70": 23,
+        "75": 53,
+        "40": 121,
+        "80": 134,
+        "60": 137,
+        "180": 58,
+        "260": 8,
+        "140": 67,
+        "220": 18,
+        "300": 16,
+        "200": 107,
+        "250": 37,
+        "25": 35,
+        "225": 14,
+        "125": 39,
+        "175": 16,
+        "120": 141,
+        "90": 44,
+        "160": 53,
+        "185": 1,
+        "275": 2,
+        "240": 18,
+        "280": 14,
+        "320": 6,
+        "130": 8,
+        "170": 6,
+        "10": 13,
+        "230": 3,
+        "210": 8,
+        "270": 6,
+        "15": 2,
+        "45": 2,
+        "110": 6
+      },
+      "required_type": {
+        "0": 1922
+      },
+      "param_one": {
+        "0": 1870,
+        "3": 8,
+        "1": 26,
+        "2": 12,
+        "5": 3,
+        "4": 3
+      },
+      "payload_kind": {
+        "empty": 1874,
+        "object": 48
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "a_lockhighrise_1.json",
+          "index": 10,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_16.json",
+          "index": 18,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 9,
+      "name": "FridgeCan",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "仅保留罐子表现，未接通棋盘消除处理",
+      "schema": null,
+      "observations": {
+        "current": 1
+      },
+      "cost": {
+        "6": 1
+      },
+      "required_type": {
+        "0": 1
+      },
+      "param_one": {
+        "0": 1
+      },
+      "payload_kind": {
+        "empty": 1
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "a_fridge_1.json",
+          "index": 10,
+          "successor": false,
+          "raw": ""
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 10,
+      "name": "BirdHouse",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "本版工厂默认null，无活动处理器",
+      "schema": null,
+      "observations": {},
+      "cost": {},
+      "required_type": {},
+      "param_one": {},
+      "payload_kind": {},
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {},
+      "extra_keys": {}
+    },
+    {
+      "value": 11,
+      "name": "WaitingCell",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "被开的位置；按完整NextState恢复",
+      "schema": null,
+      "observations": {
+        "current": 2175
+      },
+      "cost": {
+        "100": 209,
+        "50": 81,
+        "30": 66,
+        "10": 93,
+        "70": 17,
+        "40": 138,
+        "20": 150,
+        "190": 3,
+        "60": 175,
+        "230": 8,
+        "150": 104,
+        "250": 15,
+        "80": 142,
+        "75": 67,
+        "125": 51,
+        "120": 159,
+        "90": 49,
+        "140": 106,
+        "160": 97,
+        "180": 78,
+        "200": 86,
+        "220": 21,
+        "25": 56,
+        "175": 47,
+        "225": 28,
+        "115": 1,
+        "85": 1,
+        "130": 15,
+        "145": 1,
+        "55": 2,
+        "110": 15,
+        "95": 1,
+        "65": 1,
+        "155": 1,
+        "240": 19,
+        "210": 12,
+        "105": 9,
+        "135": 9,
+        "45": 9,
+        "15": 8,
+        "165": 5,
+        "195": 1,
+        "280": 2,
+        "270": 1,
+        "275": 9,
+        "170": 5,
+        "5": 2
+      },
+      "required_type": {
+        "0": 2175
+      },
+      "param_one": {
+        "0": 1183,
+        "1": 228,
+        "10": 280,
+        "1000000000": 49,
+        "2": 29,
+        "100": 45,
+        "10000": 59,
+        "10000000": 88,
+        "50": 7,
+        "5000000": 6,
+        "1000000": 20,
+        "100000": 31,
+        "15": 4,
+        "6": 2,
+        "5": 1,
+        "100000000": 16,
+        "40": 1,
+        "60": 3,
+        "80": 2,
+        "1000": 47,
+        "8": 1,
+        "300": 10,
+        "200": 1,
+        "500": 4,
+        "5000": 1,
+        "9": 5,
+        "150": 1,
+        "20": 40,
+        "140": 1,
+        "30": 3,
+        "70": 1,
+        "90": 1,
+        "95": 1,
+        "99990": 1,
+        "9999": 3
+      },
+      "payload_kind": {
+        "empty": 2019,
+        "object": 156
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 35,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_1015.json",
+          "index": 3,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 12,
+      "name": "WaitingCellStack",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "按累计量确定数量，权重抽位置；发完变Dead",
+      "schema": null,
+      "observations": {
+        "current": 284
+      },
+      "cost": {
+        "0": 274,
+        "5": 2,
+        "4": 2,
+        "6": 4,
+        "10": 1,
+        "20": 1
+      },
+      "required_type": {
+        "0": 284
+      },
+      "param_one": {
+        "0": 272,
+        "1": 6,
+        "2": 5,
+        "500": 1
+      },
+      "payload_kind": {
+        "empty": 267,
+        "object": 17
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 39,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_1015.json",
+          "index": 19,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 13,
+      "name": "FireCracker",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "邻消发射；全盘优先级目标、在途排斥",
+      "schema": null,
+      "observations": {
+        "current": 1579,
+        "successor": 231
+      },
+      "cost": {
+        "4": 1010,
+        "3": 539,
+        "2": 192,
+        "0": 12,
+        "1": 57
+      },
+      "required_type": {
+        "0": 1810
+      },
+      "param_one": {
+        "0": 1770,
+        "1": 15,
+        "8": 4,
+        "2": 17,
+        "4": 4
+      },
+      "payload_kind": {
+        "empty": 1655,
+        "object": 155
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "a_cracker.json",
+          "index": 10,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "boxing_glove_test.json",
+          "index": 5,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 14,
+      "name": "Toaster",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "两阶段相位；每个产出阶段收2片",
+      "schema": "Gameplay.ToasterStateData",
+      "observations": {
+        "current": 456,
+        "successor": 38
+      },
+      "cost": {
+        "2": 492,
+        "1": 2
+      },
+      "required_type": {
+        "0": 494
+      },
+      "param_one": {
+        "0": 451,
+        "1": 18,
+        "8": 12,
+        "2": 7,
+        "-1": 4,
+        "4": 2
+      },
+      "payload_kind": {
+        "empty": 380,
+        "object": 114
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 10,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "debug_firecracker_3.json",
+          "index": 13,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 15,
+      "name": "Gramophone",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "本版工厂默认null，无活动处理器",
+      "schema": null,
+      "observations": {},
+      "cost": {},
+      "required_type": {},
+      "param_one": {},
+      "payload_kind": {},
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {},
+      "extra_keys": {}
+    },
+    {
+      "value": 16,
+      "name": "ColorNuts",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "旧类型停用；不能套用33",
+      "schema": null,
+      "observations": {},
+      "cost": {},
+      "required_type": {},
+      "param_one": {},
+      "payload_kind": {},
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {},
+      "extra_keys": {}
+    },
+    {
+      "value": 17,
+      "name": "CarParking",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "沿固定车道逐格移动Car，入位提交目标",
+      "schema": null,
+      "observations": {
+        "current": 689
+      },
+      "cost": {
+        "5": 52,
+        "0": 309,
+        "1": 96,
+        "4": 94,
+        "3": 71,
+        "2": 67
+      },
+      "required_type": {
+        "0": 689
+      },
+      "param_one": {
+        "0": 668,
+        "2": 9,
+        "8": 3,
+        "1": 7,
+        "4": 2
+      },
+      "payload_kind": {
+        "empty": 654,
+        "object": 35
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 42,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_20.json",
+          "index": 0,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 18,
+      "name": "Curtain",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "全盘匹配色按块数扣；揭幕后提升后继",
+      "schema": null,
+      "observations": {
+        "current": 1468
+      },
+      "cost": {
+        "10": 31,
+        "20": 79,
+        "40": 115,
+        "30": 45,
+        "70": 26,
+        "80": 130,
+        "60": 129,
+        "100": 191,
+        "50": 94,
+        "150": 66,
+        "75": 31,
+        "90": 47,
+        "120": 132,
+        "130": 14,
+        "170": 4,
+        "240": 8,
+        "280": 2,
+        "160": 61,
+        "200": 37,
+        "140": 79,
+        "15": 4,
+        "105": 4,
+        "45": 3,
+        "165": 1,
+        "180": 51,
+        "135": 2,
+        "195": 1,
+        "220": 10,
+        "125": 18,
+        "210": 7,
+        "25": 12,
+        "175": 5,
+        "190": 5,
+        "250": 3,
+        "110": 17,
+        "300": 1,
+        "270": 1,
+        "330": 1,
+        "35": 1
+      },
+      "required_type": {
+        "0": 1468
+      },
+      "param_one": {
+        "0": 1398,
+        "1": 21,
+        "8": 1,
+        "2": 42,
+        "4": 6
+      },
+      "payload_kind": {
+        "empty": 1438,
+        "object": 30
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 26,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_1069.json",
+          "index": 11,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 19,
+      "name": "Cloud",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "旧类型停用；不能套用46",
+      "schema": null,
+      "observations": {},
+      "cost": {},
+      "required_type": {},
+      "param_one": {},
+      "payload_kind": {},
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {},
+      "extra_keys": {}
+    },
+    {
+      "value": 20,
+      "name": "Playpen",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "邻消颜色匹配剩余球色，移除对应球",
+      "schema": null,
+      "observations": {
+        "current": 1180,
+        "successor": 53
+      },
+      "cost": {
+        "4": 195,
+        "2": 158,
+        "3": 143,
+        "1": 722,
+        "0": 15
+      },
+      "required_type": {
+        "0": 1233
+      },
+      "param_one": {
+        "0": 1203,
+        "8": 5,
+        "1": 7,
+        "200": 10,
+        "2": 6,
+        "4": 2
+      },
+      "payload_kind": {
+        "empty": 1137,
+        "object": 96
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 11,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_20.json",
+          "index": 11,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 21,
+      "name": "GemBox",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "相邻命中排队投宝石；无合适空间直接收",
+      "schema": null,
+      "observations": {
+        "current": 937,
+        "successor": 33
+      },
+      "cost": {
+        "4": 693,
+        "3": 192,
+        "2": 67,
+        "1": 12,
+        "30": 1,
+        "10": 3,
+        "20": 2
+      },
+      "required_type": {
+        "0": 970
+      },
+      "param_one": {
+        "0": 937,
+        "1": 9,
+        "8": 2,
+        "200": 4,
+        "4": 8,
+        "2": 8,
+        "-1": 2
+      },
+      "payload_kind": {
+        "empty": 879,
+        "object": 91
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 9,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_19.json",
+          "index": 7,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 22,
+      "name": "Gem",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消一次收集，提升完整后继",
+      "schema": null,
+      "observations": {
+        "current": 202,
+        "successor": 59
+      },
+      "cost": {
+        "1": 222,
+        "2": 3,
+        "0": 36
+      },
+      "required_type": {
+        "0": 261
+      },
+      "param_one": {
+        "0": 259,
+        "1": 2
+      },
+      "payload_kind": {
+        "empty": 207,
+        "object": 54
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "debug_firecrackergenerator_21.json",
+          "index": 13,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_549.json",
+          "index": 0,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 23,
+      "name": "Honey",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消一次投1滴；全盘选目标，无目标仍扣存量",
+      "schema": null,
+      "observations": {
+        "current": 801,
+        "successor": 50
+      },
+      "cost": {
+        "3": 848,
+        "2": 3
+      },
+      "required_type": {
+        "0": 851
+      },
+      "param_one": {
+        "0": 816,
+        "1": 13,
+        "8": 1,
+        "2": 17,
+        "4": 4
+      },
+      "payload_kind": {
+        "empty": 778,
+        "object": 73
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 17,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_19.json",
+          "index": 12,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 24,
+      "name": "HoneyTrap",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消解黏，保留原堆",
+      "schema": null,
+      "observations": {
+        "current": 52
+      },
+      "cost": {
+        "1": 52
+      },
+      "required_type": {
+        "0": 52
+      },
+      "param_one": {
+        "0": 52
+      },
+      "payload_kind": {
+        "empty": 52
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "level_1763.json",
+          "index": 2,
+          "successor": false,
+          "raw": ""
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 25,
+      "name": "SnakeBody",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "同组轮廓邻接触发各节；不是只通知最近节",
+      "schema": null,
+      "observations": {
+        "current": 1635
+      },
+      "cost": {
+        "3": 1,
+        "10": 130,
+        "8": 225,
+        "2": 419,
+        "6": 325,
+        "4": 390,
+        "12": 52,
+        "14": 39,
+        "18": 14,
+        "16": 29,
+        "20": 8,
+        "22": 2,
+        "24": 1
+      },
+      "required_type": {
+        "0": 1635
+      },
+      "param_one": {
+        "0": 1044,
+        "1": 446,
+        "3": 35,
+        "4": 8,
+        "2": 99,
+        "5": 3
+      },
+      "payload_kind": {
+        "empty": 1442,
+        "object": 193
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 38,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_18.json",
+          "index": 5,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 26,
+      "name": "SnakeTail",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "同组链形与尾部收集、计分",
+      "schema": null,
+      "observations": {
+        "current": 420
+      },
+      "cost": {
+        "5": 1,
+        "12": 78,
+        "8": 100,
+        "6": 65,
+        "10": 95,
+        "20": 6,
+        "16": 10,
+        "18": 15,
+        "4": 29,
+        "14": 13,
+        "26": 1,
+        "22": 6,
+        "24": 1
+      },
+      "required_type": {
+        "0": 420
+      },
+      "param_one": {
+        "0": 231,
+        "1": 133,
+        "3": 15,
+        "4": 5,
+        "2": 33,
+        "5": 3
+      },
+      "payload_kind": {
+        "empty": 371,
+        "object": 49
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 45,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_18.json",
+          "index": 4,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 27,
+      "name": "BirdNest",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "Cost每次减1，新Cost偶数时收1只",
+      "schema": null,
+      "observations": {
+        "current": 1040,
+        "successor": 79
+      },
+      "cost": {
+        "6": 484,
+        "4": 307,
+        "2": 70,
+        "5": 150,
+        "3": 79,
+        "1": 29
+      },
+      "required_type": {
+        "0": 1119
+      },
+      "param_one": {
+        "0": 1066,
+        "8": 3,
+        "5": 7,
+        "2": 31,
+        "4": 6,
+        "1": 6
+      },
+      "payload_kind": {
+        "empty": 965,
+        "object": 154
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 21,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "cupboardtest_4.json",
+          "index": 11,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 28,
+      "name": "Pearl",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "匹配当前珍珠色；目标结束前可持续产珍珠",
+      "schema": null,
+      "observations": {
+        "current": 629,
+        "successor": 16
+      },
+      "cost": {
+        "1": 639,
+        "-1": 6
+      },
+      "required_type": {
+        "0": 645
+      },
+      "param_one": {
+        "0": 231,
+        "-1": 244,
+        "1": 66,
+        "4": 8,
+        "2": 65,
+        "3": 27,
+        "7": 2,
+        "5": 2
+      },
+      "payload_kind": {
+        "empty": 603,
+        "object": 42
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 36,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "cupboardtest_14.json",
+          "index": 8,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 29,
+      "name": "Doll",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "待处理批次扣1；空邻格随机迁移或原地打开",
+      "schema": null,
+      "observations": {
+        "current": 1103,
+        "successor": 41
+      },
+      "cost": {
+        "4": 984,
+        "2": 36,
+        "3": 117,
+        "1": 7
+      },
+      "required_type": {
+        "0": 1144
+      },
+      "param_one": {
+        "0": 1129,
+        "-1": 3,
+        "3": 6,
+        "1": 6
+      },
+      "payload_kind": {
+        "empty": 1014,
+        "object": 130
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 25,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_16.json",
+          "index": 3,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 30,
+      "name": "Drone",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "两相位递送表现块，不增加普通可排序颜色堆",
+      "schema": null,
+      "observations": {},
+      "cost": {},
+      "required_type": {},
+      "param_one": {},
+      "payload_kind": {},
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {},
+      "extra_keys": {}
+    },
+    {
+      "value": 31,
+      "name": "DronePad",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "同ID停靠点，按Cost选择下一站",
+      "schema": null,
+      "observations": {
+        "current": 1196
+      },
+      "cost": {
+        "2": 407,
+        "6": 232,
+        "4": 342,
+        "12": 22,
+        "14": 11,
+        "8": 127,
+        "10": 49,
+        "16": 5,
+        "18": 1
+      },
+      "required_type": {
+        "0": 1196
+      },
+      "param_one": {
+        "0": 660,
+        "1": 373,
+        "2": 102,
+        "3": 28,
+        "4": 12,
+        "5": 8,
+        "8": 13
+      },
+      "payload_kind": {
+        "empty": 1074,
+        "object": 122
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 16,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_17.json",
+          "index": 4,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 32,
+      "name": "DroneHandler",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "控制同组转移，最终退出才收Drone目标",
+      "schema": null,
+      "observations": {
+        "current": 407
+      },
+      "cost": {
+        "4": 64,
+        "8": 106,
+        "6": 110,
+        "16": 4,
+        "12": 28,
+        "10": 78,
+        "40": 1,
+        "14": 12,
+        "18": 4
+      },
+      "required_type": {
+        "0": 407
+      },
+      "param_one": {
+        "0": 201,
+        "1": 134,
+        "2": 45,
+        "3": 13,
+        "4": 7,
+        "5": 5,
+        "8": 2
+      },
+      "payload_kind": {
+        "empty": 370,
+        "object": 37
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 22,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_17.json",
+          "index": 17,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 33,
+      "name": "GeneratorNuts",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "匹配当前坚果，完整色段与补充队列",
+      "schema": "Gameplay.GeneratorNutsStateData",
+      "observations": {
+        "current": 512,
+        "successor": 23
+      },
+      "cost": {
+        "1": 533,
+        "8": 2
+      },
+      "required_type": {
+        "0": 535
+      },
+      "param_one": {
+        "8": 482,
+        "5": 15,
+        "4": 38
+      },
+      "payload_kind": {
+        "empty": 451,
+        "object": 84
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 46,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_17.json",
+          "index": 6,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 34,
+      "name": "RainbowLauncher",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "激活/发射两阶段；候选评分选择目标和颜色",
+      "schema": "RainbowLauncherStateData",
+      "observations": {
+        "current": 791,
+        "successor": 11
+      },
+      "cost": {
+        "2": 801,
+        "0": 1
+      },
+      "required_type": {
+        "0": 802
+      },
+      "param_one": {
+        "0": 776,
+        "5": 4,
+        "8": 11,
+        "2": 6,
+        "1": 2,
+        "-1": 1,
+        "500": 1,
+        "3": 1
+      },
+      "payload_kind": {
+        "object": 659,
+        "empty": 143
+      },
+      "json_keys": {
+        "MaxRainbowShots": 592,
+        "IsNewRainbow": 592,
+        "CurrentRainbowShots": 592,
+        "SingleShotStartCompleted": 143,
+        "AnimationCompleted": 143,
+        "GetRainbowState": 592,
+        "GetRemainingHits": 592,
+        "HasNewRainbow": 143
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "MaxRainbowShots": {
+          "int": 592
+        },
+        "IsNewRainbow": {
+          "int": 592
+        },
+        "CurrentRainbowShots": {
+          "int": 592
+        },
+        "SingleShotStartCompleted": {
+          "bool": 143
+        },
+        "AnimationCompleted": {
+          "bool": 143
+        },
+        "GetRainbowState": {
+          "int": 592
+        },
+        "GetRemainingHits": {
+          "int": 592
+        },
+        "HasNewRainbow": {
+          "bool": 143
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 8,
+          "successor": false,
+          "raw": "{\"MaxRainbowShots\":0,\"IsNewRainbow\":0,\"CurrentRainbowShots\":0,\"SingleShotStartCompleted\":false,\"AnimationCompleted\":false,\"GetRainbowState\":0,\"GetRemainingHits\":0,\"HasNewRainbow\":false}"
+        },
+        "empty": {
+          "file": "debug_dice_8.json",
+          "index": 0,
+          "successor": false,
+          "raw": ""
+        }
+      },
+      "extra_keys": {
+        "GetRainbowState": {
+          "classification": "computed_property",
+          "example": "aq_debug_levels.json"
+        },
+        "GetRemainingHits": {
+          "classification": "computed_property",
+          "example": "aq_debug_levels.json"
+        },
+        "HasNewRainbow": {
+          "classification": "computed_property",
+          "example": "aq_debug_levels.json"
+        }
+      }
+    },
+    {
+      "value": 35,
+      "name": "Jelly",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "按方向和片状态扣除，保存旋转及片数组",
+      "schema": "Gameplay.JellyStateData",
+      "observations": {
+        "current": 565,
+        "successor": 39
+      },
+      "cost": {
+        "3": 310,
+        "2": 282,
+        "1": 12
+      },
+      "required_type": {
+        "0": 604
+      },
+      "param_one": {
+        "0": 604
+      },
+      "payload_kind": {
+        "object": 604
+      },
+      "json_keys": {
+        "Segments": 604,
+        "Rotation": 604,
+        "JelliesStatus": 604
+      },
+      "null_json_fields": {
+        "JelliesStatus": 604
+      },
+      "json_value_types": {
+        "Segments": {
+          "int": 604
+        },
+        "Rotation": {
+          "int": 604
+        },
+        "JelliesStatus": {
+          "NoneType": 604
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 1,
+          "successor": false,
+          "raw": "{\"Segments\":2,\"Rotation\":0,\"JelliesStatus\":null}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 37,
+      "name": "SeedBox",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "全盘播草，也可把草写到机关NextState",
+      "schema": null,
+      "observations": {
+        "current": 681,
+        "successor": 20
+      },
+      "cost": {
+        "3": 570,
+        "2": 103,
+        "1": 28
+      },
+      "required_type": {
+        "0": 701
+      },
+      "param_one": {
+        "0": 645,
+        "1": 22,
+        "8": 9,
+        "2": 23,
+        "500": 2
+      },
+      "payload_kind": {
+        "empty": 571,
+        "object": 130
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 12,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_1010.json",
+          "index": 7,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 38,
+      "name": "CupboardPrimary",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "柜门开启后转移杯子；与副半共用邻接去重",
+      "schema": "Gameplay.CupboardCellStateData",
+      "observations": {
+        "current": 537
+      },
+      "cost": {
+        "4": 448,
+        "2": 4,
+        "3": 85
+      },
+      "required_type": {
+        "0": 537
+      },
+      "param_one": {
+        "0": 513,
+        "1": 12,
+        "2": 8,
+        "8": 4
+      },
+      "payload_kind": {
+        "object": 537
+      },
+      "json_keys": {
+        "CupboardId": 537,
+        "DoorOpen": 537
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "CupboardId": {
+          "int": 537
+        },
+        "DoorOpen": {
+          "bool": 537
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 40,
+          "successor": false,
+          "raw": "{\"CupboardId\":1,\"DoorOpen\":false}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 39,
+      "name": "CupboardSecondary",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "与主半配对，不能人工重复扣一次",
+      "schema": "Gameplay.CupboardCellStateData",
+      "observations": {
+        "current": 537
+      },
+      "cost": {
+        "4": 440,
+        "2": 6,
+        "3": 91
+      },
+      "required_type": {
+        "0": 537
+      },
+      "param_one": {
+        "0": 512,
+        "1": 13,
+        "2": 8,
+        "8": 4
+      },
+      "payload_kind": {
+        "object": 537
+      },
+      "json_keys": {
+        "CupboardId": 537,
+        "DoorOpen": 537
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "CupboardId": {
+          "int": 537
+        },
+        "DoorOpen": {
+          "bool": 537
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 31,
+          "successor": false,
+          "raw": "{\"CupboardId\":1,\"DoorOpen\":false}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 36,
+      "name": "Bloom",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "汇集同轮颜色，同色双击与后续匹配分支不同",
+      "schema": null,
+      "observations": {
+        "current": 774,
+        "successor": 79
+      },
+      "cost": {
+        "2": 831,
+        "0": 22
+      },
+      "required_type": {
+        "0": 853
+      },
+      "param_one": {
+        "0": 786,
+        "3": 2,
+        "2": 18,
+        "8": 20,
+        "1": 19,
+        "200": 2,
+        "500": 6
+      },
+      "payload_kind": {
+        "empty": 758,
+        "object": 95
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 3,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "bloom_test_16.json",
+          "index": 4,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 42,
+      "name": "Safe",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "按块数转动，收金完成才开；道具计量独立",
+      "schema": null,
+      "observations": {
+        "current": 703,
+        "successor": 137
+      },
+      "cost": {
+        "60": 698,
+        "40": 62,
+        "50": 26,
+        "30": 51,
+        "20": 2,
+        "6": 1
+      },
+      "required_type": {
+        "0": 840
+      },
+      "param_one": {
+        "0": 803,
+        "-1": 5,
+        "8": 8,
+        "2": 11,
+        "1": 5,
+        "3": 8
+      },
+      "payload_kind": {
+        "empty": 536,
+        "object": 304
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 13,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_1008.json",
+          "index": 5,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 43,
+      "name": "BoxingGlove",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "两相位拳套；邻格优先目标，待击队列",
+      "schema": "Gameplay.BoxingGloveStateData",
+      "observations": {
+        "current": 304,
+        "successor": 24
+      },
+      "cost": {
+        "2": 297,
+        "0": 2,
+        "1": 29
+      },
+      "required_type": {
+        "0": 328
+      },
+      "param_one": {
+        "0": 294,
+        "8": 11,
+        "1": 14,
+        "200": 1,
+        "2": 8
+      },
+      "payload_kind": {
+        "empty": 261,
+        "object": 67
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 2,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "boxing_glove_test.json",
+          "index": 20,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 45,
+      "name": "Kettle",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "按目标额度生成云，预占坐标并保存原堆",
+      "schema": "Gameplay.KettleStateData",
+      "observations": {
+        "current": 323,
+        "successor": 20
+      },
+      "cost": {
+        "1": 341,
+        "0": 2
+      },
+      "required_type": {
+        "0": 343
+      },
+      "param_one": {
+        "0": 316,
+        "8": 15,
+        "1": 8,
+        "-1": 1,
+        "2": 3
+      },
+      "payload_kind": {
+        "empty": 339,
+        "object": 4
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 34,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_1137.json",
+          "index": 11,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 46,
+      "name": "Steam",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消收云，动画后恢复原堆顺序",
+      "schema": "Gameplay.SteamStateData",
+      "observations": {},
+      "cost": {},
+      "required_type": {},
+      "param_one": {},
+      "payload_kind": {},
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {},
+      "extra_keys": {}
+    },
+    {
+      "value": 44,
+      "name": "Dice",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "掷1至6点，队列和共享剩余目标防超收",
+      "schema": "Gameplay.DiceStateData",
+      "observations": {
+        "current": 337,
+        "successor": 27
+      },
+      "cost": {
+        "1": 364
+      },
+      "required_type": {
+        "0": 364
+      },
+      "param_one": {
+        "0": 343,
+        "5": 4,
+        "-1": 3,
+        "8": 1,
+        "2": 4,
+        "1": 7,
+        "4": 2
+      },
+      "payload_kind": {
+        "empty": 353,
+        "object": 11
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 7,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_1100.json",
+          "index": 5,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 51,
+      "name": "Mole",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "同ID洞口按SequenceID循环或随机；出现延迟可击",
+      "schema": "Gameplay.MoleCellStateData",
+      "observations": {
+        "current": 568
+      },
+      "cost": {
+        "1": 568
+      },
+      "required_type": {
+        "0": 568
+      },
+      "param_one": {
+        "0": 504,
+        "8": 18,
+        "2": 14,
+        "200": 4,
+        "1": 22,
+        "4": 6
+      },
+      "payload_kind": {
+        "object": 568
+      },
+      "json_keys": {
+        "MoleID": 568,
+        "SequenceID": 568,
+        "MoleStatus": 568
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "MoleID": {
+          "int": 568
+        },
+        "SequenceID": {
+          "int": 568
+        },
+        "MoleStatus": {
+          "int": 568
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 0,
+          "successor": false,
+          "raw": "{\"MoleID\":1,\"SequenceID\":2,\"MoleStatus\":0}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 47,
+      "name": "PopcornMaker",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "全盘按块数扣；爆开播撒爆米花",
+      "schema": "Gameplay.PopcornMakerStateData",
+      "observations": {
+        "current": 488,
+        "successor": 31
+      },
+      "cost": {
+        "100": 69,
+        "140": 10,
+        "20": 4,
+        "60": 27,
+        "160": 9,
+        "80": 26,
+        "40": 17,
+        "120": 39,
+        "10": 2,
+        "50": 61,
+        "200": 43,
+        "175": 13,
+        "150": 63,
+        "250": 6,
+        "30": 22,
+        "90": 17,
+        "180": 27,
+        "25": 3,
+        "70": 5,
+        "125": 9,
+        "75": 11,
+        "240": 8,
+        "210": 10,
+        "225": 4,
+        "280": 3,
+        "360": 1,
+        "270": 1,
+        "220": 2,
+        "110": 1,
+        "300": 2,
+        "260": 2,
+        "85": 1,
+        "145": 1
+      },
+      "required_type": {
+        "0": 519
+      },
+      "param_one": {
+        "0": 502,
+        "8": 3,
+        "1": 6,
+        "500": 4,
+        "2": 4
+      },
+      "payload_kind": {
+        "empty": 516,
+        "object": 3
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 43,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_1138.json",
+          "index": 15,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 48,
+      "name": "Popcorn",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "邻消收集，提升后继",
+      "schema": "Gameplay.PopcornCellStateData",
+      "observations": {
+        "current": 8
+      },
+      "cost": {
+        "1": 8
+      },
+      "required_type": {
+        "0": 8
+      },
+      "param_one": {
+        "0": 8
+      },
+      "payload_kind": {
+        "empty": 8
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "level_1355.json",
+          "index": 3,
+          "successor": false,
+          "raw": ""
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 53,
+      "name": "CandyMachine",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "命中相位控制同ID糖果收集，最后清机器",
+      "schema": "Gameplay.CandyCellStateData",
+      "observations": {
+        "current": 325
+      },
+      "cost": {
+        "1": 325
+      },
+      "required_type": {
+        "0": 325
+      },
+      "param_one": {
+        "0": 308,
+        "2": 10,
+        "3": 1,
+        "-1": 2,
+        "5": 4
+      },
+      "payload_kind": {
+        "object": 325
+      },
+      "json_keys": {
+        "Id": 325,
+        "PendingHits": 1
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "Id": {
+          "int": 325
+        },
+        "PendingHits": {
+          "int": 1
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 41,
+          "successor": false,
+          "raw": "{\"Id\":0}"
+        }
+      },
+      "extra_keys": {
+        "PendingHits": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_candy_machine_test3.json"
+        }
+      }
+    },
+    {
+      "value": 54,
+      "name": "Candy",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "将邻消转发给注册机器；远处候选优先消费",
+      "schema": "Gameplay.CandyCellStateData",
+      "observations": {
+        "current": 743
+      },
+      "cost": {
+        "2": 743
+      },
+      "required_type": {
+        "0": 743
+      },
+      "param_one": {
+        "0": 706,
+        "2": 29,
+        "1": 4,
+        "5": 4
+      },
+      "payload_kind": {
+        "object": 743
+      },
+      "json_keys": {
+        "Id": 743
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "Id": {
+          "int": 743
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 23,
+          "successor": false,
+          "raw": "{\"Id\":0}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 55,
+      "name": "Drill",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "两相位钻头；攻击后可迁入清空目标",
+      "schema": "Gameplay.DrillCellStateData",
+      "observations": {
+        "current": 242,
+        "successor": 20
+      },
+      "cost": {
+        "2": 262
+      },
+      "required_type": {
+        "0": 262
+      },
+      "param_one": {
+        "0": 240,
+        "8": 7,
+        "-1": 2,
+        "200": 1,
+        "1": 5,
+        "2": 3,
+        "5": 4
+      },
+      "payload_kind": {
+        "object": 195,
+        "empty": 67
+      },
+      "json_keys": {
+        "RotationIndex": 195,
+        "PendingHits": 195,
+        "TargetCellIndex": 195
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "RotationIndex": {
+          "int": 195
+        },
+        "PendingHits": {
+          "int": 195
+        },
+        "TargetCellIndex": {
+          "dict": 195
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 33,
+          "successor": false,
+          "raw": "{\"RotationIndex\":0,\"PendingHits\":0,\"TargetCellIndex\":{\"x\":999,\"y\":999,\"magnitude\":1412.79932,\"sqrMagnitude\":1996002}}"
+        },
+        "empty": {
+          "file": "debug_drill_1.json",
+          "index": 8,
+          "successor": false,
+          "raw": ""
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 52,
+      "name": "SoilBomb",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "同ID组预锁，邻接链传播；置0防重复爆炸",
+      "schema": "Gameplay.SoilBombStateData",
+      "observations": {
+        "current": 863,
+        "successor": 9
+      },
+      "cost": {
+        "5": 855,
+        "2": 2,
+        "1": 4,
+        "4": 7,
+        "3": 4
+      },
+      "required_type": {
+        "0": 872
+      },
+      "param_one": {
+        "0": 809,
+        "1": 32,
+        "10": 1,
+        "2": 30
+      },
+      "payload_kind": {
+        "object": 865,
+        "empty": 7
+      },
+      "json_keys": {
+        "Id": 865
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "Id": {
+          "int": 865
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 49,
+          "successor": false,
+          "raw": "{\"Id\":1}"
+        },
+        "empty": {
+          "file": "debug_soilbomb_1.json",
+          "index": 4,
+          "successor": false,
+          "raw": ""
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 49,
+      "name": "TeslaTower",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "充放电相位；灯泡组和待处理队列",
+      "schema": null,
+      "observations": {
+        "current": 135,
+        "successor": 11
+      },
+      "cost": {
+        "2": 146
+      },
+      "required_type": {
+        "0": 146
+      },
+      "param_one": {
+        "0": 140,
+        "8": 2,
+        "1": 3,
+        "2": 1
+      },
+      "payload_kind": {
+        "empty": 145,
+        "object": 1
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 48,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_aq_tesla.json",
+          "index": 5,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 50,
+      "name": "TeslaBulb",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "由塔选择，预置Cost0防重复再动画开格",
+      "schema": null,
+      "observations": {
+        "current": 494,
+        "successor": 2
+      },
+      "cost": {
+        "1": 437,
+        "2": 12,
+        "3": 13,
+        "5": 9,
+        "6": 8,
+        "4": 12,
+        "8": 2,
+        "7": 3
+      },
+      "required_type": {
+        "0": 496
+      },
+      "param_one": {
+        "0": 467,
+        "8": 14,
+        "1": 8,
+        "2": 7
+      },
+      "payload_kind": {
+        "empty": 484,
+        "object": 12
+      },
+      "json_keys": {},
+      "null_json_fields": {},
+      "json_value_types": {},
+      "examples": {
+        "empty": {
+          "file": "aq_debug_levels.json",
+          "index": 4,
+          "successor": false,
+          "raw": ""
+        },
+        "object": {
+          "file": "level_aq_tesla.json",
+          "index": 9,
+          "successor": false,
+          "raw": "{}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 62,
+      "name": "Rabbit",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "按ID与SequenceID转移，落地才激活下一站",
+      "schema": "Gameplay.RabbitStateData",
+      "observations": {
+        "current": 720
+      },
+      "cost": {
+        "2": 720
+      },
+      "required_type": {
+        "0": 720
+      },
+      "param_one": {
+        "0": 673,
+        "1": 1,
+        "-1": 5,
+        "2": 41
+      },
+      "payload_kind": {
+        "object": 720
+      },
+      "json_keys": {
+        "ID": 720,
+        "SequenceID": 720
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "ID": {
+          "int": 720
+        },
+        "SequenceID": {
+          "int": 720
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 5,
+          "successor": false,
+          "raw": "{\"ID\":1,\"SequenceID\":2}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 60,
+      "name": "Penguin",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "解冻后固定方向逐格移动，无绕路",
+      "schema": "Gameplay.PenguinStateData",
+      "observations": {
+        "current": 156
+      },
+      "cost": {
+        "3": 155,
+        "1": 1
+      },
+      "required_type": {
+        "0": 156
+      },
+      "param_one": {
+        "0": 149,
+        "1": 5,
+        "1000": 2
+      },
+      "payload_kind": {
+        "object": 156
+      },
+      "json_keys": {
+        "Id": 156
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "Id": {
+          "int": 156
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 24,
+          "successor": false,
+          "raw": "{\"Id\":0}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 61,
+      "name": "Igloo",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "按ID收企鹅，收完停用而非一律Open",
+      "schema": "Gameplay.IglooStateData",
+      "observations": {
+        "current": 132
+      },
+      "cost": {
+        "1": 132
+      },
+      "required_type": {
+        "0": 132
+      },
+      "param_one": {
+        "0": 126,
+        "1": 6
+      },
+      "payload_kind": {
+        "object": 132
+      },
+      "json_keys": {
+        "Id": 132,
+        "Rotation": 131
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "Id": {
+          "int": 132
+        },
+        "Rotation": {
+          "int": 131
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 6,
+          "successor": false,
+          "raw": "{\"Id\":0,\"Rotation\":3}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 65,
+      "name": "HexGenerator",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "朝向固定输出位；输出空且解锁后才消耗生成次数",
+      "schema": "Gameplay.HexGeneratorStateData",
+      "observations": {
+        "current": 245,
+        "successor": 28
+      },
+      "cost": {
+        "5": 204,
+        "3": 47,
+        "2": 8,
+        "4": 14
+      },
+      "required_type": {
+        "0": 273
+      },
+      "param_one": {
+        "0": 273
+      },
+      "payload_kind": {
+        "object": 273
+      },
+      "json_keys": {
+        "Rotation": 273,
+        "Difficulty": 273,
+        "targetHexTypes": 162,
+        "selfHexTypes": 162
+      },
+      "null_json_fields": {
+        "targetHexTypes": 162,
+        "selfHexTypes": 162
+      },
+      "json_value_types": {
+        "Rotation": {
+          "int": 273
+        },
+        "Difficulty": {
+          "int": 273
+        },
+        "targetHexTypes": {
+          "NoneType": 162
+        },
+        "selfHexTypes": {
+          "NoneType": 162
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "aq_debug_levels.json",
+          "index": 15,
+          "successor": false,
+          "raw": "{\"Rotation\":1,\"Difficulty\":1,\"targetHexTypes\":null,\"selfHexTypes\":null}"
+        }
+      },
+      "extra_keys": {}
+    },
+    {
+      "value": 68,
+      "name": "FireCrackerGenerator",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "Cost5至1充能，批量火箭可重复分配同一目标",
+      "schema": null,
+      "observations": {
+        "current": 53,
+        "successor": 3
+      },
+      "cost": {
+        "5": 56
+      },
+      "required_type": {
+        "0": 56
+      },
+      "param_one": {
+        "0": 53,
+        "1": 1,
+        "3": 2
+      },
+      "payload_kind": {
+        "object": 24,
+        "empty": 32
+      },
+      "json_keys": {
+        "FirecrackerCount": 24,
+        "PreferSingleTarget": 24,
+        "Continuous": 24,
+        "StartingCost": 24,
+        "ContinuousUse": 24,
+        "SingleTarget": 24
+      },
+      "null_json_fields": {},
+      "json_value_types": {
+        "FirecrackerCount": {
+          "int": 24
+        },
+        "PreferSingleTarget": {
+          "int": 24
+        },
+        "Continuous": {
+          "int": 24
+        },
+        "StartingCost": {
+          "int": 24
+        },
+        "ContinuousUse": {
+          "bool": 24
+        },
+        "SingleTarget": {
+          "bool": 24
+        }
+      },
+      "examples": {
+        "object": {
+          "file": "debug_firecrackergenerator_1.json",
+          "index": 5,
+          "successor": false,
+          "raw": "{\"FirecrackerCount\":3,\"PreferSingleTarget\":0,\"Continuous\":1,\"StartingCost\":0,\"ContinuousUse\":true,\"SingleTarget\":false}"
+        },
+        "empty": {
+          "file": "debug_firecrackergenerator_22.json",
+          "index": 9,
+          "successor": false,
+          "raw": ""
+        }
+      },
+      "extra_keys": {
+        "FirecrackerCount": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_firecrackergenerator_1.json"
+        },
+        "PreferSingleTarget": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_firecrackergenerator_1.json"
+        },
+        "Continuous": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_firecrackergenerator_1.json"
+        },
+        "StartingCost": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_firecrackergenerator_1.json"
+        },
+        "ContinuousUse": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_firecrackergenerator_1.json"
+        },
+        "SingleTarget": {
+          "classification": "unproven_runtime_field",
+          "example": "debug_firecrackergenerator_1.json"
+        }
+      }
+    }
+  ]
+}

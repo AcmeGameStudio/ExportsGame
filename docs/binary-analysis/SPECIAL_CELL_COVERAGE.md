@@ -83,3 +83,5 @@
 机器可读覆盖表见 [SPECIAL_CELL_COVERAGE.json](SPECIAL_CELL_COVERAGE.json)，保存枚举值、名字、分类、规格文件与二进制/metadata哈希。原始证据由 SpecialCells、SpecialCollectionExtra、SpecialGeneratorsExtra、SpecialMovementExtra、SpecialLegacyExtra 及 SpecialClassicsExtra 的 `.asm` / `.methods.json` 对应保存。
 
 [静态校验记录](SPECIAL_CELL_VERIFICATION.json) 核对枚举默认值、方法token到ELF指针、直接B/BL指令编码和本地链接路径。它不验证游戏实际运行结果，也不把指令地址校验当作行为对拍。
+
+2026-11-25数据与逻辑复核见[全量合同审计](SPECIAL_CELL_LOGIC_CONTRACTS.md)：4171关/95736格的当前与后继字段、19类附加数据结构（补入无命名空间的RainbowLauncherStateData）、计算属性与旧配置字段区分、果冻空片数组初始化。该清点不替代实机与中断验收。

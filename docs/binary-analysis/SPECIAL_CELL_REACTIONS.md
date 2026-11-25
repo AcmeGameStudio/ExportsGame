@@ -178,6 +178,8 @@ UnRegisterListeners()
 
 ### 6.1 Jelly(35) 按方向消除，不能只存一个总 Cost
 
+`Segments` 是每片覆盖的六边形方向数，不是片数：片数为整数 `6 / Segments`，所以 Segments=2 对应3片，Segments=3 对应2片。`GetJellyData`（0x214d270–0x214d40c）若发现 `JelliesStatus` 为 null 或长度0，会分配 `6 / Segments` 个布尔值，并把索引 `i < Cost` 的片设true，其余false，然后保存；已有非空片数组不走该默认初始化。不能把null当成已清完，也不能无条件重置已有存档。导出配置包含少量Cost超过片数的旧/测试记录，代码未在此处修正Cost；需原样保留并单列，不擅自夹紧。
+
 保存 `JellyStateData.Segments`、`Rotation`、`JelliesStatus[]`。收到消除先检查相邻、本格未临时锁，再按源格相对本格的位置以及本格朝向算六边形方向；不按消除色判断。
 
 `d = normalize(sourcePosition - jellyPosition)`，`f = jelly.transform.forward`。先求 `angle=acos(clamp(dot(d,f)/(|d||f|),-1,1))` 并转角度，若 `(d.x*f.z - d.z*f.x)<0` 则取 `360-angle`，然后调用 `fmodf(angle,360)`。方向及片索引为：

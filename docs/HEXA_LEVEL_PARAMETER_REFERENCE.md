@@ -135,7 +135,7 @@ LevelConfig
 | `GetRemainingHits` | Rainbow | 剩余命中/触发次数 |
 | `IsNewRainbow`, `HasNewRainbow` | Rainbow | 是否有新生成的彩虹状态 |
 | `SingleShotStartCompleted`, `AnimationCompleted` | Rainbow | 单次流程/动画完成标记 |
-| `Segments` | Jelly | 果冻分段数量 |
+| `Segments` | Jelly | 每片覆盖的方向数，片数为 `6 / Segments` |
 | `JelliesStatus` | Jelly | 各分段完成状态 |
 | `Rotation` | Jelly/Penguin/Generator | 方向；必须结合 state 使用 |
 | `CupboardId` | Cupboard | 关联同一橱柜实例的 ID |

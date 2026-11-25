@@ -104,7 +104,7 @@ CupboardHex [脚本]
             └── VerticalSpark [ParticleSystem, ParticleRenderer]
 ```
 
-每个 `Cup1`–`Cup6` 下均有以下结构；数组顺序与节点名、逻辑侧及物理位置的对应关系尚未确认。
+每个 `Cup1`–`Cup6` 下均有以下结构；数组与逻辑侧对应关系已在文末原始资源解析中确认。
 
 ```text
 Cup [Animator]

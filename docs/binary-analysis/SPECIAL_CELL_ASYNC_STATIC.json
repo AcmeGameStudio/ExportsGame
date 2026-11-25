@@ -1,0 +1,115 @@
+{
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81",
+  "resolved_sites": [
+    {
+      "site": "0x212515c",
+      "instruction": "br",
+      "register": 3,
+      "receiver_flow": "ACellState._cell +0x20",
+      "declaring_type": "Gameplay.ICellStateContext",
+      "slot": 23,
+      "resolved_contract": "SetAdditionalParam",
+      "scope": "manual receiver-flow resolution; not complete dynamic target graph"
+    },
+    {
+      "site": "0x2120ee8",
+      "instruction": "blr",
+      "register": 8,
+      "receiver_flow": "primary._secondary listener +0x50",
+      "declaring_type": "Gameplay.ICupboardSecondaryListener",
+      "slot": 1,
+      "resolved_contract": "SetPrimaryCupboard",
+      "scope": "manual receiver-flow resolution; not complete dynamic target graph"
+    },
+    {
+      "site": "0x2121c28",
+      "instruction": "blr",
+      "register": 8,
+      "receiver_flow": "secondary._cell +0x20",
+      "declaring_type": "Gameplay.ICellStateContext",
+      "slot": 7,
+      "resolved_contract": "SetCost",
+      "scope": "manual receiver-flow resolution; not complete dynamic target graph"
+    },
+    {
+      "site": "0x2121c8c",
+      "instruction": "blr",
+      "register": 8,
+      "receiver_flow": "secondary._cell +0x20",
+      "declaring_type": "Gameplay.ICellStateContext",
+      "slot": 28,
+      "resolved_contract": "ChangeCellDataToOpenState",
+      "scope": "manual receiver-flow resolution; not complete dynamic target graph"
+    },
+    {
+      "site": "0x2121cf0",
+      "instruction": "blr",
+      "register": 8,
+      "receiver_flow": "secondary._cell +0x20",
+      "declaring_type": "Gameplay.ICellStateContext",
+      "slot": 25,
+      "resolved_contract": "StateReAssign",
+      "scope": "manual receiver-flow resolution; not complete dynamic target graph"
+    },
+    {
+      "site": "0x2142f48",
+      "instruction": "blr",
+      "register": 9,
+      "receiver_flow": "HexGenerator this; vtable +0x438",
+      "declaring_type": "Gameplay.ACellState",
+      "slot": 48,
+      "resolved_contract": "ReValidateSorting",
+      "scope": "manual receiver-flow resolution; not complete dynamic target graph"
+    },
+    {
+      "site": "0x2124ff4",
+      "instruction": "blr",
+      "register": 8,
+      "receiver_flow": "ACellState.GoalViewListener +0x18; arg42",
+      "declaring_type": "Gameplay.IGoalView",
+      "slot": 0,
+      "resolved_contract": "GoalUpdated",
+      "scope": "manual receiver-flow resolution; not complete dynamic target graph"
+    },
+    {
+      "site": "0x218b984",
+      "instruction": "blr",
+      "register": 8,
+      "receiver_flow": "ACellState.GoalViewListener +0x18; arg17",
+      "declaring_type": "Gameplay.IGoalView",
+      "slot": 0,
+      "resolved_contract": "GoalUpdated",
+      "scope": "manual receiver-flow resolution; not complete dynamic target graph"
+    }
+  ],
+  "save_zero_cost_states": [
+    13,
+    20,
+    30,
+    42
+  ],
+  "windows": {
+    "save_current_or_normalize": {
+      "start": "0x21a1850",
+      "end": "0x21a18c8",
+      "raw_hex": "e07e40fdc00a00fdeaee40b9ca2a00b9e9f240b969010034e84a41b91f090031c10200545f81007181020054e1e30091e00315aae20317aaa8000094250000145fa90071a8feff54280080520b0084d20821ca9a0b02a8f20b80c0f21f010beac0fdff54e1e30091e00315aae20317aa9a00009417000014"
+    },
+    "save_normalization": {
+      "start": "0x21a1b60",
+      "end": "0x21a1cf8",
+      "raw_hex": "600240f9a00c00b4082840b91f5100710d0300541f790071e00800541f810071200500541fa9007161040054d51301d0b56645f9a10240f9010c04f81f7c3ea91f801fb81f001ff8ec47f297600240f9400a00b4a10240f9010c05f81f801fb8e647f297e00314aae10480522e0000141f350071600000541f510071c1010054d41301d0946645f9810240f9010c04f81f7c3ea91f801fb81f001ff8d747f297600240f9a00700b4810240f9010c05f835000014f44f42a9f65741a9fe0743f8c0035fd6b50600b4a87240f9680600b4012940f9093540b9010c04f809801eb800c142fc00001efc084940b908801fb8c247f297600240f9000500b4c81301d0086545f9010140f9010c05f81f001ef81fc01db81f801fb8b847f297e00314aa01048052f44f42a9f65741a9fe0743f898000014350300b4a87240f9e80200b4012940f9093540b9010c04f809801eb800c142fc00001efc084940b908801fb8a647f297600240f9800100b4c81301d0086545f9010140f9010c05f81f001ef81fc01db8f44f42a91f801fb8f65741a9fe0743f89947f217"
+    },
+    "dice_restore": {
+      "start": "0x2124e78",
+      "end": "0x2124f34",
+      "raw_hex": "34180190948e47f9880240f9085d40f9080140b91f050071cb020054e00313aa62000094682e40f9e80b00b4091140b9151940b93f0500718b020054f7031f2a20008052e1008052e2031faa5e947094682e40f9880a00b4091140b9f70600111500150bff02096bcbfeff5408000014602a40f9800900b4f44f42a9f65741a9fe5fc3a8a3000014e003152abf060071cb07005400fd0229e00313aa1f1100b965000094601a40f9e00700b4612a40b9e203152ae3031faa6e620294"
+    },
+    "toaster_restore": {
+      "start": "0x218b8f8",
+      "end": "0x218b99c",
+      "raw_hex": "a82240f9e80700b4021140b922070034601a40f9600700b4612a40b9e3031faaf4c70094740e40f9d40600b4ea140190880240f94a7541f9095d4279410140f9290100b40a5940f94a2100914b815ff87f0101eb00010054290500f14a41009161ffff54e00314aae2031f2a6086f39704000014490180b90811098b00e10491080840a9e00314aa2102805200013fd6682e40f9680300b4e00313aa1f1100b919000094"
+    }
+  },
+  "scope": "Static first version; no device experiment"
+}

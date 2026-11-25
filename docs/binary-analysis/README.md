@@ -1,5 +1,7 @@
 # Hexa 6.2.20：合并与手牌生成的二进制还原
 
+全量数据与逻辑检查见[51项活动机关合同及19类附加数据](SPECIAL_CELL_LOGIC_CONTRACTS.md)，包含当前/后继配置扫描、初始化语义和逻辑验证缺口。
+
 特殊格与合并交互的逐状态证据索引、待验证矩阵及后续验收计划，见[交互审计](SPECIAL_CELL_MERGE_AUDIT.md)。
 
 2026-11-25重新核对的60状态原格/目的格准入、机关独立目标选择及后补骰子动态链，见[原格与目的格完整性复核](SPECIAL_CELL_SOURCE_TARGET_AUDIT.md)，附[机器记录](SPECIAL_CELL_SOURCE_TARGET_AUDIT.json)。
@@ -246,3 +248,5 @@ HexaSortingAlgorithm.asm：递归排序器、评分比较及计算函数的反�
 GridMatchTypes.asm、HexaSortAlgoLegacy.asm、DynamicDifficulty.asm、SortingGrid.asm：候选色、旧版排序、动态难度和棋盘快照/拥挤条件的反汇编，附已解析的方法名。
 
 二进制 SHA256：56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02
+
+2026-11-25补充：[暂停恢复、跨机关争用与间接回调静态第一版](SPECIAL_CELL_ASYNC_STATIC.md)。已展开保存时13/20/30/42及32退出分支的归一化、分组恢复推导、16类争用、8处接收对象/槽位与生成器末次交付窗口；保留具体未闭合分支，不再将这三项整体作为未分析事项。

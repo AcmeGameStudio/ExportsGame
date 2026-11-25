@@ -239,7 +239,7 @@ Screenshot
 
 ### Jelly
 
-- `Segments`：果冻分段数
+- `Segments`：每片覆盖的六边形方向数；片数为 `6 / Segments`
 - `Rotation`：方向
 - `JelliesStatus`：分段完成状态
 

@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-25",
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81",
+  "checked": {
+    "enum_rows": 60,
+    "runtime_contract_rows": 51,
+    "payload_schemas": 19,
+    "level_files": 4171,
+    "cells": 95736,
+    "current_and_successor_records": 191472,
+    "parse_errors": 0,
+    "jelly_null_status_records": 604,
+    "jelly_exact_instruction_encodings": [
+      "0x214d370",
+      "0x214d3d8",
+      "0x214d3e4"
+    ],
+    "report_local_links": true
+  },
+  "runtime_validation": "not performed; adb devices -l returned empty device list",
+  "completion": "Static data inventory and contract review only; persistence and cross-mechanic runtime validation remain open"
+}

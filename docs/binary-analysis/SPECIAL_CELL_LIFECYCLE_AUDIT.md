@@ -239,3 +239,5 @@ ICellStateContext间接调用已用metadata槽表重新确认：9=IsNeighbour、
 已完成本地资产与白名单读取、包含嵌套状态机的静态入口扩展、上下文接口槽核对，以及现有日志证据审计。仍待：实际加载引用/动态改写验证、757个间接点中影响玩法的对象流闭合、上述中断窗口的逐机关一致性验证（保存门控已定位）、连接设备后的同帧实测。每项都有明确对象/调用点/实验，未将这些剩余项标为通过。
 
 复现：`rtk proxy env PYTHONPATH=/tmp/hexa-analysis-deps python3 scripts/inspect_hexa_special_evidence.py`；依赖UnityPy 1.25.4、capstone 5.0.9（本次临时目录安装，不改仓库requirements）。原始大文件仍受gitignore约束，新增JSON/asm是可审查证据产物。
+
+2026-11-25补充：[暂停恢复、跨机关争用与间接回调静态第一版](SPECIAL_CELL_ASYNC_STATIC.md)。已展开保存时13/20/30/42及32退出分支的归一化、分组恢复推导、16类争用、8处接收对象/槽位与生成器末次交付窗口；保留具体未闭合分支，不再将这三项整体作为未分析事项。
