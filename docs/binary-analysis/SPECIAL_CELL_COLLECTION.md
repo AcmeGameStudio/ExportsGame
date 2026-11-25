@@ -54,6 +54,8 @@
 
 ### 糖果格和机器表现的边界
 
+2026-11-25：[进一步的表现实现还原](SPECIAL_CELL_VISUAL_IMPLEMENTATION.md#5-糖果机长糖果主网格和收集用小糖果已分清)已展开下面曾未解析的 slot13/22，确认主长网格按 `sum(Candy.Cost)` 位移并修改 `_TIleCount`，并补出独立颗粒生命周期。以下段落保留前轮取证范围；“未证明/未确认”的部分以新文明确列出的新增证据为准。Shader 内裁切与实际格边界仍未闭合。
+
 - `CandyCellState` 提供 ID、位置与 Cost 并转发邻消反馈；其构造函数未出现已解析的模型实例化调用，但其中存在未解析的虚调用，不能据此证明糖果格没有视觉对象。证据：`0x2115864–0x2115a1c`。
 - `CandyMachineHex.Init` 初始化 `CandyMachineCandy` 表现对象，`CandiesUpdated` 调用其 `Animate` 播放收集流程，见 `0x2116618–0x21166fc`、`0x21172bc–0x211742c`。[CandyMachineHex.prefab](../../extracted_game_models/ExportedProject/Assets/GameObject/CandyMachineHex.prefab) 内有 `Marshmellow/Marshmellow_Candy` 网格，但尚未证明它就是糖果格所用模型，也未确认糖果格的模型数量、排列及运行时更新方式。
 - 机器以最近的同 ID 糖果格计算朝向，实际消耗从距离排序末尾开始；这是逻辑目标顺序，不能推导糖果网格的排列。未找到独立 `Candy` Prefab 不等于证明游戏运行时没有动态生成表现。后续原始资源解析已找到机器引用的独立 Marshmellow_Piece 收集对象，但仍未证明糖果格的模型及排列，见 [后续表现解析](SPECIAL_CELL_VISUAL_HIERARCHY.md)。

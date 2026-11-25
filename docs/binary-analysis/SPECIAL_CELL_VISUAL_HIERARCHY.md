@@ -2,6 +2,8 @@
 
 本记录汇总 Hexa Sort 6.2.20 导出资源和 IL2CPP 静态分析。层级来自 Prefab 静态父子关系，不代表运行时完整 Hierarchy。相关导出 C# 脚本是空壳；尚未通过 Unity Editor 或真机验证画面、运行时挂接和动画时序。
 
+2026-11-25 深入还原见[表现实现：蛇、果冻、无人机与糖果机](SPECIAL_CELL_VISUAL_IMPLEMENTATION.md)：已补齐蛇的三次插值和卷筒公式、39 个骨骼采样组件及资源覆盖值、果冻反序分片和 0.5 秒反馈链、无人机分阶段时间线、糖果长网格的总量/材质驱动。下文早期“未知”以新文所列已闭合范围为准；原始 Shader、弹簧细节及实机观感仍未验证。
+
 ## 蛇身和蛇尾（25 / 26）
 
 蛇身、蛇尾是同 ID 的多个逻辑格；蛇尾表现对象根据同组蛇身的邻接关系和 Cost 建立路径，再以样条控制整条蛇收卷。一次邻接消除可让同组各节推进；蛇身各自 Cost 归零后释放，蛇尾收到底后触发王冠收集。详见 [Snake 玩法及表现](SPECIAL_CELL_MOVEMENT.md)。
@@ -120,7 +122,7 @@ Cup [Animator]
 
 ## 糖果机与糖果格（53 / 54）
 
-糖果格记录同组 ID 和剩余容量，糖果机按 ID 找目标并驱动收集动画。机器中的糖果网格尚未证明是糖果格所用模型，糖果格的模型数量、排列和动态生成方式仍未知。代码证据及目标顺序见 [糖果表现边界](SPECIAL_CELL_COLLECTION.md)。未找到独立命名的 Candy Prefab。
+糖果格记录同组 ID 和剩余容量，糖果机按 ID 找目标并驱动收集动画。2026-11-25 已确认机器内长网格按绑定糖果格的 Cost 总和移动并更新 `_TIleCount`，另实例化糖果颗粒飞向 HUD；支持整体网格表达多格剩余量。精确裁切和格边界尚待原始 Shader 还原，见[糖果机实现](SPECIAL_CELL_VISUAL_IMPLEMENTATION.md#5-糖果机长糖果主网格和收集用小糖果已分清)。目标顺序见 [糖果规则](SPECIAL_CELL_COLLECTION.md)。
 
 [CandyMachineHex.prefab](../../extracted_game_models/ExportedProject/Assets/GameObject/CandyMachineHex.prefab) 静态层级：
 
@@ -183,7 +185,7 @@ CandyMachineHex [脚本]
 
 CandyMachineHex 原始组件资产 `afc7ad5cd7b9d4eaf8cbe821fd036f4a:68` 的序列化偏移 92 是 CandyPrefab，PPtr 为 file 16 / path 5，解析至资产 `db10aec2a55ae494eaafd29c6869b0ac:5`。其 GameObject 名为 `Marshmellow_Piece`，具有 MeshFilter、MeshRenderer、CandyMachineCandy 和 HexCollectionAnimation，无子节点。此前仅按 Candy 名称查找，遗漏了这个独立对象。
 
-CandyMachineHex.Init 从 CandyPrefab 和 CandyParent 创建表现对象，保存到 `_candyObject`，后续调用 Animate；结合收集动画脚本，这证明机器使用独立糖果收集对象。机器内部的 Marshmellow_Candy 则由字段 CandyMesh 引用，Marshmellow 由 CandyMeshTransform 引用。独立糖果收集对象和机器内网格已有各自证据；尚未证明 Candy 格会使用、复制或排列这些模型。
+CandyMachineHex.Init 从 CandyPrefab 和 CandyParent 创建表现对象，保存到 `_candyObject`，后续调用 Animate；结合收集动画脚本，这证明机器使用独立糖果收集对象。机器内部的 Marshmellow_Candy 则由字段 CandyMesh 引用，Marshmellow 由 CandyMeshTransform 引用。后续已补出主网格的总量驱动与独立颗粒生命周期，见[2026-11-25 实现还原](SPECIAL_CELL_VISUAL_IMPLEMENTATION.md)。
 
 ### 蛇身样条与骨骼
 
@@ -191,4 +193,4 @@ CandyMachineHex.Init 从 CandyPrefab 和 CandyParent 创建表现对象，保存
 
 [新增样条指令](SpecialVisualSpline.asm)中 Update（0x1f6787c）的采样参数可还原为：`t = DistanceOnSpline / SplineLength + (number / MaxNumber) * (SnakeLength / SplineLength)`；前视偏移为 `lookAheadDist / SplineLength`。代码处理越界和 loop 分支，调用 GetHermiteAtTime(t) 写骨骼世界位置，再以前视采样点设置朝向。并非简单沿直线连接骨骼。
 
-SnakeTailHex 的样条协程（0x2182534）按 deltaTime 和整数字段 LengthFactor 更新 SnakeLength；增长分支额外乘 1.5。每步调用 SetSnakeTilling、RotateCarpetRoll、AdjustCarpetRollSize、AdjustCarpetRollPos。故完整表现还包含纹理平铺、卷筒旋转、尺寸和位置联动，见 SpecialMovementExtra.asm。Hermite 切线、重参数化、边界处理和卷筒公式仍需继续逐项还原，当前不能称为已完成样条表现或已接入游戏。
+SnakeTailHex 的样条协程（0x2182534）按 deltaTime 和整数字段 LengthFactor 更新 SnakeLength；增长分支额外乘 1.5。每步调用 SetSnakeTilling、RotateCarpetRoll、AdjustCarpetRollSize、AdjustCarpetRollPos。2026-11-25 已补出 Hermite 居中切线、骨骼边界处理、纹理/BigRoll/卷筒位置公式及原始参数，详见[蛇的实现还原](SPECIAL_CELL_VISUAL_IMPLEMENTATION.md#2-蛇路径骨骼收卷和卷筒)。重参数化方法的算法已展开，但未确认正常玩法调用它；尚未接入或实机对拍。

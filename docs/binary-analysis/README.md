@@ -10,6 +10,8 @@
 
 蛇、果冻、无人机、柜子和糖果的导出预制体层级与表现证据，见[特殊格表现资源与渲染层级](SPECIAL_CELL_VISUAL_HIERARCHY.md)。
 
+2026-11-25 继续深入的[特殊玩法表现实现还原](SPECIAL_CELL_VISUAL_IMPLEMENTATION.md)，包含蛇的骨骼采样/卷筒公式、果冻数组与延迟反馈、无人机飞行/掉块时间线、糖果长网格与材质驱动，以及原始 Shader 占位的恢复缺口；附 178 段方法及 49 个原始组件证据。
+
 运行时 Cell/CellData/Block 的字段、颜色位编码、格内堆叠顺序与排序快照结构，见[运行时格子数据结构](RUNTIME_CELL_DATA.md)；可复核的完整类型与偏移见[RUNTIME_CELL_LAYOUT.json](RUNTIME_CELL_LAYOUT.json)。
 
 按关卡字段判断模式、胜利目标、机关和 Catalog 变体，见 [关卡玩法判定](LEVEL_GAMEPLAY_CLASSIFICATION.md)。

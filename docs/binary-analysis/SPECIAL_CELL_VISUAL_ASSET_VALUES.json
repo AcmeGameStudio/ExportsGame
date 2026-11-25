@@ -1,0 +1,2521 @@
+{
+  "scope": "Original serialized values, not runtime overrides; payload fully consumed for each selected component.",
+  "unitypy_version": "1.25.4",
+  "components": [
+    {
+      "type": "Gameplay.SnakeTailHex",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 158,
+      "raw_sha256": "643b1ae05af9fc015a23525fc9a420cfdadae0e04ca862f7860ff6d738da99b2",
+      "raw_hex": "0000000028000000000000000100000001000000eb0400000000000000000000000000009700000000000000000000001600000000000000000000001700000000000000000000000b00000000000000ec51783f000000000000000081000000000000000d000000f3b00000000000000d000000efb00000000000000000000044000000000000000000344100000000800000000000000004000000000000006100000000000000000000007f00000000000000000000007700000000000000",
+      "fields": {
+        "_snakeParameters": {
+          "serialized_offset": 32,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "_snakePiecesContainer": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 22,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "GameObject",
+            "name": "SnakeSplineRoot"
+          }
+        },
+        "_snakeTangentObject": {
+          "serialized_offset": 56,
+          "value": {
+            "file_id": 0,
+            "path_id": 23,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "GameObject",
+            "name": "SnakeSplinePos (1)"
+          }
+        },
+        "_secondTangentPoint": {
+          "serialized_offset": 68,
+          "value": {
+            "file_id": 0,
+            "path_id": 11,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "GameObject",
+            "name": "SnakeSplinePos (2)"
+          }
+        },
+        "_snakeLengthFactor": {
+          "serialized_offset": 80,
+          "value": 0.9700000286102295
+        },
+        "_initialLengthFactor": {
+          "serialized_offset": 84,
+          "value": 0.0
+        },
+        "snakeSkinMeshRenderer": {
+          "serialized_offset": 88,
+          "value": {
+            "file_id": 0,
+            "path_id": 129,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "SkinnedMeshRenderer",
+            "game_object": "Snake_mesh",
+            "materials": [
+              {
+                "file_id": 11,
+                "path_id": 1,
+                "asset_file": "422b58a96a208d240bc8e073bc3e85bf"
+              }
+            ]
+          }
+        },
+        "GameplaySounds": {
+          "serialized_offset": 100,
+          "value": {
+            "file_id": 13,
+            "path_id": 45299,
+            "asset_file": "sharedassets0.assets"
+          }
+        },
+        "GameHudScorePositions": {
+          "serialized_offset": 112,
+          "value": {
+            "file_id": 13,
+            "path_id": 45295,
+            "asset_file": "sharedassets0.assets"
+          }
+        },
+        "CarpetRoll": {
+          "serialized_offset": 124,
+          "value": {
+            "file_id": 0,
+            "path_id": 68,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "Transform",
+            "game_object": "Carpet_roll"
+          }
+        },
+        "CarpetRollRotationFactor": {
+          "serialized_offset": 136,
+          "value": 11.25
+        },
+        "CarpetRollMeshRenderer": {
+          "serialized_offset": 140,
+          "value": {
+            "file_id": 0,
+            "path_id": 128,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "SkinnedMeshRenderer",
+            "game_object": "CarpetRoll",
+            "materials": [
+              {
+                "file_id": 4,
+                "path_id": 1,
+                "asset_file": "f279c1f986e467a4bb77c199bc53b022"
+              },
+              {
+                "file_id": 4,
+                "path_id": 1,
+                "asset_file": "f279c1f986e467a4bb77c199bc53b022"
+              }
+            ]
+          }
+        },
+        "LengthFactor": {
+          "serialized_offset": 152,
+          "value": 4
+        },
+        "CrownPodium": {
+          "serialized_offset": 156,
+          "value": {
+            "file_id": 0,
+            "path_id": 97,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "Transform",
+            "game_object": "Crown"
+          }
+        },
+        "Animator": {
+          "serialized_offset": 168,
+          "value": {
+            "file_id": 0,
+            "path_id": 127,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "Animator",
+            "game_object": "SnakeTailHex"
+          }
+        },
+        "CrownShadowPlane": {
+          "serialized_offset": 180,
+          "value": {
+            "file_id": 0,
+            "path_id": 119,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MeshRenderer",
+            "game_object": "ShadowPlane",
+            "materials": [
+              {
+                "file_id": 5,
+                "path_id": 1,
+                "asset_file": "a4ad1751d78a67642ae72e05e8afa96a"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "SnakeParameters",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 151,
+      "raw_sha256": "23f9c8e0740da395065dd8513e6e62cbe7e0334310222fc8c4451cd04c1e0ea8",
+      "raw_hex": "0000000018000000000000000100000001000000ae0800000000000000000000cdcc0c3f00000000960000000000000000000000000000000000000000000000",
+      "fields": {
+        "SnakeLength": {
+          "serialized_offset": 32,
+          "value": 0.550000011920929
+        },
+        "spline": {
+          "serialized_offset": 36,
+          "value": {
+            "file_id": 0,
+            "path_id": 150,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "DistanceOnSpline": {
+          "serialized_offset": 48,
+          "value": 0.0
+        },
+        "splineFollowSpeed": {
+          "serialized_offset": 52,
+          "value": 0.0
+        },
+        "animateOnSpline": {
+          "serialized_offset": 56,
+          "value": false
+        },
+        "loop": {
+          "serialized_offset": 60,
+          "value": false
+        }
+      }
+    },
+    {
+      "type": "SnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 150,
+      "raw_sha256": "6cea0453acb4dbf235c016b7f704ead80e5b23317749a12fe5d1dbf8fe7e636b",
+      "raw_hex": "00000000180000000000000001000000010000005310000000000000000000000000000016000000000000000000000016000000000000009b48004001000000010000000000a041",
+      "fields": {
+        "SplineRoot": {
+          "serialized_offset": 32,
+          "value": {
+            "file_id": 0,
+            "path_id": 22,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "GameObject",
+            "name": "SnakeSplineRoot"
+          }
+        },
+        "originalSpline": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 22,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "GameObject",
+            "name": "SnakeSplineRoot"
+          }
+        },
+        "SplineLength": {
+          "serialized_offset": 56,
+          "value": 2.0044314861297607
+        },
+        "UpdateSplineInRuntime": {
+          "serialized_offset": 60,
+          "value": true
+        },
+        "SplineEnabled": {
+          "serialized_offset": 64,
+          "value": true
+        },
+        "ReparametrizeDistance": {
+          "serialized_offset": 68,
+          "value": 20.0
+        }
+      }
+    },
+    {
+      "type": "Gameplay.JellyBlock",
+      "asset_file": "5c4df82a70bca4ad18a010301726caca",
+      "path_id": 25,
+      "raw_sha256": "c29c9aaaaef087449a091113a1abd916b2abf6cb35f61727b4f66d40cc55c9ee",
+      "raw_hex": "0000000006000000000000000100000001000000e50700000000000000000000020000000000000005000000000000000000000004000000000000000200000000000000130000000000000000000000120000000000000002000000000000001500000000000000000000001400000000000000060000007813000000000000fffd7d3f8f8e8e3eb3b2323f0000803f000080409a99193e00000000180000000000000006000000efb00000000000000900000001000000000000000a0000000100000000000000",
+      "fields": {
+        "JellySplits": {
+          "serialized_offset": 32,
+          "value": [
+            {
+              "file_id": 0,
+              "path_id": 5,
+              "asset_file": "5c4df82a70bca4ad18a010301726caca",
+              "type": "GameObject",
+              "name": "Jelly_2"
+            },
+            {
+              "file_id": 0,
+              "path_id": 4,
+              "asset_file": "5c4df82a70bca4ad18a010301726caca",
+              "type": "GameObject",
+              "name": "Jelly_1"
+            }
+          ]
+        },
+        "jellySplitRenderers": {
+          "serialized_offset": 60,
+          "value": [
+            {
+              "file_id": 0,
+              "path_id": 19,
+              "asset_file": "5c4df82a70bca4ad18a010301726caca",
+              "type": "SkinnedMeshRenderer",
+              "game_object": "Jelly_2",
+              "materials": [
+                {
+                  "file_id": 3,
+                  "path_id": 1,
+                  "asset_file": "07b7618af6e26e6418a87b2290b88686"
+                },
+                {
+                  "file_id": 4,
+                  "path_id": 1,
+                  "asset_file": "cd1b53f79453f0248b5e74462d2b7ddd"
+                }
+              ]
+            },
+            {
+              "file_id": 0,
+              "path_id": 18,
+              "asset_file": "5c4df82a70bca4ad18a010301726caca",
+              "type": "SkinnedMeshRenderer",
+              "game_object": "Jelly_1",
+              "materials": [
+                {
+                  "file_id": 3,
+                  "path_id": 1,
+                  "asset_file": "07b7618af6e26e6418a87b2290b88686"
+                },
+                {
+                  "file_id": 4,
+                  "path_id": 1,
+                  "asset_file": "cd1b53f79453f0248b5e74462d2b7ddd"
+                }
+              ]
+            }
+          ]
+        },
+        "ParticlesSystem": {
+          "serialized_offset": 88,
+          "value": [
+            {
+              "file_id": 0,
+              "path_id": 21,
+              "asset_file": "5c4df82a70bca4ad18a010301726caca",
+              "type": "ParticleSystem",
+              "game_object": "JellyImpact_FX 2"
+            },
+            {
+              "file_id": 0,
+              "path_id": 20,
+              "asset_file": "5c4df82a70bca4ad18a010301726caca",
+              "type": "ParticleSystem",
+              "game_object": "JellyImpact_FX 1"
+            }
+          ]
+        },
+        "Icon": {
+          "serialized_offset": 116,
+          "value": {
+            "file_id": 6,
+            "path_id": 4984,
+            "asset_file": "sharedassets0.assets"
+          }
+        },
+        "Color": {
+          "serialized_offset": 128,
+          "value": [
+            0.9921569228172302,
+            0.27843138575553894,
+            0.6980392336845398,
+            1.0
+          ]
+        },
+        "WobbleStrength": {
+          "serialized_offset": 144,
+          "value": 4.0
+        },
+        "WobbleDuration": {
+          "serialized_offset": 148,
+          "value": 0.15000000596046448
+        },
+        "BoingBones": {
+          "serialized_offset": 152,
+          "value": {
+            "file_id": 0,
+            "path_id": 24,
+            "asset_file": "5c4df82a70bca4ad18a010301726caca",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "DoubleSplitJelly"
+          }
+        },
+        "GameHudScorePositions": {
+          "serialized_offset": 164,
+          "value": {
+            "file_id": 6,
+            "path_id": 45295,
+            "asset_file": "sharedassets0.assets"
+          }
+        },
+        "active": {
+          "serialized_offset": 176,
+          "value": {
+            "file_id": 9,
+            "path_id": 1,
+            "asset_file": "39e6e38d5c1aca64bb936f3cc166dd1c"
+          }
+        },
+        "general": {
+          "serialized_offset": 188,
+          "value": {
+            "file_id": 10,
+            "path_id": 1,
+            "asset_file": "eb526b43106fa45479e972d11933c75b"
+          }
+        }
+      }
+    },
+    {
+      "type": "Gameplay.JellyBlock",
+      "asset_file": "36b4f01513f714f81a0838e1a66f5832",
+      "path_id": 32,
+      "raw_sha256": "e4232dd1f7fc392dc3ca359995de8c067ca4e2694c34804dc7820a2b33ac11d2",
+      "raw_hex": "0000000008000000000000000100000001000000e5070000000000000000000003000000000000000100000000000000000000000a000000000000000000000002000000000000000300000000000000170000000000000000000000180000000000000000000000160000000000000003000000000000001a00000000000000000000001b0000000000000000000000190000000000000006000000781300000000000000ff7e3f9b9a9a3ec0bf3f3f0000803f000080409a99193e000000001f0000000000000006000000efb00000000000000900000001000000000000000a0000000100000000000000",
+      "fields": {
+        "JellySplits": {
+          "serialized_offset": 32,
+          "value": [
+            {
+              "file_id": 0,
+              "path_id": 1,
+              "asset_file": "36b4f01513f714f81a0838e1a66f5832",
+              "type": "GameObject",
+              "name": "Jelly_1"
+            },
+            {
+              "file_id": 0,
+              "path_id": 10,
+              "asset_file": "36b4f01513f714f81a0838e1a66f5832",
+              "type": "GameObject",
+              "name": "Jelly_2"
+            },
+            {
+              "file_id": 0,
+              "path_id": 2,
+              "asset_file": "36b4f01513f714f81a0838e1a66f5832",
+              "type": "GameObject",
+              "name": "Jelly_3"
+            }
+          ]
+        },
+        "jellySplitRenderers": {
+          "serialized_offset": 72,
+          "value": [
+            {
+              "file_id": 0,
+              "path_id": 23,
+              "asset_file": "36b4f01513f714f81a0838e1a66f5832",
+              "type": "SkinnedMeshRenderer",
+              "game_object": "Jelly_1",
+              "materials": [
+                {
+                  "file_id": 3,
+                  "path_id": 1,
+                  "asset_file": "07b7618af6e26e6418a87b2290b88686"
+                },
+                {
+                  "file_id": 4,
+                  "path_id": 1,
+                  "asset_file": "cd1b53f79453f0248b5e74462d2b7ddd"
+                }
+              ]
+            },
+            {
+              "file_id": 0,
+              "path_id": 24,
+              "asset_file": "36b4f01513f714f81a0838e1a66f5832",
+              "type": "SkinnedMeshRenderer",
+              "game_object": "Jelly_2",
+              "materials": [
+                {
+                  "file_id": 3,
+                  "path_id": 1,
+                  "asset_file": "07b7618af6e26e6418a87b2290b88686"
+                },
+                {
+                  "file_id": 4,
+                  "path_id": 1,
+                  "asset_file": "cd1b53f79453f0248b5e74462d2b7ddd"
+                }
+              ]
+            },
+            {
+              "file_id": 0,
+              "path_id": 22,
+              "asset_file": "36b4f01513f714f81a0838e1a66f5832",
+              "type": "SkinnedMeshRenderer",
+              "game_object": "Jelly_3",
+              "materials": [
+                {
+                  "file_id": 3,
+                  "path_id": 1,
+                  "asset_file": "07b7618af6e26e6418a87b2290b88686"
+                },
+                {
+                  "file_id": 4,
+                  "path_id": 1,
+                  "asset_file": "cd1b53f79453f0248b5e74462d2b7ddd"
+                }
+              ]
+            }
+          ]
+        },
+        "ParticlesSystem": {
+          "serialized_offset": 112,
+          "value": [
+            {
+              "file_id": 0,
+              "path_id": 26,
+              "asset_file": "36b4f01513f714f81a0838e1a66f5832",
+              "type": "ParticleSystem",
+              "game_object": "JellyImpact_FX 1"
+            },
+            {
+              "file_id": 0,
+              "path_id": 27,
+              "asset_file": "36b4f01513f714f81a0838e1a66f5832",
+              "type": "ParticleSystem",
+              "game_object": "JellyImpact_FX 2"
+            },
+            {
+              "file_id": 0,
+              "path_id": 25,
+              "asset_file": "36b4f01513f714f81a0838e1a66f5832",
+              "type": "ParticleSystem",
+              "game_object": "JellyImpact_FX 3"
+            }
+          ]
+        },
+        "Icon": {
+          "serialized_offset": 152,
+          "value": {
+            "file_id": 6,
+            "path_id": 4984,
+            "asset_file": "sharedassets0.assets"
+          }
+        },
+        "Color": {
+          "serialized_offset": 164,
+          "value": [
+            0.9960784912109375,
+            0.3019607961177826,
+            0.7490196228027344,
+            1.0
+          ]
+        },
+        "WobbleStrength": {
+          "serialized_offset": 180,
+          "value": 4.0
+        },
+        "WobbleDuration": {
+          "serialized_offset": 184,
+          "value": 0.15000000596046448
+        },
+        "BoingBones": {
+          "serialized_offset": 188,
+          "value": {
+            "file_id": 0,
+            "path_id": 31,
+            "asset_file": "36b4f01513f714f81a0838e1a66f5832",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "TripleSplitJelly"
+          }
+        },
+        "GameHudScorePositions": {
+          "serialized_offset": 200,
+          "value": {
+            "file_id": 6,
+            "path_id": 45295,
+            "asset_file": "sharedassets0.assets"
+          }
+        },
+        "active": {
+          "serialized_offset": 212,
+          "value": {
+            "file_id": 9,
+            "path_id": 1,
+            "asset_file": "39e6e38d5c1aca64bb936f3cc166dd1c"
+          }
+        },
+        "general": {
+          "serialized_offset": 224,
+          "value": {
+            "file_id": 10,
+            "path_id": 1,
+            "asset_file": "eb526b43106fa45479e972d11933c75b"
+          }
+        }
+      }
+    },
+    {
+      "type": "Gameplay.JellyHex",
+      "asset_file": "dde373b06bda148bd83c7c42acd10a27",
+      "path_id": 3,
+      "raw_sha256": "f6ec787e75b66cd48755a5a67687d804d3a4ece0b6476ec6ba249525923cb491",
+      "raw_hex": "00000000010000000000000001000000010000005e0c000000000000000000000200000019000000000000000300000020000000000000000400000025b1000000000000",
+      "fields": {
+        "DoubleSplitJelly": {
+          "serialized_offset": 32,
+          "value": {
+            "file_id": 2,
+            "path_id": 25,
+            "asset_file": "5c4df82a70bca4ad18a010301726caca"
+          }
+        },
+        "TripleSplitJelly": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 3,
+            "path_id": 32,
+            "asset_file": "36b4f01513f714f81a0838e1a66f5832"
+          }
+        },
+        "ReValidateSorting": {
+          "serialized_offset": 56,
+          "value": {
+            "file_id": 4,
+            "path_id": 45349,
+            "asset_file": "sharedassets0.assets"
+          }
+        }
+      }
+    },
+    {
+      "type": "Gameplay.DroneAnimationConfig",
+      "asset_file": "6639c877b017644e8bc9e9f756771b8c",
+      "path_id": 1,
+      "raw_sha256": "884361cb90553eba5da1f355f2597be6ad131b3c4d1148a7de326debcdfae65e",
+      "raw_hex": "0000000000000000000000000100000001000000f6030000000000001400000044726f6e65416e696d6174696f6e436f6e6669676666263f9a99993f6666e63e0000a040000000400000803f0000803f0000403fcdcc4c3f0000003fcdcc4c3e0000803e0000803e040000001400000000000041000000000000a040000040c0000000000000c0c0000000c1000000000000a04000004040000000000000c0c00000704100000040000000000000c03f0000803f000080bf0000c03f0000803f000000c0000000003333333e0000000000000000000070c200000000",
+      "fields": {
+        "CellDropInitialDelay": {
+          "serialized_offset": 52,
+          "value": 0.6499999761581421
+        },
+        "CellDropLifeTime": {
+          "serialized_offset": 56,
+          "value": 1.2000000476837158
+        },
+        "CellDropDuration": {
+          "serialized_offset": 60,
+          "value": 0.44999998807907104
+        },
+        "DroneMaxYDistance": {
+          "serialized_offset": 64,
+          "value": 5.0
+        },
+        "DroneFtueMaxYDistance": {
+          "serialized_offset": 68,
+          "value": 2.0
+        },
+        "DroneFlightInitialDelay": {
+          "serialized_offset": 72,
+          "value": 1.0
+        },
+        "FinalFlyOutDuration": {
+          "serialized_offset": 76,
+          "value": 1.0
+        },
+        "FinalFlyOutFtueDuration": {
+          "serialized_offset": 80,
+          "value": 0.75
+        },
+        "DroneMoveYDuration": {
+          "serialized_offset": 84,
+          "value": 0.800000011920929
+        },
+        "GlideTransitionTime": {
+          "serialized_offset": 88,
+          "value": 0.5
+        },
+        "DroneGlideDurationFactor": {
+          "serialized_offset": 92,
+          "value": 0.20000000298023224
+        },
+        "DroneTiltDurationFactor": {
+          "serialized_offset": 96,
+          "value": 0.25
+        },
+        "DroneTiltBackDurationFactor": {
+          "serialized_offset": 100,
+          "value": 0.25
+        },
+        "DroneMaxTiltFactor": {
+          "serialized_offset": 104,
+          "value": 4
+        },
+        "DroneMaxTilt": {
+          "serialized_offset": 108,
+          "value": 20
+        },
+        "DroneFinalMoveOutPointRight": {
+          "serialized_offset": 112,
+          "value": [
+            8.0,
+            0.0,
+            5.0
+          ]
+        },
+        "DroneFinalMidPointRight": {
+          "serialized_offset": 124,
+          "value": [
+            -3.0,
+            0.0,
+            -6.0
+          ]
+        },
+        "DroneFinalMoveOutPointLeft": {
+          "serialized_offset": 136,
+          "value": [
+            -8.0,
+            0.0,
+            5.0
+          ]
+        },
+        "DroneFinalMidPointLeft": {
+          "serialized_offset": 148,
+          "value": [
+            3.0,
+            0.0,
+            -6.0
+          ]
+        },
+        "DroneFtueFinalMoveOutPoint": {
+          "serialized_offset": 160,
+          "value": [
+            15.0,
+            2.0,
+            0.0
+          ]
+        },
+        "MidPointRandomSeedMax": {
+          "serialized_offset": 172,
+          "value": [
+            1.5,
+            1.0,
+            -1.0
+          ]
+        },
+        "MidPointRandomSeedMin": {
+          "serialized_offset": 184,
+          "value": [
+            1.5,
+            1.0,
+            -2.0
+          ]
+        },
+        "DroneFtueInitialLocalPos": {
+          "serialized_offset": 196,
+          "value": [
+            0.0,
+            0.17499999701976776,
+            0.0
+          ]
+        },
+        "DroneFtueInitialLocalRotation": {
+          "serialized_offset": 208,
+          "value": [
+            0.0,
+            -60.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "type": "Gameplay.DroneHex",
+      "asset_file": "05c02ff7abb214b43992e557ef3bed99",
+      "path_id": 36,
+      "raw_sha256": "dca0768aff3e35b9325535dc46a83a55310e2343e974e78b624ab42518ab8f3c",
+      "raw_hex": "00000000010000000000000001000000010000003f0c0000000000000000000000000000230000000000000005000000f3b000000000000008000000010000000000000005000000efb00000000000000000000010000000000000000000000014000000000000000000000008000000000000000500000025b1000000000000",
+      "fields": {
+        "Animator": {
+          "serialized_offset": 32,
+          "value": {
+            "file_id": 0,
+            "path_id": 35,
+            "asset_file": "05c02ff7abb214b43992e557ef3bed99",
+            "type": "Animator",
+            "game_object": "Drone"
+          }
+        },
+        "GameplaySounds": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 5,
+            "path_id": 45299,
+            "asset_file": "sharedassets0.assets"
+          }
+        },
+        "AnimConfig": {
+          "serialized_offset": 56,
+          "value": {
+            "file_id": 8,
+            "path_id": 1,
+            "asset_file": "6639c877b017644e8bc9e9f756771b8c"
+          }
+        },
+        "GameHudScorePositions": {
+          "serialized_offset": 68,
+          "value": {
+            "file_id": 5,
+            "path_id": 45295,
+            "asset_file": "sharedassets0.assets"
+          }
+        },
+        "DroneTransform": {
+          "serialized_offset": 80,
+          "value": {
+            "file_id": 0,
+            "path_id": 16,
+            "asset_file": "05c02ff7abb214b43992e557ef3bed99",
+            "type": "Transform",
+            "game_object": "Drone"
+          }
+        },
+        "BlocksParent": {
+          "serialized_offset": 92,
+          "value": {
+            "file_id": 0,
+            "path_id": 20,
+            "asset_file": "05c02ff7abb214b43992e557ef3bed99",
+            "type": "Transform",
+            "game_object": "BlocksParent"
+          }
+        },
+        "BlockPrefab": {
+          "serialized_offset": 104,
+          "value": {
+            "file_id": 0,
+            "path_id": 8,
+            "asset_file": "05c02ff7abb214b43992e557ef3bed99",
+            "type": "GameObject",
+            "name": "DroneStackBlock"
+          }
+        },
+        "ReValidateSortingEvent": {
+          "serialized_offset": 116,
+          "value": {
+            "file_id": 5,
+            "path_id": 45349,
+            "asset_file": "sharedassets0.assets"
+          }
+        }
+      }
+    },
+    {
+      "type": "Gameplay.CandyMachineHex",
+      "asset_file": "afc7ad5cd7b9d4eaf8cbe821fd036f4a",
+      "path_id": 68,
+      "raw_sha256": "caf3153a06197660672bdba49751d0c757743421b955a3c78ea3d4cb980799fa",
+      "raw_hex": "000000000e000000000000000100000001000000c41000000000000000000000000000002800000000000000000000002700000000000000000000002200000000000000000000002e00000000000000000000002100000000000000100000000500000000000000",
+      "fields": {
+        "CandyMesh": {
+          "serialized_offset": 32,
+          "value": {
+            "file_id": 0,
+            "path_id": 40,
+            "asset_file": "afc7ad5cd7b9d4eaf8cbe821fd036f4a",
+            "type": "MeshRenderer",
+            "game_object": "Marshmellow_Candy",
+            "materials": [
+              {
+                "file_id": 4,
+                "path_id": 1,
+                "asset_file": "40fa64cf58438214b86ae7030179bcde"
+              }
+            ]
+          }
+        },
+        "CandyGlowMesh": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 39,
+            "asset_file": "afc7ad5cd7b9d4eaf8cbe821fd036f4a",
+            "type": "MeshRenderer",
+            "game_object": "CM_Glow",
+            "materials": [
+              {
+                "file_id": 3,
+                "path_id": 1,
+                "asset_file": "2c04a55003890bb47bb5a08cc5f2022d"
+              }
+            ]
+          }
+        },
+        "CandyParent": {
+          "serialized_offset": 56,
+          "value": {
+            "file_id": 0,
+            "path_id": 34,
+            "asset_file": "afc7ad5cd7b9d4eaf8cbe821fd036f4a",
+            "type": "Transform",
+            "game_object": "CandyParent"
+          }
+        },
+        "CandyAnimator": {
+          "serialized_offset": 68,
+          "value": {
+            "file_id": 0,
+            "path_id": 46,
+            "asset_file": "afc7ad5cd7b9d4eaf8cbe821fd036f4a",
+            "type": "Animator",
+            "game_object": "CandyMaker"
+          }
+        },
+        "CandyMeshTransform": {
+          "serialized_offset": 80,
+          "value": {
+            "file_id": 0,
+            "path_id": 33,
+            "asset_file": "afc7ad5cd7b9d4eaf8cbe821fd036f4a",
+            "type": "Transform",
+            "game_object": "Marshmellow"
+          }
+        },
+        "CandyPrefab": {
+          "serialized_offset": 92,
+          "value": {
+            "file_id": 16,
+            "path_id": 5,
+            "asset_file": "db10aec2a55ae494eaafd29c6869b0ac"
+          }
+        }
+      }
+    },
+    {
+      "type": "Gameplay.CandyMachineCandy",
+      "asset_file": "db10aec2a55ae494eaafd29c6869b0ac",
+      "path_id": 5,
+      "raw_sha256": "94933777f1937f92e6f9f74a98a7bbd2347e555854e8e05a47528ef4feb1801f",
+      "raw_hex": "0000000001000000000000000100000001000000051000000000000000000000000000000600000000000000",
+      "fields": {
+        "CollectionAnimation": {
+          "serialized_offset": 32,
+          "value": {
+            "file_id": 0,
+            "path_id": 6,
+            "asset_file": "db10aec2a55ae494eaafd29c6869b0ac",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Marshmellow_Piece"
+          }
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 130,
+      "raw_sha256": "5a956b91bf643de8bfb196ca0a8124eb087dbe75f7f386cac0060db068d8da9f",
+      "raw_hex": "0000000014000000000000000100000001000000c80200000000000000000000110000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 17
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 131,
+      "raw_sha256": "d522af98d440ec9ad2b35fc0daed8717acb5d9b6110f31aaee3632652a7599d5",
+      "raw_hex": "0000000027000000000000000100000001000000c80200000000000000000000260000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 38
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 132,
+      "raw_sha256": "fc7543545a4d25c5bd62c89b9a08eb173b6a69153cf7c15c3a0ebe41554af798",
+      "raw_hex": "000000000a000000000000000100000001000000c80200000000000000000000070000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 7
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 133,
+      "raw_sha256": "d3b4b7cc5a8a6aac57f915c7f8d871cb2f6486e2f5eb6fc562d4d8a69583f7ae",
+      "raw_hex": "0000000026000000000000000100000001000000c802000000000000000000001a0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 26
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 134,
+      "raw_sha256": "48de9adc9ce13650863e36c50d20e263d08818ddfde474830087cb70d8505074",
+      "raw_hex": "0000000002000000000000000100000001000000c80200000000000000000000170000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 23
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 135,
+      "raw_sha256": "6ebf9a4c615215b699cf4704eef228af7a4f3eedd2c7b0ce540ed31ea832b820",
+      "raw_hex": "0000000032000000000000000100000001000000c80200000000000000000000190000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 25
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 136,
+      "raw_sha256": "3e2ce4dd8c0487b2d88ea70c350b8d6eb87253f3cf207c12d44f5942c936db02",
+      "raw_hex": "0000000025000000000000000100000001000000c802000000000000000000000b0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 11
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 137,
+      "raw_sha256": "9770d18be4be53e239e826ee5a8eb3be993bf63586ca39d351cf4f938207a257",
+      "raw_hex": "0000000024000000000000000100000001000000c80200000000000000000000180000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 24
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 138,
+      "raw_sha256": "8bb8eb4166d925e4e6cf962b19641ce71fc32f534222ceace4bf59897ae2ed8b",
+      "raw_hex": "0000000036000000000000000100000001000000c80200000000000000000000030000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 3
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 139,
+      "raw_sha256": "bf0efb366f9a61666ecce083458174ec1483dd2954d681bb990e4ab62f135209",
+      "raw_hex": "0000000001000000000000000100000001000000c802000000000000000000000d0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 13
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 140,
+      "raw_sha256": "bab85f27c16ef93e3f6097acbeb85072d3f9a71d609904069ca48f472f1b1088",
+      "raw_hex": "000000002a000000000000000100000001000000c802000000000000000000000f0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 15
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 141,
+      "raw_sha256": "d331551cf67e914f14e6c35e34adac115226e4c78a4d9f6d65d2607c8e1b022d",
+      "raw_hex": "000000001a000000000000000100000001000000c80200000000000000000000130000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 19
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 142,
+      "raw_sha256": "474a6e82d12619bfdc614bdeb704c067b31daab506222402b4a681a8b37d05e1",
+      "raw_hex": "0000000031000000000000000100000001000000c80200000000000000000000120000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 18
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 143,
+      "raw_sha256": "51827ea4a82e07e13edc68a4e61b6e109a08c1c2f953c31004f66ca18d95456f",
+      "raw_hex": "0000000020000000000000000100000001000000c80200000000000000000000210000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 33
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 144,
+      "raw_sha256": "9501b078a9cb68b857a4cc90ac1c83932ad66a2f0a90d16133704c7b4ca0c1d4",
+      "raw_hex": "0000000038000000000000000100000001000000c80200000000000000000000240000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 36
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 145,
+      "raw_sha256": "3f11a322a4848b443da323e47a8b278fcc1e4c42f2341ef86f360caa7499552d",
+      "raw_hex": "000000000d000000000000000100000001000000c80200000000000000000000150000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 21
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 146,
+      "raw_sha256": "3f017c1c14204c230730ca160593f5e1472832ef2e759a16aee96274d02c0ea1",
+      "raw_hex": "000000001c000000000000000100000001000000c80200000000000000000000250000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 37
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 147,
+      "raw_sha256": "b052c17ff9e444f87e6c1b4f87184bef850747a8f7eab638748d286cdf092b91",
+      "raw_hex": "000000002c000000000000000100000001000000c80200000000000000000000270000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 39
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 148,
+      "raw_sha256": "ae0e0ec7056555780cbd4e7f632a398cd88f7981ec6872eae3a4faf064365f0d",
+      "raw_hex": "0000000034000000000000000100000001000000c802000000000000000000001e0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 30
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 149,
+      "raw_sha256": "47b12dd634ad5e72d3992d0ee5b7f4185c9e71684d2b1e940fd37b30a860137d",
+      "raw_hex": "0000000004000000000000000100000001000000c802000000000000000000001c0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 28
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 152,
+      "raw_sha256": "96065be924d144bb7687d5b14f7aea30b0b68562379c7f234669f97aaa8308d8",
+      "raw_hex": "000000001f000000000000000100000001000000c80200000000000000000000090000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 9
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 153,
+      "raw_sha256": "8028b4b5f17ccc1c0b07c66a10de528375472548bf654c41ec4a2b08ea02a081",
+      "raw_hex": "0000000033000000000000000100000001000000c80200000000000000000000200000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 32
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 154,
+      "raw_sha256": "458cec44a2c1abb937ad824c88499701a885b103ee169b3e442e3c9d6c5f790c",
+      "raw_hex": "0000000022000000000000000100000001000000c80200000000000000000000140000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 20
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 155,
+      "raw_sha256": "044ecdd7f9460916842edc5e985954f013ba790c3fc236c15daec9a9d5874993",
+      "raw_hex": "0000000009000000000000000100000001000000c80200000000000000000000040000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 4
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 156,
+      "raw_sha256": "f4711bf423e9fc8dc8418ca1fcb48877fa351fc0c9b427241e952d7a008d673f",
+      "raw_hex": "0000000006000000000000000100000001000000c80200000000000000000000010000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 1
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 157,
+      "raw_sha256": "717880166d4fec42147ba671c11c110755e95c045c8bbc618f74962014f14655",
+      "raw_hex": "0000000012000000000000000100000001000000c802000000000000000000000c0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 12
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 159,
+      "raw_sha256": "fcd415352df3132dc51d9145ced1dcfcfe7b0580d9e607a4cc921df04fa606ec",
+      "raw_hex": "0000000008000000000000000100000001000000c80200000000000000000000020000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 2
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 160,
+      "raw_sha256": "29e693576fd87b477509e76f5bd12a3142d6f9c95fe3d614350b1029762f8dfc",
+      "raw_hex": "0000000023000000000000000100000001000000c802000000000000000000000e0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 14
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 161,
+      "raw_sha256": "491f13e0507ddd811c2157cf2d947e00a9dd0503a95612a96a9a56cea5605681",
+      "raw_hex": "0000000037000000000000000100000001000000c802000000000000000000001b0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 27
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 162,
+      "raw_sha256": "1efdc9805448f515c9b5a40408b4da02900d67d7eb09355ab2fd5396fc0ad123",
+      "raw_hex": "0000000019000000000000000100000001000000c80200000000000000000000100000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 16
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 163,
+      "raw_sha256": "408782a24ea827cdfbd88f076a5b30f8b653b20702a29d3abf424b4ebca0e477",
+      "raw_hex": "000000002b000000000000000100000001000000c802000000000000000000000a0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 10
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 164,
+      "raw_sha256": "1a0b8ee34307d19febb66dccec58d88719db15664907c2025c4c4edcba9f3012",
+      "raw_hex": "000000002d000000000000000100000001000000c80200000000000000000000050000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 5
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 165,
+      "raw_sha256": "770e702cf419cccae9bce28557ea1dd5f7bab66c4b068f7fe45f920441433967",
+      "raw_hex": "0000000007000000000000000100000001000000c80200000000000000000000230000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 35
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 166,
+      "raw_sha256": "9145d51534f795cc2e972d9790fee953b3e95384f898e2432b9bb1ad80c66ee6",
+      "raw_hex": "0000000039000000000000000100000001000000c80200000000000000000000080000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 8
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 167,
+      "raw_sha256": "c6c3c4d3cffe27ac0bd4b1b08ab42ecd9551a5405e6fc2fd19d8db12ad55a691",
+      "raw_hex": "0000000003000000000000000100000001000000c802000000000000000000001d0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 29
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 168,
+      "raw_sha256": "05d69fe101905e7d39a8e6b28122bfccda75200dd38f09512dbc54856de50b7c",
+      "raw_hex": "000000000c000000000000000100000001000000c80200000000000000000000160000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 22
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 169,
+      "raw_sha256": "812277285f3cae599138b93d09f4c10e8ab2c91c40d04d214696bb93e9b6a20b",
+      "raw_hex": "000000000e000000000000000100000001000000c802000000000000000000001f0000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 31
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 170,
+      "raw_sha256": "a12d4e4cdf0352f930d0eab667a1ef91ea9d16748499b98bda32f604a81c60c5",
+      "raw_hex": "0000000013000000000000000100000001000000c80200000000000000000000220000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 34
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "type": "UpdatePosFromSnakeSpline",
+      "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+      "path_id": 171,
+      "raw_sha256": "dac7430d46490e29fff16fa3181ab02d3f71ecd48da71fb3671487f8a90482d4",
+      "raw_hex": "0000000010000000000000000100000001000000c80200000000000000000000060000002700000000000000000000009700000000000000ec51383e",
+      "fields": {
+        "number": {
+          "serialized_offset": 32,
+          "value": 6
+        },
+        "MaxNumber": {
+          "serialized_offset": 36,
+          "value": 39
+        },
+        "DebugThis": {
+          "serialized_offset": 40,
+          "value": false
+        },
+        "snakeParameters": {
+          "serialized_offset": 44,
+          "value": {
+            "file_id": 0,
+            "path_id": 151,
+            "asset_file": "d21ac21292aff4d9fa6192a9e3efbed7",
+            "type": "MonoBehaviour",
+            "name": "",
+            "game_object": "Snake_Toon"
+          }
+        },
+        "lookAheadDist": {
+          "serialized_offset": 56,
+          "value": 0.18000000715255737
+        }
+      }
+    }
+  ],
+  "supplemental_assets": [
+    {
+      "asset_file": "0f0fdb1b242f89843b252d017d2552e0",
+      "path_id": 1,
+      "name": "CarpetRoll",
+      "type": "Mesh",
+      "raw_sha256": "95c8477eddf546dc750c1ab16bc70ebd56993dd8973b211156228d3cf1f3816d",
+      "local_bounds_center": [
+        -0.004925161600112915,
+        -0.00016638636589050293,
+        -9.381771087646484e-05
+      ],
+      "local_bounds_extent": [
+        0.45638665556907654,
+        0.6499223709106445,
+        0.6499224305152893
+      ],
+      "blend_shape_names": [
+        "blendShape2.BigRoll"
+      ]
+    },
+    {
+      "asset_file": "3900356ecc4fa3e42bfda8bd296a032d",
+      "path_id": 1,
+      "name": "Marshmellow_Candy",
+      "type": "Mesh",
+      "raw_sha256": "97764f3c0eea2434d3e799d6ec3d86e9bded25f0e8dcda2b70dc607d4ebcd099",
+      "local_bounds_center": [
+        0.008531704545021057,
+        6.665628433227539,
+        0.032081007957458496
+      ],
+      "local_bounds_extent": [
+        0.34667521715164185,
+        6.665628433227539,
+        0.3462769091129303
+      ],
+      "blend_shape_names": []
+    },
+    {
+      "asset_file": "39e6e38d5c1aca64bb936f3cc166dd1c",
+      "path_id": 1,
+      "name": "Jellly_HiLight",
+      "type": "Material",
+      "raw_sha256": "79ab71b25afe1c283d4e034ef1edd4df013f5ba029313a447fe3a348fc8e4760",
+      "floats": {
+        "_AddPrecomputedVelocity": 0.0,
+        "_AlphaClip": 0.0,
+        "_AlphaToMask": 0.0,
+        "_Blend": 0.0,
+        "_BlendModePreserveSpecular": 1.0,
+        "_BumpScale": 1.0,
+        "_ClearCoatMask": 0.0,
+        "_ClearCoatSmoothness": 0.0,
+        "_Cull": 2.0,
+        "_Cutoff": 0.5,
+        "_DetailAlbedoMapScale": 1.0,
+        "_DetailNormalMapScale": 1.0,
+        "_DstBlend": 0.0,
+        "_DstBlendAlpha": 0.0,
+        "_EnvironmentReflections": 1.0,
+        "_GlossMapScale": 0.0,
+        "_Glossiness": 0.0,
+        "_GlossinessSource": 0.0,
+        "_GlossyReflections": 0.0,
+        "_Metallic": 0.0,
+        "_OcclusionStrength": 1.0,
+        "_Parallax": 0.004999999888241291,
+        "_QueueOffset": 0.0,
+        "_ReceiveShadows": 1.0,
+        "_Shininess": 0.0,
+        "_Smoothness": 0.8109999895095825,
+        "_SmoothnessSource": 0.0,
+        "_SmoothnessTextureChannel": 0.0,
+        "_SpecSource": 0.0,
+        "_SpecularHighlights": 1.0,
+        "_SrcBlend": 1.0,
+        "_SrcBlendAlpha": 1.0,
+        "_Surface": 0.0,
+        "_WorkflowMode": 1.0,
+        "_XRMotionVectorsPass": 1.0,
+        "_ZWrite": 1.0
+      }
+    },
+    {
+      "asset_file": "40fa64cf58438214b86ae7030179bcde",
+      "path_id": 1,
+      "name": "CandyMask",
+      "type": "Material",
+      "raw_sha256": "565c8c326911a9ac0d6db1e769d2a8dc3ecf6f48722f2b13265bfa64f9376687",
+      "floats": {
+        "_AlphaClip": 1.0,
+        "_AlphaToMask": 1.0,
+        "_Blend": 0.0,
+        "_BlendModePreserveSpecular": 1.0,
+        "_CastShadows": 1.0,
+        "_Cull": 2.0,
+        "_DstBlend": 0.0,
+        "_DstBlendAlpha": 0.0,
+        "_Emission": 0.10000000149011612,
+        "_Float": 0.0,
+        "_QueueControl": 0.0,
+        "_QueueOffset": 0.0,
+        "_ReceiveShadows": 1.0,
+        "_SrcBlend": 1.0,
+        "_SrcBlendAlpha": 1.0,
+        "_Surface": 0.0,
+        "_TIleCount": 1.0,
+        "_WorkflowMode": 1.0,
+        "_XRMotionVectorsPass": 1.0,
+        "_ZTest": 4.0,
+        "_ZWrite": 1.0,
+        "_ZWriteControl": 0.0
+      }
+    },
+    {
+      "asset_file": "cd1b53f79453f0248b5e74462d2b7ddd",
+      "path_id": 1,
+      "name": "Pack_Mat",
+      "type": "Material",
+      "raw_sha256": "d53fb4100ca0a88e795af018d39b578ce1d8b4e5d52daff76a05bf34c2b396b2",
+      "floats": {
+        "_AlphaClip": 0.0,
+        "_Blend": 0.0,
+        "_BumpScale": 1.0,
+        "_CastShadows": 1.0,
+        "_ClearCoatMask": 0.0,
+        "_ClearCoatSmoothness": 0.0,
+        "_Cull": 2.0,
+        "_Cutoff": 0.5,
+        "_DetailAlbedoMapScale": 1.0,
+        "_DetailNormalMapScale": 1.0,
+        "_DstBlend": 0.0,
+        "_Emission": 0.0,
+        "_EmissionIntensity": 0.800000011920929,
+        "_EnvironmentReflections": 1.0,
+        "_GlossMapScale": 0.0,
+        "_Glossiness": 0.0,
+        "_GlossyReflections": 0.0,
+        "_MaskIntensity": 0.44999998807907104,
+        "_Mask_Intensity": 0.7200000286102295,
+        "_Mask_Move": 0.0,
+        "_Masked_Intensity": 0.0,
+        "_MatCapIntensity": 5.489999771118164,
+        "_MatcapIntensity": 5.739999771118164,
+        "_Metallic": 0.0,
+        "_OcclusionStrength": 1.0,
+        "_Parallax": 0.004999999888241291,
+        "_QueueControl": 0.0,
+        "_QueueOffset": 0.0,
+        "_ROtate": 2.4100000858306885,
+        "_ReceiveShadows": 1.0,
+        "_Roationx": 0.0,
+        "_Rotate": 2.9700000286102295,
+        "_Rotation": 0.0,
+        "_Smoothness": 0.5,
+        "_SmoothnessTextureChannel": 0.0,
+        "_SpecularHighlights": 1.0,
+        "_SrcBlend": 1.0,
+        "_Surface": 0.0,
+        "_WorkflowMode": 1.0,
+        "_XRMotionVectorsPass": 1.0,
+        "_ZTest": 4.0,
+        "_ZWrite": 1.0,
+        "_ZWriteControl": 0.0,
+        "_ro": -80.0
+      }
+    }
+  ]
+}
