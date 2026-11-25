@@ -26,6 +26,8 @@
 
 ## 手牌更新
 
+生成规则的逐分支复核、累计量与参数缓存、单空格覆盖后的交付边界，见[手牌生成完整性复核](HAND_GENERATION_RULES.md)，附[字段及指令机器证据](HAND_GENERATION_AUDIT.json)。本页保留主流程和反汇编细节。
+
 Tray.CheckTrayStatus (0x21ca11c) 调用 IsTrayEmpty；仅返回 true 时调用 SpawnItems(0)，随后触发一个静态委托。证据 0x21ca148–0x21ca18c。这条正常补牌路径等待整个托盘为空，不是每放一张就立即补一张。
 
 `SpawningAlgorithm.GetNext(initial, slotCount, emptyCells, matchTypes)`（0x21c4d04）的控制流：
@@ -198,6 +200,8 @@ counts = []
 4. 其他槽轮流使用短名单里的颜色，各生成 7–8 块单色堆（0x21c61d4–0x21c628c）。只有走这条分支才将 `DidGetPowerupPieces` 置为 true。若没有可用的候选索引，则保留对应的原堆；指令还有一条颜色值为 0 时追加对应原堆的分支。输出槽数少于输入槽数时回退整组，否则返回新列表（0x21c6290–0x21c6368）。
 
 排序方法名可直接核对：GOT 0x442cdf0 → `OrderByDescending`，0x442ce08 → `ThenBy`，0x442ce00 → `Take`。两键委托分别落在 0x21c7e40（读取格数）和 0x21c7cac（随机数），过滤委托在 0x21c7dc8。候选 A 的初始统计和第二次统计扫描的是不同集合：前者读空格的 `Cell.Neighbours`，后者读整张 `GridSystem.Cells`。如果 B 有至少两种、短名单为空，合计数量检查仍会通过；在颜色上限至少为 2 时短堆分支直接取短名单索引 0，指令没有为空名单添加保护（0x21c6020–0x21c6030、0x21c60c0–0x21c60e0）。因此颜色可以在空格邻域计为 0，同时在全盘其他位置计为正。
+
+2026-11-25复核补充：这里的色池与颜色上限读取**最后一个普通堆留下的** `_lastMaxTypes/+144`、`_lastMaxTypesInStack/+148`，不为替换组重新判档。普通候选已增加累计值；本方法构造的短堆、7–8 块长堆没有再次增加或按最终长度校正累计值。替换后直接回 `GetNext` 尾部清一次性 Easy，**不再做智能命中校验**。`DidGetPowerupPieces` 只在长堆分支置真；只构造短堆不等于该标志为真。异常颜色 0 分支还可能额外追加原槽，而末尾只检查输出数不少于输入数。精确边界和计数表见[生成复核第6、7节](HAND_GENERATION_RULES.md#6-单空格道具手牌最后一次覆盖)。
 
 ## 特殊物件移动与关卡阶段
 

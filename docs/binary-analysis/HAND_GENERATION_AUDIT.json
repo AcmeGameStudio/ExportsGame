@@ -1,0 +1,2280 @@
+{
+  "version": "Hexa Sort 6.2.20 ARM64 metadata v39",
+  "date": "2026-11-25",
+  "scope": "Static hand generation audit; instruction equality and metadata offsets verified. Semantic conclusions require the accompanying Markdown; no device RNG replay. External B/BL list is syntactic, not a full call graph.",
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81",
+  "asm_sources": {
+    "SpawningAlgorithm.asm": {
+      "sha256": "a34d2fb1b17eaa1cdb068b00b45576caf3231d6f939af3e51801426f9cb1e98b",
+      "instructions_verified_against_elf": 3650
+    },
+    "Tray.asm": {
+      "sha256": "5ad647b15f3f143f62cf08a235e5e22a20d13ab7eba806bc4a457a2f0b6d5cc5",
+      "instructions_verified_against_elf": 18865
+    },
+    "DynamicDifficulty.asm": {
+      "sha256": "813144357f489fd9ba54aed3cc906e63a8f193cd55c7ff368d33c898ac5873ee",
+      "instructions_verified_against_elf": 521
+    },
+    "GridMatchTypes.asm": {
+      "sha256": "2614bd7d2be2c4e17b7f60f0c7d0ba4cf45d29d1035d663389d743e9eb382c2b",
+      "instructions_verified_against_elf": 835
+    }
+  },
+  "generator_layout": {
+    "name": "Gameplay.SpawningAlgorithm",
+    "type_definition_index": 2881,
+    "instance_size": "0xa0",
+    "fields": [
+      {
+        "name": "TotalHexCreatedInLevel",
+        "type": "UM.Variables.Int",
+        "offset": "0x18",
+        "storage": "instance",
+        "token": "0x4003e8c"
+      },
+      {
+        "name": "MaxTypesInTray",
+        "type": "UM.Variables.Int",
+        "offset": "0x20",
+        "storage": "instance",
+        "token": "0x4003e8d"
+      },
+      {
+        "name": "DDSystem",
+        "type": "Gameplay.DDSystem",
+        "offset": "0x28",
+        "storage": "instance",
+        "token": "0x4003e8e"
+      },
+      {
+        "name": "SmartTrayConfig",
+        "type": "Gameplay.SmartTrayConfig",
+        "offset": "0x30",
+        "storage": "instance",
+        "token": "0x4003e8f"
+      },
+      {
+        "name": "GridSystem",
+        "type": "Gameplay.GridSystem",
+        "offset": "0x38",
+        "storage": "instance",
+        "token": "0x4003e90"
+      },
+      {
+        "name": "HelperModeTrayConfig",
+        "type": "Gameplay.HelperModeTrayConfig",
+        "offset": "0x40",
+        "storage": "instance",
+        "token": "0x4003e91"
+      },
+      {
+        "name": "TutorialIndices",
+        "type": "System.Collections.Generic.List`1<int>",
+        "offset": "0x48",
+        "storage": "instance",
+        "token": "0x4003e92"
+      },
+      {
+        "name": "DefaultMaxTypesInStack",
+        "type": "int",
+        "offset": "0x50",
+        "storage": "instance",
+        "token": "0x4003e93"
+      },
+      {
+        "name": "DefaultMinTypes",
+        "type": "int",
+        "offset": "0x54",
+        "storage": "instance",
+        "token": "0x4003e94"
+      },
+      {
+        "name": "MinRandHexPerStack",
+        "type": "int",
+        "offset": "0x58",
+        "storage": "instance",
+        "token": "0x4003e95"
+      },
+      {
+        "name": "MaxRandHexPerStack",
+        "type": "int",
+        "offset": "0x5c",
+        "storage": "instance",
+        "token": "0x4003e96"
+      },
+      {
+        "name": "MinEasyHexPerStack",
+        "type": "int",
+        "offset": "0x60",
+        "storage": "instance",
+        "token": "0x4003e97"
+      },
+      {
+        "name": "MaxEasyHexPerStack",
+        "type": "int",
+        "offset": "0x64",
+        "storage": "instance",
+        "token": "0x4003e98"
+      },
+      {
+        "name": "LevelConfig",
+        "type": "Gameplay.LevelConfig",
+        "offset": "0x68",
+        "storage": "instance",
+        "token": "0x4003e99"
+      },
+      {
+        "name": "SpawnEasyOverride",
+        "type": "bool",
+        "offset": "0x70",
+        "storage": "instance",
+        "token": "0x4003e9a"
+      },
+      {
+        "name": "SpawnMediumOverride",
+        "type": "bool",
+        "offset": "0x71",
+        "storage": "instance",
+        "token": "0x4003e9b"
+      },
+      {
+        "name": "_lastRefreshTime",
+        "type": "float",
+        "offset": "0x74",
+        "storage": "instance",
+        "token": "0x4003e9c"
+      },
+      {
+        "name": "_emptyCells",
+        "type": "int",
+        "offset": "0x78",
+        "storage": "instance",
+        "token": "0x4003e9d"
+      },
+      {
+        "name": "_emptyCellNeighTypes",
+        "type": "System.Collections.Generic.List`1<Gameplay.HexType>",
+        "offset": "0x80",
+        "storage": "instance",
+        "token": "0x4003e9e"
+      },
+      {
+        "name": "EasyModeOn",
+        "type": "bool",
+        "offset": "0x88",
+        "storage": "instance",
+        "token": "0x4003e9f"
+      },
+      {
+        "name": "EasyTemporaryMode",
+        "type": "bool",
+        "offset": "0x89",
+        "storage": "instance",
+        "token": "0x4003ea0"
+      },
+      {
+        "name": "EasyTempCounter",
+        "type": "int",
+        "offset": "0x8c",
+        "storage": "instance",
+        "token": "0x4003ea1"
+      },
+      {
+        "name": "<SmartRefreshUsed>k__BackingField",
+        "type": "bool",
+        "offset": "0x0",
+        "storage": "static",
+        "token": "0x4003ea2"
+      },
+      {
+        "name": "<DidGetPowerupPieces>k__BackingField",
+        "type": "bool",
+        "offset": "0x1",
+        "storage": "static",
+        "token": "0x4003ea3"
+      },
+      {
+        "name": "_lastMaxTypes",
+        "type": "int",
+        "offset": "0x90",
+        "storage": "instance",
+        "token": "0x4003ea4"
+      },
+      {
+        "name": "_lastMaxTypesInStack",
+        "type": "int",
+        "offset": "0x94",
+        "storage": "instance",
+        "token": "0x4003ea5"
+      },
+      {
+        "name": "_lastDifficulty",
+        "type": "Gameplay.LevelDifficulty",
+        "offset": "0x98",
+        "storage": "instance",
+        "token": "0x4003ea6"
+      },
+      {
+        "name": "_currentDifficulty",
+        "type": "Gameplay.LevelDifficulty",
+        "offset": "0x9c",
+        "storage": "instance",
+        "token": "0x4003ea7"
+      }
+    ],
+    "methods": [
+      {
+        "name": "get_SmartRefreshUsed",
+        "token": "0x600455d",
+        "rva": "0x21c45a4"
+      },
+      {
+        "name": "set_SmartRefreshUsed",
+        "token": "0x600455e",
+        "rva": "0x21c45ec"
+      },
+      {
+        "name": "get_DidGetPowerupPieces",
+        "token": "0x600455f",
+        "rva": "0x21c463c"
+      },
+      {
+        "name": "set_DidGetPowerupPieces",
+        "token": "0x6004560",
+        "rva": "0x21c4684"
+      },
+      {
+        "name": "get_LastDifficulty",
+        "token": "0x6004561",
+        "rva": "0x21c46d4"
+      },
+      {
+        "name": "get_CurrentDifficulty",
+        "token": "0x6004562",
+        "rva": "0x21c46dc"
+      },
+      {
+        "name": "Init",
+        "token": "0x6004563",
+        "rva": "0x21c46e4"
+      },
+      {
+        "name": "SetupEasyTray",
+        "token": "0x6004564",
+        "rva": "0x21c4cf4"
+      },
+      {
+        "name": "GetNext",
+        "token": "0x6004565",
+        "rva": "0x21c4d04"
+      },
+      {
+        "name": "ConfigureLevelParameters",
+        "token": "0x6004566",
+        "rva": "0x21c4734"
+      },
+      {
+        "name": "GetPieces",
+        "token": "0x6004567",
+        "rva": "0x21c4f88"
+      },
+      {
+        "name": "GetPieceOfType",
+        "token": "0x6004568",
+        "rva": "0x21c6dac"
+      },
+      {
+        "name": "ThresholdHexCount",
+        "token": "0x6004569",
+        "rva": "0x21c641c"
+      },
+      {
+        "name": "GetPieceRandom",
+        "token": "0x600456a",
+        "rva": "0x21c647c"
+      },
+      {
+        "name": "ValidatePiecesWithGrid",
+        "token": "0x600456b",
+        "rva": "0x21c5334"
+      },
+      {
+        "name": "GetPowerupPieces",
+        "token": "0x600456c",
+        "rva": "0x21c5454"
+      },
+      {
+        "name": "GetCurrentAvailableTypesWithCount",
+        "token": "0x600456d",
+        "rva": "0x21c6e44"
+      },
+      {
+        "name": "GetCurrentAvailableTypes",
+        "token": "0x600456e",
+        "rva": "0x21c754c"
+      },
+      {
+        "name": ".ctor",
+        "token": "0x600456f",
+        "rva": "0x21c7608"
+      }
+    ]
+  },
+  "key_instructions": [
+    {
+      "rva": "0x21c4d50",
+      "word": "0x9400008e",
+      "assembly": "bl\t21c4f88 <__start_il2cpp@@Base+0x29d9f4>"
+    },
+    {
+      "rva": "0x21c4d64",
+      "word": "0x51000508",
+      "assembly": "sub\tw8, w8, #0x1"
+    },
+    {
+      "rva": "0x21c4d88",
+      "word": "0x3902267f",
+      "assembly": "strb\twzr, [x19, #137]"
+    },
+    {
+      "rva": "0x21c4e18",
+      "word": "0x540000e5",
+      "assembly": "b.pl\t21c4e34 <__start_il2cpp@@Base+0x29d8a0>  // b.nfrst"
+    },
+    {
+      "rva": "0x21c4e28",
+      "word": "0x946e1485",
+      "assembly": "bl\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c4e30",
+      "word": "0x1a9fa7f9",
+      "assembly": "cset\tw25, lt\t// lt = tstop"
+    },
+    {
+      "rva": "0x21c4e3c",
+      "word": "0xbd007660",
+      "assembly": "str\ts0, [x19, #116]"
+    },
+    {
+      "rva": "0x21c4e70",
+      "word": "0x3900011f",
+      "assembly": "strb\twzr, [x8]"
+    },
+    {
+      "rva": "0x21c4e88",
+      "word": "0x9400012b",
+      "assembly": "bl\t21c5334 <__start_il2cpp@@Base+0x29dda0>"
+    },
+    {
+      "rva": "0x21c4ebc",
+      "word": "0x94000033",
+      "assembly": "bl\t21c4f88 <__start_il2cpp@@Base+0x29d9f4>"
+    },
+    {
+      "rva": "0x21c4ec8",
+      "word": "0x71000f3f",
+      "assembly": "cmp\tw25, #0x3"
+    },
+    {
+      "rva": "0x21c4ecc",
+      "word": "0x54fffda9",
+      "assembly": "b.ls\t21c4e80 <__start_il2cpp@@Base+0x29d8ec>  // b.plast"
+    },
+    {
+      "rva": "0x21c4efc",
+      "word": "0x3900051f",
+      "assembly": "strb\twzr, [x8, #1]"
+    },
+    {
+      "rva": "0x21c4f2c",
+      "word": "0x35000128",
+      "assembly": "cbnz\tw8, 21c4f50 <__start_il2cpp@@Base+0x29d9bc>"
+    },
+    {
+      "rva": "0x21c4f48",
+      "word": "0x94000143",
+      "assembly": "bl\t21c5454 <__start_il2cpp@@Base+0x29dec0>"
+    },
+    {
+      "rva": "0x21c4f54",
+      "word": "0x3901c27f",
+      "assembly": "strb\twzr, [x19, #112]"
+    },
+    {
+      "rva": "0x21c50ec",
+      "word": "0x946e13d4",
+      "assembly": "bl\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c5140",
+      "word": "0x54000200",
+      "assembly": "b.eq\t21c5180 <__start_il2cpp@@Base+0x29dbec>  // b.none"
+    },
+    {
+      "rva": "0x21c5148",
+      "word": "0x940004cd",
+      "assembly": "bl\t21c647c <__start_il2cpp@@Base+0x29eee8>"
+    },
+    {
+      "rva": "0x21c517c",
+      "word": "0xd63f0120",
+      "assembly": "blr\tx9"
+    },
+    {
+      "rva": "0x21c520c",
+      "word": "0x946e138c",
+      "assembly": "bl\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c5294",
+      "word": "0x940006c6",
+      "assembly": "bl\t21c6dac <__start_il2cpp@@Base+0x29f818>"
+    },
+    {
+      "rva": "0x21c52c8",
+      "word": "0xd63f0120",
+      "assembly": "blr\tx9"
+    },
+    {
+      "rva": "0x21c60c4",
+      "word": "0xb9409508",
+      "assembly": "ldr\tw8, [x8, #148]"
+    },
+    {
+      "rva": "0x21c60cc",
+      "word": "0x5400036b",
+      "assembly": "b.lt\t21c6138 <__start_il2cpp@@Base+0x29eba4>  // b.tstop"
+    },
+    {
+      "rva": "0x21c60e0",
+      "word": "0x941a0b77",
+      "assembly": "bl\t2848ebc <__start_il2cpp@@Base+0x921928>"
+    },
+    {
+      "rva": "0x21c60f4",
+      "word": "0x946e0fd2",
+      "assembly": "bl\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c615c",
+      "word": "0x946e0fb8",
+      "assembly": "bl\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c6204",
+      "word": "0x946e0f8e",
+      "assembly": "bl\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c6278",
+      "word": "0x39000509",
+      "assembly": "strb\tw9, [x8, #1]"
+    },
+    {
+      "rva": "0x21c62fc",
+      "word": "0x5400036b",
+      "assembly": "b.lt\t21c6368 <__start_il2cpp@@Base+0x29edd4>  // b.tstop"
+    },
+    {
+      "rva": "0x21c6458",
+      "word": "0x1e380109",
+      "assembly": "fcvtzs\tw9, s8"
+    },
+    {
+      "rva": "0x21c6940",
+      "word": "0x540002ac",
+      "assembly": "b.gt\t21c6994 <__start_il2cpp@@Base+0x29f400>"
+    },
+    {
+      "rva": "0x21c6994",
+      "word": "0x39422668",
+      "assembly": "ldrb\tw8, [x19, #137]"
+    },
+    {
+      "rva": "0x21c69a0",
+      "word": "0x1400000e",
+      "assembly": "b\t21c69d8 <__start_il2cpp@@Base+0x29f444>"
+    },
+    {
+      "rva": "0x21c69e4",
+      "word": "0x29125674",
+      "assembly": "stp\tw20, w21, [x19, #144]"
+    },
+    {
+      "rva": "0x21c6a08",
+      "word": "0x946e0d8d",
+      "assembly": "bl\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c6a20",
+      "word": "0x946e0d87",
+      "assembly": "bl\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c6aa8",
+      "word": "0x946e0d65",
+      "assembly": "bl\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c6af4",
+      "word": "0x71018b1f",
+      "assembly": "cmp\tw24, #0x62"
+    },
+    {
+      "rva": "0x21c6af8",
+      "word": "0x540000a8",
+      "assembly": "b.hi\t21c6b0c <__start_il2cpp@@Base+0x29f578>  // b.pmore"
+    },
+    {
+      "rva": "0x21c6b3c",
+      "word": "0x946e0d40",
+      "assembly": "bl\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c6e08",
+      "word": "0x946e0c8d",
+      "assembly": "bl\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c75e0",
+      "word": "0xb9409261",
+      "assembly": "ldr\tw1, [x19, #144]"
+    },
+    {
+      "rva": "0x21c7cb8",
+      "word": "0x146e08e1",
+      "assembly": "b\t3d4a03c <__start_il2cpp@@Base+0x1e22aa8>"
+    },
+    {
+      "rva": "0x21c85c4",
+      "word": "0x97fff1d0",
+      "assembly": "bl\t21c4d04 <__start_il2cpp@@Base+0x29d770>"
+    },
+    {
+      "rva": "0x21c8564",
+      "word": "0xf8048ec0",
+      "assembly": "str\tx0, [x22, #72]!"
+    },
+    {
+      "rva": "0x21c8a54",
+      "word": "0x97fffe83",
+      "assembly": "bl\t21c8460 <__start_il2cpp@@Base+0x2a0ecc>"
+    }
+  ],
+  "method_windows": [
+    {
+      "method": "GetNext",
+      "start": "0x21c4d04",
+      "end_exclusive": "0x21c4f88",
+      "sha256": "222f37f943d802a700abe419e2255efdb68a175dfccc038bb799c4493057025f",
+      "external_direct_branches": [
+        {
+          "site": "0x21c4d3c",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4d50",
+          "target": "0x21c4f88",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4d9c",
+          "target": "0x21c43d8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4da8",
+          "target": "0x3d631e8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4e28",
+          "target": "0x3d4a03c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4e38",
+          "target": "0x3d631e8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4e54",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4e88",
+          "target": "0x21c5334",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4e9c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4ebc",
+          "target": "0x21c4f88",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4ee4",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4f14",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4f38",
+          "target": "0x21c44c4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4f48",
+          "target": "0x21c5454",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4f84",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        }
+      ],
+      "indirect_call_sites": [
+        "0x21c4dd0",
+        "0x21c4dfc"
+      ]
+    },
+    {
+      "method": "GetPieces",
+      "start": "0x21c4f88",
+      "end_exclusive": "0x21c5334",
+      "sha256": "88be1f219e5c3c26693caa81b358304b5dd588f21b0696b5b1001b5004718bf1",
+      "external_direct_branches": [
+        {
+          "site": "0x21c4fd0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4fdc",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4fe8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c4ff4",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5000",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c500c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5018",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5024",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5030",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c503c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5048",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5054",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5064",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5070",
+          "target": "0x2848924",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c50a0",
+          "target": "0x1e34940",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c50c4",
+          "target": "0x30416c0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c50ec",
+          "target": "0x3d4a03c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5120",
+          "target": "0x1e33c98",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5134",
+          "target": "0x1f43cfc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5148",
+          "target": "0x21c647c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5160",
+          "target": "0x2848f44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c51a4",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c51b8",
+          "target": "0x2848924",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c51ec",
+          "target": "0x1f43cfc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c520c",
+          "target": "0x3d4a03c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5228",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c524c",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5264",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5294",
+          "target": "0x21c6dac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c52ac",
+          "target": "0x2848f44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c52e8",
+          "target": "0x1f43cfc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5300",
+          "target": "0x1f43cfc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c532c",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5330",
+          "target": "0x1e33e5c",
+          "kind": "BL"
+        }
+      ],
+      "indirect_call_sites": [
+        "0x21c517c",
+        "0x21c52c8"
+      ]
+    },
+    {
+      "method": "GetPowerupPieces",
+      "start": "0x21c5454",
+      "end_exclusive": "0x21c641c",
+      "sha256": "6bf181cf5945a7eeee5d8e626e5192349ae1837fa624f669dd61282c0fc5d5ed",
+      "external_direct_branches": [
+        {
+          "site": "0x21c5494",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c54a0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c54ac",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c54b8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c54c4",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c54d0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c54dc",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c54e8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c54f4",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5500",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c550c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5518",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5524",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5530",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c553c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5548",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5554",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5560",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c556c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5578",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5584",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5590",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c559c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c55a8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c55b4",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c55c0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c55cc",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c55d8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c55e4",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c55f0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c55fc",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5608",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5614",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5620",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c562c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5638",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5644",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5650",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c565c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5668",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5674",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5680",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c568c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5698",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c56a4",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c56b0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c56bc",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c56c8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c56d4",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c56e0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c56ec",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c56f8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5704",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5724",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5730",
+          "target": "0x3060bd8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5738",
+          "target": "0x21c6e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5758",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c577c",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5798",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c57b4",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c57c8",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c57d8",
+          "target": "0x25ef01c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c57f0",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5810",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c582c",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5848",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c585c",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5870",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5898",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c58b4",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c58d0",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c58e4",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c58f8",
+          "target": "0x25ee8bc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5910",
+          "target": "0x27a58d4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5924",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5940",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c595c",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5978",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c598c",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c599c",
+          "target": "0x25ef01c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c59b4",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c59d4",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c59f0",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5a0c",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5a20",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5a38",
+          "target": "0x25ebe24",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5a48",
+          "target": "0x25eee5c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5a68",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5a84",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5aa0",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5abc",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5ad0",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5ae0",
+          "target": "0x25ef01c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5af8",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5b18",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5b34",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5b50",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5b64",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5b74",
+          "target": "0x25ebe24",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5b84",
+          "target": "0x25eee5c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5bb0",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5bcc",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5be8",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5c04",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5c18",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5c28",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5c44",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5c60",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5c7c",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5c90",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5cac",
+          "target": "0x25ee8bc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5cc4",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5cec",
+          "target": "0x27a71fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5d28",
+          "target": "0x27cc594",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5d44",
+          "target": "0x1e6cfa8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5d70",
+          "target": "0x1e6cfa8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5d88",
+          "target": "0x1e33bd0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5d98",
+          "target": "0x411f4d0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5db8",
+          "target": "0x1e6cfa8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5de4",
+          "target": "0x1e6cfa8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5dfc",
+          "target": "0x1e33bd0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5e0c",
+          "target": "0x411f4d0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5e20",
+          "target": "0x21a2cb0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5e30",
+          "target": "0x21a3344",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5e60",
+          "target": "0x27a6904",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5e8c",
+          "target": "0x27a5b9c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5eb4",
+          "target": "0x27a5d58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5ecc",
+          "target": "0x27ccb88",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5edc",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5ef8",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5f10",
+          "target": "0x25ef01c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5f28",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5f44",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5f5c",
+          "target": "0x25eba74",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5f74",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5f94",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5fa8",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5fc4",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5fd8",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c5ff0",
+          "target": "0x25ee648",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6004",
+          "target": "0x25ee3dc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6014",
+          "target": "0x25eee5c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6040",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6054",
+          "target": "0x2848924",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c60a8",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c60bc",
+          "target": "0x2848924",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c60e0",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c60f4",
+          "target": "0x3d4a03c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6108",
+          "target": "0x25ebae4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6118",
+          "target": "0x25eee5c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6134",
+          "target": "0x28499c8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6148",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c615c",
+          "target": "0x3d4a03c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6170",
+          "target": "0x25ebae4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6180",
+          "target": "0x25eee5c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c619c",
+          "target": "0x28499c8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c61b0",
+          "target": "0x284c4e8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c61c4",
+          "target": "0x1f43cfc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c61f0",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6204",
+          "target": "0x3d4a03c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6218",
+          "target": "0x25ebae4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6228",
+          "target": "0x25ee7e0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c623c",
+          "target": "0x1f43cfc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6254",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c62a8",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c62c8",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c62dc",
+          "target": "0x1f43cfc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6314",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c634c",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6360",
+          "target": "0x3ce7e90",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c638c",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6390",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6394",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6398",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c63d4",
+          "target": "0x411f4a0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c63e0",
+          "target": "0x411f4b0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c63f4",
+          "target": "0x27ccb88",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6400",
+          "target": "0x1e33e4c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c640c",
+          "target": "0x1c52c14",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6414",
+          "target": "0x1f2366c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6418",
+          "target": "0x1c4cf10",
+          "kind": "BL"
+        }
+      ],
+      "indirect_call_sites": []
+    },
+    {
+      "method": "GetPieceRandom",
+      "start": "0x21c647c",
+      "end_exclusive": "0x21c6dac",
+      "sha256": "05483fb334c1aef1ebc5081264f18adcb84b13845adbf17227143003cc678423",
+      "external_direct_branches": [
+        {
+          "site": "0x21c64b0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c64bc",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c64c8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c64d4",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c64e0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c64ec",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c64f8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6504",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6510",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c651c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6528",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6534",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6540",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c654c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6558",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6564",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6570",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c657c",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6588",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6594",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c65a0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c65ac",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c65b8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c65c4",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c65d0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c65dc",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6618",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c663c",
+          "target": "0x1e33d28",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6658",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6674",
+          "target": "0x27fe3fc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6688",
+          "target": "0x1e33b58",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6698",
+          "target": "0x25eb988",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c66e4",
+          "target": "0x1e6d2e4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6778",
+          "target": "0x1e6d2e4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c67dc",
+          "target": "0x1e6d2e4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c681c",
+          "target": "0x21c641c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6888",
+          "target": "0x1e6d2e4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c68cc",
+          "target": "0x21ad45c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c68ec",
+          "target": "0x1e6cfa8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6900",
+          "target": "0x1e33bd0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6920",
+          "target": "0x28815d0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6938",
+          "target": "0x21b3ccc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6964",
+          "target": "0x21b3d84",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6978",
+          "target": "0x21b3d4c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c698c",
+          "target": "0x21b3d14",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6a08",
+          "target": "0x3d4a03c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6a20",
+          "target": "0x3d4a03c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6a38",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6a44",
+          "target": "0x2848924",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6a54",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6a68",
+          "target": "0x2848924",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6aa8",
+          "target": "0x3d4a03c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6ac0",
+          "target": "0x2849de4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6ad8",
+          "target": "0x1f43cfc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6af0",
+          "target": "0x1f43cfc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6b3c",
+          "target": "0x3d4a03c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6b54",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6b74",
+          "target": "0x2848f44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6b8c",
+          "target": "0x1e33e44",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6b98",
+          "target": "0x2848924",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6be8",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6c08",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6c20",
+          "target": "0x2848ebc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6c34",
+          "target": "0x25ebae4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6c3c",
+          "target": "0x25ee7e0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6c50",
+          "target": "0x28499c8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6c78",
+          "target": "0x284c4e8",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6c9c",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6ca0",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6ca4",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6ca8",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6cac",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6cb4",
+          "target": "0x1e33e4c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6cb8",
+          "target": "0x1e33e54",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6cd8",
+          "target": "0x411f4a0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6ce8",
+          "target": "0x1e33bc0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6cf4",
+          "target": "0x1e3425c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6d14",
+          "target": "0x411f4b0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6d24",
+          "target": "0x411f4e0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6d3c",
+          "target": "0x411f4f0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6d44",
+          "target": "0x411f4b0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6d74",
+          "target": "0x411f4a0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6d80",
+          "target": "0x411f4b0",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6d9c",
+          "target": "0x1c4d06c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6da4",
+          "target": "0x1f2366c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6da8",
+          "target": "0x1c4cf10",
+          "kind": "BL"
+        }
+      ],
+      "indirect_call_sites": [
+        "0x21c6728",
+        "0x21c6794",
+        "0x21c67f8",
+        "0x21c68a4",
+        "0x21c69f8"
+      ]
+    },
+    {
+      "method": "GetPieceOfType",
+      "start": "0x21c6dac",
+      "end_exclusive": "0x21c6e3c",
+      "sha256": "71fa816724f0dcf6ac2f6f1141cfa0b00cb63736a5adbbb55a0c45e5462de7df",
+      "external_direct_branches": [
+        {
+          "site": "0x21c6de8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6df4",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6e08",
+          "target": "0x3d4a03c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6e1c",
+          "target": "0x25ebae4",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c6e24",
+          "target": "0x25ee7e0",
+          "kind": "BL"
+        }
+      ],
+      "indirect_call_sites": []
+    },
+    {
+      "method": "GetCurrentAvailableTypes",
+      "start": "0x21c754c",
+      "end_exclusive": "0x21c7608",
+      "sha256": "bede335bd2207c5436f5a78006b7977ad489bc89cb6c14543de301b641e54905",
+      "external_direct_branches": [
+        {
+          "site": "0x21c7594",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c75a0",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c75ac",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c75b8",
+          "target": "0x1e33bac",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c75cc",
+          "target": "0x1e33c98",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c75dc",
+          "target": "0x2f4867c",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c75ec",
+          "target": "0x25ee3dc",
+          "kind": "BL"
+        },
+        {
+          "site": "0x21c7604",
+          "target": "0x25eee5c",
+          "kind": "B"
+        }
+      ],
+      "indirect_call_sites": []
+    }
+  ]
+}
