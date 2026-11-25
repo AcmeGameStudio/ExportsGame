@@ -54,7 +54,7 @@
 
 ### 糖果格和机器表现的边界
 
-2026-11-25：[进一步的表现实现还原](SPECIAL_CELL_VISUAL_IMPLEMENTATION.md#5-糖果机长糖果主网格和收集用小糖果已分清)已展开下面曾未解析的 slot13/22，确认主长网格按 `sum(Candy.Cost)` 位移并修改 `_TIleCount`，并补出独立颗粒生命周期。以下段落保留前轮取证范围；“未证明/未确认”的部分以新文明确列出的新增证据为准。Shader 内裁切与实际格边界仍未闭合。
+2026-11-25：[进一步的表现实现还原](SPECIAL_CELL_VISUAL_IMPLEMENTATION.md#5-糖果机长糖果主网格和收集用小糖果已分清)已展开下面曾未解析的 slot13/22，确认主长网格按 `sum(Candy.Cost)` 位移并修改 `_TIleCount`，并补出独立颗粒生命周期。后续[Shader 专项](SHADER_EFFECT_RECOVERY.md)又从原始 GLES3 程序补出 UV 裁切公式和长度映射。以下段落保留前轮取证范围；“未证明/未确认”的部分以新文明确列出的新增证据为准，实际格边界的画面对照仍未完成。
 
 - `CandyCellState` 提供 ID、位置与 Cost 并转发邻消反馈；其构造函数未出现已解析的模型实例化调用，但其中存在未解析的虚调用，不能据此证明糖果格没有视觉对象。证据：`0x2115864–0x2115a1c`。
 - `CandyMachineHex.Init` 初始化 `CandyMachineCandy` 表现对象，`CandiesUpdated` 调用其 `Animate` 播放收集流程，见 `0x2116618–0x21166fc`、`0x21172bc–0x211742c`。[CandyMachineHex.prefab](../../extracted_game_models/ExportedProject/Assets/GameObject/CandyMachineHex.prefab) 内有 `Marshmellow/Marshmellow_Candy` 网格，但尚未证明它就是糖果格所用模型，也未确认糖果格的模型数量、排列及运行时更新方式。

@@ -1,0 +1,1614 @@
+{
+  "scope": "Original compiled GLES3 source; no Shader Graph node recovery or live rendering claim.",
+  "unitypy_version": "1.25.4",
+  "shaders": [
+    {
+      "name": "Shader Graphs/Candymask",
+      "asset_file": "bbeb306cba1a5dc43b4c575787252a85",
+      "path_id": 1,
+      "unity_version": "6000.3f2",
+      "raw_sha256": "73d97c5521949b35453c4ada1b7d02e2009ce2c13dbf84bf9e65b4fc111b5c4e",
+      "compressed_blob_sha256": "bde9a3b657d4e9ead40d59e69e5d1988646cbece42e27496e12947cd880bfaee",
+      "platforms": [
+        {
+          "platform": 9,
+          "compressed_offset": 0,
+          "compressed_size": 54495,
+          "decompressed_size": 804616,
+          "decompressed_sha256": "2410c96282484512d16d17395b6c9a37edb8206c1f349d4f25f887d4ad765721"
+        },
+        {
+          "platform": 18,
+          "compressed_offset": 54495,
+          "compressed_size": 92037,
+          "decompressed_size": 412760,
+          "decompressed_sha256": "bdc49c571a9c39b7b6457072a6c9f78df24f44a69ba9fe767373fd4098ae8c99"
+        }
+      ],
+      "code_records": [
+        {
+          "table_index": 32,
+          "offset": 37908,
+          "size": 23560,
+          "record_sha256": "b2cf11a3864b56a15e9db25c73e6a0b5c6fa531c3ca69015df16e77eed4d5fd1",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_ALPHATEST_ON",
+            "_LIGHT_COOKIES"
+          ],
+          "code_offset_in_record": 120,
+          "code_payload_size": 23432,
+          "code_payload_sha256": "c773a90a048035335fbfe3eb282d6a53a9a2866cd3b139a38d29bb15163ba1af",
+          "trailing_null_bytes": 0,
+          "text_sha256": "c773a90a048035335fbfe3eb282d6a53a9a2866cd3b139a38d29bb15163ba1af"
+        },
+        {
+          "table_index": 33,
+          "offset": 61468,
+          "size": 22408,
+          "record_sha256": "9024874367fcb18cbc3833d765f431f09b9d9a046415d8195308744c7785ab2e",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_LIGHT_COOKIES"
+          ],
+          "code_offset_in_record": 100,
+          "code_payload_size": 22299,
+          "code_payload_sha256": "981dda09bec5be65eb6e32e8195a0f7aaca5e8a80c342f0cd060059d54af8807",
+          "trailing_null_bytes": 0,
+          "text_sha256": "981dda09bec5be65eb6e32e8195a0f7aaca5e8a80c342f0cd060059d54af8807"
+        },
+        {
+          "table_index": 34,
+          "offset": 83876,
+          "size": 17184,
+          "record_sha256": "4afd18d8e9208686a3cb5af0cae3bb44520fcc2fef3771ff2fe5671baab05572",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_ALPHATEST_ON"
+          ],
+          "code_offset_in_record": 100,
+          "code_payload_size": 17076,
+          "code_payload_sha256": "20d8b5e163d0fbe5d0e3d19f9f1845ed41a162917630ab285e3219ab0ccaeeb5",
+          "trailing_null_bytes": 0,
+          "text_sha256": "20d8b5e163d0fbe5d0e3d19f9f1845ed41a162917630ab285e3219ab0ccaeeb5"
+        },
+        {
+          "table_index": 35,
+          "offset": 101060,
+          "size": 15996,
+          "record_sha256": "607cccdc085c837e96d5f5ae40eb8437f0f04f5fb3769b151dda215d68b8710a",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS"
+          ],
+          "code_offset_in_record": 80,
+          "code_payload_size": 15906,
+          "code_payload_sha256": "fec73ff20974969aef9c07a9f48528fb421d9d68eef73af46e8714f1fc6d8833",
+          "trailing_null_bytes": 0,
+          "text_sha256": "fec73ff20974969aef9c07a9f48528fb421d9d68eef73af46e8714f1fc6d8833"
+        },
+        {
+          "table_index": 36,
+          "offset": 117056,
+          "size": 15188,
+          "record_sha256": "c31f7cbb4765794cd0157e00c2a46dcbd7383795a5dddc76a85c342fd1961cfb",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ALPHATEST_ON",
+            "_LIGHT_COOKIES"
+          ],
+          "code_offset_in_record": 96,
+          "code_payload_size": 15083,
+          "code_payload_sha256": "71a9a7143405591a0a55a408d130bcdb20186398cf994e0fc5ed421681e36c19",
+          "trailing_null_bytes": 0,
+          "text_sha256": "71a9a7143405591a0a55a408d130bcdb20186398cf994e0fc5ed421681e36c19"
+        },
+        {
+          "table_index": 37,
+          "offset": 132244,
+          "size": 14048,
+          "record_sha256": "c71aea61ea1a9759758beb1a2a70011c1c57d3d05e9e2b4a0b7cfc89279c85e7",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_LIGHT_COOKIES"
+          ],
+          "code_offset_in_record": 76,
+          "code_payload_size": 13962,
+          "code_payload_sha256": "6d5ec72f594564952fa8239aeb3607276584bfd7382e6e25cf325dc671b63eb5",
+          "trailing_null_bytes": 0,
+          "text_sha256": "6d5ec72f594564952fa8239aeb3607276584bfd7382e6e25cf325dc671b63eb5"
+        },
+        {
+          "table_index": 38,
+          "offset": 146292,
+          "size": 13824,
+          "record_sha256": "78664a12f0dac5571c2f4abcfd4ab6dafae3e34ad8a69bbc9018b274156c2358",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ALPHATEST_ON"
+          ],
+          "code_offset_in_record": 76,
+          "code_payload_size": 13740,
+          "code_payload_sha256": "a1b8a6480d5ee6e43d94e61f268188c2c2c9bb5b18410613702a7b8a4967eb20",
+          "trailing_null_bytes": 0,
+          "text_sha256": "a1b8a6480d5ee6e43d94e61f268188c2c2c9bb5b18410613702a7b8a4967eb20",
+          "export": "docs/binary-analysis/shader-recovery/CandyMask.gles3.glsl"
+        },
+        {
+          "table_index": 39,
+          "offset": 160116,
+          "size": 12680,
+          "record_sha256": "eade5528e32bcda9cb821b79bcf713fc577d39e2020a13303308d84618ed972d",
+          "keywords": [
+            "EVALUATE_SH_VERTEX"
+          ],
+          "code_offset_in_record": 56,
+          "code_payload_size": 12615,
+          "code_payload_sha256": "167980c5f408114e0a0195a56c7ce8aa3f57895d8e5470889309413f8cc7464c",
+          "trailing_null_bytes": 0,
+          "text_sha256": "167980c5f408114e0a0195a56c7ce8aa3f57895d8e5470889309413f8cc7464c",
+          "export": "docs/binary-analysis/shader-recovery/CandyMask.no-alpha.gles3.glsl"
+        },
+        {
+          "table_index": 40,
+          "offset": 172796,
+          "size": 17532,
+          "record_sha256": "91f5329e8c1c84c0e665f3e87eb523493295cb41a4483df323034728dbb8bf5c",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 104,
+          "code_payload_size": 17417,
+          "code_payload_sha256": "209dbef7138772186bea524953a6a569779335f2312109b8adda880f04a78302",
+          "trailing_null_bytes": 0,
+          "text_sha256": "209dbef7138772186bea524953a6a569779335f2312109b8adda880f04a78302"
+        },
+        {
+          "table_index": 41,
+          "offset": 190328,
+          "size": 18716,
+          "record_sha256": "fd5f7c39956198ae229e69a0fbaac5e2784b51d645cef40685792899f76aedcd",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_ALPHATEST_ON",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 124,
+          "code_payload_size": 18584,
+          "code_payload_sha256": "20248feb6780af8ac811ab634b9028a14b9851fb27572e1811a0b90f9ede2372",
+          "trailing_null_bytes": 0,
+          "text_sha256": "20248feb6780af8ac811ab634b9028a14b9851fb27572e1811a0b90f9ede2372"
+        },
+        {
+          "table_index": 42,
+          "offset": 209044,
+          "size": 23960,
+          "record_sha256": "1dd83264ae8ac02199165bb209c3cffcf490098305088e69cfc22e17f8f08b2a",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 124,
+          "code_payload_size": 23827,
+          "code_payload_sha256": "b09f4a1a8dd4d0fb9d99da1471c2c0b218fd983d93051bc36a6311a98f9fab29",
+          "trailing_null_bytes": 0,
+          "text_sha256": "b09f4a1a8dd4d0fb9d99da1471c2c0b218fd983d93051bc36a6311a98f9fab29"
+        },
+        {
+          "table_index": 43,
+          "offset": 233004,
+          "size": 25112,
+          "record_sha256": "f830b188333e9db75e01f709ef27fc9eeb3ccacaba3fe8304db9293287cc5353",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_ALPHATEST_ON",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 144,
+          "code_payload_size": 24957,
+          "code_payload_sha256": "d87d22cd87fd44aba0bde7df2874fa4466bfa686256e4ca9688b5e4415b8ccfe",
+          "trailing_null_bytes": 0,
+          "text_sha256": "d87d22cd87fd44aba0bde7df2874fa4466bfa686256e4ca9688b5e4415b8ccfe"
+        },
+        {
+          "table_index": 44,
+          "offset": 258116,
+          "size": 32904,
+          "record_sha256": "fd1c3a3ce7b8b88ec4c68e33bc65f72a6eb0e04cda11c8d0c7266aa081d3b128",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ALPHATEST_ON",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 148,
+          "code_payload_size": 32746,
+          "code_payload_sha256": "c6d880d062e2613bcad555d8d33964f8c9e2cc1c04867025109ccabb01b46d74",
+          "trailing_null_bytes": 0,
+          "text_sha256": "c6d880d062e2613bcad555d8d33964f8c9e2cc1c04867025109ccabb01b46d74"
+        },
+        {
+          "table_index": 45,
+          "offset": 291020,
+          "size": 31720,
+          "record_sha256": "285df8ac853205074bb752650eb5c1089b61307ae9b1a03bf39565aabe134113",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 128,
+          "code_payload_size": 31582,
+          "code_payload_sha256": "355887e1951fc7e326d15010e82cb97585f19270b01cac978d8bbe07d3a99606",
+          "trailing_null_bytes": 0,
+          "text_sha256": "355887e1951fc7e326d15010e82cb97585f19270b01cac978d8bbe07d3a99606"
+        },
+        {
+          "table_index": 46,
+          "offset": 322740,
+          "size": 31576,
+          "record_sha256": "bd314d061ea9cf3898440e96c052308edebf7c126d434b5a90ae4c527b7f7e83",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ALPHATEST_ON",
+            "_MAIN_LIGHT_SHADOWS_CASCADE",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 128,
+          "code_payload_size": 31440,
+          "code_payload_sha256": "4aee29933781384583f904a5fa73f8a3e4d117a4ba33015ffc4e3aae22029609",
+          "trailing_null_bytes": 0,
+          "text_sha256": "4aee29933781384583f904a5fa73f8a3e4d117a4ba33015ffc4e3aae22029609"
+        },
+        {
+          "table_index": 47,
+          "offset": 354316,
+          "size": 30396,
+          "record_sha256": "ed1b697bf5e479da707fb885f7e4ea8ba9017eeabcf2f53983b287cbc8c336a6",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_MAIN_LIGHT_SHADOWS_CASCADE",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 108,
+          "code_payload_size": 30280,
+          "code_payload_sha256": "964ce748fae8b9092342f93613010ca591f7ad51126cce40c63ba3e85f56394f",
+          "trailing_null_bytes": 0,
+          "text_sha256": "964ce748fae8b9092342f93613010ca591f7ad51126cce40c63ba3e85f56394f"
+        },
+        {
+          "table_index": 48,
+          "offset": 384712,
+          "size": 18308,
+          "record_sha256": "350af7b38857c42ec7135f4aa68e828c07a7d6f23908f968f70e5ed0b24f3b6a",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ALPHATEST_ON",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 128,
+          "code_payload_size": 18170,
+          "code_payload_sha256": "9d93c69b5ab6cd2f157a5dcb63cd61128ee489cfc13c9c63cfd1caac9acfc1cb",
+          "trailing_null_bytes": 0,
+          "text_sha256": "9d93c69b5ab6cd2f157a5dcb63cd61128ee489cfc13c9c63cfd1caac9acfc1cb"
+        },
+        {
+          "table_index": 49,
+          "offset": 403020,
+          "size": 17172,
+          "record_sha256": "3e319b73a61627fba99593caecaeeeb2c3c27ce30d8c5b03be31c6ec98f5852b",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 108,
+          "code_payload_size": 17054,
+          "code_payload_sha256": "a0f0f1eb26ec2678018dc2eeb5327e29c3f2f3da29ba42c658728f8dc825807a",
+          "trailing_null_bytes": 0,
+          "text_sha256": "a0f0f1eb26ec2678018dc2eeb5327e29c3f2f3da29ba42c658728f8dc825807a"
+        },
+        {
+          "table_index": 50,
+          "offset": 420192,
+          "size": 16960,
+          "record_sha256": "99c0d24c9b7e58e1ea2ff0edddf51a5a60a7624ffa312b679eb273f1d36ccc36",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ALPHATEST_ON",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 108,
+          "code_payload_size": 16841,
+          "code_payload_sha256": "fefbaa88047d84bf4b79074c7d870dc52e1c1bfd615d418c6e66374c8bb59c30",
+          "trailing_null_bytes": 0,
+          "text_sha256": "fefbaa88047d84bf4b79074c7d870dc52e1c1bfd615d418c6e66374c8bb59c30"
+        },
+        {
+          "table_index": 51,
+          "offset": 437152,
+          "size": 15828,
+          "record_sha256": "76de9544d61013b84f1e928610435c3284069b7cc4f6def3c5bbfa501bde580c",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 88,
+          "code_payload_size": 15730,
+          "code_payload_sha256": "17f54955a6cce1c613486c4edb097a6383f2dbbbc7078cb095f9bf6c2b4b0237",
+          "trailing_null_bytes": 0,
+          "text_sha256": "17f54955a6cce1c613486c4edb097a6383f2dbbbc7078cb095f9bf6c2b4b0237"
+        },
+        {
+          "table_index": 52,
+          "offset": 452980,
+          "size": 19064,
+          "record_sha256": "3cd115222b750d7f4c8976fb572de095b487cbf8e397cb51f88b988078a5282b",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 112,
+          "code_payload_size": 18941,
+          "code_payload_sha256": "4919307b48e843c336c3a21060b69c3fc724e7bc2de6b74d852c2e91a2004836",
+          "trailing_null_bytes": 0,
+          "text_sha256": "4919307b48e843c336c3a21060b69c3fc724e7bc2de6b74d852c2e91a2004836"
+        },
+        {
+          "table_index": 53,
+          "offset": 472044,
+          "size": 20228,
+          "record_sha256": "79ec5b9747c544f1684731591aefc3d9bcce3fa61166b7b79a5e5f472887f27f",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_ALPHATEST_ON",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 132,
+          "code_payload_size": 20085,
+          "code_payload_sha256": "6bd5ed29457760d86e99202c2a9c84447fe159a0024611787a600d1bfca39c4d",
+          "trailing_null_bytes": 0,
+          "text_sha256": "6bd5ed29457760d86e99202c2a9c84447fe159a0024611787a600d1bfca39c4d"
+        },
+        {
+          "table_index": 54,
+          "offset": 492272,
+          "size": 25456,
+          "record_sha256": "0ea91b752764be143aac0f408cb10b79f71cab13d38fc5069796336563582d22",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 132,
+          "code_payload_size": 25315,
+          "code_payload_sha256": "4abab0350df85a123383db29e78aea1b4264a06ae9c1cfddabf750d06324101f",
+          "trailing_null_bytes": 0,
+          "text_sha256": "4abab0350df85a123383db29e78aea1b4264a06ae9c1cfddabf750d06324101f"
+        },
+        {
+          "table_index": 55,
+          "offset": 517728,
+          "size": 26592,
+          "record_sha256": "3ad5473d64737a9d88fe877bbf35f3241d4b1e586a4f825a7baf0ae99870e1cd",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_ALPHATEST_ON",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 152,
+          "code_payload_size": 26431,
+          "code_payload_sha256": "440b005ae0abc8392f128c602d4b91771401c009488a38855030e07b3856712e",
+          "trailing_null_bytes": 0,
+          "text_sha256": "440b005ae0abc8392f128c602d4b91771401c009488a38855030e07b3856712e"
+        },
+        {
+          "table_index": 56,
+          "offset": 544320,
+          "size": 31636,
+          "record_sha256": "600f59aa600e06d5f585166775309ff6ac204c2497e3278fe0dd4eac3e559dfd",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ALPHATEST_ON",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 140,
+          "code_payload_size": 31486,
+          "code_payload_sha256": "fdc3c9c8c7c40d3395428c7aa77651ecaf8bc100784588b2fbf92ecde0ec2991",
+          "trailing_null_bytes": 0,
+          "text_sha256": "fdc3c9c8c7c40d3395428c7aa77651ecaf8bc100784588b2fbf92ecde0ec2991"
+        },
+        {
+          "table_index": 57,
+          "offset": 575956,
+          "size": 30240,
+          "record_sha256": "e64b253c6e899d54bff544f124fc411b91618982e4921caba361bae04240f7b8",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 120,
+          "code_payload_size": 30112,
+          "code_payload_sha256": "e3be2fb647af6e0cc61ab89261edd7c01d0e330b8be78e4ecc57e439492011f5",
+          "trailing_null_bytes": 0,
+          "text_sha256": "e3be2fb647af6e0cc61ab89261edd7c01d0e330b8be78e4ecc57e439492011f5"
+        },
+        {
+          "table_index": 58,
+          "offset": 606196,
+          "size": 30312,
+          "record_sha256": "8c246e24d3fa4ea2290f78dfb181aee25636ac49945727489864a1e848d0ff98",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ALPHATEST_ON",
+            "_MAIN_LIGHT_SHADOWS",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 120,
+          "code_payload_size": 30182,
+          "code_payload_sha256": "64fe537fa16e11b265b6bba014f7f4f173a4bbcfcd505ab45af71528b00f6b05",
+          "trailing_null_bytes": 0,
+          "text_sha256": "64fe537fa16e11b265b6bba014f7f4f173a4bbcfcd505ab45af71528b00f6b05"
+        },
+        {
+          "table_index": 59,
+          "offset": 636508,
+          "size": 28916,
+          "record_sha256": "cf58157f2ee4a2fcaeef228ca72833ac42c935b236fb962d0e3d01d6285d2337",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_MAIN_LIGHT_SHADOWS",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 100,
+          "code_payload_size": 28806,
+          "code_payload_sha256": "9f47382c5718965256a2ca4e000e46fcf3c273ab26371e7de38fa81dfcca75ac",
+          "trailing_null_bytes": 0,
+          "text_sha256": "9f47382c5718965256a2ca4e000e46fcf3c273ab26371e7de38fa81dfcca75ac"
+        },
+        {
+          "table_index": 60,
+          "offset": 665424,
+          "size": 16736,
+          "record_sha256": "97e49c96df94396f651a32e14a70a8c3303d1bd5ce6fd69c7709961e3ee6e2fa",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ALPHATEST_ON",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 120,
+          "code_payload_size": 16608,
+          "code_payload_sha256": "242f875172b2f7e9077fcd81c93bae9749a2f0bc2138b5c5b84dc1de4d972fa6",
+          "trailing_null_bytes": 0,
+          "text_sha256": "242f875172b2f7e9077fcd81c93bae9749a2f0bc2138b5c5b84dc1de4d972fa6"
+        },
+        {
+          "table_index": 61,
+          "offset": 682160,
+          "size": 15600,
+          "record_sha256": "bc1b372f4ec62c2e9079af3c24906c84e9d0e3c57e44391a2072fe583bf0834b",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 100,
+          "code_payload_size": 15490,
+          "code_payload_sha256": "adb132fbe009b21b37200ab823e0488fdedddfa6735118e44319446ff3362e18",
+          "trailing_null_bytes": 0,
+          "text_sha256": "adb132fbe009b21b37200ab823e0488fdedddfa6735118e44319446ff3362e18"
+        },
+        {
+          "table_index": 62,
+          "offset": 697760,
+          "size": 15452,
+          "record_sha256": "705847764e980b1536ab85c50cc490fd8cfd621c4fae619edc55092c521d00c1",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ALPHATEST_ON",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 100,
+          "code_payload_size": 15341,
+          "code_payload_sha256": "cf4d3349f7563f9eb0e20c050bada5a0d654803b948838711d394f09a41cdbce",
+          "trailing_null_bytes": 0,
+          "text_sha256": "cf4d3349f7563f9eb0e20c050bada5a0d654803b948838711d394f09a41cdbce"
+        },
+        {
+          "table_index": 63,
+          "offset": 713212,
+          "size": 14308,
+          "record_sha256": "556c4c80fe23ddc1a818d0ec4e641f88642107cf8b652ee953f832d0d9ee4723",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 80,
+          "code_payload_size": 14218,
+          "code_payload_sha256": "d2aed13bb5dcbcb539a91d818fcb1cadba22565d59f79dea8740b5cd2964ab7c",
+          "trailing_null_bytes": 0,
+          "text_sha256": "d2aed13bb5dcbcb539a91d818fcb1cadba22565d59f79dea8740b5cd2964ab7c"
+        },
+        {
+          "table_index": 66,
+          "offset": 728144,
+          "size": 4964,
+          "record_sha256": "471cada8655b3c8730475a6b5e4d32c29f911f520907ebe54c98da6b24d02d7f",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 4921,
+          "code_payload_sha256": "29469ace59b60e33e783427cb20f9d43793c35e26ec6f2a0b378a7df1540efa9",
+          "trailing_null_bytes": 0,
+          "text_sha256": "29469ace59b60e33e783427cb20f9d43793c35e26ec6f2a0b378a7df1540efa9"
+        },
+        {
+          "table_index": 67,
+          "offset": 733108,
+          "size": 6268,
+          "record_sha256": "2110bf1da8285f5f82f5dcb8215b481523233a22bb7f37b1c151b59821cef4da",
+          "keywords": [
+            "_ALPHATEST_ON"
+          ],
+          "code_offset_in_record": 52,
+          "code_payload_size": 6208,
+          "code_payload_sha256": "266abf6b7cd3d2466afb11828e018803968c1f685d3a9ea9c073c32b1cd9d6a9",
+          "trailing_null_bytes": 0,
+          "text_sha256": "266abf6b7cd3d2466afb11828e018803968c1f685d3a9ea9c073c32b1cd9d6a9"
+        },
+        {
+          "table_index": 70,
+          "offset": 740040,
+          "size": 8528,
+          "record_sha256": "25839022c9db28cd1d6c789f08b5ce6d5d2a5fc52e1838f3bf95cb5ed7bb1571",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 8488,
+          "code_payload_sha256": "4496cbd9a9c440751b8cee6e65eef261b6dcd90e5e7a3724424985ff3fa6691d",
+          "trailing_null_bytes": 0,
+          "text_sha256": "4496cbd9a9c440751b8cee6e65eef261b6dcd90e5e7a3724424985ff3fa6691d"
+        },
+        {
+          "table_index": 71,
+          "offset": 748568,
+          "size": 9432,
+          "record_sha256": "9493b958b153d2c142b6b377721c0be4e3b2fd8e59e0d15cf1b2957ba2ec7ab1",
+          "keywords": [
+            "_ALPHATEST_ON"
+          ],
+          "code_offset_in_record": 52,
+          "code_payload_size": 9372,
+          "code_payload_sha256": "21081610efc07fee06918fb810c50efe55286de6ee19483aa195280f306c0995",
+          "trailing_null_bytes": 0,
+          "text_sha256": "21081610efc07fee06918fb810c50efe55286de6ee19483aa195280f306c0995"
+        },
+        {
+          "table_index": 74,
+          "offset": 758456,
+          "size": 3744,
+          "record_sha256": "a875592a4939f9568c0accf2723e9ce17305521adff5c9a51ed088298ba1526c",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 3703,
+          "code_payload_sha256": "7a4b7208c7ac3ae488442c0db969862f0ab48041748e4b88c474c384b347eb3a",
+          "trailing_null_bytes": 0,
+          "text_sha256": "7a4b7208c7ac3ae488442c0db969862f0ab48041748e4b88c474c384b347eb3a"
+        },
+        {
+          "table_index": 75,
+          "offset": 762200,
+          "size": 5052,
+          "record_sha256": "4c89d6668767bbbba94025713977881ee0b0efd55eb3a190c97c0849959f5f37",
+          "keywords": [
+            "_ALPHATEST_ON"
+          ],
+          "code_offset_in_record": 52,
+          "code_payload_size": 4990,
+          "code_payload_sha256": "44055253b627a58f54bdea4990a0ff65c815cf66c61f2de9b28d5f09db7dc472",
+          "trailing_null_bytes": 0,
+          "text_sha256": "44055253b627a58f54bdea4990a0ff65c815cf66c61f2de9b28d5f09db7dc472"
+        },
+        {
+          "table_index": 76,
+          "offset": 767252,
+          "size": 4872,
+          "record_sha256": "f5a78bcc240d2a1283006d86a5de6abb62b3767ef735725c17e5c66d5e8924ff",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 4830,
+          "code_payload_sha256": "eac590d8c6e0fe936fadd5642dabe63b788e91e998170b53e43cd245f0b00227",
+          "trailing_null_bytes": 0,
+          "text_sha256": "eac590d8c6e0fe936fadd5642dabe63b788e91e998170b53e43cd245f0b00227"
+        },
+        {
+          "table_index": 77,
+          "offset": 772124,
+          "size": 6172,
+          "record_sha256": "ce174d9b0f2e2dafe2945cf22e3a8950d8cc8e44add698cbee30a36ba9723e25",
+          "keywords": [
+            "_ALPHATEST_ON"
+          ],
+          "code_offset_in_record": 52,
+          "code_payload_size": 6110,
+          "code_payload_sha256": "e327f03768e6cc852260d92c58f69a9f5107eb9632eec4bbd238aedd1ea6582b",
+          "trailing_null_bytes": 0,
+          "text_sha256": "e327f03768e6cc852260d92c58f69a9f5107eb9632eec4bbd238aedd1ea6582b"
+        },
+        {
+          "table_index": 80,
+          "offset": 779640,
+          "size": 7076,
+          "record_sha256": "8fd84b7b9c00e77df7a3cb8d8b618463b8a6e8abf8df98c1befe7fb75b75ac53",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 7035,
+          "code_payload_sha256": "d1fa9e6b7b8f3df6f3ef55024cc5828d815c2e422dc23443338894176b3578a4",
+          "trailing_null_bytes": 0,
+          "text_sha256": "d1fa9e6b7b8f3df6f3ef55024cc5828d815c2e422dc23443338894176b3578a4"
+        },
+        {
+          "table_index": 81,
+          "offset": 786716,
+          "size": 7308,
+          "record_sha256": "bc5e4a5db502c2dea4ef6a268d3c6aadf777f7e3f335cdda0780f942b34d1c18",
+          "keywords": [
+            "_ALPHATEST_ON"
+          ],
+          "code_offset_in_record": 52,
+          "code_payload_size": 7245,
+          "code_payload_sha256": "1b89fbe4f2155155dd018eaae11abe7ef7fb91d450afba3571e70c9b677bc5ed",
+          "trailing_null_bytes": 0,
+          "text_sha256": "1b89fbe4f2155155dd018eaae11abe7ef7fb91d450afba3571e70c9b677bc5ed"
+        },
+        {
+          "table_index": 84,
+          "offset": 794664,
+          "size": 4516,
+          "record_sha256": "ddc7a4504b81e512158a69adc930f6f12c331b266da196218ba0418339f37db1",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 4473,
+          "code_payload_sha256": "ce88855fff50932df6b3245c625c276c93f70bd796527ea7ae641e463ecc2613",
+          "trailing_null_bytes": 0,
+          "text_sha256": "ce88855fff50932df6b3245c625c276c93f70bd796527ea7ae641e463ecc2613"
+        },
+        {
+          "table_index": 85,
+          "offset": 799180,
+          "size": 5436,
+          "record_sha256": "3cfe3a9e7095fd8499ee06e8e18a168cf0ef5c7563f5f8a855cd6f2de4e794e2",
+          "keywords": [
+            "_ALPHATEST_ON"
+          ],
+          "code_offset_in_record": 52,
+          "code_payload_size": 5375,
+          "code_payload_sha256": "a280ddbaeda3c1e1ebb67ee312af6e966e7c0fd64eec9fcc670c157d489fcfc0",
+          "trailing_null_bytes": 0,
+          "text_sha256": "a280ddbaeda3c1e1ebb67ee312af6e966e7c0fd64eec9fcc670c157d489fcfc0"
+        }
+      ],
+      "gles_table_count": 86
+    },
+    {
+      "name": "Shader Graphs/Jelly_glow",
+      "asset_file": "4375d94f9cc0ce645bfcd7a9f551bfc5",
+      "path_id": 1,
+      "unity_version": "6000.3f2",
+      "raw_sha256": "0b098cb5d1b13c1de1e34dd41d1ebdcbf52c842f3384f61090dcb7fdb963f43e",
+      "compressed_blob_sha256": "241f1319b6abdbc261f24830467b1953c8957fabaee4269a1f61a212c1a0f70e",
+      "platforms": [
+        {
+          "platform": 9,
+          "compressed_offset": 0,
+          "compressed_size": 46192,
+          "decompressed_size": 857128,
+          "decompressed_sha256": "1fd43aca2a9cfbe22505cb1c99f8f2c2e9c0e49001099c8acac0225df84fc531"
+        },
+        {
+          "platform": 18,
+          "compressed_offset": 46192,
+          "compressed_size": 73384,
+          "decompressed_size": 474132,
+          "decompressed_sha256": "1b031fbeb10495dc91ecc1816c9134e902cc8f68069ce6437ccf15735c6743df"
+        }
+      ],
+      "code_records": [
+        {
+          "table_index": 32,
+          "offset": 53720,
+          "size": 24552,
+          "record_sha256": "4c49b52564d4baedbe864a999c3c8af43a70dc7b38110a5493c5268fe1f90355",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_ADDITIONAL_LIGHTS",
+            "_LIGHT_COOKIES"
+          ],
+          "code_offset_in_record": 120,
+          "code_payload_size": 24422,
+          "code_payload_sha256": "a88216af5856fd436ca1b8be0b6d48f38b1314c6486d4cf16ad771bf2ace9a6c",
+          "trailing_null_bytes": 0,
+          "text_sha256": "a88216af5856fd436ca1b8be0b6d48f38b1314c6486d4cf16ad771bf2ace9a6c"
+        },
+        {
+          "table_index": 33,
+          "offset": 78272,
+          "size": 18132,
+          "record_sha256": "6127eb37cebb217f5095a6c5d542c1c815481338d255c11b6eaa3de279074bd5",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_ADDITIONAL_LIGHTS"
+          ],
+          "code_offset_in_record": 100,
+          "code_payload_size": 18021,
+          "code_payload_sha256": "b493362e5840a1cce1dd737ada655f85c0eeea4b067cba17999f1ca663cbf61a",
+          "trailing_null_bytes": 0,
+          "text_sha256": "b493362e5840a1cce1dd737ada655f85c0eeea4b067cba17999f1ca663cbf61a"
+        },
+        {
+          "table_index": 34,
+          "offset": 96404,
+          "size": 24652,
+          "record_sha256": "9f37cfb42c9899cf8a62adc8359f2a7efd372ee9855df9c37d7c439d1ffa0903",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_LIGHT_COOKIES"
+          ],
+          "code_offset_in_record": 100,
+          "code_payload_size": 24544,
+          "code_payload_sha256": "97361af41cc5562c4308a0fd82a07ef17474a7159d7f52c0052e730d516b826f",
+          "trailing_null_bytes": 0,
+          "text_sha256": "97361af41cc5562c4308a0fd82a07ef17474a7159d7f52c0052e730d516b826f"
+        },
+        {
+          "table_index": 35,
+          "offset": 121056,
+          "size": 18232,
+          "record_sha256": "b461b7533f7005574281515b01054645d8fe561f574ccf8c9fc29533c7e4d9f0",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS"
+          ],
+          "code_offset_in_record": 80,
+          "code_payload_size": 18143,
+          "code_payload_sha256": "1f3c7e4f2a4373a5fca936735cee0d3b7a808a58f7178e6eafa3833caa8a8423",
+          "trailing_null_bytes": 0,
+          "text_sha256": "1f3c7e4f2a4373a5fca936735cee0d3b7a808a58f7178e6eafa3833caa8a8423"
+        },
+        {
+          "table_index": 36,
+          "offset": 139288,
+          "size": 15892,
+          "record_sha256": "bbba62fc69585e1ceab1396fbd3f01149c140ee469a4ce341cce2912cfdcdca2",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_LIGHT_COOKIES"
+          ],
+          "code_offset_in_record": 96,
+          "code_payload_size": 15787,
+          "code_payload_sha256": "9e00502828fc19f05b079a5a261acc42b9385f96fde3919a883b6893af8e3396",
+          "trailing_null_bytes": 0,
+          "text_sha256": "9e00502828fc19f05b079a5a261acc42b9385f96fde3919a883b6893af8e3396"
+        },
+        {
+          "table_index": 37,
+          "offset": 155180,
+          "size": 14592,
+          "record_sha256": "400e218320a92916476c6f3003d517a22f33171fd06e6e59bf4aafa5d2128dab",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON"
+          ],
+          "code_offset_in_record": 76,
+          "code_payload_size": 14506,
+          "code_payload_sha256": "54da7ab0f4a06ac14a1fdccef5ec7b49931a48b8623905ba95b164170de5ae5a",
+          "trailing_null_bytes": 0,
+          "text_sha256": "54da7ab0f4a06ac14a1fdccef5ec7b49931a48b8623905ba95b164170de5ae5a"
+        },
+        {
+          "table_index": 38,
+          "offset": 169772,
+          "size": 15996,
+          "record_sha256": "9dc5917b9a05871328c6f2c2eeddad18576f95ea27ed9d4f9188b6b673073d99",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_LIGHT_COOKIES"
+          ],
+          "code_offset_in_record": 76,
+          "code_payload_size": 15909,
+          "code_payload_sha256": "3bcbe6383e60f3fc87cbccd9a75b25c956ac546b2a0a90e7069093d5dbfa519a",
+          "trailing_null_bytes": 0,
+          "text_sha256": "3bcbe6383e60f3fc87cbccd9a75b25c956ac546b2a0a90e7069093d5dbfa519a"
+        },
+        {
+          "table_index": 39,
+          "offset": 185768,
+          "size": 14692,
+          "record_sha256": "df906286411b87dd5c96db5d418bf5f9b9dd0d3b60382ba7a3e58f36812651a0",
+          "keywords": [
+            "EVALUATE_SH_VERTEX"
+          ],
+          "code_offset_in_record": 56,
+          "code_payload_size": 14628,
+          "code_payload_sha256": "d5c12ac96c9286c8c32936e0c0d4e3952ad18eb38d4c8100c44cb8f8ad7d7300",
+          "trailing_null_bytes": 0,
+          "text_sha256": "d5c12ac96c9286c8c32936e0c0d4e3952ad18eb38d4c8100c44cb8f8ad7d7300",
+          "export": "docs/binary-analysis/shader-recovery/JellyGlow.gles3.glsl"
+        },
+        {
+          "table_index": 40,
+          "offset": 200460,
+          "size": 19840,
+          "record_sha256": "778967dcb3b7d667edb6b57b241578af218306b19596121fa79324e840ed11f5",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 104,
+          "code_payload_size": 19727,
+          "code_payload_sha256": "036d647e418b2581cdcb8fcda02c62a34a6072120d555272763a15cbbfaa693b",
+          "trailing_null_bytes": 0,
+          "text_sha256": "036d647e418b2581cdcb8fcda02c62a34a6072120d555272763a15cbbfaa693b"
+        },
+        {
+          "table_index": 41,
+          "offset": 220300,
+          "size": 26176,
+          "record_sha256": "50b5f9c71cb1a61585e9e4ea04b95191a9db8c0fc068d11b7cc364dfee89fd04",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 124,
+          "code_payload_size": 26042,
+          "code_payload_sha256": "64da1450beee342b2836caadbec5a1d4f0679ea40d948a3d3275515b6d7fb060",
+          "trailing_null_bytes": 0,
+          "text_sha256": "64da1450beee342b2836caadbec5a1d4f0679ea40d948a3d3275515b6d7fb060"
+        },
+        {
+          "table_index": 42,
+          "offset": 246476,
+          "size": 19740,
+          "record_sha256": "05c8e630ece1e7c70117e5b2e0734cf237e6f875fd420ac3ae497f5f34270800",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_ADDITIONAL_LIGHTS",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 124,
+          "code_payload_size": 19605,
+          "code_payload_sha256": "243383d981e5502e2a4f17ca9bbf04882797a50f3685e321cae4824310453445",
+          "trailing_null_bytes": 0,
+          "text_sha256": "243383d981e5502e2a4f17ca9bbf04882797a50f3685e321cae4824310453445"
+        },
+        {
+          "table_index": 43,
+          "offset": 266216,
+          "size": 26072,
+          "record_sha256": "b6b52750c6b71ff8c677ff717b5aacfa2fd284c74a90acf5d07e4c27d21be58d",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_ADDITIONAL_LIGHTS",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 144,
+          "code_payload_size": 25920,
+          "code_payload_sha256": "c99749ff60de9ba03d72116e83ca71d31b3a2a9d7d79d3a1773c25c6d4a1422e",
+          "trailing_null_bytes": 0,
+          "text_sha256": "c99749ff60de9ba03d72116e83ca71d31b3a2a9d7d79d3a1773c25c6d4a1422e"
+        },
+        {
+          "table_index": 44,
+          "offset": 292288,
+          "size": 33692,
+          "record_sha256": "6df16ddcffcee5e91895aba496bccfed2481daf646ffd40e03f4c4cbe3989abe",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 148,
+          "code_payload_size": 33534,
+          "code_payload_sha256": "57501ffc87eda5ac1931f06b10594c118c011f3f14a9133102e23b37d867d1f5",
+          "trailing_null_bytes": 0,
+          "text_sha256": "57501ffc87eda5ac1931f06b10594c118c011f3f14a9133102e23b37d867d1f5"
+        },
+        {
+          "table_index": 45,
+          "offset": 325980,
+          "size": 32416,
+          "record_sha256": "16e6581a5eccd437aa833e4e74dec4ccd01e8bcd7e4f7387ab480e93bde63c76",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_MAIN_LIGHT_SHADOWS_CASCADE",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 128,
+          "code_payload_size": 32279,
+          "code_payload_sha256": "1cccff285395154aa0294d23c81e79dc9172de01fcebad240e181a99ee2cdccb",
+          "trailing_null_bytes": 0,
+          "text_sha256": "1cccff285395154aa0294d23c81e79dc9172de01fcebad240e181a99ee2cdccb"
+        },
+        {
+          "table_index": 46,
+          "offset": 358396,
+          "size": 19076,
+          "record_sha256": "95e702478b9ced6fb2bdf7068bcc7db591b44dc96f1dead779e3e8404e79a6ed",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 128,
+          "code_payload_size": 18940,
+          "code_payload_sha256": "3aecdfb4ee6e706042c1763874476c948c33268245fb6f490f0bb391561fae16",
+          "trailing_null_bytes": 0,
+          "text_sha256": "3aecdfb4ee6e706042c1763874476c948c33268245fb6f490f0bb391561fae16"
+        },
+        {
+          "table_index": 47,
+          "offset": 377472,
+          "size": 17780,
+          "record_sha256": "7a3cccdfed070b1512b081d9f5b9d307adcfd975bb742ec42abfc65e05a6967a",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 108,
+          "code_payload_size": 17663,
+          "code_payload_sha256": "230b0b5f136e22d7701f316b37073eb93a5f5a0e750e5a80089eff41cece7a86",
+          "trailing_null_bytes": 0,
+          "text_sha256": "230b0b5f136e22d7701f316b37073eb93a5f5a0e750e5a80089eff41cece7a86"
+        },
+        {
+          "table_index": 48,
+          "offset": 395252,
+          "size": 33792,
+          "record_sha256": "581c4fd847f91adb99bf18be1ffe9cd395ee51e5db65423395061eeb7fdcff7c",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 128,
+          "code_payload_size": 33656,
+          "code_payload_sha256": "a4948226910fdb61d2c321eb05e0627f4bf742d53a633b99f549004bb93c0161",
+          "trailing_null_bytes": 0,
+          "text_sha256": "a4948226910fdb61d2c321eb05e0627f4bf742d53a633b99f549004bb93c0161"
+        },
+        {
+          "table_index": 49,
+          "offset": 429044,
+          "size": 32520,
+          "record_sha256": "159f2d973005ae48a8063a94b41e7aab0e8b949b617c2da38a8c0ba921fae91f",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_MAIN_LIGHT_SHADOWS_CASCADE",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 108,
+          "code_payload_size": 32401,
+          "code_payload_sha256": "d164b891a7ecc56d544bfab73a0e7a3c32e300b8a19623bfaf6d7b51c418e72e",
+          "trailing_null_bytes": 0,
+          "text_sha256": "d164b891a7ecc56d544bfab73a0e7a3c32e300b8a19623bfaf6d7b51c418e72e"
+        },
+        {
+          "table_index": 50,
+          "offset": 461564,
+          "size": 19180,
+          "record_sha256": "61d9c419cb9d28423344a794684aaae0d5872b57dca92a21c6c370a3833d5936",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 108,
+          "code_payload_size": 19062,
+          "code_payload_sha256": "477525fb0f508fcf8d6f479dc1c6be36bc614c8a8d5227261f517b934791117d",
+          "trailing_null_bytes": 0,
+          "text_sha256": "477525fb0f508fcf8d6f479dc1c6be36bc614c8a8d5227261f517b934791117d"
+        },
+        {
+          "table_index": 51,
+          "offset": 480744,
+          "size": 17884,
+          "record_sha256": "83695d1401193ce36de8cca9a8201be0ce693fb7a757ef412a3dd007bb96e147",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 88,
+          "code_payload_size": 17785,
+          "code_payload_sha256": "1c0a3f9f7940424934688ec77c2dd3843f659363ed6aa4989b3d1c331f6ac591",
+          "trailing_null_bytes": 0,
+          "text_sha256": "1c0a3f9f7940424934688ec77c2dd3843f659363ed6aa4989b3d1c331f6ac591"
+        },
+        {
+          "table_index": 52,
+          "offset": 498628,
+          "size": 21376,
+          "record_sha256": "bf5900120ff7c2af13123ab080bfc98a12e25a7402ecce83690539735ccd8280",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 112,
+          "code_payload_size": 21253,
+          "code_payload_sha256": "ef36cf238a3b98a48ce12476aed819272273bd6f3dd908c095d0352badaf1eff",
+          "trailing_null_bytes": 0,
+          "text_sha256": "ef36cf238a3b98a48ce12476aed819272273bd6f3dd908c095d0352badaf1eff"
+        },
+        {
+          "table_index": 53,
+          "offset": 520004,
+          "size": 27676,
+          "record_sha256": "0fbb27646d05ae42dc9f72d1c560266d32b5dd32886b8874e70d8a973194408c",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_ADDITIONAL_LIGHTS",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 132,
+          "code_payload_size": 27534,
+          "code_payload_sha256": "230211ea8e3a80e43fe181b393f9c5a2894b62d326985b5efe5ab048f784c22c",
+          "trailing_null_bytes": 0,
+          "text_sha256": "230211ea8e3a80e43fe181b393f9c5a2894b62d326985b5efe5ab048f784c22c"
+        },
+        {
+          "table_index": 54,
+          "offset": 547680,
+          "size": 21272,
+          "record_sha256": "21427dc7b7d72e16f277cd8bcdfa48df54fd1a961bd534944b537a6f523f35bd",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_ADDITIONAL_LIGHTS",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 132,
+          "code_payload_size": 21131,
+          "code_payload_sha256": "f8a47f0103d91fff0a91607fe2653a79e3f31669f21ed5ad2a25e532babba6b3",
+          "trailing_null_bytes": 0,
+          "text_sha256": "f8a47f0103d91fff0a91607fe2653a79e3f31669f21ed5ad2a25e532babba6b3"
+        },
+        {
+          "table_index": 55,
+          "offset": 568952,
+          "size": 27572,
+          "record_sha256": "ab5111d496d47b0dc30961e73911a7ae070222b7f1dadf454f6c46ddc0f7f3f9",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_ADDITIONAL_LIGHTS",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS_CASCADE"
+          ],
+          "code_offset_in_record": 152,
+          "code_payload_size": 27412,
+          "code_payload_sha256": "6c9a0e42e63082b06bbf02d93087cff40de9c674f12f19413ad27bd48e23789b",
+          "trailing_null_bytes": 0,
+          "text_sha256": "6c9a0e42e63082b06bbf02d93087cff40de9c674f12f19413ad27bd48e23789b"
+        },
+        {
+          "table_index": 56,
+          "offset": 596524,
+          "size": 32188,
+          "record_sha256": "55c4da9af45544a805a1fc1e1e478b523cb336ebac27959afb44fb987e0d5699",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 140,
+          "code_payload_size": 32040,
+          "code_payload_sha256": "37dd2317c82b2a21bbed012b8b9bb774bbeee0313fd86d1e02e28425a1ba81dc",
+          "trailing_null_bytes": 0,
+          "text_sha256": "37dd2317c82b2a21bbed012b8b9bb774bbeee0313fd86d1e02e28425a1ba81dc"
+        },
+        {
+          "table_index": 57,
+          "offset": 628712,
+          "size": 30868,
+          "record_sha256": "f344a11f93cd6930990e5be8e008251000c03f8f25b3d313586ef85eb2999360",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_MAIN_LIGHT_SHADOWS",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 120,
+          "code_payload_size": 30737,
+          "code_payload_sha256": "5eabe6e50ea551d3acdfb9df57dfea87d0084f9086c822053d04b57799841eb0",
+          "trailing_null_bytes": 0,
+          "text_sha256": "5eabe6e50ea551d3acdfb9df57dfea87d0084f9086c822053d04b57799841eb0"
+        },
+        {
+          "table_index": 58,
+          "offset": 659580,
+          "size": 17500,
+          "record_sha256": "553b39a7b4417e9db00a9dc7d75c767dfd8fcbe6f63e56da97a532107feda4a5",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 120,
+          "code_payload_size": 17371,
+          "code_payload_sha256": "01dc2b86bbf1b62a037cc085f69f3e76c764560aa49a3b2bc607248523540389",
+          "trailing_null_bytes": 0,
+          "text_sha256": "01dc2b86bbf1b62a037cc085f69f3e76c764560aa49a3b2bc607248523540389"
+        },
+        {
+          "table_index": 59,
+          "offset": 677080,
+          "size": 16208,
+          "record_sha256": "c8b8e5d3328a8f01a63a11ac13b728daa14285e6ebdfe9d07fbdc83dd6f34015",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "INSTANCING_ON",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 100,
+          "code_payload_size": 16100,
+          "code_payload_sha256": "fb8947c92d73eddc732875666d5362fa1194c1959fd9b5479852c45bcae81530",
+          "trailing_null_bytes": 0,
+          "text_sha256": "fb8947c92d73eddc732875666d5362fa1194c1959fd9b5479852c45bcae81530"
+        },
+        {
+          "table_index": 60,
+          "offset": 693288,
+          "size": 32292,
+          "record_sha256": "c4cd279967f35196204fcb308c2b6ae51184370b30eb265494730a887cce1386",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 120,
+          "code_payload_size": 32162,
+          "code_payload_sha256": "946e01b6e021a2de9b1270d2d33361cdd3a9378fa80dcaa6fee9b34319e6d442",
+          "trailing_null_bytes": 0,
+          "text_sha256": "946e01b6e021a2de9b1270d2d33361cdd3a9378fa80dcaa6fee9b34319e6d442"
+        },
+        {
+          "table_index": 61,
+          "offset": 725580,
+          "size": 30968,
+          "record_sha256": "3da89d0ff606b06a0ddc8e74596b01d8773e5680bf932d0801dac9f09953b6c3",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_MAIN_LIGHT_SHADOWS",
+            "_SHADOWS_SOFT"
+          ],
+          "code_offset_in_record": 100,
+          "code_payload_size": 30859,
+          "code_payload_sha256": "bb73138e2d3bec69cdb217f439f249f334d17a1690780a3feca10879b72cfc58",
+          "trailing_null_bytes": 0,
+          "text_sha256": "bb73138e2d3bec69cdb217f439f249f334d17a1690780a3feca10879b72cfc58"
+        },
+        {
+          "table_index": 62,
+          "offset": 756548,
+          "size": 17604,
+          "record_sha256": "93e435db3bfec42b6469ba2c7fedd93a574b195f3200bb6506f62f722f5b37ff",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_LIGHT_COOKIES",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 100,
+          "code_payload_size": 17493,
+          "code_payload_sha256": "6d5025f72b9429b1b2dc2df46dfdcea7d6fa28a2d0f08ddef90f57d19013eb9e",
+          "trailing_null_bytes": 0,
+          "text_sha256": "6d5025f72b9429b1b2dc2df46dfdcea7d6fa28a2d0f08ddef90f57d19013eb9e"
+        },
+        {
+          "table_index": 63,
+          "offset": 774152,
+          "size": 16312,
+          "record_sha256": "e2294ca2b09d0ec7f2a1f25ee4dbb32540be37c308fc02c3b08cd233a87842fe",
+          "keywords": [
+            "EVALUATE_SH_VERTEX",
+            "_MAIN_LIGHT_SHADOWS"
+          ],
+          "code_offset_in_record": 80,
+          "code_payload_size": 16222,
+          "code_payload_sha256": "b9bde265405af0d2b6353d743ea98175ac3dada8f42ff7aae8e538740a41d31b",
+          "trailing_null_bytes": 0,
+          "text_sha256": "b9bde265405af0d2b6353d743ea98175ac3dada8f42ff7aae8e538740a41d31b"
+        },
+        {
+          "table_index": 66,
+          "offset": 791296,
+          "size": 4796,
+          "record_sha256": "70545f18d1edc0837ea9d4cf7cecd131f469796341266c9688f29ecde1722cc5",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 4755,
+          "code_payload_sha256": "be065e2586bc69a69bf0013aca172a94e52299e15db3c7d67e3703a69d32c7b8",
+          "trailing_null_bytes": 0,
+          "text_sha256": "be065e2586bc69a69bf0013aca172a94e52299e15db3c7d67e3703a69d32c7b8"
+        },
+        {
+          "table_index": 67,
+          "offset": 796092,
+          "size": 3660,
+          "record_sha256": "5bd86c911dc01f6697374b30973754bfae49a19be803e617dc6453ba2f164806",
+          "keywords": [
+            "INSTANCING_ON"
+          ],
+          "code_offset_in_record": 52,
+          "code_payload_size": 3597,
+          "code_payload_sha256": "40ac1eb42b2edf046f21eb081cd610474b12fd8c9e2ef3621608144a565a4cd5",
+          "trailing_null_bytes": 0,
+          "text_sha256": "40ac1eb42b2edf046f21eb081cd610474b12fd8c9e2ef3621608144a565a4cd5"
+        },
+        {
+          "table_index": 70,
+          "offset": 800916,
+          "size": 8448,
+          "record_sha256": "ba9e387cceb89de1329116e32eb2f4d8b0ea68c7378d64e5f1b859a3d577d614",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 8406,
+          "code_payload_sha256": "c68282119909791ec1da00f287b5d6716b103fd118f5866dfe19e2c2a5e031e1",
+          "trailing_null_bytes": 0,
+          "text_sha256": "c68282119909791ec1da00f287b5d6716b103fd118f5866dfe19e2c2a5e031e1"
+        },
+        {
+          "table_index": 71,
+          "offset": 809364,
+          "size": 9932,
+          "record_sha256": "8220e316611a590e8dbef91b184bfa59c031cdc20e7328dc35f172c3f0edb914",
+          "keywords": [
+            "INSTANCING_ON"
+          ],
+          "code_offset_in_record": 52,
+          "code_payload_size": 9872,
+          "code_payload_sha256": "d6b396062e5c03934a05f2310aaad79600aa20c0a60828c8ea2fe1251f891c9e",
+          "trailing_null_bytes": 0,
+          "text_sha256": "d6b396062e5c03934a05f2310aaad79600aa20c0a60828c8ea2fe1251f891c9e"
+        },
+        {
+          "table_index": 74,
+          "offset": 819912,
+          "size": 3664,
+          "record_sha256": "e9bbe4680bc2c4d774621179c165ecbcbad1d998d03e19ffd63da9a4c0b6de13",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 3621,
+          "code_payload_sha256": "16659daab6c3e64d83bb57a847367e56c5d1ec99d8813dc32d64ced2998a3fed",
+          "trailing_null_bytes": 0,
+          "text_sha256": "16659daab6c3e64d83bb57a847367e56c5d1ec99d8813dc32d64ced2998a3fed"
+        },
+        {
+          "table_index": 75,
+          "offset": 823576,
+          "size": 2400,
+          "record_sha256": "ba099756409d095967af2f7177e5731733f3dfa8a5347896c682f2b42db1f5d3",
+          "keywords": [
+            "INSTANCING_ON"
+          ],
+          "code_offset_in_record": 52,
+          "code_payload_size": 2338,
+          "code_payload_sha256": "c8f0b6e10a2c0cd10f082b619de1c622a1f4558ef3558b093656d668f90d66a6",
+          "trailing_null_bytes": 0,
+          "text_sha256": "c8f0b6e10a2c0cd10f082b619de1c622a1f4558ef3558b093656d668f90d66a6"
+        },
+        {
+          "table_index": 77,
+          "offset": 826248,
+          "size": 4964,
+          "record_sha256": "6734d6d8cf51d283d50e20369aa3ba8c59c59bc53c5c5bb09e5b56fa09e8991c",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 4924,
+          "code_payload_sha256": "22c6c1a378e9ee32cd559bce4d8daeee7f92b571eaff03c9a9ad3cadccb52ddc",
+          "trailing_null_bytes": 0,
+          "text_sha256": "22c6c1a378e9ee32cd559bce4d8daeee7f92b571eaff03c9a9ad3cadccb52ddc"
+        },
+        {
+          "table_index": 78,
+          "offset": 831212,
+          "size": 3936,
+          "record_sha256": "52e3437dc8a6c8cb925013de5af04a6f145e81ed3f3e9beca4878aeca594be36",
+          "keywords": [
+            "INSTANCING_ON"
+          ],
+          "code_offset_in_record": 52,
+          "code_payload_size": 3875,
+          "code_payload_sha256": "826ba1a19e3226683134a85351a9ff857543366fa7e2a0a45444121cc368a1a0",
+          "trailing_null_bytes": 0,
+          "text_sha256": "826ba1a19e3226683134a85351a9ff857543366fa7e2a0a45444121cc368a1a0"
+        },
+        {
+          "table_index": 80,
+          "offset": 835944,
+          "size": 11404,
+          "record_sha256": "9c80232522a098f6e4ce0dc784f576a1d4bfaa8ebef7f5a2c8a0db97e8159c3f",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 11363,
+          "code_payload_sha256": "90dc3dfcc6ce6488130720f1fc73bb7d836e36ee32b235b6c1aa49700a7c74f9",
+          "trailing_null_bytes": 0,
+          "text_sha256": "90dc3dfcc6ce6488130720f1fc73bb7d836e36ee32b235b6c1aa49700a7c74f9"
+        },
+        {
+          "table_index": 82,
+          "offset": 847824,
+          "size": 9304,
+          "record_sha256": "fbe0cf45b632d5993121acfa0cf74c4596374705ab3c93c5f54384fd4bd1687f",
+          "keywords": [],
+          "code_offset_in_record": 32,
+          "code_payload_size": 9261,
+          "code_payload_sha256": "5d12bad71e7ba8e924809296bd2c37fc22263d93c9f2bdb6f94215993b0cb569",
+          "trailing_null_bytes": 0,
+          "text_sha256": "5d12bad71e7ba8e924809296bd2c37fc22263d93c9f2bdb6f94215993b0cb569"
+        }
+      ],
+      "gles_table_count": 83
+    }
+  ],
+  "materials": [
+    {
+      "name": "CandyMask",
+      "asset_file": "40fa64cf58438214b86ae7030179bcde",
+      "raw_sha256": "565c8c326911a9ac0d6db1e769d2a8dc3ecf6f48722f2b13265bfa64f9376687",
+      "shader": {
+        "file_id": 1,
+        "path_id": 1,
+        "asset_file": "bbeb306cba1a5dc43b4c575787252a85"
+      },
+      "floats": {
+        "_AlphaClip": 1.0,
+        "_AlphaToMask": 1.0,
+        "_Blend": 0.0,
+        "_BlendModePreserveSpecular": 1.0,
+        "_CastShadows": 1.0,
+        "_Cull": 2.0,
+        "_DstBlend": 0.0,
+        "_DstBlendAlpha": 0.0,
+        "_Emission": 0.10000000149011612,
+        "_Float": 0.0,
+        "_QueueControl": 0.0,
+        "_QueueOffset": 0.0,
+        "_ReceiveShadows": 1.0,
+        "_SrcBlend": 1.0,
+        "_SrcBlendAlpha": 1.0,
+        "_Surface": 0.0,
+        "_TIleCount": 1.0,
+        "_WorkflowMode": 1.0,
+        "_XRMotionVectorsPass": 1.0,
+        "_ZTest": 4.0,
+        "_ZWrite": 1.0,
+        "_ZWriteControl": 0.0
+      },
+      "keywords": [
+        "_ALPHATEST_ON"
+      ],
+      "textures": [
+        {
+          "property": "_SampleTexture2D_97763961ab1e444eaf19fa9c2c67494e_Texture_1_Texture2D",
+          "texture": {
+            "file_id": 2,
+            "path_id": 1,
+            "asset_file": "a9f8492504bde4c45a180e6b35ddc13e"
+          },
+          "name": "Marshmellow_Tex",
+          "width": 128,
+          "height": 128,
+          "color_space": 1,
+          "wrap_u": 0,
+          "wrap_v": 0
+        },
+        {
+          "property": "unity_Lightmaps",
+          "texture": {
+            "file_id": 0,
+            "path_id": 0,
+            "asset_file": "40fa64cf58438214b86ae7030179bcde"
+          }
+        },
+        {
+          "property": "unity_LightmapsInd",
+          "texture": {
+            "file_id": 0,
+            "path_id": 0,
+            "asset_file": "40fa64cf58438214b86ae7030179bcde"
+          }
+        },
+        {
+          "property": "unity_ShadowMasks",
+          "texture": {
+            "file_id": 0,
+            "path_id": 0,
+            "asset_file": "40fa64cf58438214b86ae7030179bcde"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pack_Mat",
+      "asset_file": "cd1b53f79453f0248b5e74462d2b7ddd",
+      "raw_sha256": "d53fb4100ca0a88e795af018d39b578ce1d8b4e5d52daff76a05bf34c2b396b2",
+      "shader": {
+        "file_id": 1,
+        "path_id": 1,
+        "asset_file": "4375d94f9cc0ce645bfcd7a9f551bfc5"
+      },
+      "floats": {
+        "_AlphaClip": 0.0,
+        "_Blend": 0.0,
+        "_BumpScale": 1.0,
+        "_CastShadows": 1.0,
+        "_ClearCoatMask": 0.0,
+        "_ClearCoatSmoothness": 0.0,
+        "_Cull": 2.0,
+        "_Cutoff": 0.5,
+        "_DetailAlbedoMapScale": 1.0,
+        "_DetailNormalMapScale": 1.0,
+        "_DstBlend": 0.0,
+        "_Emission": 0.0,
+        "_EmissionIntensity": 0.800000011920929,
+        "_EnvironmentReflections": 1.0,
+        "_GlossMapScale": 0.0,
+        "_Glossiness": 0.0,
+        "_GlossyReflections": 0.0,
+        "_MaskIntensity": 0.44999998807907104,
+        "_Mask_Intensity": 0.7200000286102295,
+        "_Mask_Move": 0.0,
+        "_Masked_Intensity": 0.0,
+        "_MatCapIntensity": 5.489999771118164,
+        "_MatcapIntensity": 5.739999771118164,
+        "_Metallic": 0.0,
+        "_OcclusionStrength": 1.0,
+        "_Parallax": 0.004999999888241291,
+        "_QueueControl": 0.0,
+        "_QueueOffset": 0.0,
+        "_ROtate": 2.4100000858306885,
+        "_ReceiveShadows": 1.0,
+        "_Roationx": 0.0,
+        "_Rotate": 2.9700000286102295,
+        "_Rotation": 0.0,
+        "_Smoothness": 0.5,
+        "_SmoothnessTextureChannel": 0.0,
+        "_SpecularHighlights": 1.0,
+        "_SrcBlend": 1.0,
+        "_Surface": 0.0,
+        "_WorkflowMode": 1.0,
+        "_XRMotionVectorsPass": 1.0,
+        "_ZTest": 4.0,
+        "_ZWrite": 1.0,
+        "_ZWriteControl": 0.0,
+        "_ro": -80.0
+      },
+      "keywords": [],
+      "textures": [
+        {
+          "property": "_Mask",
+          "texture": {
+            "file_id": 2,
+            "path_id": 1,
+            "asset_file": "de1bca887fde8434e938e61bba8e16e2"
+          },
+          "name": "Mask",
+          "width": 128,
+          "height": 128,
+          "color_space": 0,
+          "wrap_u": 0,
+          "wrap_v": 0
+        },
+        {
+          "property": "_Primary_MatCap",
+          "texture": {
+            "file_id": 3,
+            "path_id": 1,
+            "asset_file": "14adde1c965d5ae449b18894e9ad155f"
+          },
+          "name": "Bronze_Matcap",
+          "width": 256,
+          "height": 256,
+          "color_space": 1,
+          "wrap_u": 0,
+          "wrap_v": 0
+        },
+        {
+          "property": "_Texture_Map",
+          "texture": {
+            "file_id": 4,
+            "path_id": 1,
+            "asset_file": "b1108ef6cbe2a484d9bd9a2697c0bbe5"
+          },
+          "name": "Jelly_Tex",
+          "width": 256,
+          "height": 256,
+          "color_space": 1,
+          "wrap_u": 0,
+          "wrap_v": 0
+        },
+        {
+          "property": "unity_Lightmaps",
+          "texture": {
+            "file_id": 0,
+            "path_id": 0,
+            "asset_file": "cd1b53f79453f0248b5e74462d2b7ddd"
+          }
+        },
+        {
+          "property": "unity_LightmapsInd",
+          "texture": {
+            "file_id": 0,
+            "path_id": 0,
+            "asset_file": "cd1b53f79453f0248b5e74462d2b7ddd"
+          }
+        },
+        {
+          "property": "unity_ShadowMasks",
+          "texture": {
+            "file_id": 0,
+            "path_id": 0,
+            "asset_file": "cd1b53f79453f0248b5e74462d2b7ddd"
+          }
+        }
+      ]
+    }
+  ],
+  "candy_mesh": {
+    "asset_file": "3900356ecc4fa3e42bfda8bd296a032d",
+    "path_id": 1,
+    "raw_sha256": "97764f3c0eea2434d3e799d6ec3d86e9bded25f0e8dcda2b70dc607d4ebcd099",
+    "vertex_count": 4848,
+    "uv1_y_min": 0.0,
+    "uv1_y_max": 0.9999999403953552,
+    "local_y_min": 2.3611902122411266e-07,
+    "local_y_max": 13.331256866455078,
+    "uv1_y_linear_fit": {
+      "slope": 0.07501167675875035,
+      "intercept": 3.524469759825722e-08,
+      "max_error": 2.687390021627323e-07
+    }
+  }
+}

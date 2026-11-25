@@ -4,6 +4,8 @@
 
 2026-11-25 深入还原见[表现实现：蛇、果冻、无人机与糖果机](SPECIAL_CELL_VISUAL_IMPLEMENTATION.md)：已补齐蛇的三次插值和卷筒公式、39 个骨骼采样组件及资源覆盖值、果冻反序分片和 0.5 秒反馈链、无人机分阶段时间线、糖果长网格的总量/材质驱动。下文早期“未知”以新文所列已闭合范围为准；原始 Shader、弹簧细节及实机观感仍未验证。
 
+后续[Shader 专项](SHADER_EFFECT_RECOVERY.md)已补出果冻发光与糖果 UV 裁切的原始计算及材质引用，保留代表性 GLES3 程序；剩余为 Unity 迁移和实机观感验证。
+
 ## 蛇身和蛇尾（25 / 26）
 
 蛇身、蛇尾是同 ID 的多个逻辑格；蛇尾表现对象根据同组蛇身的邻接关系和 Cost 建立路径，再以样条控制整条蛇收卷。一次邻接消除可让同组各节推进；蛇身各自 Cost 归零后释放，蛇尾收到底后触发王冠收集。详见 [Snake 玩法及表现](SPECIAL_CELL_MOVEMENT.md)。
@@ -122,7 +124,7 @@ Cup [Animator]
 
 ## 糖果机与糖果格（53 / 54）
 
-糖果格记录同组 ID 和剩余容量，糖果机按 ID 找目标并驱动收集动画。2026-11-25 已确认机器内长网格按绑定糖果格的 Cost 总和移动并更新 `_TIleCount`，另实例化糖果颗粒飞向 HUD；支持整体网格表达多格剩余量。精确裁切和格边界尚待原始 Shader 还原，见[糖果机实现](SPECIAL_CELL_VISUAL_IMPLEMENTATION.md#5-糖果机长糖果主网格和收集用小糖果已分清)。目标顺序见 [糖果规则](SPECIAL_CELL_COLLECTION.md)。
+糖果格记录同组 ID 和剩余容量，糖果机按 ID 找目标并驱动收集动画。2026-11-25 已确认机器内长网格按绑定糖果格的 Cost 总和移动并更新 `_TIleCount`，另实例化糖果颗粒飞向 HUD；支持整体网格表达多格剩余量。后续[Shader 专项](SHADER_EFFECT_RECOVERY.md)已还原裁切公式和第二套 UV 的长度映射，Unity 接入和实际格边界的画面对照尚未完成。目标顺序见 [糖果规则](SPECIAL_CELL_COLLECTION.md)。
 
 [CandyMachineHex.prefab](../../extracted_game_models/ExportedProject/Assets/GameObject/CandyMachineHex.prefab) 静态层级：
 

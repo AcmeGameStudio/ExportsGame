@@ -12,6 +12,8 @@
 
 2026-11-25 继续深入的[特殊玩法表现实现还原](SPECIAL_CELL_VISUAL_IMPLEMENTATION.md)，包含蛇的骨骼采样/卷筒公式、果冻数组与延迟反馈、无人机飞行/掉块时间线、糖果长网格与材质驱动，以及原始 Shader 占位的恢复缺口；附 178 段方法及 49 个原始组件证据。
 
+后续已从原始压缩程序解析[果冻发光与糖果遮罩](SHADER_EFFECT_RECOVERY.md)：恢复糖果第二套 UV 的裁切公式、果冻 MatCap/旋转移动遮罩/自发光，并保存原始 GLES3 代表变体。占位导出不代表原始程序丢失；Unity 接入与画面对拍仍未完成。
+
 运行时 Cell/CellData/Block 的字段、颜色位编码、格内堆叠顺序与排序快照结构，见[运行时格子数据结构](RUNTIME_CELL_DATA.md)；可复核的完整类型与偏移见[RUNTIME_CELL_LAYOUT.json](RUNTIME_CELL_LAYOUT.json)。
 
 按关卡字段判断模式、胜利目标、机关和 Catalog 变体，见 [关卡玩法判定](LEVEL_GAMEPLAY_CLASSIFICATION.md)。

@@ -2,6 +2,8 @@
 
 分析日期：2026-11-25。对象：Hexa Sort 6.2.20，ARM64 样本 SHA256 `56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02`。
 
+后续更新：本页初版已提交为 `135948e`；[果冻发光与糖果遮罩专项](SHADER_EFFECT_RECOVERY.md)已经从原始 GLES3 程序补出核心公式，更新了下文 Shader 的未决范围。Unity 接入与原版画面对拍仍未完成。
+
 这轮把前一版的“有什么模型”推进到“哪些数据驱动哪些对象、怎样变化、何时回调”。证据来自原始 Unity 序列化文件、v39 metadata、IL2CPP 指令及导出动画。**未运行原版画面对拍，也未把这些表现接入复刻项目。**“确认”指静态证据闭合；涉及最终观感和 Shader 像素结果仍另列未决。
 
 - [178 段方法指令](SpecialVisualImplementation.asm)、[字段/方法/常量/字符串记录](SPECIAL_CELL_VISUAL_IMPLEMENTATION.json)。方法范围按下一不同的 Assembly-CSharp 方法指针截取，保留共享地址别名，不等价于恢复完整源码。
@@ -15,7 +17,7 @@
 | 蛇 25/26 | 多格同 ID、各段 Cost、尾格最大长度 | 尾格持有整条 SkinnedMesh、39 个采样组件和控制点容器 | 收缩改变整条蛇的采样跨度；蛇身逻辑格不各自渲染一段网格 |
 | 果冻 35 | Rotation、Segments、JelliesStatus[] | 外层 JellyHex 动态创建二片或三片 JellyBlock | 方向索引必须对应原始序列化数组，不能按物体名称排序 |
 | 无人机 30/31/32 | 站点 ID、Cost、当前承接状态 | 接收器管理飞行对象，飞行根、机身、携带块、掉落复制块分开 | 起飞、掉块、目标接管、最终收集有不同回调时点 |
-| 糖果 53/54 | 同 ID 糖果格的剩余 Cost 总和 | 一个机器内的长网格随总量移动/修改材质，另实例化飞向 HUD 的糖果 | 本轮确认主网格受总量控制；原始 Shader 裁切公式仍缺失 |
+| 糖果 53/54 | 同 ID 糖果格的剩余 Cost 总和 | 一个机器内的长网格随总量移动/修改材质，另实例化飞向 HUD 的糖果 | 主网格受总量控制；裁切公式已在后续 Shader 专项恢复 |
 
 ```mermaid
 flowchart LR
@@ -200,7 +202,7 @@ Animator `Drone.controller` 负责 Start/Loop、Start_Slow/Loop_Slow、End 等�
 
 本轮确认机器持有的 `CandyMesh` 是 `Marshmellow_Candy` renderer，材质是 **CandyMask**，其网格局部包围盒 Y 总长约 **13.3313**，没有 BlendShape。机器还引用独立 `Marshmellow_Piece`（CandyMachineCandy + HexCollectionAnimation）作为弹出收集对象。
 
-`CandyCellState` 构造函数中的两个间接调用现已展开为 `ICellStateContext.GetAdditionalParam`（slot22）和 `SetCellMeshState`（slot13）；这两个调用不创建单格糖果模型。结合下面的总量更新，已经有证据支持：**机器用一份长糖果网格表达绑定糖果格的整体剩余长度，飞出去的颗粒另生成。** 尚未恢复 Shader 内的可见边界计算，也未排除其他未追踪入口对格子添加装饰。
+`CandyCellState` 构造函数中的两个间接调用现已展开为 `ICellStateContext.GetAdditionalParam`（slot22）和 `SetCellMeshState`（slot13）；这两个调用不创建单格糖果模型。结合下面的总量更新，已经有证据支持：**机器用一份长糖果网格表达绑定糖果格的整体剩余长度，飞出去的颗粒另生成。** Shader 可见边界已在后续专项补出，仍未排除其他未追踪入口对格子添加装饰。
 
 ### 5.2 长度变化实际是移动加材质参数
 
@@ -227,11 +229,11 @@ CandyMesh.material.SetFloat("_TIleCount", N * 0.5)
 
 其中 `0x2116014` 有跳到界外代码块 `0x411efa8` 的分支，本轮未把这个外置块完整展开；因此不把弹出物的所有随机/缓动细节称为已还原。已闭合的是独立对象身份、主网格总量驱动、三项联动和收集委托。
 
-### 5.4 Shader 仍是最具体的缺口
+### 5.4 Shader 导出占位，原始公式已在后续恢复
 
-导出 `Shader Graphs_Candymask.shader` 声明 `_TIleCount`，原始 CandyMask 启用了 AlphaClip。但导出的 Shader 主体带 **DummyShaderTextExporter**，片元只返回白色，没有原始裁切逻辑。上述 N/2 和位移可确认，**N/2 如何变成屏幕中的准确长度、端面与边缘，仍须反解编译 Shader 或原版逐档画面对照**。
+导出 `Shader Graphs_Candymask.shader` 主体带 **DummyShaderTextExporter**，片元只返回白色。后续直接读取原始资产保留的 GLES3 编译程序，已确认裁切近似为 **第二套 UV.y > 1 - N/14**，并恢复 AlphaToMask 分支；精确 float 常量、比较边界及原始程序见[Shader 专项](SHADER_EFFECT_RECOVERY.md)。片元裁切不生成新封口面。
 
-果冻的 `Shader Graphs_Jelly_glow.shader` 也有同样占位问题。可提取纹理、网格和材质参数，不等于可直接还原发光/遮罩。果冻 GlowEffect 动画还带属性绑定占位名，导入后需单独核对绑定。
+果冻的导出文件也有同样占位问题，但原始程序已恢复 MatCap、旋转/移动遮罩、混色与自发光的核心计算。剩余工作是 ShaderLab 迁移、动画绑定和画面对拍；不能直接使用占位导出，也不能把已提取公式等同于已经完成 Unity 效果。
 
 ## 6. 可落地的实现顺序与验证边界
 
@@ -240,9 +242,9 @@ CandyMesh.material.SetFloat("_TIleCount", N * 0.5)
 1. 蛇：正确路径顺序 → 39 个编号采样 → 长度变化 → UV/BigRoll/位移 → 王冠回调。先检查弯角连续性和连续命中重启，不能只看直线路径。
 2. 果冻：Segments 选型和原始数组 → bool 恢复 → 两个材质槽 → 0.5 秒命中阶段 → Boing/Punch → 粒子回调。重点核对二片版反序，以及视觉未隐藏时重复命中的逻辑去重。
 3. 无人机：控制器/站点归属 → 根与机身坐标 → 携带显示块 → 独立掉落复制块 → 阶段委托 → HUD。重点记录 1.1 秒视觉落底与 1.2 秒业务回调的差别。
-4. 糖果：N 总量和机器朝向 → 主网格位移/90°进料 → 可工作的遮罩 Shader → 独立收集糖果。Shader 精确恢复之前，只能称为近似外观。
+4. 糖果：N 总量和机器朝向 → 主网格位移/90°进料 → 按后续原始公式实现 UV 裁切及 AlphaTest → 独立收集糖果。完成接入及对拍前不宣称与原版画面一致。
 
-本轮静态复核能够确认参数和调用关系，不能确认原版设备的材质实例覆盖、动画与 Update 的实际执行先后、所有 timeScale 情形或多机关并发观感。BoingBones 的完整弹簧参数、糖果外置代码块、原始 Shader 和画面对拍是明确剩余项；柜子六杯映射、其他机关逻辑及异步提交合同继续参考已有专项文档。
+本轮静态复核能够确认参数和调用关系，不能确认原版设备的材质实例覆盖、动画与 Update 的实际执行先后、所有 timeScale 情形或多机关并发观感。BoingBones 的完整弹簧参数、糖果外置代码块、Shader 的 Unity 迁移和画面对拍是明确剩余项；柜子六杯映射、其他机关逻辑及异步提交合同继续参考已有专项文档。
 
 复核命令（Python 环境需有兼容版本的 Capstone 和 UnityPy）：
 
