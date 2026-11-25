@@ -1,5 +1,7 @@
 # 2026-11-23 模拟器只读取证
 
+> 2026-11-25补充：本文以下“骰子实验缺失”限定于当时收录的31条记录。后续183行日志已取得一次邻消→pending→点数2→目标入账→清待入账值的完整链，见[复核 §6](SPECIAL_CELL_SOURCE_TARGET_AUDIT.md#6-补入的骰子动态证据)及其机器记录；未证明多骰子或中断恢复。
+
 ## 环境与采集范围
 
 设备emulator-5554，Android arm64，原版包com.gamebrain.hexasort，versionName=6.2.20、versionCode=1281447；本轮游戏PID16901。关卡1254、骰子由用户报告，尚未用运行时关卡Hash独立核对。已对设备实际加载路径下的libil2cpp.so计算SHA256，结果为56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02，与本地静态样本完全一致。

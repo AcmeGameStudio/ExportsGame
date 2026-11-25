@@ -1,0 +1,1038 @@
+{
+  "scope": "Hexa 6.2.20 static assets and metadata, no live validation",
+  "layouts": {
+    "Gameplay.CupboardHex": {
+      "name": "Gameplay.CupboardHex",
+      "type_definition_index": 2404,
+      "instance_size": "0x68",
+      "fields": [
+        {
+          "name": "CupsAnimator",
+          "type": "UnityEngine.Animator[]",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4003524"
+        },
+        {
+          "name": "Animator",
+          "type": "UnityEngine.Animator",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003525"
+        },
+        {
+          "name": "ReValidateSorting",
+          "type": "UM.Events.GameEvent",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003526"
+        },
+        {
+          "name": "Icon",
+          "type": "UnityEngine.Sprite",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003527"
+        },
+        {
+          "name": "Color",
+          "type": "UnityEngine.Color",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4003528"
+        },
+        {
+          "name": "_feedbacksInstance",
+          "type": "Feedbacks",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x4003529"
+        },
+        {
+          "name": "CUP_SHATTER_HASH",
+          "type": "int",
+          "offset": "0x58",
+          "storage": "instance",
+          "token": "0x400352a"
+        },
+        {
+          "name": "IMPACT_HASH",
+          "type": "int",
+          "offset": "0x5c",
+          "storage": "instance",
+          "token": "0x400352b"
+        },
+        {
+          "name": "DETACH_DOOR_HASH",
+          "type": "int",
+          "offset": "0x60",
+          "storage": "instance",
+          "token": "0x400352c"
+        },
+        {
+          "name": "CUPBOARD_SHATTER_HASH",
+          "type": "int",
+          "offset": "0x64",
+          "storage": "instance",
+          "token": "0x400352d"
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_Feedbacks",
+          "token": "0x60038c8",
+          "rva": "0x211e8b4"
+        },
+        {
+          "name": "Init",
+          "token": "0x60038c9",
+          "rva": "0x211e8f4"
+        },
+        {
+          "name": "CostUpdated",
+          "token": "0x60038ca",
+          "rva": "0x211ea78"
+        },
+        {
+          "name": "DelayedPick",
+          "token": "0x60038cb",
+          "rva": "0x211eb98"
+        },
+        {
+          "name": "CupCollectionAnim",
+          "token": "0x60038cc",
+          "rva": "0x211ec90"
+        },
+        {
+          "name": "BreakDoors",
+          "token": "0x60038cd",
+          "rva": "0x211e930"
+        },
+        {
+          "name": "PlayShatterAnimation",
+          "token": "0x60038ce",
+          "rva": "0x211ed84"
+        },
+        {
+          "name": "EnableCups",
+          "token": "0x60038cf",
+          "rva": "0x211e99c"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x60038d0",
+          "rva": "0x211ee40"
+        }
+      ]
+    },
+    "Gameplay.CandyMachineHex": {
+      "name": "Gameplay.CandyMachineHex",
+      "type_definition_index": 2375,
+      "instance_size": "0x88",
+      "fields": [
+        {
+          "name": "CandyMesh",
+          "type": "UnityEngine.MeshRenderer",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x40034a8"
+        },
+        {
+          "name": "CandyGlowMesh",
+          "type": "UnityEngine.MeshRenderer",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x40034a9"
+        },
+        {
+          "name": "CandyParent",
+          "type": "UnityEngine.Transform",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x40034aa"
+        },
+        {
+          "name": "CandyAnimator",
+          "type": "UnityEngine.Animator",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x40034ab"
+        },
+        {
+          "name": "CandyMeshTransform",
+          "type": "UnityEngine.Transform",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x40034ac"
+        },
+        {
+          "name": "CandyPrefab",
+          "type": "Gameplay.CandyMachineCandy",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x40034ad"
+        },
+        {
+          "name": "_feedbacksInstance",
+          "type": "Feedbacks",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x40034ae"
+        },
+        {
+          "name": "_totalCandiesCost",
+          "type": "int",
+          "offset": "0x58",
+          "storage": "instance",
+          "token": "0x40034af"
+        },
+        {
+          "name": "_animationSequence",
+          "type": "DG.Tweening.Sequence",
+          "offset": "0x60",
+          "storage": "instance",
+          "token": "0x40034b0"
+        },
+        {
+          "name": "_completeAnimationTween",
+          "type": "DG.Tweening.Tween",
+          "offset": "0x68",
+          "storage": "instance",
+          "token": "0x40034b1"
+        },
+        {
+          "name": "_candyObject",
+          "type": "Gameplay.CandyMachineCandy",
+          "offset": "0x70",
+          "storage": "instance",
+          "token": "0x40034b2"
+        },
+        {
+          "name": "_candyMachineProperties",
+          "type": "Gameplay.CandyMachineConfig",
+          "offset": "0x78",
+          "storage": "instance",
+          "token": "0x40034b3"
+        },
+        {
+          "name": "_cellHexListener",
+          "type": "Gameplay.ICellHexListener",
+          "offset": "0x80",
+          "storage": "instance",
+          "token": "0x40034b4"
+        }
+      ],
+      "methods": [
+        {
+          "name": "get_Feedbacks",
+          "token": "0x6003826",
+          "rva": "0x21181a4"
+        },
+        {
+          "name": "OnDestroy",
+          "token": "0x6003827",
+          "rva": "0x21181e4"
+        },
+        {
+          "name": "Init",
+          "token": "0x6003828",
+          "rva": "0x2116618"
+        },
+        {
+          "name": "CandiesUpdated",
+          "token": "0x6003829",
+          "rva": "0x21172bc"
+        },
+        {
+          "name": "OnBoardRotate",
+          "token": "0x600382a",
+          "rva": "0x2117130"
+        },
+        {
+          "name": "PlayCompleteAnimation",
+          "token": "0x600382b",
+          "rva": "0x2117d48"
+        },
+        {
+          "name": "PlayShakeAnimation",
+          "token": "0x600382c",
+          "rva": "0x2117778"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x600382d",
+          "rva": "0x2118230"
+        },
+        {
+          "name": "<PlayCompleteAnimation>b__19_0",
+          "token": "0x600382e",
+          "rva": "0x2118238"
+        }
+      ]
+    },
+    "Gameplay.CandyMachineCandy": {
+      "name": "Gameplay.CandyMachineCandy",
+      "type_definition_index": 2367,
+      "instance_size": "0x38",
+      "fields": [
+        {
+          "name": "CollectionAnimation",
+          "type": "Gameplay.HexCollectionAnimation",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x400348c"
+        },
+        {
+          "name": "_animationSequence",
+          "type": "DG.Tweening.Sequence",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x400348d"
+        },
+        {
+          "name": "_candyMachineProperties",
+          "type": "Gameplay.CandyMachineConfig",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x400348e"
+        }
+      ],
+      "methods": [
+        {
+          "name": "OnDestroy",
+          "token": "0x60037ff",
+          "rva": "0x2115df8"
+        },
+        {
+          "name": "Init",
+          "token": "0x6003800",
+          "rva": "0x2115e10"
+        },
+        {
+          "name": "Animate",
+          "token": "0x6003801",
+          "rva": "0x2115e98"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6003802",
+          "rva": "0x211620c"
+        }
+      ]
+    },
+    "SnakeSpline": {
+      "name": "SnakeSpline",
+      "type_definition_index": 30,
+      "instance_size": "0x58",
+      "fields": [
+        {
+          "name": "SplineRoot",
+          "type": "UnityEngine.GameObject",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4000054"
+        },
+        {
+          "name": "originalSpline",
+          "type": "UnityEngine.GameObject",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4000055"
+        },
+        {
+          "name": "SplineLength",
+          "type": "float",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4000056"
+        },
+        {
+          "name": "UpdateSplineInRuntime",
+          "type": "bool",
+          "offset": "0x34",
+          "storage": "instance",
+          "token": "0x4000057"
+        },
+        {
+          "name": "rootObj",
+          "type": "UnityEngine.GameObject",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4000058"
+        },
+        {
+          "name": "once",
+          "type": "bool",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4000059"
+        },
+        {
+          "name": "mNodes",
+          "type": "System.Collections.Generic.List`1<SplinePoint>",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x400005a"
+        },
+        {
+          "name": "SplineEnabled",
+          "type": "bool",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x400005b"
+        },
+        {
+          "name": "ReparametrizeDistance",
+          "type": "float",
+          "offset": "0x54",
+          "storage": "instance",
+          "token": "0x400005c"
+        }
+      ],
+      "methods": [
+        {
+          "name": "OnDrawGizmos",
+          "token": "0x6000068",
+          "rva": "0x1f64ed4"
+        },
+        {
+          "name": "Update",
+          "token": "0x6000069",
+          "rva": "0x1f650e4"
+        },
+        {
+          "name": "UpdateSpline",
+          "token": "0x600006a",
+          "rva": "0x1f64edc"
+        },
+        {
+          "name": "SetupSplineInterpolator",
+          "token": "0x600006b",
+          "rva": "0x1f65274"
+        },
+        {
+          "name": "GetTransforms",
+          "token": "0x600006c",
+          "rva": "0x1f65114"
+        },
+        {
+          "name": "Awake",
+          "token": "0x600006d",
+          "rva": "0x1f656d8"
+        },
+        {
+          "name": "StartInterpolation",
+          "token": "0x600006e",
+          "rva": "0x1f6536c"
+        },
+        {
+          "name": "ResetSpline",
+          "token": "0x600006f",
+          "rva": "0x1f6556c"
+        },
+        {
+          "name": "AddPoint",
+          "token": "0x6000070",
+          "rva": "0x1f65608"
+        },
+        {
+          "name": "SetInput",
+          "token": "0x6000071",
+          "rva": "0x1f656dc"
+        },
+        {
+          "name": "GetSquad",
+          "token": "0x6000072",
+          "rva": "0x1f65878"
+        },
+        {
+          "name": "GetHermiteInternal",
+          "token": "0x6000073",
+          "rva": "0x1f65a50"
+        },
+        {
+          "name": "GetHermiteAtTime",
+          "token": "0x6000074",
+          "rva": "0x1f65388"
+        },
+        {
+          "name": "GetZRotationAtTime",
+          "token": "0x6000075",
+          "rva": "0x1f65bf4"
+        },
+        {
+          "name": "CreateReparametrizedSpline",
+          "token": "0x6000076",
+          "rva": "0x1f65f94"
+        },
+        {
+          "name": "createSplineTransform",
+          "token": "0x6000077",
+          "rva": "0x1f66500"
+        },
+        {
+          "name": "SwitchToOriginalSpline",
+          "token": "0x6000078",
+          "rva": "0x1f66650"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6000079",
+          "rva": "0x1f6674c"
+        }
+      ]
+    },
+    "SnakeParameters": {
+      "name": "SnakeParameters",
+      "type_definition_index": 28,
+      "instance_size": "0x40",
+      "fields": [
+        {
+          "name": "SnakeLength",
+          "type": "float",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x400004e"
+        },
+        {
+          "name": "spline",
+          "type": "SnakeSpline",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x400004f"
+        },
+        {
+          "name": "DistanceOnSpline",
+          "type": "float",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4000050"
+        },
+        {
+          "name": "splineFollowSpeed",
+          "type": "float",
+          "offset": "0x34",
+          "storage": "instance",
+          "token": "0x4000051"
+        },
+        {
+          "name": "animateOnSpline",
+          "type": "bool",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4000052"
+        },
+        {
+          "name": "loop",
+          "type": "bool",
+          "offset": "0x39",
+          "storage": "instance",
+          "token": "0x4000053"
+        }
+      ],
+      "methods": [
+        {
+          "name": "Start",
+          "token": "0x6000063",
+          "rva": "0x1f64e28"
+        },
+        {
+          "name": "Update",
+          "token": "0x6000064",
+          "rva": "0x1f64e2c"
+        },
+        {
+          "name": "SetSnakeSize",
+          "token": "0x6000065",
+          "rva": "0x1f64eb0"
+        },
+        {
+          "name": "GetSnakeSize",
+          "token": "0x6000066",
+          "rva": "0x1f64eb8"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6000067",
+          "rva": "0x1f64ec0"
+        }
+      ]
+    },
+    "UpdatePosFromSnakeSpline": {
+      "name": "UpdatePosFromSnakeSpline",
+      "type_definition_index": 36,
+      "instance_size": "0x50",
+      "fields": [
+        {
+          "name": "number",
+          "type": "int",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x4000070"
+        },
+        {
+          "name": "MaxNumber",
+          "type": "int",
+          "offset": "0x24",
+          "storage": "instance",
+          "token": "0x4000071"
+        },
+        {
+          "name": "DebugThis",
+          "type": "bool",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4000072"
+        },
+        {
+          "name": "snakeParameters",
+          "type": "SnakeParameters",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4000073"
+        },
+        {
+          "name": "lookAheadDist",
+          "type": "float",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4000074"
+        },
+        {
+          "name": "lookAheadTime",
+          "type": "float",
+          "offset": "0x3c",
+          "storage": "instance",
+          "token": "0x4000075"
+        },
+        {
+          "name": "snakeSpline",
+          "type": "SnakeSpline",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4000076"
+        },
+        {
+          "name": "SnakeLengthMeters",
+          "type": "float",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x4000077"
+        },
+        {
+          "name": "snakeLength",
+          "type": "float",
+          "offset": "0x4c",
+          "storage": "instance",
+          "token": "0x4000078"
+        }
+      ],
+      "methods": [
+        {
+          "name": "OnEnable",
+          "token": "0x600008d",
+          "rva": "0x1f67878"
+        },
+        {
+          "name": "Update",
+          "token": "0x600008e",
+          "rva": "0x1f6787c"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x600008f",
+          "rva": "0x1f67a98"
+        }
+      ]
+    },
+    "Gameplay.SnakeTailHex": {
+      "name": "Gameplay.SnakeTailHex",
+      "type_definition_index": 2639,
+      "instance_size": "0xc8",
+      "fields": [
+        {
+          "name": "_snakeParameters",
+          "type": "SnakeParameters",
+          "offset": "0x20",
+          "storage": "instance",
+          "token": "0x400395f"
+        },
+        {
+          "name": "_snakePiecesContainer",
+          "type": "UnityEngine.GameObject",
+          "offset": "0x28",
+          "storage": "instance",
+          "token": "0x4003960"
+        },
+        {
+          "name": "_snakeTangentObject",
+          "type": "UnityEngine.GameObject",
+          "offset": "0x30",
+          "storage": "instance",
+          "token": "0x4003961"
+        },
+        {
+          "name": "_secondTangentPoint",
+          "type": "UnityEngine.GameObject",
+          "offset": "0x38",
+          "storage": "instance",
+          "token": "0x4003962"
+        },
+        {
+          "name": "_snakeLengthFactor",
+          "type": "float",
+          "offset": "0x40",
+          "storage": "instance",
+          "token": "0x4003963"
+        },
+        {
+          "name": "_initialLengthFactor",
+          "type": "float",
+          "offset": "0x44",
+          "storage": "instance",
+          "token": "0x4003964"
+        },
+        {
+          "name": "snakeSkinMeshRenderer",
+          "type": "UnityEngine.SkinnedMeshRenderer",
+          "offset": "0x48",
+          "storage": "instance",
+          "token": "0x4003965"
+        },
+        {
+          "name": "GameplaySounds",
+          "type": "Gameplay.GameplaySounds",
+          "offset": "0x50",
+          "storage": "instance",
+          "token": "0x4003966"
+        },
+        {
+          "name": "GameHudScorePositions",
+          "type": "Gameplay.GameHudScorePositions",
+          "offset": "0x58",
+          "storage": "instance",
+          "token": "0x4003967"
+        },
+        {
+          "name": "CarpetRoll",
+          "type": "UnityEngine.Transform",
+          "offset": "0x60",
+          "storage": "instance",
+          "token": "0x4003968"
+        },
+        {
+          "name": "CarpetRollRotationFactor",
+          "type": "float",
+          "offset": "0x68",
+          "storage": "instance",
+          "token": "0x4003969"
+        },
+        {
+          "name": "CarpetRollMeshRenderer",
+          "type": "UnityEngine.SkinnedMeshRenderer",
+          "offset": "0x70",
+          "storage": "instance",
+          "token": "0x400396a"
+        },
+        {
+          "name": "LengthFactor",
+          "type": "int",
+          "offset": "0x78",
+          "storage": "instance",
+          "token": "0x400396b"
+        },
+        {
+          "name": "CrownPodium",
+          "type": "UnityEngine.Transform",
+          "offset": "0x80",
+          "storage": "instance",
+          "token": "0x400396c"
+        },
+        {
+          "name": "Animator",
+          "type": "UnityEngine.Animator",
+          "offset": "0x88",
+          "storage": "instance",
+          "token": "0x400396d"
+        },
+        {
+          "name": "CrownShadowPlane",
+          "type": "UnityEngine.MeshRenderer",
+          "offset": "0x90",
+          "storage": "instance",
+          "token": "0x400396e"
+        },
+        {
+          "name": "_animationCoroutine",
+          "type": "UnityEngine.Coroutine",
+          "offset": "0x98",
+          "storage": "instance",
+          "token": "0x400396f"
+        },
+        {
+          "name": "_snakeCoroutine",
+          "type": "UnityEngine.Coroutine",
+          "offset": "0xa0",
+          "storage": "instance",
+          "token": "0x4003970"
+        },
+        {
+          "name": "_snakePiecesCells",
+          "type": "System.Collections.Generic.List`1<Gameplay.Cell>",
+          "offset": "0xa8",
+          "storage": "instance",
+          "token": "0x4003971"
+        },
+        {
+          "name": "_totalCost",
+          "type": "int",
+          "offset": "0xb0",
+          "storage": "instance",
+          "token": "0x4003972"
+        },
+        {
+          "name": "_snakeMaxLength",
+          "type": "int",
+          "offset": "0xb4",
+          "storage": "instance",
+          "token": "0x4003973"
+        },
+        {
+          "name": "_collectionSequence",
+          "type": "DG.Tweening.Sequence",
+          "offset": "0xb8",
+          "storage": "instance",
+          "token": "0x4003974"
+        },
+        {
+          "name": "_cellHexListener",
+          "type": "Gameplay.ICellHexListener",
+          "offset": "0xc0",
+          "storage": "instance",
+          "token": "0x4003975"
+        },
+        {
+          "name": "_crownInAnim",
+          "type": "string",
+          "offset": "0x0",
+          "storage": "static",
+          "token": "0x4003976"
+        },
+        {
+          "name": "_crownOutAnim",
+          "type": "string",
+          "offset": "0x8",
+          "storage": "static",
+          "token": "0x4003977"
+        },
+        {
+          "name": "_crownFloatAnim",
+          "type": "string",
+          "offset": "0x10",
+          "storage": "static",
+          "token": "0x4003978"
+        },
+        {
+          "name": "_crownOutFtueAnim",
+          "type": "string",
+          "offset": "0x18",
+          "storage": "static",
+          "token": "0x4003979"
+        }
+      ],
+      "methods": [
+        {
+          "name": "OnDisable",
+          "token": "0x6003ee5",
+          "rva": "0x21814b0"
+        },
+        {
+          "name": "Init",
+          "token": "0x6003ee6",
+          "rva": "0x2180fbc"
+        },
+        {
+          "name": "GenerateDummyPosition",
+          "token": "0x6003ee7",
+          "rva": "0x2181730"
+        },
+        {
+          "name": "CalculateSnakeLength",
+          "token": "0x6003ee8",
+          "rva": "0x2180f98"
+        },
+        {
+          "name": "GeneratePieces",
+          "token": "0x6003ee9",
+          "rva": "0x2181558"
+        },
+        {
+          "name": "FtueInit",
+          "token": "0x6003eea",
+          "rva": "0x2180af4"
+        },
+        {
+          "name": "FtueGeneratePieces",
+          "token": "0x6003eeb",
+          "rva": "0x21818ac"
+        },
+        {
+          "name": "Execute",
+          "token": "0x6003eec",
+          "rva": "0x2180060"
+        },
+        {
+          "name": "OnRotationUpdated",
+          "token": "0x6003eed",
+          "rva": "0x2180920"
+        },
+        {
+          "name": "StartSnakeCoroutine",
+          "token": "0x6003eee",
+          "rva": "0x2181840"
+        },
+        {
+          "name": "SnakeSplineAnimation",
+          "token": "0x6003eef",
+          "rva": "0x218195c"
+        },
+        {
+          "name": "SetSnakeTilling",
+          "token": "0x6003ef0",
+          "rva": "0x2181a04"
+        },
+        {
+          "name": "RotateCarpetRoll",
+          "token": "0x6003ef1",
+          "rva": "0x2181a8c"
+        },
+        {
+          "name": "AdjustCarpetRollSize",
+          "token": "0x6003ef2",
+          "rva": "0x2181b94"
+        },
+        {
+          "name": "AdjustCarpetRollPos",
+          "token": "0x6003ef3",
+          "rva": "0x2181bec"
+        },
+        {
+          "name": "CollectHudAnimation",
+          "token": "0x6003ef4",
+          "rva": "0x2181cd4"
+        },
+        {
+          "name": "UpdateCrownPodiumRotation",
+          "token": "0x6003ef5",
+          "rva": "0x21814f8"
+        },
+        {
+          "name": ".ctor",
+          "token": "0x6003ef6",
+          "rva": "0x2182168"
+        },
+        {
+          "name": ".cctor",
+          "token": "0x6003ef7",
+          "rva": "0x218218c"
+        },
+        {
+          "name": "<CollectHudAnimation>b__42_0",
+          "token": "0x6003ef8",
+          "rva": "0x218227c"
+        },
+        {
+          "name": "<CollectHudAnimation>b__42_1",
+          "token": "0x6003ef9",
+          "rva": "0x2182298"
+        }
+      ]
+    }
+  },
+  "assets": [
+    {
+      "name": "CandyMachineHex",
+      "asset_file": "afc7ad5cd7b9d4eaf8cbe821fd036f4a",
+      "component_path_id": 68,
+      "sha256": "caf3153a06197660672bdba49751d0c757743421b955a3c78ea3d4cb980799fa",
+      "raw_hex": "000000000e000000000000000100000001000000c41000000000000000000000000000002800000000000000000000002700000000000000000000002200000000000000000000002e00000000000000000000002100000000000000100000000500000000000000",
+      "CandyPrefab": {
+        "file_id": 16,
+        "path_id": 5,
+        "asset_file": "db10aec2a55ae494eaafd29c6869b0ac",
+        "node": "Marshmellow_Piece",
+        "script": "CandyMachineCandy",
+        "raw_hex": "0000000001000000000000000100000001000000051000000000000000000000000000000600000000000000"
+      }
+    },
+    {
+      "name": "CupboardHex",
+      "asset_file": "8c2dd8c69d61eaa4c8ff6c777766a445",
+      "component_path_id": 483,
+      "sha256": "981d1aaf904564816620243fc194f1fa7b2a6a9ada29c6a55cb2aea0fc765837",
+      "raw_hex": "000000007e000000000000000100000001000000f70f0000000000000000000006000000000000009701000000000000000000009801000000000000000000009a01000000000000000000009501000000000000000000009901000000000000000000009b010000000000000000000096010000000000000900000025b10000000000000e00000001000000000000000000803f0000803f0000803f0000803f",
+      "cups": [
+        {
+          "index": 0,
+          "animator_path_id": 407,
+          "parent": "Cup2",
+          "parent_local_position": [
+            0.625,
+            0.6840000152587891,
+            -0.6079999804496765
+          ]
+        },
+        {
+          "index": 1,
+          "animator_path_id": 408,
+          "parent": "Cup1",
+          "parent_local_position": [
+            -0.5950000286102295,
+            0.6959999799728394,
+            -0.6209999918937683
+          ]
+        },
+        {
+          "index": 2,
+          "animator_path_id": 410,
+          "parent": "Cup3",
+          "parent_local_position": [
+            0.07800000160932541,
+            0.7369999885559082,
+            -1.6970000267028809
+          ]
+        },
+        {
+          "index": 3,
+          "animator_path_id": 405,
+          "parent": "Cup6",
+          "parent_local_position": [
+            0.04899999871850014,
+            0.6679999828338623,
+            0.21899999678134918
+          ]
+        },
+        {
+          "index": 4,
+          "animator_path_id": 409,
+          "parent": "Cup5",
+          "parent_local_position": [
+            0.5960000157356262,
+            0.6859999895095825,
+            1.3079999685287476
+          ]
+        },
+        {
+          "index": 5,
+          "animator_path_id": 411,
+          "parent": "Cup4",
+          "parent_local_position": [
+            -0.6240000128746033,
+            0.6729999780654907,
+            1.2949999570846558
+          ]
+        }
+      ]
+    }
+  ]
+}

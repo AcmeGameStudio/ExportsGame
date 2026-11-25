@@ -1,0 +1,2443 @@
+{
+  "date": "2026-11-25",
+  "scope": "Static source/target role audit for local 6.2.20 binary and serialized assets; not exhaustive runtime validation or upper-project implementation review",
+  "binary_sha256": "56c3f96084cfd0d7b61b75fa555c83ed5ca07d9696f4ad0bf5fcf18e04fd1d02",
+  "metadata_sha256": "944f5da29004d17ecdfa241c2914330cf841ab4237a785013e56899b079baf81",
+  "enum_values_reverified": 60,
+  "status_counts": {
+    "base": 3,
+    "runtime": 51,
+    "inactive_legacy": 6
+  },
+  "opcode_verification": [
+    {
+      "file": "Cell.asm",
+      "instruction_words_verified": 9811
+    },
+    {
+      "file": "SortingGrid.asm",
+      "instruction_words_verified": 1085
+    },
+    {
+      "file": "HexaSortingAlgorithm.asm",
+      "instruction_words_verified": 1570
+    },
+    {
+      "file": "HexaSortAlgoLegacy.asm",
+      "instruction_words_verified": 1340
+    },
+    {
+      "file": "Tray.asm",
+      "instruction_words_verified": 18865
+    }
+  ],
+  "getter_metadata": [
+    {
+      "type": "Gameplay.BoxingGloveCellState",
+      "method": "get_IsCellStateActivate",
+      "slot": 13,
+      "rva": "0x2111454"
+    },
+    {
+      "type": "Gameplay.DroneCellState",
+      "method": "get_IsCellStateActivate",
+      "slot": 13,
+      "rva": "0x212dc90"
+    },
+    {
+      "type": "Gameplay.DroneHandlerCellState",
+      "method": "get_IsCellStateActivate",
+      "slot": 13,
+      "rva": "0x212eb20"
+    },
+    {
+      "type": "Gameplay.KettleCellState",
+      "method": "get_IsGeneratorState",
+      "slot": 15,
+      "rva": "0x214e0f4"
+    },
+    {
+      "type": "Gameplay.KettleCellState",
+      "method": "get_IsGlobalLocked",
+      "slot": 16,
+      "rva": "0x214e0f8"
+    },
+    {
+      "type": "Gameplay.PenguinCellState",
+      "method": "get_IsTemporaryBlocker",
+      "slot": 18,
+      "rva": "0x21529b0"
+    },
+    {
+      "type": "Gameplay.PenguinCellState",
+      "method": "get_IsGlobalLocked",
+      "slot": 16,
+      "rva": "0x21529cc"
+    },
+    {
+      "type": "Gameplay.RabbitCellState",
+      "method": "get_IsGlobalLocked",
+      "slot": 16,
+      "rva": "0x2170a94"
+    },
+    {
+      "type": "Gameplay.RabbitCellState",
+      "method": "get_IsTemporaryBlocker",
+      "slot": 18,
+      "rva": "0x2170aa4"
+    },
+    {
+      "type": "Gameplay.RainbowLauncherCellState",
+      "method": "get_IsCellStateActivate",
+      "slot": 13,
+      "rva": "0x21742c8"
+    },
+    {
+      "type": "Gameplay.RainbowLauncherCellState",
+      "method": "get_IsGlobalLocked",
+      "slot": 16,
+      "rva": "0x2174378"
+    },
+    {
+      "type": "Gameplay.RainbowLauncherCellState",
+      "method": "get_IsGeneratorHelperState",
+      "slot": 23,
+      "rva": "0x2174390"
+    },
+    {
+      "type": "Gameplay.SteamCellState",
+      "method": "get_IsTemporaryBlocker",
+      "slot": 18,
+      "rva": "0x2186774"
+    },
+    {
+      "type": "Gameplay.TeslaTowerCellState",
+      "method": "get_IsCellStateActivate",
+      "slot": 13,
+      "rva": "0x2188ebc"
+    },
+    {
+      "type": "Gameplay.ToasterCellState",
+      "method": "get_IsCellStateActivate",
+      "slot": 13,
+      "rva": "0x218b084"
+    },
+    {
+      "type": "Gameplay.MoleCellState",
+      "method": "get_IsGlobalLocked",
+      "slot": 16,
+      "rva": "0x21907f0"
+    },
+    {
+      "type": "Gameplay.MoleCellState",
+      "method": "get_IsGeneratorState",
+      "slot": 15,
+      "rva": "0x2190800"
+    },
+    {
+      "type": "Gameplay.ACellState",
+      "method": "get_IsCellStateActivate",
+      "slot": 13,
+      "rva": "0x219df18"
+    },
+    {
+      "type": "Gameplay.ACellState",
+      "method": "get_IsGeneratorState",
+      "slot": 15,
+      "rva": "0x219df40"
+    },
+    {
+      "type": "Gameplay.ACellState",
+      "method": "get_IsGlobalLocked",
+      "slot": 16,
+      "rva": "0x219df60"
+    },
+    {
+      "type": "Gameplay.ACellState",
+      "method": "get_IsTemporaryBlocker",
+      "slot": 18,
+      "rva": "0x219dfa0"
+    },
+    {
+      "type": "Gameplay.ACellState",
+      "method": "get_IsTemporaryHelper",
+      "slot": 19,
+      "rva": "0x219dfc0"
+    },
+    {
+      "type": "Gameplay.ACellState",
+      "method": "get_IsGeneratorHelperState",
+      "slot": 23,
+      "rva": "0x219e040"
+    },
+    {
+      "type": "Gameplay.ACellState",
+      "method": "get_IsMovingHelperState",
+      "slot": 25,
+      "rva": "0x219e080"
+    }
+  ],
+  "states": [
+    {
+      "value": -1,
+      "name": "Dead",
+      "status": "base",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "不可用基础格；不接受邻消扣层",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "0",
+      "source_role": "正常不可用；异常数据按E",
+      "target_role": "正常不可用；异常数据按E",
+      "general_goal_type": 0,
+      "property_assets": [],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 0,
+      "name": "Open",
+      "status": "base",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "普通承载格；按堆顶参与排序/消除",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "0",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 1,
+      "property_assets": [],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 1,
+      "name": "RV",
+      "status": "base",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "广告/金币解锁；不由邻消打开",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 0,
+      "property_assets": [],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 2,
+      "name": "Cost",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "全盘按消除块数扣Cost",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 1,
+      "property_assets": [
+        {
+          "file": "36cf4a2ab73664dd5be1e55eedc8772e",
+          "path_id": 1,
+          "name": "Property_Cost",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "5d3f9031b81ed80c75bdcb95b70a5654e57c6405357ad828974c549af577ae16"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 3,
+      "name": "Wood",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "相邻事件扣1，归零Open并计目标",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 3,
+      "property_assets": [
+        {
+          "file": "1981d068e523e4f26851901b19f65959",
+          "path_id": 1,
+          "name": "Property_Wood",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "693f61cd32633fb6d2f8d76a6184c273c9ee5658e4d4fdb741c25a0650650cde"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 4,
+      "name": "Ice",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "相邻事件扣1，解冰保留原堆",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 2,
+      "property_assets": [
+        {
+          "file": "37a6d9b276ad5463493e48fb4aab511f",
+          "path_id": 1,
+          "name": "Property_Ice",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "f130ed46e4c49b19d3010348d1b4b5437b157a1a6aafca462b4083d46f0a47fc"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 5,
+      "name": "Hole",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "无活动状态处理器；旧排序器仍有同色Hole优先分支",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "0",
+      "source_role": "遗留：仅按E公式",
+      "target_role": "遗留：仅按E公式",
+      "general_goal_type": 0,
+      "property_assets": [],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 6,
+      "name": "Grass",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "本格消除扣1；不是邻消扣层",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "0",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 13,
+      "property_assets": [],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 7,
+      "name": "Camera",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "邻消拍照；目标完成停止普通收集，道具入口独立",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "G(7)",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 14,
+      "property_assets": [
+        {
+          "file": "5c17c668e4a054b3581abbbab514c853",
+          "path_id": 1,
+          "name": "Property_Camera",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 1,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "ac0dc3810de9c2fb5f358c38925f970a4b7d599030d10d50c2a3e82c85714a47"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 8,
+      "name": "LockHighRise",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "全局累计消除量达到固定Cost门槛",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 1,
+      "property_assets": [
+        {
+          "file": "9d608caf3bde84647a2139c80dcde86a",
+          "path_id": 1,
+          "name": "Property_LockHighRise",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "24e2a307c1f3662abdce360bbc9c40ac740c954c2dfae6a59d57658cf8f4ce05"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 9,
+      "name": "FridgeCan",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "仅保留罐子表现，未接通棋盘消除处理",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "遗留：仅按E公式",
+      "target_role": "遗留：仅按E公式",
+      "general_goal_type": 15,
+      "property_assets": [],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 10,
+      "name": "BirdHouse",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "本版工厂默认null，无活动处理器",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "0",
+      "source_role": "遗留：仅按E公式",
+      "target_role": "遗留：仅按E公式",
+      "general_goal_type": 16,
+      "property_assets": [],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 11,
+      "name": "WaitingCell",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "被开的位置；按完整NextState恢复",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 0,
+      "property_assets": [
+        {
+          "file": "1aae7df9ee1894eaeaa45c3b7487227a",
+          "path_id": 1,
+          "name": "Property_WaitingCell",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "dd4ae38b3594ad53c3c5b1a4659177d7063a1b5e8f76e9ef4aed43e420ab9b67"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 12,
+      "name": "WaitingCellStack",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "按累计量确定数量，权重抽位置；发完变Dead",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 1,
+      "property_assets": [
+        {
+          "file": "14dc95b0c85ca4b29920a80fc6e6a361",
+          "path_id": 1,
+          "name": "Property_WaitingTile",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "dc41378acf14272fdece3310043ae810b5e2bb75afec13c5832c30ee3b4baebb"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 13,
+      "name": "FireCracker",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "邻消发射；全盘优先级目标、在途排斥",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 0,
+      "property_assets": [
+        {
+          "file": "f71031248e50e4d24b1505360513d010",
+          "path_id": 1,
+          "name": "Property_FireCracker",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "b8ad0606bc77315de63f2001cddc10ff0afba43ce0b7042468d2517686fbd338"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 14,
+      "name": "Toaster",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "两阶段相位；每个产出阶段收2片",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "G(14)",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 17,
+      "property_assets": [
+        {
+          "file": "5bb619cbf138c4020bca9b696a7fa2d5",
+          "path_id": 1,
+          "name": "Property_Toaster",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 1,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "a31af71a963fc4fcd6831334743be5dc36b07575140a3dae497e038392a8fb26"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 15,
+      "name": "Gramophone",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "本版工厂默认null，无活动处理器",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "0",
+      "source_role": "遗留：仅按E公式",
+      "target_role": "遗留：仅按E公式",
+      "general_goal_type": 18,
+      "property_assets": [],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 16,
+      "name": "ColorNuts",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "旧类型停用；不能套用33",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "0",
+      "source_role": "遗留：仅按E公式",
+      "target_role": "遗留：仅按E公式",
+      "general_goal_type": 19,
+      "property_assets": [],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 17,
+      "name": "CarParking",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "沿固定车道逐格移动Car，入位提交目标",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "0",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 20,
+      "property_assets": [
+        {
+          "file": "2f56b8ba42ecb4d59a9c58bc1d9ed937",
+          "path_id": 1,
+          "name": "Property_Car",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "43c29f881e23301b514805ee7691013c1209ce400fdc761e858ceff8968d0b33"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 18,
+      "name": "Curtain",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "全盘匹配色按块数扣；揭幕后提升后继",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 0,
+      "property_assets": [
+        {
+          "file": "97f20a31b14534ee9bdc8115c47a7005",
+          "path_id": 1,
+          "name": "Property_Curtain",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "3ddb484144cf8b597f2ab73fe81157cfa35ca7140c73745d448060d2ce147f13"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 19,
+      "name": "Cloud",
+      "status": "inactive_legacy",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "旧类型停用；不能套用46",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "0",
+      "source_role": "遗留：仅按E公式",
+      "target_role": "遗留：仅按E公式",
+      "general_goal_type": 43,
+      "property_assets": [],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 20,
+      "name": "Playpen",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "邻消颜色匹配剩余球色，移除对应球",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "B",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 22,
+      "property_assets": [
+        {
+          "file": "26fd34e4ef155430496274211c5b229e",
+          "path_id": 1,
+          "name": "Property_Playpen",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "12c88af155d9ce5c746004ba53c34b3d37d3e7485f107da8f80cd574d187da2e"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 21,
+      "name": "GemBox",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "相邻命中排队投宝石；无合适空间直接收",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 24,
+      "property_assets": [
+        {
+          "file": "aa78a4474ac05466c887721a29edb2eb",
+          "path_id": 1,
+          "name": "Property_GemBox",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "c28309995199354fca29d937b23140dd48e2db784da8f477ac9e71e59fb7273f"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 22,
+      "name": "Gem",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消一次收集，提升完整后继",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 24,
+      "property_assets": [
+        {
+          "file": "f83135520e0214ccaa1160aaaabedda5",
+          "path_id": 1,
+          "name": "Property_Gem",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "b73fe053b0185e094066476bf2d4d05f015b1bbd3a74aa22b697258d1d948df4"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 23,
+      "name": "Honey",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消一次投1滴；全盘选目标，无目标仍扣存量",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 27,
+      "property_assets": [
+        {
+          "file": "0c7ba6c6c796741bcb359c2609d67d37",
+          "path_id": 1,
+          "name": "Property_Honey",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "666886f237826a79880da715bbc5436be8fdf02a8f22d3b1bc6aff9dddd868fd"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 24,
+      "name": "HoneyTrap",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消解黏，保留原堆",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 27,
+      "property_assets": [
+        {
+          "file": "bca4c5c9de89847138428acd8f328b63",
+          "path_id": 1,
+          "name": "Property_HoneyTrap",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "721160776cc71956c51e9cd6a5d3c4070066e9577755c09e17fc66fd3405c4a2"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 25,
+      "name": "SnakeBody",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "同组轮廓邻接触发各节；不是只通知最近节",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 28,
+      "property_assets": [
+        {
+          "file": "87288f08390004f4dabd919aca2929c3",
+          "path_id": 1,
+          "name": "Property_SnakeBody",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "c7ca2a8396332715df5d1b7005c21af8aa112d1ad141af4ece60cae572c8fbb1"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 26,
+      "name": "SnakeTail",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "同组链形与尾部收集、计分",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 28,
+      "property_assets": [
+        {
+          "file": "5d38adfd9732e4abcbcb652697d29c9a",
+          "path_id": 1,
+          "name": "Property_SnakeTail",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "159a6ad9a7b14989dfee9dfad4159f15d15adf6fa1de353a525b04d5d843989a"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 27,
+      "name": "BirdNest",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "Cost每次减1，新Cost偶数时收1只",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 29,
+      "property_assets": [
+        {
+          "file": "4bc16b2475f054e5aa3cdf2c746d8183",
+          "path_id": 1,
+          "name": "Property_BirdNest",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "2e1e99f3bd2db188fdf286cc1ebef8a1d83f73b545082ba720acbb7bcca7f84e"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 28,
+      "name": "Pearl",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_CLASSICS.md",
+      "behavior": "匹配当前珍珠色；目标结束前可持续产珍珠",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "G(28)",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 30,
+      "property_assets": [
+        {
+          "file": "a5d3c982ae2804ed4923fc3579b51e21",
+          "path_id": 1,
+          "name": "Property_Pearl",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 1,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "4ed8ea1213c36d6652c95b0eba49cc8d96707025d8860de8895c3ddfa3d1b8bc"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 29,
+      "name": "Doll",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "待处理批次扣1；空邻格随机迁移或原地打开",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 31,
+      "property_assets": [
+        {
+          "file": "3e9b5f14516e54c84a5c983c9620c13d",
+          "path_id": 1,
+          "name": "Property_Doll",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "7395d9a5775a1631f26de4253658d88789f8bc8505b37b82dce2665aee5facac"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 30,
+      "name": "Drone",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "两相位递送表现块，不增加普通可排序颜色堆",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 32,
+      "property_assets": [
+        {
+          "file": "7a8ce94fbd881463987c18c8befbd14a",
+          "path_id": 1,
+          "name": "Property_Drone",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "6a6c9b03c4da81549bc7d95354b872d1830caad1495c6c536f87e7ec61c1c1fd"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 31,
+      "name": "DronePad",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "同ID停靠点，按Cost选择下一站",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 32,
+      "property_assets": [
+        {
+          "file": "c34943ecc9ae4451795295b787e5ba65",
+          "path_id": 1,
+          "name": "Property_DronePad",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "d944e8879d160417418790a490c47fe20164895626784018722b7d12695c176c"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 32,
+      "name": "DroneHandler",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "控制同组转移，最终退出才收Drone目标",
+      "lock_without_temporary": "!A32",
+      "neighbor_requirement": "A32 ? C : 0",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 32,
+      "property_assets": [
+        {
+          "file": "e4f3805132742490da6b5d1aff202da9",
+          "path_id": 1,
+          "name": "Property_DroneHandler",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "c9c0f1aa21e9b20e426ab55911a57ee91e254622ba9ab5905e023fed5ce46039"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 33,
+      "name": "GeneratorNuts",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "匹配当前坚果，完整色段与补充队列",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "G(33)",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 33,
+      "property_assets": [
+        {
+          "file": "eae957f22893a4a90a6f17c753b67bfa",
+          "path_id": 1,
+          "name": "Property_GeneratorNuts",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 1,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "31b1fb82824c8f766a82280e18055d2650439d5960e02aa8397fa52b0023b825"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 34,
+      "name": "RainbowLauncher",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "激活/发射两阶段；候选评分选择目标和颜色",
+      "lock_without_temporary": "!R",
+      "neighbor_requirement": "R ? 3 : 0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 0,
+      "property_assets": [
+        {
+          "file": "sharedassets0.assets",
+          "path_id": 45348,
+          "name": "Property_Rainbow",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 1,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "a46a9a4dbc50274a507b22806d674537a85a436c37497c4b9d7d5b9c011e6b7b"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 35,
+      "name": "Jelly",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "按方向和片状态扣除，保存旋转及片数组",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 34,
+      "property_assets": [
+        {
+          "file": "6acab6166ae934510bea12755191578b",
+          "path_id": 1,
+          "name": "Property_Jelly",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "622f6cae5c3da059bd13aaf7bf4ae5018734d727c83e6f311ab7b0971d9ad33c"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 36,
+      "name": "Bloom",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "汇集同轮颜色，同色双击与后续匹配分支不同",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 35,
+      "property_assets": [
+        {
+          "file": "4e7cf5e955e024143a65521af1d2230e",
+          "path_id": 1,
+          "name": "Property_Bloom",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "3a5320861ada2d14f027a463d7a64d2e8a7d0a12126373080b59418da404d4ae"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 37,
+      "name": "SeedBox",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "全盘播草，也可把草写到机关NextState",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 13,
+      "property_assets": [
+        {
+          "file": "e0a21237e49fe454f9466bacc516b956",
+          "path_id": 1,
+          "name": "Property_Seedbox",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "108d5461b710ae2f863804baf865c58e51087b3449206aefba92984ab61ad8b8"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 38,
+      "name": "CupboardPrimary",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "柜门开启后转移杯子；与副半共用邻接去重",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 36,
+      "property_assets": [
+        {
+          "file": "3badfdb3c9d0844a3863bbd4a2e57b92",
+          "path_id": 1,
+          "name": "Property_CupboardPrimary",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "af1bd4e2bf95ee212b7d6748d6cc7d886819e8bad9be725767e5f07374839f13"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 39,
+      "name": "CupboardSecondary",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "与主半配对，不能人工重复扣一次",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 36,
+      "property_assets": [
+        {
+          "file": "855d9b1ed3cca43dbaa61959c001e8b7",
+          "path_id": 1,
+          "name": "Property_CupboardSecondary",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "4f27e95127c2565a5687f2f4e2076f39fad5b203aaa9026aa8668dfabb385cf8"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 42,
+      "name": "Safe",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "按块数转动，收金完成才开；道具计量独立",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 39,
+      "property_assets": [
+        {
+          "file": "e1ffcc0c7be1544f4a2130d9675d4f17",
+          "path_id": 1,
+          "name": "Property_Safe",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "e1afbf5cb2c16648d142f6a344cf7424f0484fec8a087aceaf9aeac062b594fe"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 43,
+      "name": "BoxingGlove",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "两相位拳套；邻格优先目标，待击队列",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "3",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 0,
+      "property_assets": [
+        {
+          "file": "62a4ec9e1804c4e509e1339b2b2defd1",
+          "path_id": 1,
+          "name": "Property_Boxing",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 1,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "06dcc7cbe05d20c8e4f6810390817187204383646de89ef55f359b8d0c56a314"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 44,
+      "name": "Dice",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "掷1至6点，队列和共享剩余目标防超收",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "G(44)",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 42,
+      "property_assets": [
+        {
+          "file": "081fbcfce21624c4e9519f3225106094",
+          "path_id": 1,
+          "name": "Property_Dice",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 1,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "152914194176c211a6d8ca7add8f47eef3500c5c1d4cb931499c35ad17530679"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 45,
+      "name": "Kettle",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "按目标额度生成云，预占坐标并保存原堆",
+      "lock_without_temporary": "!K",
+      "neighbor_requirement": "K ? G(45) : 0",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 43,
+      "property_assets": [
+        {
+          "file": "aa2cb64a036694370bbfc8d8e52593df",
+          "path_id": 1,
+          "name": "Property_Kettle",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 1,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "46df7b8208fb58dfe09e0b7870d7c175244b294c3f62a63a129e2573bc85e636"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 46,
+      "name": "Steam",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_REACTIONS.md",
+      "behavior": "邻消收云，动画后恢复原堆顺序",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 43,
+      "property_assets": [
+        {
+          "file": "1ec20505e4c1c41b38b0946239e5f562",
+          "path_id": 1,
+          "name": "Property_Steam",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "3ea3a6c95f609ed45c7f11d9d5103b3890fed6ac39f02ffc5150ba6a17aed0bd"
+        },
+        {
+          "file": "1d657ad9edaca4bdbbe80badee6f45bd",
+          "path_id": 1,
+          "name": "Property_Steam",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "000e2c543ab26d08b87dd6450f2d9d31ecdbc966fd08a518b5a813129c347834"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 47,
+      "name": "PopcornMaker",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "全盘按块数扣；爆开播撒爆米花",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 44,
+      "property_assets": [
+        {
+          "file": "5012b4c9e5f554eee913c8265174d815",
+          "path_id": 1,
+          "name": "Property_PopcornMaker",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "4dbd3aa905b3216c0b79aafc9f9159612d3880df7ed8fd44e892ac79b2644cb8"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 48,
+      "name": "Popcorn",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "邻消收集，提升后继",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 44,
+      "property_assets": [
+        {
+          "file": "f9f38a534fcea4d6b9520244f52da7a8",
+          "path_id": 1,
+          "name": "Property_Popcorn",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "a2d19bd8cbcfc3fe7502a1e0e99b320f4f9374c2d6c8fbaa2a0108673e87025b"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 49,
+      "name": "TeslaTower",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "充放电相位；灯泡组和待处理队列",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "G(49)",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 47,
+      "property_assets": [
+        {
+          "file": "496feb8644d634a7e8e8e59a0a349b11",
+          "path_id": 1,
+          "name": "Property_TeslaTower",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 1,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "a66824c53b48e13746cb473a9ea4a359ff92ce7a22e24b64f086e405601d5628"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 50,
+      "name": "TeslaBulb",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "由塔选择，预置Cost0防重复再动画开格",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 47,
+      "property_assets": [
+        {
+          "file": "240fa9ac002134838b34dbedceeb8478",
+          "path_id": 1,
+          "name": "Property_TeslaBulb",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "cf10861a9be39f5d9abcf0504fa1eb84c90c49b59f7ee00654920c0baa5391b4"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 51,
+      "name": "Mole",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_LEGACY.md",
+      "behavior": "同ID洞口按SequenceID循环或随机；出现延迟可击",
+      "lock_without_temporary": "!M",
+      "neighbor_requirement": "M ? G(51) : 0",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 48,
+      "property_assets": [
+        {
+          "file": "ae6f02430bed245fbaed039290a21950",
+          "path_id": 1,
+          "name": "Property_Mole",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 1,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "3a830d2a87238bb6e0f08e86b8dd625c3a45921a5cda06a07d829e388a960a49"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 52,
+      "name": "SoilBomb",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "同ID组预锁，邻接链传播；置0防重复爆炸",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 0,
+      "property_assets": [
+        {
+          "file": "fa513cf8660fe4b61bb1437fbfc6c38f",
+          "path_id": 1,
+          "name": "Property_SoilBomb",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "475ef4622ef2c3c7c66ee7d7723f0e823da3e270f663d43f1c02b50110ed920a"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 53,
+      "name": "CandyMachine",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "命中相位控制同ID糖果收集，最后清机器",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "C",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 50,
+      "property_assets": [
+        {
+          "file": "86634579cde2848dfbc32eec86a1e92d",
+          "path_id": 1,
+          "name": "Property_CandyMachine",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "e95193620b2d9d950d9a054d41c477b458d1387ab98d4b766671e416cc8dc104"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 54,
+      "name": "Candy",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_COLLECTION.md",
+      "behavior": "将邻消转发给注册机器；远处候选优先消费",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 50,
+      "property_assets": [
+        {
+          "file": "bd474a0f469f1403f8485fcb3b127efc",
+          "path_id": 1,
+          "name": "Property_Candy",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "9316e0ed0014c43b53abc0b370e4e81929afcef50b8f70d04ace48e940500841"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 55,
+      "name": "Drill",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "两相位钻头；攻击后可迁入清空目标",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "3",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 0,
+      "property_assets": [
+        {
+          "file": "8c5f3c4db9a5647ca83231e7582fdd96",
+          "path_id": 1,
+          "name": "Property_Drill",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 1
+          },
+          "sha256": "d987f6715dc63bad0157a4dd2efabe98171a111ee9da16704decd095643321ca"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 60,
+      "name": "Penguin",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "解冻后固定方向逐格移动，无绕路",
+      "lock_without_temporary": "C < 2",
+      "neighbor_requirement": "C > 1 ? C : 0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 0,
+      "property_assets": [
+        {
+          "file": "36d358687a51f416daf755cac443b021",
+          "path_id": 1,
+          "name": "Property_Penguin",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 1,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "4cdef13e0aaf7dbac8749284c5ce87e5b0e9feed78ad64fa32e4b7cbe75596e5"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 61,
+      "name": "Igloo",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "按ID收企鹅，收完停用而非一律Open",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 0,
+      "property_assets": [
+        {
+          "file": "5a217672dbcf94fb69891e1f1da0ed2b",
+          "path_id": 1,
+          "name": "Property_Igloo",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "cb56755f376b24e45b1363b67c4e4a8c8db98e845806d3cabc286fbead0f8f01"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 62,
+      "name": "Rabbit",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_MOVEMENT.md",
+      "behavior": "按ID与SequenceID转移，落地才激活下一站",
+      "lock_without_temporary": "!A62",
+      "neighbor_requirement": "A62 ? C : 0",
+      "source_role": "按E",
+      "target_role": "按E",
+      "general_goal_type": 58,
+      "property_assets": [
+        {
+          "file": "ff15c7a2d82ca401b8ff3b4496a4f59a",
+          "path_id": 1,
+          "name": "Property_Rabbit",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 1,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "e3390a8162db768a29b6a9110faa539639c5a9c01b6d805347bfbfec97fc907c"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 65,
+      "name": "HexGenerator",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "朝向固定输出位；输出空且解锁后才消耗生成次数",
+      "lock_without_temporary": "1",
+      "neighbor_requirement": "0",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 61,
+      "property_assets": [
+        {
+          "file": "80e00b7138ab04360b8cdce2582d9b6d",
+          "path_id": 1,
+          "name": "Property_HexGenerator",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 0,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 1,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "aefc3566e017d74b5ab7dac3f066aa8b1bc68561669d95c0a8c197ba3bb2735a"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    },
+    {
+      "value": 68,
+      "name": "FireCrackerGenerator",
+      "status": "runtime",
+      "document": "SPECIAL_CELL_GENERATORS.md",
+      "behavior": "Cost5至1充能，批量火箭可重复分配同一目标",
+      "lock_without_temporary": "0",
+      "neighbor_requirement": "3",
+      "source_role": "否",
+      "target_role": "否",
+      "general_goal_type": 0,
+      "property_assets": [
+        {
+          "file": "e55c4ab28590c412384b0715143c7c16",
+          "path_id": 1,
+          "name": "Property_FireCrackerGenerator",
+          "classification": {
+            "IsPlaceableState": 0,
+            "IsGeneratorHelperState": 1,
+            "IsGeneratorState": 0,
+            "IsTemporaryBlockedState": 0,
+            "IsTemporaryHelperState": 0,
+            "IsLowerLayerState": 0,
+            "IsLowerLayerTrapState": 0,
+            "CanHaveLowerLayerState": 0,
+            "IsGlobalLockedState": 0,
+            "IsSelfMergeRequired": 0,
+            "IsMovingHelperState": 0
+          },
+          "sha256": "e79172c269d7b02a6b7c9f5acebea720b6e638b6dff7d19356410176b8aa63c2"
+        }
+      ],
+      "confidence": "static_local_asset_conditional",
+      "runtime_exhaustively_verified": false
+    }
+  ],
+  "dice_log": {
+    "path": ".runtime/hexasort/live-dice-17274-20261123.jsonl",
+    "sha256": "6c1fd8b367b675dc1b69fdd15ff0083ae6da533fb7eebe2a82fa51bc1aeaff76",
+    "lines": 183,
+    "sessions": 2,
+    "event_counts": {
+      "ready": 2,
+      "heartbeat": 81,
+      "properties": 4,
+      "enter": 89,
+      "detached": 2,
+      "leave": 4,
+      "goal": 1
+    },
+    "method_counts": {
+      "PlaceHex": 29,
+      "Merge": 3,
+      "Gameplay.WoodCellState.OnCellMerge": 28,
+      "NeighbourCellMerged": 15,
+      "Gameplay.ACellState.NeighbourCellMerged": 8,
+      "Gameplay.ACellState.CellMerged": 1,
+      "Gameplay.DiceCellState.NeighbourCellMerged": 1,
+      "Gameplay.DiceCellState.OnDiceHit": 2,
+      "Gameplay.DiceCellState.SaveData": 6,
+      "Gameplay.LevelGoalTracker.ItemCollected@0x21bd8e8": 1
+    },
+    "evidence": [
+      {
+        "line": 142,
+        "session": 2,
+        "payload": {
+          "seq": 34,
+          "ms": 1795417650088,
+          "tid": 31875,
+          "event": "enter",
+          "frame": 4852,
+          "method": "Merge",
+          "cell": {
+            "ptr": "0x7a0c120cf0",
+            "state": 0,
+            "cost": 0,
+            "row": -1,
+            "col": 1,
+            "param": 0,
+            "stateObject": "0x7a0fbba540"
+          },
+          "properties": null,
+          "dice": null,
+          "args": [
+            "0x7a0c6487e0",
+            "0x1",
+            "0x0"
+          ]
+        }
+      },
+      {
+        "line": 158,
+        "session": 2,
+        "payload": {
+          "seq": 50,
+          "ms": 1795417650090,
+          "tid": 31875,
+          "event": "enter",
+          "frame": 4852,
+          "method": "NeighbourCellMerged",
+          "cell": {
+            "ptr": "0x7a0c1205c0",
+            "state": 44,
+            "cost": 1,
+            "row": 0,
+            "col": 1,
+            "param": 0,
+            "stateObject": "0x7a0fba6680"
+          },
+          "properties": null,
+          "dice": null,
+          "args": [
+            "0x7a0c120cf0",
+            "0x1",
+            "0xa"
+          ]
+        }
+      },
+      {
+        "line": 159,
+        "session": 2,
+        "payload": {
+          "seq": 51,
+          "ms": 1795417650090,
+          "tid": 31875,
+          "event": "enter",
+          "frame": 4852,
+          "method": "Gameplay.DiceCellState.NeighbourCellMerged",
+          "cell": {
+            "ptr": "0x7a0c1205c0",
+            "state": 44,
+            "cost": 1,
+            "row": 0,
+            "col": 1,
+            "param": 0,
+            "stateObject": "0x7a0fba6680"
+          },
+          "properties": null,
+          "dice": null,
+          "args": [
+            "0x7a0c120cf0",
+            "0x1",
+            "0xa"
+          ]
+        }
+      },
+      {
+        "line": 160,
+        "session": 2,
+        "payload": {
+          "seq": 52,
+          "ms": 1795417650090,
+          "tid": 31875,
+          "event": "enter",
+          "frame": 4852,
+          "method": "Gameplay.DiceCellState.OnDiceHit",
+          "cell": {
+            "ptr": "0x7a0c1205c0",
+            "state": 44,
+            "cost": 1,
+            "row": 0,
+            "col": 1,
+            "param": 0,
+            "stateObject": "0x7a0fba6680"
+          },
+          "properties": null,
+          "dice": {
+            "pending": 0,
+            "last": 0,
+            "value": 0
+          },
+          "args": [
+            "0x7a0c120cf0",
+            "0x1",
+            "0xa"
+          ]
+        }
+      },
+      {
+        "line": 161,
+        "session": 2,
+        "payload": {
+          "seq": 53,
+          "ms": 1795417650090,
+          "tid": 31875,
+          "event": "enter",
+          "frame": 4852,
+          "method": "Gameplay.DiceCellState.SaveData",
+          "cell": {
+            "ptr": "0x7a0c1205c0",
+            "state": 44,
+            "cost": 1,
+            "row": 0,
+            "col": 1,
+            "param": 0,
+            "stateObject": "0x7a0fba6680"
+          },
+          "properties": null,
+          "dice": {
+            "pending": 1,
+            "last": 0,
+            "value": 0
+          },
+          "args": [
+            "0x7b6b09a208",
+            "0x7b6c294300",
+            "0xa"
+          ]
+        }
+      },
+      {
+        "line": 162,
+        "session": 2,
+        "payload": {
+          "seq": 54,
+          "ms": 1795417650090,
+          "tid": 31875,
+          "event": "leave",
+          "frame": 4852,
+          "method": "Gameplay.DiceCellState.SaveData",
+          "dice": {
+            "pending": 1,
+            "last": 0,
+            "value": 0
+          },
+          "result": -1080423848
+        }
+      },
+      {
+        "line": 163,
+        "session": 2,
+        "payload": {
+          "seq": 55,
+          "ms": 1795417650090,
+          "tid": 31875,
+          "event": "leave",
+          "frame": 4852,
+          "method": "Gameplay.DiceCellState.OnDiceHit",
+          "dice": {
+            "pending": 1,
+            "last": 0,
+            "value": 0
+          },
+          "result": 98330
+        }
+      },
+      {
+        "line": 166,
+        "session": 2,
+        "payload": {
+          "seq": 58,
+          "ms": 1795417650108,
+          "tid": 31875,
+          "event": "enter",
+          "frame": 4853,
+          "method": "Gameplay.DiceCellState.SaveData",
+          "cell": {
+            "ptr": "0x7a0c1205c0",
+            "state": 44,
+            "cost": 1,
+            "row": 0,
+            "col": 1,
+            "param": 0,
+            "stateObject": "0x7a0fba6680"
+          },
+          "properties": null,
+          "dice": {
+            "pending": 0,
+            "last": 2,
+            "value": 2
+          },
+          "args": [
+            "0x2",
+            "0x7",
+            "0x7b4cdfbfa4"
+          ]
+        }
+      },
+      {
+        "line": 167,
+        "session": 2,
+        "payload": {
+          "seq": 59,
+          "ms": 1795417650108,
+          "tid": 31875,
+          "event": "leave",
+          "frame": 4853,
+          "method": "Gameplay.DiceCellState.SaveData",
+          "dice": {
+            "pending": 0,
+            "last": 2,
+            "value": 2
+          },
+          "result": -1080423848
+        }
+      },
+      {
+        "line": 168,
+        "session": 2,
+        "payload": {
+          "seq": 60,
+          "ms": 1795417651834,
+          "tid": 31875,
+          "event": "goal",
+          "frame": 4931,
+          "method": "Gameplay.LevelGoalTracker.ItemCollected@0x21bd8e8",
+          "state": 44,
+          "count": 2
+        }
+      },
+      {
+        "line": 169,
+        "session": 2,
+        "payload": {
+          "seq": 61,
+          "ms": 1795417651834,
+          "tid": 31875,
+          "event": "enter",
+          "frame": 4931,
+          "method": "Gameplay.DiceCellState.SaveData",
+          "cell": {
+            "ptr": "0x7a0c1205c0",
+            "state": 44,
+            "cost": 1,
+            "row": 0,
+            "col": 1,
+            "param": 0,
+            "stateObject": "0x7a0fba6680"
+          },
+          "properties": null,
+          "dice": {
+            "pending": 0,
+            "last": 2,
+            "value": 0
+          },
+          "args": [
+            "0x7b7aef3830",
+            "0x8",
+            "0x7b4b8da1ac"
+          ]
+        }
+      },
+      {
+        "line": 170,
+        "session": 2,
+        "payload": {
+          "seq": 62,
+          "ms": 1795417651834,
+          "tid": 31875,
+          "event": "leave",
+          "frame": 4931,
+          "method": "Gameplay.DiceCellState.SaveData",
+          "dice": {
+            "pending": 0,
+            "last": 2,
+            "value": 0
+          },
+          "result": -1080423848
+        }
+      }
+    ]
+  },
+  "limitations": [
+    "Actual loaded property references not resolved for every state",
+    "No new device session or full 60-state runtime comparison",
+    "Pending queues and transfer interruption not proven atomic",
+    "Legacy historical gameplay not recovered",
+    "No upper-project implementation parity claim"
+  ],
+  "validation": {
+    "state_matrix_rows": 60,
+    "raw_asset_sha256_verified": 51,
+    "local_report_links": "passed",
+    "dice_original_records_verified": 12,
+    "git_diff_check": "passed",
+    "adb_devices": "2026-11-25: List of devices attached was empty; no new device gameplay validation"
+  }
+}

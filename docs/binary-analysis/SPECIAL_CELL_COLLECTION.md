@@ -41,6 +41,23 @@
 
 证据：读写 0x211eff0、0x211f99c；配对 0x2120c6c、0x2120b10、0x211fa54、0x21218f4；主副入口 0x211fe7c、0x2121d10；开门 0x211f428、0x211ff40、0x2120720；扣层和转发 0x211ff74、0x212160c；收集 0x2120194、0x2120950；动画完成 0x2120214、0x2120b34；开放 0x2120500、0x2121b88；道具 0x211f424、0x21212fc、0x211f7cc、0x21213bc。
 
+## 柜子与糖果：渲染投影补充（2026-11-24）
+
+以下来自导出 Prefab 和 IL2CPP 静态指令，未在 Unity Editor 或真机验证。导出的相关 C# 脚本是空壳，不是完整源码。
+
+### 双格柜子的联合投影
+
+- 主格按 `CupboardId` 匹配副格，使用两格位置初始化一个完整柜体。`InitialiseHex` 计算两格位置的中点并叠加偏移，再依据两格位置差设置旋转。后续已确认中点向上偏移 0.1，旋转为主格指向副格的 LookRotation；六方向推导及数组对应见 [后续表现解析](SPECIAL_CELL_VISUAL_HIERARCHY.md)。证据：`0x211faf4–0x211fd54`，见 [指令](SpecialCollectionExtra.asm)。
+- 门的持久状态为主格的 `DoorOpen`。恢复已开门状态时调用 `BreakDoors(true)`；普通首次有效命中调用开门流程。初始化恢复和正常反馈的参数不同。证据：`0x211e8f4–0x211e99c`、`0x211fe38–0x211fe4c`。
+- `EnableCups` 按杯子数组长度的一半分组：对于 `0 <= i < half`，第一组索引 `i` 在 `i < primaryCost - 1` 时启用；第二组索引 `half + i` 在 `i < secondaryCost - 1` 时启用。例：两侧 Cost 为 3、2 时分别显示 2、1 杯。`CostUpdated` 也以半数组偏移选择对应杯子播放反馈；`Cost == 1` 是该侧耗尽哨兵。证据：`0x211e99c–0x211eb84`、`0x211fe50–0x211fe5c`。
+- [CupboardHex.prefab](../../extracted_game_models/ExportedProject/Assets/GameObject/CupboardHex.prefab) 包含整体柜体、两扇门、六杯及破碎特效；未找到独立 `CupboardSecondary` Prefab。原始数组引用已在后续分析中解出：主侧 Cup2、Cup1、Cup3，副侧 Cup6、Cup5、Cup4，详见 [后续表现解析](SPECIAL_CELL_VISUAL_HIERARCHY.md)。
+
+### 糖果格和机器表现的边界
+
+- `CandyCellState` 提供 ID、位置与 Cost 并转发邻消反馈；其构造函数未出现已解析的模型实例化调用，但其中存在未解析的虚调用，不能据此证明糖果格没有视觉对象。证据：`0x2115864–0x2115a1c`。
+- `CandyMachineHex.Init` 初始化 `CandyMachineCandy` 表现对象，`CandiesUpdated` 调用其 `Animate` 播放收集流程，见 `0x2116618–0x21166fc`、`0x21172bc–0x211742c`。[CandyMachineHex.prefab](../../extracted_game_models/ExportedProject/Assets/GameObject/CandyMachineHex.prefab) 内有 `Marshmellow/Marshmellow_Candy` 网格，但尚未证明它就是糖果格所用模型，也未确认糖果格的模型数量、排列及运行时更新方式。
+- 机器以最近的同 ID 糖果格计算朝向，实际消耗从距离排序末尾开始；这是逻辑目标顺序，不能推导糖果网格的排列。未找到独立 `Candy` Prefab 不等于证明游戏运行时没有动态生成表现。后续原始资源解析已找到机器引用的独立 Marshmellow_Piece 收集对象，但仍未证明糖果格的模型及排列，见 [后续表现解析](SPECIAL_CELL_VISUAL_HIERARCHY.md)。
+
 ## 骰子（44）
 
 每个实例构造函数都会以 `max(0, GetRequiredForCellState(44))` 重写类共享的 `RemainingDiceGoal`（不是只执行一次的静态初始化）；正常关卡若只有一个骰子时才等价于一次初始化。随后从 `AdditionalParam` 恢复 `DiceStateData { PendingHits, LastDiceValue, PendingDiceValue }`。如果恢复时目标仍有效，注册目标结束事件。恢复中已经决定的骰面 `PendingDiceValue` 保留，再为每个 `PendingHits` 重新掷一次，直接把总和记到目标并扣共享剩余值，因此不会把这些命中再额外扣一次。存档把队列和未入账骰面置零，保存末次用于显示的面，随后更新骰面朝向。初始化时目标已清空则隐藏骰子。

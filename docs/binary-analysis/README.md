@@ -2,7 +2,11 @@
 
 特殊格与合并交互的逐状态证据索引、待验证矩阵及后续验收计划，见[交互审计](SPECIAL_CELL_MERGE_AUDIT.md)。
 
+2026-11-25重新核对的60状态原格/目的格准入、机关独立目标选择及后补骰子动态链，见[原格与目的格完整性复核](SPECIAL_CELL_SOURCE_TARGET_AUDIT.md)，附[机器记录](SPECIAL_CELL_SOURCE_TARGET_AUDIT.json)。
+
 棋盘底座 prefab、运行时材质字段、锁状态及接入验证，见[棋盘底座与状态证据](CELL_BOARD_VISUALS.md)。
+
+蛇、果冻、无人机、柜子和糖果的导出预制体层级与表现证据，见[特殊格表现资源与渲染层级](SPECIAL_CELL_VISUAL_HIERARCHY.md)。
 
 运行时 Cell/CellData/Block 的字段、颜色位编码、格内堆叠顺序与排序快照结构，见[运行时格子数据结构](RUNTIME_CELL_DATA.md)；可复核的完整类型与偏移见[RUNTIME_CELL_LAYOUT.json](RUNTIME_CELL_LAYOUT.json)。
 

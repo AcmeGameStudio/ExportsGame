@@ -1,5 +1,7 @@
 # Hexa Sort 6.2.20：特殊格与合并交互审计
 
+2026-11-25复核补充：[60状态原格/目的格矩阵、独立目标搜索及骰子后续动态证据](SPECIAL_CELL_SOURCE_TARGET_AUDIT.md)。下文保留2026-11-23的历史审计基线，不将其统一待核标记当作最新结论。
+
 > 2026-11-23；分析基线 ExportsGame `7ed8e8499d44cf1bf47b977cd1e5e97b4fe79d11`。此文是证据索引及待验证矩阵，不是完整还原声明。上级项目只读对照；其代码可能随工作区变化。
 
 补充结果：[逐状态方法、时序与恢复分析](SPECIAL_CELL_MERGE_DETAILS.md)、[全量方法索引](SPECIAL_CELL_REVERSE_INDEX.json)、[配置全集交叉清点](SPECIAL_CELL_CONFIG_INVENTORY.json)。补充分析已实际读取本地 ELF/metadata 并复算哈希；原表中的统一待核标记保留为动态验证状态。
